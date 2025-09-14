@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --white-color: #fff;
+  --login-hover: #99fcaf;
+  --black-color: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white-color);
+  font-family: "DM Sans", sans-serif;
+}
+.dropdownbtn{
+  background: transparent;
+  border: none;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.hamburger{
+  position: relative;
+  display: inline-block;
+  display: none;
+}
+.dropdown-content-1 {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: -5px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 193px;
+  height: 124px;
+  text-align: right;
+}
+.link {
+  padding: 5px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 10px;
+}
+.dropdown-content ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 2rem;
+  background-color: var(--white-color);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content ul li {
+  list-style-type: none;
+}
+.dropdown-content li a {
+  text-decoration: none;
+  color: var(--lighter-green);
+  font-size: 18px;
+}
+.hamburger:hover .dropdown-content ul {
+  display: block;
+}
+.menu a:hover {
+  background: #007900;
+  color: var(--white-color);
+  width: 100%;
+}
+.menu {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+.service {
+  letter-spacing: -0.03em;
+  line-height: 28px;
+  font-weight: 500;
+}
+.hamburger img:hover,
+.dropdown-content {
+  display: block;
+}
+.logo-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+.medcheck {
+  text-decoration: none;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+  line-height: 32px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+/* signin */
+.bg {
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.sign-in-container {
+  height: 893px;
+  position: absolute;
+  right: 5px;
+  top: 150px;
+  width: 486px;
+  backdrop-filter: blur(18px);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1.5px groove var(--white-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+.sign-in-container b {
+  margin-bottom: 25px;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+  color: #222;
+  line-height: 36px;
+}
+/* Input fields */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.input-box input {
+  width: 100%;
+  padding: 20px 45px 20px 45px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+  font-size: 14px;
+  border-bottom: 1px solid #808080;
+}
+.input-box i,
+.input-box img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #666;
+}
+.btn a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.input-box .toggle-password {
+  right: 15px;
+  left: auto;
+  cursor: pointer;
+}
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.options a {
+  color: green;
+  text-decoration: none;
+}
+.options label {
+  color: #666;
+}
+.btn {
+  width: 242px;
+}
+/* Container */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+/* Hide default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Custom box */
+.checkmark {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #00c853;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+}
+/* When checked */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #00c853; /* green */
+  border: none;
+}
+/* Add checkmark */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+/* Login button */
+.btn {
+  width: 100%;
+  padding: 25px;
+  border: none;
+  border-radius: 15px;
+  background: green;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: var(--login-hover);
+}
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  margin: 20px 0;
+  padding-block: 3.5em;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+.divider:not(:empty)::before {
+  margin-right: 10px;
+}
+.divider:not(:empty)::after {
+  margin-left: 10px;
+}
+/* Social buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: brightness(10);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #999;
+  box-shadow: 0px 2px 4px #ccc;
+}
+.social-btn img,
+.social-btn i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.social-btn a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-weight: 700;
+}
+.social-btn:hover {
+  background: #e5feeb !important;
+}
+/* Signup link */
+.signup {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+.signup a {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 884px) {
+  .bg{
+    height: 100vh;
+  }
+}
+@media (max-width: 834px) {
+  .bg {
+    display: none;
+  }
+  .sign-in-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+  }
+  .sign-in-container b {
+    font-size: 34px;
+    letter-spacing: -0.03em;
+    line-height: 32px;
+    color: #197c1d;
+    text-align: center;
+  }
+  /* Input fields */
+  .input-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    /* padding: 20px; */
+    border-radius: 50px;
+    margin-bottom: 15px;
+    background: whitesmoke;
+    border-bottom: 2px solid #ccc;
+  }
+  .input-box input {
+    height: 80px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-block: 20px;
+    background: whitesmoke;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+  .input-box i,
+  .input-box img {
+    left: 20px;
+  }
+  /* Login button */
+  .btn {
+    width: 100%;
+  }
+  /* social button */
+  .social-btn {
+    border-radius: 50px;
+    padding: 25px;
+  }
+  /* Signup link */
+  .signup {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+  }
+  .hamburger{
+  display: block;
+}
+}
+@media (max-width: 500px) {
+.form{
+  padding-block: 10rem;
+}
+.signup{
+  padding: 2rem;
+}
+.divider{
+  padding-block: 0px;
+}
+}

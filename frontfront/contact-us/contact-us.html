@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - MedCheck</title>
+  
+  <link rel="stylesheet" href="./contact_us.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap" />
+</head>
+<body>
+  <div class="contact-us">
+
+    <!-- Header Section -->
+    <header class="header">
+      <!-- Green Background -->
+      <div class="green-background"></div>
+      
+      <!-- White Navigation Bar -->
+      <div class="white-nav-bar"></div>
+      
+      <!-- Navigation -->
+      <nav class="navbar">
+        <a href="#" class="logo-link" id="logoLink">
+          <img class="logo-icon" src="../assets/images/logo.svg" alt="MedCheck Logo">
+          <span class="brand-name">Medcheck</span>
+        </a>
+        
+        <!-- Desktop Navigation Menu -->
+        <div class="nav-menu">
+          <div class="nav-item active">
+            <span class="nav-link">Home</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link">Our Service</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link">More</span>
+          </div>
+        </div>
+        
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Notifications -->
+          <div class="notification-container">
+            <input type="checkbox" id="notifications-toggle" class="popup-toggle" hidden>
+            <label for="notifications-toggle" class="notification-trigger" aria-label="View notifications">
+              <img src="../assets/images/Frame 161.svg" alt="Notifications">
+            </label>
+            
+            <div class="notification-popup">
+              <div class="notification-list">
+                <article class="notification-item">
+                  <img src="../assets/images/Ellipse 9.png" alt="User avatar" class="notification-avatar">
+                  <div class="notification-content">
+                    <div class="notification-title">
+                      <strong>Miss Jennifer</strong>
+                      <button class="notification-action">View</button>
+                    </div>
+                    <p class="notification-message">Fake product everywhere</p>
+                    <time class="notification-time">20m ago</time>
+                  </div>
+                </article>
+                <article class="notification-item">
+                  <img src="../assets/images/Ellipse 9.png" alt="User avatar" class="notification-avatar">
+                  <div class="notification-content">
+                    <div class="notification-title">
+                      <strong>Miss Jennifer</strong>
+                      <button class="notification-action">View</button>
+                    </div>
+                    <p class="notification-message">Fake product everywhere</p>
+                    <time class="notification-time">20m ago</time>
+                  </div>
+                </article>
+                <article class="notification-item">
+                  <img src="../assets/images/Ellipse 9.png" alt="User avatar" class="notification-avatar">
+                  <div class="notification-content">
+                    <div class="notification-title">
+                      <strong>Miss Jennifer</strong>
+                      <button class="notification-action">View</button>
+                    </div>
+                    <p class="notification-message">Fake product everywhere</p>
+                    <time class="notification-time">20m ago</time>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Profile Picture -->
+          <img src="../assets/images/imoleayo_user.jpg" alt="Profile" class="profile-pic">
+          
+          <!-- Profile Menu -->
+          <!-- <div class="profile-menu-container">
+            <input type="checkbox" id="profile-menu-toggle" class="popup-toggle" hidden>
+            <label for="profile-menu-toggle" class="profile-menu-trigger" aria-label="Profile menu">
+              <img src="Frame 162.svg" alt="Menu">
+            </label>
+            
+            <nav class="profile-menu-popup">
+              <a href="#" class="menu-item">Profile</a>
+              <a href="#" class="menu-item">History</a>
+              <a href="#" class="menu-item logout">Logout</a>
+            </nav>
+          </div> -->
+          
+          <!-- Mobile Menu Button -->
+          <div class="mobile-menu-container">
+            <input type="checkbox" id="mobile-menu-toggle" class="popup-toggle" hidden>
+            <label for="mobile-menu-toggle" class="mobile-menu-trigger" aria-label="Mobile menu">
+              <img src="../assets/images/menu-line.svg" alt="Menu">
+            </label>
+            
+            <nav class="mobile-menu-popup">
+              <div class="menu">
+                <div class="component-18">
+                  <div class="our-service">Verify Product</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service">Report Product</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service">Awareness</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service">Profile</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service">History</div>
+                </div>
+                <div class="component-27">
+                  <div class="our-service">Community</div>
+                </div>
+                <div class="component-27">
+                  <div class="our-service">Testimonies</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service-7">Our Team</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service-7">About Us</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service-7">Contact Us</div>
+                </div>
+                <div class="component-18">
+                  <div class="our-service-7 logout">Logout</div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Page Title on Green Background -->
+      <div class="page-title">
+        <h1>Contact Us</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="contact-text-section">
+            <p class="hero-subtitle">We are here to help you</p>
+            <div class="hero-title-container">
+              <p class="need-solution">
+                <span class="need">Need </span>
+                <span>Solution</span>
+              </p>
+              <p class="for-your-product">for your product ?</p>
+            </div>
+            <p class="hero-description">Are you looking for top-quality product for your need? reach out to us.</p>
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <div class="contact-labels">
+                <div class="e-mail">E-mail</div>
+                <div class="phone-number">phone number</div>
+              </div>
+              <div class="contact-details">
+                <div class="mail-line-parent">
+                  <img class="mail-line-icon" alt="" src="../assets/images/mail-line.svg">
+                  <div class="support-email">support@medcheck.com</div>
+                </div>
+                <div class="call-parent">
+                  <img class="call-icon" alt="" src="../assets/images/call.svg">
+                  <div class="support-phone">+ 123 456 7890</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <form class="contact-form" action="#" method="post">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <div class="form-input">
+                  <input type="text" id="name" name="name" value="Abiodun Adegbola" placeholder="Your Name" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <div class="form-input">
+                  <input type="email" id="email" name="email" value="abiodun@gmail.com" placeholder="Your Email" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="location" class="form-label">Location</label>
+                <div class="form-input">
+                  <input type="text" id="location" name="location" value="Ogun State" placeholder="Your Location" required>
+                </div>
+              </div>
+              
+              <div class="form-group message-group">
+                <label for="message" class="form-label">Message</label>
+                <div class="form-input message-input">
+                  <textarea id="message" name="message" placeholder="Type your message" rows="6" required></textarea>
+                </div>
+              </div>
+              
+              <button type="submit" class="submit-button">Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Map Section -->
+      <section class="map-section">
+        <img src="../assets/images/map_of_lagos.png" alt="Map of Lagos, Nigeria" class="map-image">
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.svg" alt="MedCheck Logo">
+            <span>Medcheck</span>
+          </a>
+        </div>
+        
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h3>Services</h3>
+            <nav>
+              <a href="../verify_product/verify_product.html">Verify Product</a>
+              <a href="../report_product/report_product.html">Report Product</a>
+              <a href="../awareness/awareness.html">Awareness</a>
+              <a href="../we-we-do/what-we-do.html">What we Do</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>More</h3>
+            <nav>
+              <a href="../about-us/about-us.html">About Us</a>
+              <a href="../our-team/our-team.html">Our Team</a>
+              <a href="../Faq/Faq.html">FAQs</a>
+              <a href="../testimonials/testimonials.html">Testimonies</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Help</h3>
+            <nav>
+              <a href="../contact-us/contact-us.html">Contact Us</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section newsletter-section">
+            <h3>Subscribe to our newsletter</h3>
+            <form class="newsletter-form" action="#" method="post">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <div class="newsletter-input">
+                <input type="email" id="newsletter-email" name="email" placeholder="Email address" required>
+                <button type="submit" aria-label="Subscribe">
+                  <img src="../assets/images/Submit.svg" alt="Submit" class="submit-img">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="../terms/condition.html">Terms & Conditions</a>
+            <a href="../privacy-policy/privacy-policy.html">Privacy Policy</a>
+          </div>
+          
+          <div class="social-media">
+            <a href="#" aria-label="Facebook">
+              <img src="../assets/images/001-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src="../assets/images/003-twitter.svg" alt="Twitter">
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="../assets/images/004-instagram.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>© 2025 MedCheck. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

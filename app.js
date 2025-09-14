@@ -77,7 +77,7 @@ app.use('/api', limiter);
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:5000', 
-  'null',  
+  'https://fake-drug-verification.onrender.com', //deployed backend  
   //'https://blog-api-4zax.onrender.com',// deployed backend
   ]; 
 
@@ -106,7 +106,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 //to work from vercel frontend i will have to comment this static out
-app.use(express.static(path.join(__dirname, "frontend/MedCheck-Project/Customer-Website"))); // serve frontend static
+app.use(express.static(path.join(__dirname, "frontfront"))); // serve frontend static
 
 
 

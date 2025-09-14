@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up - MedCheck</title>
+  
+  <link rel="stylesheet" href="./signup.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap" />
+</head>
+<body>
+  <!-- Main container -->
+  <div class="signup-page">
+    
+    <!-- Desktop background image (hidden on mobile) -->
+    <div class="desktop-background">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="../assets/images/Gemini_Generated_Image_afm97tafm97tafm9 (1) 1 (2).png">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="">
+      </picture>
+      <div class="background-overlay"></div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="logo-link" id="logoLink">
+          <img class="logo-icon" src="../assets/images/logo.svg" alt="MedCheck Logo" loading="lazy">
+          <span class="brand-name">Medcheck</span>
+        </a>
+        
+        <!-- Desktop notifications (hidden on mobile) -->
+        <div class="header-actions desktop-only">
+          <!-- Notification dropdown using CSS-only -->
+          <div class="notification-container">
+            <input type="checkbox" id="notifications-toggle" class="popup-toggle" hidden>
+            <label for="notifications-toggle" class="notification-trigger" aria-label="View notifications">
+              <img src="../assets/images/imoleayo_profile.jpg" alt="Profile" class="profile-pic">
+            </label>
+            
+            <div class="notification-popup">
+              <div class="notification-list">
+                <article class="notification-item">
+                  <img src="../assets/images/imoleayo_profile.jpg" alt="User avatar" class="notification-avatar" loading="lazy">
+                  <div class="notification-content">
+                    <div class="notification-title">
+                      <strong>Miss Jennifer</strong>
+                      <button class="notification-action">View</button>
+                    </div>
+                    <p class="notification-message">Fake product everywhere</p>
+                    <time class="notification-time">20m ago</time>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="mobile-menu-container">
+          <input type="checkbox" id="mobile-menu-toggle" class="popup-toggle" hidden>
+          <label for="mobile-menu-toggle" class="mobile-menu-trigger" aria-label="Mobile menu">
+            <img src="../assets/images/menu-line.svg" alt="Menu" loading="lazy">
+          </label>
+          
+          <nav class="mobile-menu-popup">
+            <div class="menu">
+              <div class="menu-item">
+                <span class="menu-link">Verify Product</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">Report Product</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">Awareness</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">Profile</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">History</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">Community</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">About Us</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link">Contact Us</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-link logout">Logout</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <section class="signup-section">
+        
+        <!-- Page title -->
+        <h1 class="page-title">Sign up</h1>
+        
+        <!-- Signup form container -->
+        <div class="form-container">
+          <form class="signup-form" action="#" method="post" novalidate>
+            
+            <!-- Avatar upload -->
+            <div class="avatar-section">
+              <div class="avatar-placeholder">
+                <div class="avatar-circle"></div>
+                <div class="avatar-text">
+                  <p>Add</p>
+                  <p>Avatar</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Username field -->
+            <div class="form-group">
+              <label for="username" class="sr-only">Username</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/vuesax/linear/vuesax/linear/user.svg" alt="" class="input-icon" loading="lazy">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+              </div>
+            </div>
+            
+            <!-- Email field -->
+            <div class="form-group">
+              <label for="email" class="sr-only">Email</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/mail-line.svg" alt="" class="input-icon" loading="lazy">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+            </div>
+            
+            <!-- Phone field -->
+            <div class="form-group">
+              <label for="phone" class="sr-only">Phone Number</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/Group.svg" alt="" class="input-icon" loading="lazy">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+              </div>
+            </div>
+            
+            <!-- Location field -->
+            <div class="form-group">
+              <label for="location" class="sr-only">Location</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/vuesax/linear/vuesax/linear/location-tick.svg" alt="" class="input-icon" loading="lazy">
+                <input type="text" id="location" name="location" placeholder="Location" required>
+              </div>
+            </div>
+            
+            <!-- Password field -->
+            <div class="form-group">
+              <label for="password" class="sr-only">Password</label>
+              <div class="input-wrapper password-wrapper">
+                <img src="../assets/images/vuesax/linear/vuesax/linear/lock.svg" alt="" class="input-icon" loading="lazy">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                  <img src="../assets/images/vuesax/linear/vuesax/linear/eye.svg" alt="" loading="lazy">
+                </button>
+              </div>
+            </div>
+            
+            <!-- Confirm password field -->
+            <div class="form-group">
+              <label for="confirmPassword" class="sr-only">Confirm Password</label>
+              <div class="input-wrapper password-wrapper">
+                <img src="../assets/images/vuesax/linear/vuesax/linear/lock.svg" alt="" class="input-icon" loading="lazy">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                  <img src="../assets/images/vuesax/linear/vuesax/linear/eye.svg" alt="" loading="lazy">
+                </button>
+              </div>
+            </div>
+            
+            <!-- Terms and conditions -->
+            <div class="form-group checkbox-group">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="checkbox-label">
+                  <span class="checkbox-custom"></span>
+                  <span class="terms-text">
+                    I agree to the Medcheck 
+                    <a href="../terms_conditions/terms_conditions.html" class="terms-link">Terms of Service</a>
+                    and 
+                    <a href="../privacy_policy/privacy_policy.html" class="terms-link">Privacy Policy</a>
+                  </span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn">Signup</button>
+            
+          </form>
+          
+          <!-- Divider -->
+          <div class="divider">
+            <div class="divider-line"></div>
+            <span class="divider-text">OR</span>
+            <div class="divider-line"></div>
+          </div>
+          
+          <!-- Social login options -->
+          <div class="social-login">
+            <button type="button" class="social-btn google-btn">
+              <img src="../assets/images/google-fill.svg" alt="" loading="lazy">
+              <span>Sign in with Google</span>
+            </button>
+            
+            <button type="button" class="social-btn linkedin-btn">
+              <img src="../assets/images/linkedin-box-fill.svg" alt="" loading="lazy">
+              <span>LinkedIn</span>
+            </button>
+            
+            <button type="button" class="social-btn facebook-btn">
+              <img src="../assets/images/facebook-circle-fill.svg" alt="" loading="lazy">
+              <span>Sign in with Facebook</span>
+            </button>
+          </div>
+          
+          <!-- Login link -->
+          <div class="login-link">
+            <p>
+              Already have an account? 
+              <a href="../signin/signin.html" class="login-text">Sign in</a>
+            </p>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (mobile only) -->
+    <footer class="footer mobile-only">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.svg" alt="MedCheck Logo" loading="lazy">
+            <span>Medcheck</span>
+          </a>
+        </div>
+        
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h3>Services</h3>
+            <nav>
+              <a href="../verify_product/verify_product.html">Verify Product</a>
+              <a href="../report_product/report_product.html">Report Product</a>
+              <a href="../awareness/awareness.html">Awareness</a>
+              <a href="../what_we_do/what_we_do.html">What we Do</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>More</h3>
+            <nav>
+              <a href="../about_us/about_us.html">About Us</a>
+              <a href="../our_team/our_team.html">Our Team</a>
+              <a href="../faqs/faqs.html">FAQs</a>
+              <a href="../testimonials/testimonials.html">Testimonies</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Help</h3>
+            <nav>
+              <a href="../contact_us/contact_us.html">Contact Us</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section newsletter-section">
+            <h3>Subscribe to our newsletter</h3>
+            <form class="newsletter-form" action="#" method="post">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <div class="newsletter-input">
+                <input type="email" id="newsletter-email" name="email" placeholder="Email address" required>
+                <button type="submit" aria-label="Subscribe">
+                  <img src="../assets/images/mail-line.svg" alt="Submit" class="submit-img" loading="lazy">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="../terms_conditions/terms_conditions.html">Terms & Conditions</a>
+            <a href="../privacy_policy/privacy_policy.html">Privacy Policy</a>
+          </div>
+          
+          <div class="social-media">
+            <a href="https://www.facebook.com" aria-label="Facebook">
+              <img src="../assets/images/facebook-circle-fill.svg" alt="Facebook" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">
+              <img src="../assets/images/linkedin-box-fill.svg" alt="LinkedIn" loading="lazy">
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>© 2025 MedCheck. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer (desktop only) -->
+    <footer class="footer desktop-only">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.svg" alt="MedCheck Logo" loading="lazy">
+            <span>Medcheck</span>
+          </a>
+        </div>
+        
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h3>Services</h3>
+            <nav>
+              <a href="../verify_product/verify_product.html">Verify Product</a>
+              <a href="../report_product/report_product.html">Report Product</a>
+              <a href="../awareness/awareness.html">Awareness</a>
+              <a href="../what_we_do/what_we_do.html">What we Do</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>More</h3>
+            <nav>
+              <a href="../about_us/about_us.html">About Us</a>
+              <a href="../our_team/our_team.html">Our Team</a>
+              <a href="../faqs/faqs.html">FAQs</a>
+              <a href="../testimonials/testimonials.html">Testimonies</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Help</h3>
+            <nav>
+              <a href="../contact_us/contact_us.html">Contact Us</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section newsletter-section">
+            <h3>Subscribe to our newsletter</h3>
+            <form class="newsletter-form" action="#" method="post">
+              <label for="desktop-newsletter-email" class="sr-only">Email address</label>
+              <div class="newsletter-input">
+                <input type="email" id="desktop-newsletter-email" name="email" placeholder="Email address" required>
+                <button type="submit" aria-label="Subscribe">
+                  <img src="../assets/images/mail-line.svg" alt="Submit" class="submit-img" loading="lazy">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="../terms_conditions/terms_conditions.html">Terms & Conditions</a>
+            <a href="../privacy_policy/privacy_policy.html">Privacy Policy</a>
+          </div>
+          
+          <div class="social-media">
+            <a href="https://www.facebook.com" aria-label="Facebook">
+              <img src="../assets/images/facebook-circle-fill.svg" alt="Facebook" loading="lazy">
+            </a>
+            <a href="https://www.facebook.com" aria-label="LinkedIn">
+              <img src="../assets/images/linkedin-box-fill.svg" alt="LinkedIn" loading="lazy">
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>© 2025 MedCheck. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

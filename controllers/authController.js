@@ -249,7 +249,7 @@ exports.forgotPassword = async (req, res) => {
     await user.save();
 
     // Build reset URL
-    const resetUrl = `http://localhost:5000/api/auth/reset-password/${resetToken}`;
+    const resetUrl = `https://fake-drug-verification.onrender.com/api/auth/reset-password/${resetToken}`; ///////change to frontend link
 
     // send via email
     await sendOtpEmail(user.email, `Reset your password using this link: ${resetUrl}`);
@@ -298,6 +298,69 @@ exports.resetPassword = async (req, res) => {
 
     res.json({ message: "Password reset successful. You can now login." });
 
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
+// UPDATE USER (including image)
+exports.updateUser = async (req, res) => {
+  try {
+    const userId = req.user.id; 
+    const { username, email, phoneNumber, location } = req.body;
+
+    const updateFields = { username, email, phoneNumber, location };
+
+    // If an image is uploaded
+    if (req.file) {
+      updateFields.profileImage =  `/uploads/${req.file.filename}`; 
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { $set: updateFields },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({
+      message: "User updated successfully",
+      user: {
+        _id: updatedUser._id,
+        username: updatedUser.username,
+        email: updatedUser.email,
+        phoneNumber: updatedUser.phoneNumber,
+        location: updatedUser.location,
+        profileImage: updatedUser.profileImage,
+        role: updatedUser.role,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
+
+// GET USER PROFILE
+exports.getUserProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select("-password");
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    res.json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      location: user.location,
+      image: user.image,
+      role: user.role,
+    });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

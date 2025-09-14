@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile - MedCheck</title>
+    <link rel="icon" href="../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../profile/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="profile">
+      <!-- Header Section -->
+      <header class="header">
+        <nav class="navbar">
+          <a href="../home/home.html" class="logo-link" id="logoLink">
+            <img
+              class="logo-icon"
+              src="../assets/images/logo.svg"
+              alt="MedCheck Logo"
+            />
+            <span class="brand-name">Medcheck</span>
+          </a>
+
+          <div class="nav-menu">
+            <a href="../homepage/homepage.html" class="nav-link active">Home</a>
+            <div class="nav-dropdown">
+              <span class="nav-link">Our Service</span>
+            </div>
+            <div class="nav-dropdown">
+              <span class="nav-link">More</span>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <!-- Notifications -->
+            <div class="notification-container">
+              <input
+                type="checkbox"
+                id="notifications-toggle"
+                class="popup-toggle"
+                hidden
+              />
+              <label
+                for="notifications-toggle"
+                class="notification-trigger"
+                aria-label="View notifications"
+              >
+                <img src="../assets/images/Frame 161.svg" alt="Notifications" />
+              </label>
+
+              <div class="notification-popup">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                </div>
+                <div class="notification-list">
+                  <article class="notification-item">
+                    <img
+                      src="../assets/images/Ellipse 9.png"
+                      alt="User avatar"
+                      class="notification-avatar"
+                    />
+                    <div class="notification-content">
+                      <div class="notification-title">
+                        <strong>Miss Jennifer</strong>
+                        <button class="notification-action">View</button>
+                      </div>
+                      <p class="notification-message">
+                        Fake product everywhere
+                      </p>
+                      <time class="notification-time">20m ago</time>
+                    </div>
+                  </article>
+                  <!-- Repeat for other notifications -->
+                  <article class="notification-item">
+                    <img
+                      src="../assets/images/Ellipse 9.png"
+                      alt="User avatar"
+                      class="notification-avatar"
+                    />
+                    <div class="notification-content">
+                      <div class="notification-title">
+                        <strong>Miss Jennifer</strong>
+                        <button class="notification-action">View</button>
+                      </div>
+                      <p class="notification-message">
+                        Fake product everywhere
+                      </p>
+                      <time class="notification-time">20m ago</time>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Picture -->
+            <img
+              src="../assets/images/imoleayo_user.jpg"
+              alt="Profile"
+              class="profile-pic"
+            />
+
+            <!-- Profile Menu -->
+            <div class="profile-menu-container">
+              <input
+                type="checkbox"
+                id="profile-menu-toggle"
+                class="popup-toggle"
+                hidden
+              />
+              <label
+                for="profile-menu-toggle"
+                class="profile-menu-trigger"
+                aria-label="Profile menu"
+              >
+                <img src="../assets/images/Frame 162.svg" alt="Menu" />
+              </label>
+
+              <nav class="profile-menu-popup">
+                <a href="../profile/profile.html" class="menu-item active">Profile</a>
+                <a href="../history/history.html" class="menu-item">History</a>
+                <a href="../signin/signin.html" class="menu-item logout"
+                  >Logout</a
+                >
+              </nav>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="hero-image">
+          <img
+            src="../assets/images/Gemini_Generated_Image_8ef5px8ef5px8ef5 1.png"
+            alt="MedCheck Hero"
+            class="hero-bg"
+          />
+        </div>
+
+        <section class="profile-section">
+          <h1>Profile</h1>
+
+          <form class="profile-form" action="#" method="post">
+            <div class="avatar-section">
+              <img
+                src="../assets/images/profile_avatar.jpeg"
+                alt="Profile Avatar"
+                class="profile-avatar"
+                id="profile-avatar"
+              />
+              <button type="button" class="avatar-change-btn">
+                Change Avatar
+              </button>
+              <input type="file" id="avatar-input" name="image" accept="image/*" style="display: none;" />
+            </div>
+
+            <div class="form-fields">
+              <div class="input-group">
+                <label for="fullname" class="sr-only">Full Name</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../assets/images/user.svg"
+                    alt=""
+                    class="input-icon"
+                    aria-hidden="true"
+                  />
+                  <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="email" class="sr-only">Email Address</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../assets/images/mail-line.svg"
+                    alt=""
+                    class="input-icon"
+                    aria-hidden="true"
+                  />
+                  <input type="email" id="email" name="email" placeholder="Email Address" required />
+
+
+
+                  
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="phone" class="sr-only">Phone Number</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../assets/images/ng logo.svg"
+                    alt=""
+                    class="input-icon"
+                    aria-hidden="true"
+                  />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="location" class="sr-only">Location</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../assets/images/location-tick.svg"
+                    alt=""
+                    class="input-icon"
+                    aria-hidden="true"
+                  />
+                  <input type="text" id="location" name="location" placeholder="Location" required />
+                </div>
+              </div>
+
+              <button type="submit" class="save-button">Save Changes</button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+              <img src="../assets/images/logo.svg" alt="MedCheck Logo" />
+              <span>Medcheck</span>
+          </div>
+
+          <div class="footer-sections">
+            <div class="footer-section">
+              <h3>Services</h3>
+              <nav>
+                <a href="../verify_product/verify_product.html"
+                  >Verify Product</a
+                >
+                <a href="../report_product/report_product.html"
+                  >Report Product</a
+                >
+                <a href="../awareness/awareness.html">Awareness</a>
+                <a href="../what_we_do/what_we_do.html">What we Do</a>
+              </nav>
+            </div>
+
+            <div class="footer-section">
+              <h3>More</h3>
+              <nav>
+                <a href="../about_us/about_us.html">About Us</a>
+                <a href="../our_team/our_team.html">Our Team</a>
+                <a href="../faqs/faqs.html">FAQs</a>
+                <a href="../testimonials/testimonials.html">Testimonies</a>
+              </nav>
+            </div>
+
+            <div class="footer-section">
+              <h3>Help</h3>
+              <nav>
+                <a href="../contact_us/contact_us.html">Contact Us</a>
+              </nav>
+            </div>
+
+            <div class="footer-section newsletter-section">
+              <h3>Subscribe to our newsletter</h3>
+              <form class="newsletter-form" action="#" method="post">
+                <label for="newsletter-email" class="sr-only"
+                  >Email address</label
+                >
+                <div class="newsletter-input">
+                  <input
+                    type="email"
+                    id="newsletter-email"
+                    name="email"
+                    placeholder="Email address"
+                    required
+                  />
+                  <button type="submit" aria-label="Subscribe">
+                    <img src="../assets/images/Submit.svg" alt="Submit" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-legal">
+              <a href="../terms_conditions/terms_conditions.html"
+                >Terms & Conditions</a
+              >
+              <a href="../privacy_policy/privacy_policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><img src="../assets/images/001-facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src="../assets/images/003-twitter.svg" alt="Twitter"
+              /></a>
+              <a href="#" aria-label="Instagram"
+                ><img src="../assets/images/004-instagram.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+
+          <p class="copyright">© 2025 MedCheck. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="profile.js"></script>
+  </body>
+</html>
