@@ -77,8 +77,9 @@ app.use('/api', limiter);
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:5000', 
+  'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend  
-  //'https://blog-api-4zax.onrender.com',// deployed backend
+  
   ]; 
 
 app.use(cors({
