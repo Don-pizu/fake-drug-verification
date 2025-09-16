@@ -33,3 +33,13 @@ exports.protect = async (req, res, next) => {
 		return res.status(401).json({ message: 'Not Authorized, No token' });
 	}
 };
+
+
+
+exports.admin = (req, res, next) => {
+  if (req.user && req.user.role === "admin") {
+    next();
+  } else {
+    res.status(403).json({ message: "Not authorized as admin" });
+  }
+};

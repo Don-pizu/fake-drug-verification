@@ -14,6 +14,11 @@ const verifySchema = new mongoose.Schema({
 		required: true,
 		unique: true,
 	},
+	category:{
+		type: String,
+		required: true,
+		enum: [ 'beverages', 'drugs', 'cosmetics', 'chemical', 'devices']
+	},
 	expiry: {
 		type: Date,
 		required: true

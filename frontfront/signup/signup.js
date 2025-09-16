@@ -4,6 +4,8 @@
 const API = 'https://fake-drug-verification.onrender.com/api'; // Production backend
 
 
+
+
 document.querySelector('.signup-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 

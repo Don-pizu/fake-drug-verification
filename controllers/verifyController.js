@@ -8,7 +8,7 @@ const User = require('../models/User');
 
 exports.createVerify = async (req, res, next) => {
 	try {
-		const { name, nafdacReg, expiry, authentic} = req.body;
+		const { name, nafdacReg, category, expiry, authentic} = req.body;
 
 		if(!name || !nafdacReg || !expiry || !authentic)
 			return res.status(400).json({ message: 'All fields are required'});
@@ -20,6 +20,13 @@ exports.createVerify = async (req, res, next) => {
 		//validate name
 		if(!name)
 			return res.status(400).json({ message: 'Name is required'});
+
+		const validCategory = ['beverages', 'drugs', 'cosmetics', 'chemical', 'devices'];
+
+		if(!validCategory.includes(category))
+			return res.status(400).json ({
+				message: 'category must be one of the following : beverages, drugs, cosmetics, chemical or devices'
+			});
 		
 		//check if name exists
 		const eName = await Verify.findOne({ name: name });
@@ -43,6 +50,7 @@ exports.createVerify = async (req, res, next) => {
 		const createVerify = await Verify.create({
 			name,
 			nafdacReg,
+			category,
 			expiry,
 			authentic,
 			image: imagePath,
@@ -142,7 +150,7 @@ exports.updateReg = async (req, res, next) => {
 		if(!getVeri)
 			return res.status(404).json({ message: 'Nafdac reg not found'});
 
-		const { name, nafdacReg, expiry, authentic} = req.body;
+		const { name, nafdacReg, category, expiry, authentic} = req.body;
 
 		//if (!name || !nafdacReg || !expiry || !authentic)
 			//return res.status(400).json({ message: 'All fields are required for update'});
@@ -151,6 +159,8 @@ exports.updateReg = async (req, res, next) => {
 			getVeri.name = name;
 		if(nafdacReg)
 			getVeri.nafdacReg = nafdacReg;
+		if(category)
+			getVeri.category = category;
 		if(expiry)
 			getVeri.expiry = expiry;
 		if(authentic)

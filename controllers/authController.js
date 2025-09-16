@@ -11,7 +11,7 @@ const { sendOtpEmail } = require('../util/emailService');
 //Generate JWT Token
 const createToken = (user) => {
 	return jwt.sign (
-		{id: user._id},
+		{id: user._id, role: user.role},
 		process.env.JWT_SECRET,
 		{expiresIn: '1h'}
 		);
@@ -358,7 +358,7 @@ exports.getUserProfile = async (req, res) => {
       email: user.email,
       phoneNumber: user.phoneNumber,
       location: user.location,
-      image: user.image,
+      profileImage: user.profileImage,
       role: user.role,
     });
   } catch (err) {
