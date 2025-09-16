@@ -750,7 +750,6 @@ textarea {
   color: #e5feeb;
 }
 
-
 /* ========================================
    NOTIFICATION POPUP - MOBILE
 ======================================== */
@@ -943,7 +942,7 @@ textarea {
     padding: 40px;
     max-width: none;
     width: 100%;
-    background-image: url(../assets/images/form_background.png);
+    background-image: url(.assets/images/form_background.png);
     background-repeat: no-repeat;
     background-size: fit;
     background-position-x: 20%;

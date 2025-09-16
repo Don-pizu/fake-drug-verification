@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verify Your Email</title>
     <link rel="stylesheet" href="verification-link.css" />
+    <link rel="icon" href="images/logo.svg" />
   </head>
   <body>
     <div class="verify-email">
@@ -19,7 +20,7 @@
           </p>
           <p class="p"></p>
           <p class="please-check-your">
-            Please check your inbox and click the link to activate your account.
+            Please check your inbox  (<span id="userEmail"></span>) and click the link to activate your account.
           </p>
           <p class="please-check-your">
             If you don’t see the email, check your spam or junk folder.
@@ -27,7 +28,11 @@
         </div>
         <div class="component-28">
           <div class="verify">
-            <a href="../signup/otp-code.html?username=USERNAME&email=EMAIL" target="_self">Continue</a>
+            <a
+              href="otp-code.html?username=USERNAME&email=EMAIL"
+              target="_self"
+              >Continue</a
+            >
           </div>
         </div>
       </div>

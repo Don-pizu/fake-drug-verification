@@ -6,9 +6,11 @@ const username = urlParams.get("username");
 const email = urlParams.get("email");
 
 // Update the Continue link with real values
-const continueLink = document.querySelector(".verify a");
+const continueLink = document.querySelector(".verify");
 if (username && email) {
-  continueLink.href = `../signup/otp-code.html?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`;
+  continueLink.href = `otp-code.html?username=${encodeURIComponent(
+    username
+  )}&email=${encodeURIComponent(email)}`;
 } else {
   console.warn("Username or email missing in query params.");
 }

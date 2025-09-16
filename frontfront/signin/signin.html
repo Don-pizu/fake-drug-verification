@@ -10,63 +10,97 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" href="images/logo.svg" />
     <title>MedCheck SignIn Page</title>
-    <link rel="stylesheet" href="./signin.css" />
+    <link rel="stylesheet" href="signin.css" />
   </head>
   <body>
     <header id="frameContainer">
-      <div class="logo-parent" >
-         <img src="../assets/images/logo.svg" alt="logo.svg" />
-      <a class="medcheck" href="#">Medcheck</a>
+      <div class="logo-parent">
+        <img src=".assets/images/logo.svg" alt="logo.svg" />
+        <a class="medcheck" href="#">Medcheck</a>
       </div>
-        <div class="hamburger">
-          <button class="dropdownbtn">
-            <img src="../assets/images/menu-line.svg" alt="" />
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <ul>
-              <li class="menu">
-                <a class="service" href="../verify_product/verify_product.html">Verify Product</a>
-              </li>
-              <li class="menu">
-                <a class="service" target="_blank" href="../report-a-product.html"
-                  >Report Product</a
-                >
-              </li>
-              <li class="menu">
-                <a class="service" target="_blank" href="../awareness-page.html">Awareness</a>
-              </li>
-              <li class="menu"><a class="service" href="../profile/profile.html">Profile</a></li>
-              <li class="menu"><a class="service" href="../history/history.html">History</a></li>
-              <li class="menu">
-                <a class="service" href="../community_gist/community_gist.html">Community</a>
-              </li>
-              <li class="menu">
-                <a class="service" href="../testimonials/testimonials.html">Testimonies</a>
-              </li>
-              <li class="menu"><a class="service" href="../our_team/">Our Team</a></li>
-              <li class="menu"><a class="service" href="../about_us/about_us.html">About Us</a></li>
-              <li class="menu"><a class="service" href="../contact_us/contact_us.html">Contact Us</a></li>
-              <li class="menu"><a class="service" href="../signin/signin.html">Logout</a></li>
-            </ul>
-          </div>
+      <div class="hamburger">
+        <button class="dropdownbtn">
+          <img src=".assets/images/menu-line.svg" alt="" />
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <ul>
+            <li class="menu">
+              <a class="service" href=".verify_product/verify_product.html"
+                >Verify Product</a
+              >
+            </li>
+            <li class="menu">
+              <a
+                class="service"
+                target="_blank"
+                href="./report-a-product/report-a-product.html"
+                >Report Product</a
+              >
+            </li>
+            <li class="menu">
+              <a class="service" target="_blank" href=".awareness-page.html"
+                >Awareness</a
+              >
+            </li>
+            <li class="menu">
+              <a class="service" href=".profile/profile.html">Profile</a>
+            </li>
+            <li class="menu">
+              <a class="service" href=".history/history.html">History</a>
+            </li>
+            <li class="menu">
+              <a class="service" href=".community_gist/community_gist.html"
+                >Community</a
+              >
+            </li>
+            <li class="menu">
+              <a class="service" href=".testimonials.html">Testimonies</a>
+            </li>
+            <li class="menu">
+              <a class="service" href=".our_team/">Our Team</a>
+            </li>
+            <li class="menu">
+              <a class="service" href=".about_us/about_us.html">About Us</a>
+            </li>
+            <li class="menu">
+              <a class="service" href=".contact_us/contact_us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="menu">
+              <a class="service" href=".signin.html" id="logloglog">Logout</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </header>
     <main class="bg-image">
-      <img class="bg" src="../assets/images/background-image-sign-in.png" alt="" />
+      <img
+        class="bg"
+        src=".assets/images/background-image-sign-in.png"
+        alt=""
+      />
       <section class="form">
         <div class="sign-in-container">
           <b class="sign-in">Sign in</b>
+
           <!-- Username -->
-           <br><br><br>
+          <br /><br /><br />
           <div class="input-box">
-            <img src="../assets/images/user.svg" alt="" />
+            <img src=".assets/images/user.svg" alt="" />
             <input type="text" id="username" placeholder="Username" required />
           </div>
           <!-- Password -->
           <div class="input-box">
-            <img src="../assets/images/lock.svg" alt="" />
-            <input type="password" id="password" placeholder="••••••••••••••••••••" required />
+            <img src=".assets/images/lock.svg" alt="" />
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••••••••••••••"
+              required
+            />
             <i
               class="fa-solid fa-eye-slash toggle-password"
               id="togglePassword"
@@ -79,7 +113,9 @@
               <span class="checkmark"></span>
               Keep me logged in
             </label>
-            <a id="forgotPassword" href="../signup/reset-pw-email.html">Forgot password?</a>
+            <a id="forgotPassword" href="../signup/reset-pw-email.html"
+              >Forgot password?</a
+            >
           </div>
           <!-- Login Button -->
           <button class="btn">Login</button>
@@ -87,19 +123,21 @@
           <div class="divider">OR</div>
           <!-- Social Logins -->
           <div class="social-btn">
-            <img src="../assets/images/google-fill.svg" alt="" />
+            <img src=".assets/images/google-fill.svg" alt="" />
             <a href="https://www.gmail.com">Sign in with Google</a>
           </div>
           <div class="social-btn">
-            <img src="../assets/images/linkedin-box-fill.svg" alt="" />
+            <img src=".assets/images/linkedin-box-fill.svg" alt="" />
             <a href="https://www.linkedin.com">LinkedIn</a>
           </div>
           <div class="social-btn">
-            <img src="../assets/images/facebook-circle-fill.svg" alt="" />
+            <img src=".assets/images/facebook-circle-fill.svg" alt="" />
             <a href="https://www.facebook.com">Sign in with Facebook</a>
           </div>
           <!-- Signup -->
-          <p class="signup">Don’t have an account? <a href="../signup/signup.html">Signup</a></p>
+          <p class="signup">
+            Don’t have an account? <a href="../signup/signup.html">Signup</a>
+          </p>
         </div>
       </section>
     </main>

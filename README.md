@@ -36,24 +36,25 @@ project-root/
 ├── controllers/
 │   ├── authController.js
 │   ├── awarenessController.js
-|   |-- profileImageController.js
-|   |-- reportController.js
-|   |-- verifyController.js
+│   ├── profileImageController.js
+│   ├── reportController.js
+│   ├── verifyController.js
 ├── models/
-|   |-- awareness.js
-|   |-- report.jd
+│   ├── awareness.js
+│   ├── report.js
 │   ├── User.js
 │   ├── verify.js
 ├── routes/
 │   ├── authRoutes.js
 │   ├── awarenessRoutes.js
-│   └── dashboardRoutes.js
-|   |-- profileImageRoutes.js
-|   |-- reportRoues.js
-|   |-- verifyRoutes.js
+│   ├── dashboardRoutes.js
+│   ├── profileImageRoutes.js
+│   ├── reportRoutes.js
+│   ├── statsRoutes.js
+│   ├── verifyRoutes.js
 ├── middleware/
-│   └── authMiddleware.js
-|   |-- upload.js
+│   ├── authMiddleware.js
+│   ├── upload.js
 ├── config/
 │   └── db.js
 ├── app.js
@@ -62,6 +63,7 @@ project-root/
 ├── .env
 ├── .gitignore
 └── README.md
+
 
 
 ## Technologies used
@@ -82,27 +84,58 @@ API Endpoints
 Auth Routes
 Method       Endpoint                 Description              Access
 POST    api/auth/register          Register a new user         Public
-POST    api/auth/login            Login an existing user       Public
-GET     api/auth/protected        Protected route              Private
+POST    api/auth/verifyOtp         Verify OTP code             Public
+POST    api/auth/resendOtp         Resend OTP code             Public
+POST    api/auth/forgotPassword    Forgot password             Public
+POST    api/auth/reset-password/:token    Reset password       Public
+POST    api/auth/login             Login an existing user      Public
+GET     api/auth/allusers          Get all users route         Private
+GET     api/auth/me                Get user profile            Private
+PUT     api/auth/update            Update user                 Private
 
 
-Post Routes
+Verify Routes
 
-Method       Endpoint       Description                                          Access
-POST       /api/post        Make a post                                          Private
-GET         /api/post/:id    Get a single post by id                             Private
-GET         /api/getposts   Get all posts (with pagination + filtering)          Public
-PUT        /api/update/:id   Update a post (only author and admin)               Private
-DELETE     /api/delete/:id   Delete a post (only author abd admin)               Private
+Method	            Endpoint	                        Description	                                Access
+POST	            /api/verify	                    Create a product record (with image)	        Private
+GET	                /api/verify	                    Get all products (pagination + filter)	        Public
+GET              	/api/verify/:nafdacReg	        Get product by NAFDAC Reg						Public
+GET					/api/verifyId/:id				Get product by ID								Public
+PUT					/api/verify/:id					Update product (Admin/Author)					Private
+DELETE				/api/verify/:id					Delete product (Admin/Author)					Private
 
 
-Comment Routes
+Awareness Routes
 
-Method       Endpoint                   Description                                Access
-POST       /api/id/comment           Make a comment on a post                      Private
-GET         /api/getcomment/id       Get all comment in s podt                     Public
-PUT        /api/commentupdate/:id    Update a comment (only author and admin)      Private
-DELETE     /api/commentdelete/:id    Delete a comment (only author abd admin)      Private
+Method				Endpoint							Description									Access
+POST				/api/awareness					Create awareness post (with image)				Private
+GET					/api/awareness					Get all awareness posts							Public
+GET					/api/awareness/:id				Get awareness post by ID						Public
+PUT					/api/awareness/:id				Update awareness post							Private
+DELETE				/api/awareness/:id				Delete awareness post							Private
+
+Report Routes
+
+Method				Endpoint							Description									Access
+POST				/api/report						Create a report (with image)					Private
+GET					/api/reportall					Get all reports									Public
+GET					/api/report/:nafdacReg			Get report by NAFDAC Reg						Public
+PUT					/api/report/:id					Update report									Private
+DELETE				/api/report/:id					Delete report									Private
+
+Dashboard Route
+
+Method				Endpoint							Description									Access
+GET					/api/dashboard					Get dashboard stats (monthly/total)				Private
+
+Profile Image Routes
+
+Method				Endpoint							Description									Access
+POST				/api/upload-image				Upload a profile image							Private
+
+Stats Routes
+Method				Endpoint							Description									Access
+GET					/api/stats						Get system statistics							Private (Admin)
 
 
 

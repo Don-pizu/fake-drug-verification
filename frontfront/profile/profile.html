@@ -8,7 +8,20 @@
     <link rel="stylesheet" href="../profile/profile.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <div class="logo-parent" id="frameContainer">
+          <img class="logo-icon" alt="" src="../images/logo-1.svg" />
+          <span class="medcheck">Medcheck</span>
+
+      <a href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
     />
     <link
       rel="stylesheet"
@@ -232,17 +245,120 @@
               <img src="../assets/images/logo.svg" alt="MedCheck Logo" />
               <span>Medcheck</span>
           </div>
+        </div>
+        <div class="more-dropdown">
+          <button class="nav-btn">More</button>
+          <div class="more-content">
+            <a href="../testimonials/testimonials.html">Testimonies</a>
+            <a href="../our-team/our-team.html">Our Teams</a>
+            <a href="../Faq/Faq.html">FAQS</a>
+            <a href="../history/history.html">History</a>
+            <a href="../about-us/about-us.html">About US</a>
+            <a href="../contact-us/contact-us.html">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav2">
+        <!-- bell icon -->
+        <div class="dropdown" id="dropdown">
+          <img
+            class="group-child"
+            alt=""
+            src="../images/notification-2-fill.svg"
+          />
+          <img src="../images/Ellipse 8.svg" alt="" />
+          <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="group-item" src="../images/Ellipse 1.svg" alt="" />
+        <div class="dropdown-2">
+          <img
+            class="group-inner"
+            alt=""
+            src="../images/expand-up-down-line.svg"
+            id="frameIcon1"
+          />
+          <div class="dropdown-content-1">
+            <div class="link">
+              <a href="../profile/profile.html">Profile</a>
+            </div>
+            <div class="link">
+              <a href="../history/history.html">History</a>
+            </div>
+            <div class="link"><a href="#">Logout</a></div>
+          </div>
+        </div>
+        <div class="hamburger">
+          <button class="dropdownbtn">
+            <img src="../images/menu-line.svg" alt="" />
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <ul>
+              <li class="menu">
+                <a class="service" href="../verify-products/verify-profuct.html"
+
 
           <div class="footer-sections">
             <div class="footer-section">
               <h3>Services</h3>
               <nav>
                 <a href="../verify_product/verify_product.html"
+
                   >Verify Product</a
                 >
-                <a href="../report_product/report_product.html"
+              </li>
+              <li class="menu">
+                <a
+                  class="service"
+                  href="../report-a-product/report-a-product.html"
                   >Report Product</a
                 >
+
+              </li>
+              <li class="menu">
+                <a class="service" href="../awareness/awareness.html"
+                  >Awareness</a
+
                 <a href="../awareness/awareness.html">Awareness</a>
                 <a href="../what_we_do/what_we_do.html">What we Do</a>
               </nav>
@@ -269,24 +385,38 @@
               <h3>Subscribe to our newsletter</h3>
               <form class="newsletter-form" action="#" method="post">
                 <label for="newsletter-email" class="sr-only"
-                  >Email address</label
+                  >Email address</label>
+              </li>
+              <li class="menu">
+                <a class="service" href="../profile/profile.html">Profile</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../history/history.html">History</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../community-gist/community-gist.html"
+                  >Community</a
                 >
-                <div class="newsletter-input">
-                  <input
-                    type="email"
-                    id="newsletter-email"
-                    name="email"
-                    placeholder="Email address"
-                    required
-                  />
-                  <button type="submit" aria-label="Subscribe">
-                    <img src="../assets/images/Submit.svg" alt="Submit" />
-                  </button>
-                </div>
-              </form>
-            </div>
+              </li>
+              <li class="menu">
+                <a class="service" href="../testimonials/testimonials.html"
+                  >Testimonies</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../our-team/our-team.html">Our Team</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../about-us/about-us.html">About Us</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../contact-us/contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="menu"><a class="service" href="#">Logout</a></li>
+            </ul>
           </div>
-
           <div class="footer-bottom">
             <div class="footer-legal">
               <a href="../terms_conditions/terms_conditions.html"

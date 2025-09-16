@@ -11,10 +11,16 @@ document.querySelector('.signup-form').addEventListener('submit', async (e) => {
 
   const username = document.getElementById('username').value;
   const email = document.getElementById('email').value;
-  const phoneNumber = document.getElementById('phone').value; // ✅ match backend
+  const phoneNumber = document.getElementById('phone').value; 
   const location = document.getElementById('location').value;
-  const password = document.getElementById('password').value; // ✅ fixed typo
-  const confirmPassword = document.getElementById('confirmPassword').value; // ✅ fixed typo
+  const password = document.getElementById('password').value;  
+  const confirmPassword = document.getElementById('confirmPassword').value; 
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
 
   try {
     const res = await fetch(`${API}/auth/register`, {
@@ -27,7 +33,7 @@ document.querySelector('.signup-form').addEventListener('submit', async (e) => {
 
     if (res.ok) {
       alert('User registered. Verify OTP sent to email');
-      window.location.href = "verification-link.html";window.location.href = `verification-link.html?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`;
+     window.location.href = `verification-link.html?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`;
     } else {
       alert(data.message || "Registration failed");
     }

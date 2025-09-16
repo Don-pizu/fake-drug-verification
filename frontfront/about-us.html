@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - MedCheck</title>
+
+    <link rel="stylesheet" href="about-us.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="about-us">
+      <!-- Header Section -->
+      <header class="header">
+        <nav class="navbar">
+          <img class="logo-icon" src="images/logo.svg" alt="MedCheck Logo" />
+          <span class="brand-name">Medcheck</span>
+          <div class="hor-nav">
+            <div class="nav-menu">
+              <a href="index/index.html" class="nav-link active">Home</a>
+              <div class="nav-dropdown">
+                <span class="nav-link active">Our Service</span>
+                <div class="service">
+                  <a href="verify.product.html" class="menu-item"
+                    >Verify Product</a
+                  >
+                  <a
+                    href="./report-a-product/report-a-product.html"
+                    class="menu-item"
+                    >Report Product</a
+                  >
+                  <a href=".awareness/awareness.html" class="menu-item"
+                    >Awareness</a
+                  >
+                </div>
+              </div>
+              <div class="nav-dropdown">
+                <span class="nav-link active">More</span>
+                <div class="more">
+                  <a href=".testimonials.html" class="menu-item">Testimonies</a>
+                  <a href=".our-team.html" class="menu-item">Our Team</a>
+                  <a href=".Faq.html" class="menu-item">FAQS</a>
+                  <a href=".history/history.html" class="menu-item">History</a>
+                  <a href=".contact-us/contact-us.html" class="menu-item"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-actions">
+            <!-- Notifications -->
+            <div class="notification-container">
+              <input
+                type="checkbox"
+                id="notifications-toggle"
+                class="popup-toggle"
+                hidden
+              />
+              <label
+                for="notifications-toggle"
+                class="notification-trigger"
+                aria-label="View notifications"
+              >
+                <img src="images/Frame 161.svg" alt="Notifications" />
+              </label>
+
+              <div class="notification-popup">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                </div>
+                <div class="notification-list">
+                  <article class="notification-item">
+                    <img
+                      src="images/profile_avatar.jpeg"
+                      alt="User avatar"
+                      class="notification-avatar"
+                      id="dropdrop"
+                    />
+                    <div class="notification-content">
+                      <div class="notification-title">
+                        <strong>Miss Jennifer</strong>
+                        <button class="notification-action">View</button>
+                      </div>
+                      <p class="notification-message">
+                        Fake product everywhere
+                      </p>
+                      <time class="notification-time">20m ago</time>
+                    </div>
+                  </article>
+                  <!-- Repeat for other notifications -->
+                  <article class="notification-item">
+                    <img
+                      src="images/Ellipse 9.png"
+                      alt="User avatar"
+                      class="notification-avatar"
+                    />
+                    <div class="notification-content">
+                      <div class="notification-title">
+                        <strong>Miss Jennifer</strong>
+                        <button class="notification-action">View</button>
+                      </div>
+                      <p class="notification-message">
+                        Fake product everywhere
+                      </p>
+                      <time class="notification-time">20m ago</time>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Picture -->
+            <img
+              src="images/images/Ellipse 1.svg"
+              alt="Profile"
+              class="profile-pic"
+            />
+            <img
+              src="images/imoleayo_user.jpg"
+              alt="Profile"
+              class="profile-pic"
+              id="profilePic"
+            />
+
+            <!-- Profile Menu -->
+            <div class="profile-menu-container">
+              <input
+                type="checkbox"
+                id="profile-menu-toggle"
+                class="popup-toggle"
+                hidden
+              />
+              <label
+                for="profile-menu-toggle"
+                class="profile-menu-trigger"
+                aria-label="Profile menu"
+              >
+                <img src="images/Frame 162.svg" alt="Menu" />
+              </label>
+
+              <nav class="profile-menu-popup">
+                <a href=".profile/profile.html" class="menu-item">Profile</a>
+                <a href=".history/history.html" class="menu-item">History</a>
+                <a
+                  href=".logout.logout.html"
+                  class="menu-item logout"
+                  id="logloglog"
+                  >Logout</a
+                >
+              </nav>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Hero Section with Green Background - ONLY titles -->
+        <section class="hero-section">
+          <div class="green-background">
+            <h1 class="hero-title">About Us</h1>
+            <h2 class="hero-subtitle">Who we are!</h2>
+          </div>
+
+          <!-- Team Section - Overlapping the Green Background -->
+          <div class="team-section-overlay">
+            <div class="team-images">
+              <img
+                src="images/Rectangle 35.png"
+                alt="Team Member"
+                class="team-image"
+              />
+              <img
+                src="images/Rectangle 36.png"
+                alt="Team Member"
+                class="team-image team-image-offset"
+              />
+              <img
+                src="images/Rectangle 37.png"
+                alt="Team Member"
+                class="team-image"
+              />
+              <img
+                src="images/Rectangle 38.png"
+                alt="Team Member"
+                class="team-image team-image-offset"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Description Section - BELOW team images -->
+        <section class="description-section">
+          <div class="description-content">
+            <p class="description-motto">
+              We believe safety is a right — not a luxury.
+            </p>
+            <div class="description-text">
+              <p>
+                In a world flooded with counterfeit drugs, expired food
+                products, and harmful cosmetics, we are building a powerful yet
+                simple tool that puts the power of verification in every
+                consumer's hands.
+              </p>
+              <p>
+                MedCheck is a platform that allows users to verify the
+                authenticity of drugs, foods, drinks, and personal care items
+                before purchase. Whether you're scanning a barcode, entering a
+                NAFDAC number, or reporting a suspicious product, MedCheck helps
+                you make safer choices in real-time.
+              </p>
+              <p>
+                We are proudly Nigerian, deeply connected to our local
+                realities, and driven by a passion for public health,
+                technology, and community awareness. MedCheck is more than an
+                app — it's a movement to take back control from counterfeiters
+                and put it where it belongs: in the hands of the people.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+          <!-- Mission Statement -->
+          <div class="value-item">
+            <img
+              src="images/Gemini_Generated_Image_6uo3ds6uo3ds6uo3 1.png"
+              alt="Mission Statement"
+              class="value-image"
+            />
+            <div class="value-content">
+              <h3 class="value-title">Mission Statement</h3>
+              <p class="value-text">
+                To empower consumers with simple, reliable tools to verify the
+                authenticity of drugs, foods, drinks, and cosmetics before
+                purchase, helping prevent harm and saving lives through
+                technology, transparency, and awareness.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vision Statement -->
+          <div class="value-item reverse">
+            <div class="value-content">
+              <h3 class="value-title">Vision Statement</h3>
+              <p class="value-text">
+                To become the leading digital platform in Africa for eliminating
+                counterfeit products, fostering a world where every consumer can
+                make safe, informed choices — confidently, instantly, and
+                securely.
+              </p>
+            </div>
+            <img
+              src="images/Gemini_Generated_Image_9rvsnj9rvsnj9rvs 1.png"
+              alt="Vision Statement"
+              class="value-image"
+            />
+          </div>
+
+          <!-- Core Value -->
+          <div class="value-item">
+            <img
+              src="images/Gemini_Generated_Image_qwys89qwys89qwys 1.png"
+              alt="Core Value"
+              class="value-image"
+            />
+            <div class="value-content">
+              <h3 class="value-title">Core Value</h3>
+              <p class="value-text">
+                We aim to build and maintain trust between consumers, producers,
+                and regulators by ensuring transparent, accurate product
+                verification.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index/index.html" class="footer-logo">
+              <img src="images/logo.svg" alt="MedCheck Logo" />
+              <span>Medcheck</span>
+            </a>
+          </div>
+
+          <div class="footer-sections">
+            <div class="footer-section">
+              <h3>Services</h3>
+              <nav>
+                <a href="verify.product.html">Verify Product</a>
+                <a href="./report-a-product/report-a-product.html"
+                  >Report Product</a
+                >
+                <a href=".awareness/">Awareness</a>
+                <a href=".we-we-do/what-we-do.html">What we Do</a>
+              </nav>
+            </div>
+
+            <div class="footer-section">
+              <h3>More</h3>
+              <nav>
+                <a href=".about-us.html">About Us</a>
+                <a href=".our-team.html">Our Team</a>
+                <a href=".Faq.html">FAQs</a>
+                <a href=".testimonials.html">Testimonies</a>
+              </nav>
+            </div>
+
+            <div class="footer-section">
+              <h3>Help</h3>
+              <nav>
+                <a href=".contact-us/contact-us.html">Contact Us</a>
+              </nav>
+            </div>
+
+            <div class="footer-section newsletter-section">
+              <span class="subscribe-text"
+                >Subscribe to our <br />
+                newsletter</span
+              >
+              <form class="newsletter-form" action="#" method="post">
+                <!-- <label for="newsletter-email" class="sr-only">Email address</label>
+              <div class="newsletter-input">
+                <input type="email" id="newsletter-email" name="email" placeholder="Email address" required>
+                <button type="submit" aria-label="Subscribe">
+                  <img src=".assets/images/Submit.svg" alt="Submit">
+                </button>
+              </div> -->
+                <div class="input-container">
+                  <input type="email" placeholder="Email address" />
+                  <button class="btn-sub">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-social-links">
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><img src=".001-facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src=".003-twitter.svg" alt="Twitter"
+              /></a>
+              <a href="#" aria-label="Instagram"
+                ><img src=".004-instagram.png" alt="Instagram"
+              /></a>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-legal">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="copyright">© 2025 MedCheck. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="about-us.js"></script>
+  </body>
+</html>

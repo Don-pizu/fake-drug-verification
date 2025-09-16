@@ -12,7 +12,8 @@
   box-sizing: border-box;
 }
 body {
-  width: 100%;
+  background: var(--white-color);
+  max-width: 100%;
   font-family: "DM Sans", sans-serif;
 }
 button {
@@ -62,7 +63,6 @@ nav a:hover {
 .header {
   max-width: 100%;
   width: 95%;
-  margin: 0 auto;
   background: var(--white-color);
   display: flex;
   justify-content: space-between;
@@ -72,12 +72,6 @@ nav a:hover {
 .logo-icon {
   width: 40px;
   height: 32px;
-}
-.logo-parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
 }
 .medcheck {
   font-size: 18px;
@@ -105,26 +99,30 @@ nav a:hover {
   color: var(--white-color);
 }
 .main-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 13rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 584px;
+}
+.family-image {
+  max-width: 100%;
+}
+.family-image img {
+  object-fit: cover;
 }
 .protects-your-family-container {
-  flex: 1;
-  width: 584px;
-  position: relative;
   font-size: 60px;
   letter-spacing: -0.03em;
   line-height: 60px;
-  display: inline-block;
-  font-family: "DM Sans";
   text-align: left;
   color: #4d4d4d;
   font-weight: 600;
 }
-.protects {
-  margin: 0;
+.protect-family__text {
+  max-width: 100%;
+  height: 548px;
 }
 .counterfeit-harmful {
   margin: 0;
@@ -136,8 +134,6 @@ nav a:hover {
 }
 .easily-verify-the {
   flex: 1;
-  width: 584px;
-  position: relative;
   font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 40px;
@@ -173,15 +169,12 @@ nav a:hover {
   background: var(--hover-color);
 }
 .more-than-25000-user-trust-me-parent {
-  position: relative;
   box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
   background-color: #fff;
   width: 100%;
-  overflow: hidden;
   display: flex;
   align-items: center;
   padding: 50px 25px;
-  box-sizing: border-box;
   gap: 30px;
   text-align: left;
   font-size: 32px;
@@ -190,9 +183,6 @@ nav a:hover {
 .more-than-25000-container {
   line-height: 40px;
   font-weight: 600;
-}
-.more-than-25000 {
-  margin: 0;
 }
 .medcheck {
   margin: 0;
@@ -224,208 +214,75 @@ nav a:hover {
   height: 37px;
 }
 .benefit-of-medcheck {
-  background: url("../images/Rectangle\ 41-bg.png") no-repeat;
-  height: 914px;
+  background: url("../images/-bg-2.png") no-repeat;
+  height: 900px;
   background-size: cover;
 }
 .frame-parent {
-  position: relative;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  box-sizing: border-box;
-  gap: 48px;
-  text-align: center;
-  font-size: 36px;
-  color: #005f00;
-  font-family: "DM Sans";
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px groove var(--white-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
-.benefits-advantages-of-medch-wrapper {
-  align-self: stretch;
+.benefit-medcheck-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 5rem;
+  margin: 20px;
+}
+.benefit-header {
+  width: 95%;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #005f00;
+  margin: 0 auto;
+  margin-block: 1rem;
 }
-.benefits-advantages {
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 40px;
-}
-.frame-group {
-  width: 1200px;
-  position: relative;
-  height: 619px;
-  text-align: left;
-  font-size: 30px;
-  color: #424242;
-}
-.peace-of-mind-with-every-purch-parent {
-  position: absolute;
-  top: 0px;
-  left: 2px;
-  border-radius: 15px;
-  background-color: #fff;
+.benefit-text {
   width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 272px;
   padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
+  border-radius: 15px;
+  background: var(--white-color);
 }
-.peace-of-mind {
+.benefit-text h2 {
   width: 270px;
-  position: relative;
+  font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 36px;
-  display: inline-block;
+  color: #424242;
+  text-align: left;
 }
-.no-more-second-guessing {
-  align-self: stretch;
-  position: relative;
+.benefit-text p {
+  width: 100%;
   font-size: 24px;
   letter-spacing: -0.03em;
   line-height: 32px;
   color: #1a1a1a;
-  white-space: pre-wrap;
+  text-align: left;
 }
-.protect-your-health-and-loved-parent {
-  position: absolute;
-  top: 0px;
-  left: 308px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.avoid-harmful-side {
-  align-self: stretch;
-  position: relative;
-  font-size: 24px;
-  letter-spacing: -0.03em;
-  line-height: 32px;
-  color: #1a1a1a;
-}
-.save-money-by-avoiding-scams-parent {
-  position: absolute;
-  top: 0px;
-  left: 615px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.make-informed-choices-in-secon-parent {
-  position: absolute;
-  top: 0px;
-  left: 918px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.join-a-community-fighting-back-parent {
-  position: absolute;
-  top: 347px;
-  left: 0px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.build-confidence-in-what-you-c-parent {
-  position: absolute;
-  top: 347px;
-  left: 306px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.stay-ahead-of-criminal-tactics-parent {
-  position: absolute;
-  top: 347px;
-  left: 613px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.empower-yourself-with-knowledg-parent {
-  position: absolute;
-  top: 347px;
-  left: 916px;
-  border-radius: 15px;
-  background-color: #fff;
-  width: 282px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  gap: 20px;
-}
-.turn-uncertainty-into {
-  margin: 0;
+/* What we do Section */
+.wwd {
+  background: var(--white-color);
 }
 .what-we-do h2 {
   font-size: 36px;
   color: #333;
   padding-block: 2rem;
+  text-align: center;
 }
 .what-we-do {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   width: 100%;
 }
@@ -562,6 +419,7 @@ nav a:hover {
 .see-what-our {
   font-size: 1.5rem;
   letter-spacing: -0.03em;
+  color: var(--white-color) !important;
 }
 .testimonials {
   height: 150px;
@@ -569,7 +427,6 @@ nav a:hover {
   background: var(--main-color);
   display: flex;
   justify-content: center;
-
 }
 .testimonial-container {
   height: 1600px;
@@ -646,6 +503,133 @@ nav a:hover {
 .star:last-child {
   opacity: 0.5; /* make the last star lighter */
 }
+.call-to-action-parent {
+  background: var(--main-color);
+  color: var(--white-color);
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+  height: 160px;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.call-to-action-parent span {
+  width: 690px;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  color: #fff;
+  text-align: left;
+}
+.call-to-action-parent a {
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0px 3px 7.7px #bdfebd;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  color: #00ab00;
+}
+.call-to-action-parent a:hover {
+  background: var(--hover-color);
+}
+/* Brands Partner */
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5rem;
+  padding-block: 3rem;
+}
+.partners h2 {
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  display: inline-block;
+  font-family: "DM Sans";
+  color: #424242;
+}
+.brand-image {
+  display: flex;
+  gap: 3rem;
+}
+/* Faq Dropdown */
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  display: flex;
+  align-items: center;
+  padding-block: 10rem;
+}
+.faq-parent,
+summary,
+details ul li {
+  max-width: 100%;
+}
+.faq-parent b {
+  width: 638px;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  color: #424242 !important;
+}
+.side-faq-image img {
+  width: 700px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 2px dashed #4d4d4d;
+}
+summary .chevron {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+/* Rotate when open (for details) */
+details[open] .chevron {
+  transform: rotate(180deg);
+}
+summary {
+  list-style: none; /* removes marker in Firefox */
+  cursor: pointer;
+}
+/* Chrome, Safari, Edge */
+summary::-webkit-details-marker {
+  display: none;
+}
+/* Firefox */
+summary::marker {
+  display: none;
+}
+details ul li {
+  width: 548px;
+  list-style: none;
+}
+summary {
+  background: var(--white-color);
+  padding: 20px;
+  width: 638px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+summary span {
+  font-size: 24px;
+  letter-spacing: -0.03em;
+  line-height: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+  display: inline-block;
+}
 /* ===== Footer Styling ===== */
 .footer {
   max-width: 100%;
@@ -658,6 +642,9 @@ nav a:hover {
   gap: 1rem;
   padding: 3rem 2rem;
   text-decoration: none;
+  color: var(--black-color);
+  font-size: 20px;
+  font-weight: 700;
 }
 .chevron-right {
   background: #99fcaf;
@@ -792,6 +779,25 @@ input::placeholder {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 1114px) {
+  .protect-family__text{
+   margin: 5px;
+  }
+  .protects-your-family-container{
+    font-size: 50px;
+  }
+  .benefit-of-medcheck {
+  height: ;
+  background-size: cover;
+}
+  .easily-verify-the{
+    padding-block: 1rem;
+  }
+  .more-than-25000-user-trust-me-parent {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .nav-btn,
   .dropdown-2,
@@ -801,18 +807,70 @@ input::placeholder {
   .hamburger {
     display: block;
   }
+  .main-section {
+    width: 95%;
+    margin: 0 auto;
+  }
   .first-image {
     display: none;
   }
   .productVerify__container {
     height: 100%;
   }
+  .card{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .benefit-of-medcheck {
+    background: none;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding-block: 2rem;
+  }
+  .benefit-header {
+    font-size: 20px;
+  }
+  .benefit-text {
+    margin: 0 auto;
+  }
+  .benefit-text h2,
+  .benefit-text p {
+    text-align: center;
+  }
+  .faq-container{
+    padding-block: 3rem;
+  }
+  .side-faq-image {
+    display: none;
+  }
+  summary{
+    width: 95%;
+  }
+  .call-to-action-parent{
+    margin-bottom: 2rem;
+  }
+  .call-to-action-parent{
+    flex-direction: column;
+  }
+  .call-to-action-parent span{
+    font-size: 20px;
+    height: 96px;
+    width: 313px;
+    line-height: normal;
+    text-align: center;
+  }
+  .call-to-action-parent a{
+    width: 197px;
+    height: 64px;
+    white-space: nowrap;
+    text-align: center;
+  }
   .footer-links {
     width: 90%;
     margin: 0 auto;
     gap: 2rem;
   }
-
   .divider {
     display: none;
   }
@@ -857,6 +915,12 @@ input::placeholder {
   }
 }
 @media (max-width: 480px) {
+  .family-image {
+    display: none;
+  }
+  .testimonial-container {
+    height: 100%;
+  }
   .container {
     margin: 0 auto;
     padding-block: 0rem;
@@ -868,11 +932,80 @@ input::placeholder {
     display: block; /* show placeholders */
     margin: 0 auto;
   }
+  .easily-verify-the {
+    width: 335px;
+    font-size: 24px;
+  }
+  .btc-big-parent {
+    gap: 3rem;
+    margin: 10px;
+  }
+  .verify-product,
+  .report-product {
+    width: 154px;
+    height: 44px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  .more-than-25000-container {
+    font-size: 20px;
+    text-align: left;
+    margin-right: 7rem;
+  }
+  .logo-parent img {
+    width: 75px;
+  }
+  .benefit-of-medcheck {
+    background: none;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    padding-block: 2rem;
+  }
+  .benefit-header {
+    font-size: 20px;
+  }
+  .benefit-text {
+    margin: 0 auto;
+  }
+  .benefit-text h2,
+  .benefit-text p {
+    text-align: center;
+  }
+  .partners {
+    display: none;
+  }
+  .frequently-asked-questions{
+    background: var(--main-color);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    color: var(--white-color);
+  }
+  .question-mark{
+    display: none;
+  }
   .what-we-do {
     letter-spacing: -0.03em;
     line-height: 32px;
     color: #4d4d4d;
     margin: 0 auto;
+  }
+  .what-we-do p{
+    width: 335px;
+  }
+  .protects-your-family-container {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .easily-verify-the {
+    width: 335px;
+  }
+  .our-mission {
+    display: none;
   }
   .logo {
     padding: 2rem 0rem;

@@ -1,124 +1,133 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="./awareness.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=SF Pro:wght@400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">
-        <div class="logo-parent" id="frameContainer">
-          <img class="logo-icon" alt="" src="../images/logo.svg"/>
-          <span class="medcheck">Medcheck</span>
-        </div>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="../images/logo (1).svg"/>
+    <link rel="stylesheet" href="../awareness/awareness.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Mobile Awareness</title>
+</head>
+<body>
+  <div class="awareness">
       <nav>
-        <button class="nav-btn"><a href="../homepage/homepage.html">Home</a></button>
-        <button class="nav-btn"><a href="#">Our Services</a></button>
-        <button class="nav-btn"><a href="#">More</a></button>
-      </nav>
-      <div class="nav2">
-        <!-- bell icon -->
-        <div class="dropdown" id="dropdown">
-          <img
-            class="group-child-1"
-            alt=""
-            src="../images/notification-2-fill.svg"
-          />
-          <img src="../images/Ellipse 8.svg" alt="" />
-          <div class="notification">
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" id="dropdrop" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-          </div>
+        <div class="logo">
+            <img src="../images/logo (1).svg" alt="MedChecklogo">
+            <p>MedCheck</p>
         </div>
-        <img class="group-item" src="images/Ellipse 1.svg" alt="" />
-        <div class="dropdown-2">
-          <img
-            class="group-inner"
-            alt=""
-            src="images/expand-up-down-line.svg"
-            id="frameIcon1 profilePic"
+        <div class="more">
+            <ul>
+                <li><a href="../homepage/homepage.html">Home</a></li>
+                <li class="head"><a href="#">Our Service</a>
+                  <div class="dropdown-i"> 
+                <a href="../verify-profuct.html">Verify product</a>
+                <a href="../report-a-product.html">Report Product</a>
+                <a href="../awareness/awareness.html">Awareness</a>
+                <a href="#" id="logloglog">Logout</a>
+            </div>
+                </li>
+                <li class="head"><a href="#">More</a>
+                <div class="dropdown-i"> 
+                <a href="../testimonials.html">Testimonies</a>
+                <a href="../our-team.html">Our Teams</a>
+                <a href="../Faq.html">FAQS</a>
+                <a href="../history/history.html">History</a>
+                <a href="../about-us.html">About us</a>
+                <a href="../contact-us/contact-us.html">Contact Us</a>
+            </div>
+                </li>
+            </ul>
+        </div>
+        <div class="icon">
+            <div class="notification">
+            <img src="../images/Frame 161.svg" alt="notification-icon" class="notify" id="dropdrop">
+            <div class="dropdown">
+                <div class="defaultchild">
+                    <div>
+                    <img src="../images/small-woman.svg" alt="">
+                    <p class="miss">Miss Jennifer <span>view</span></p> 
+                    </div>
+                    <p class="fake">Fake Product everywhere</p>
+                    <span>20m ago</span>
+                </div>
+                <div class="defaultchild">
+                    <div>
+                    <img src="../images/small-woman.svg" alt="">
+                    <p class="miss">Miss Jennifer <span>view</span></p> 
+                    </div>
+                    <p class="fake">Fake Product everywhere</p>
+                    <span>20m ago</span>
+                </div>
+                <div class="defaultchild">
+                    <div>
+                    <img src="../images/small-woman.svg" alt="">
+                    <p class="miss">Miss Jennifer <span>view</span></p> 
+                    </div>
+                    <p class="fake">Fake Product everywhere</p>
+                    <span>20m ago</span>
+                </div>
+                <div class="defaultchild">
+                    <div>
+                    <img src="../images/small-woman.svg" alt="">
+                    <p class="miss">Miss Jennifer <span>view</span></p> 
+                    </div>
+                    <p class="fake">Fake Product everywhere</p>
+                    <span>20m ago</span>
+                </div>
+                <div class="defaultchild">
+                    <div>
+                    <img src="../images/small-woman.svg" alt="">
+                    <p class="miss">Miss Jennifer <span>view</span></p> 
+                    </div>
+                    <p class="fake">Fake Product everywhere</p>
+                    <span>20m ago</span>
+                </div>
+                
+            </div>
+            </div>
 
-          />
-          <div class="dropdown-content">
-            <div class="link">
-              <a href="../profile/profile.html">Profile</a>
+            <img src="../images/small-man.svg" class="anime" alt="" id="profilePic">
+
+            <div class="menuicon">
+            <img src="../images/menu-line.svg" alt="menu" class="menui">
+
+            <div class="options">
+                <div class="menu">
+                    <a href="../verify-profuct.html">Verify Product</a>
+                    <a href="../report-a-product.html">Report Product</a>
+                    <a href="../awareness/awareness.html">Awareness</a>
+                    <a href="../profile/profile.html">Profile</a>
+                    <a href="../history/history.html">History</a>
+                    <a href="../community-gist/community-gist.html">Community</a>
+                    <a href="../testimonials.html">Testimonies</a>
+                    <a href="../our-team.html">Our Team</a>
+                    <a href="../about-us.html">About Us</a>
+                    <a href="../contact-us/contact-us.html">Contact Us</a>
+                    <a href="#" id="logloglog">Logout</a>
+                </div>
             </div>
-            <div class="link">
-              <a href="../history/history.html">History</a>
             </div>
-            <div class="link"><a href="../logout/logout.html" id="logloglog">Logout</a></div>
-          </div>
+
+            <div class="expand">
+            <img src="../images/expand-up-down-line.svg" alt="expand" class="xpand">
+
+            <div class="dropdowni">
+                <a href="../profile/profile.html">Profile</a>
+                <a href="../history/history.html">History</a>
+                <a href="#" id="logloglog">Logout</a>
+            </div>
+            </div>
         </div>
-        <div class="hamburger">
-          <img src="images/menu-line.svg" alt="" />
-          <!-- <i class="fa-solid fa-bars fa-2xl" style="color: #000000"></i> -->
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <!-- Awareness Page -->
-        <div class="awareness-page-child">
-          <div class="slide">
-            <div class="awareness-parent-1 one">
-              <img alt="" src="images/cream.png" />
-              <div class="awareness-parent">
+    </nav>
+
+
+    <section>
+    <div class="center">
+             <!-- Awareness -->
+    <div class="awareness-page-child">
+      <div class="awareness-parent-1">
+        <img src="../images/cream.png" alt="">
+       <div class="awareness-parent">
                 <h2 class="awareness">Awareness</h2>
                 <div class="that-cream-that">
                   That Cream, That Drink, That Pill — Could Be Fake
@@ -128,9 +137,10 @@
                   worth it.
                 </div>
               </div>
-            </div>
-            <div class="awareness-parent-1 two">
-              <img alt="" src="images/cream.png" />
+             </div>
+
+     <div class="awareness-parent-2">
+              <img alt="" src="../images/synthetic-drug-1.png" />
               <div class="awareness-parent">
                 <h2 class="awareness">Awareness</h2>
                 <div class="that-cream-that">Don't Guess What You Swallow</div>
@@ -139,9 +149,10 @@
                   keeps you safe
                 </div>
               </div>
-            </div>
-            <div class="awareness-parent-1 three">
-              <img alt="" src="images/cream.png" />
+      </div>
+
+       <div class="awareness-parent-3">
+              <img alt="" src="../images/vidoe.png" />
               <div class="awareness-parent">
                 <h2 class="awareness">Awareness</h2>
                 <div class="that-cream-that">Fake Drugs Are Everywhere</div>
@@ -151,117 +162,261 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="in-todays-market-the-circula-parent">
-            <div class="in-todays-market-container">
-              <b class="welcome">Welcome </b>
-              <p class="police">
+
+    </div>
+
+<!-- welcome section -->
+    <div class="welcome">
+      <b>Welcome</b>
+      <p class="police">
                 In today’s market, the circulation of counterfeit products
                 especially in the health and beauty industries has become an
                 alarming problem.
-              </p>
-              <p class="police">
+      </p>
+
+      <p class="">
                 From expired medications to fake cosmetics, these products pose
                 serious risks to consumer health and safety.
-              </p>
-            </div>
-          </div>
-          <div class="recently-added-products-parent">
+      </p>
 
+    </div>
+  
+    <!-- added products -->
+<main>
+  <h3>Recently Added Proucts</h3>
+  <div class="luminosa" id="lum">
+    <div class="lumi-i">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Luminosa Beauty</h5>
+      <p class="flag">⚠️Flagged</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
-            <!-- Approved Products -->
-            <b class="recently-added-products">Recently Added Products</b>
+     <div class="lumi-ii">
+      <img src="../images/Rectangle 13 (1).png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+  </div>
 
-            <div id="recentPro" class="product-scroll">
-              <!-- Products will be dynamically added here -->
-            </div>
+   <!-- only display on mobile -->
+  <div class="luminosa" id="lumin">
+    <div class="lumi-i">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Luminosa Beauty</h5>
+      <p class="flag">⚠️Flagged</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+    
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+  </div>
 
+  <h3>Products Recalls From NAFDAC &amp; FDA</h3>
+  <div class="luminosa" id="lum">
+   <div class="lumi-i">
+      <img src="../images/amoxivue.png" alt="">
+      <div class="beauty">
+      <h5>Amoxivue (Amoxicillin)</h5>
+      <p class="Recalle">🧪 Recalle</p>
+      <p class="cos">Drugs</p>
+      <p class="date">July 9,2025</p>
+      </div>
+   </div>
+  
+    <div class="lumi-ii">
+      <img src="../images/folic-acid.png" alt="">
+      <div class="beauty">
+      <h5>Juhel Folic Acid</h5>
+      <p class="Recall">🧪 Recalle</p>
+      <p class="cos">Drugs</p>
+      <p class="date">May 27,2025</p>
+      </div>
+   </div>
 
-            <b class="recently-added-products"
-              >Products Recalls from NAFDAC & FDA</b
-            >
-            <div class="frame-parent7">
-              <div class="rectangle-container">
-                <img class="frame-child4" alt="" src="images/amoxivue.png" />
-                <div class="luminosa-beauty-parent">
-                  <b class="luminosa-beauty">Amoxivue (Amoxicillin)</b>
-                  <div class="badge-products3">
-                    <b class="flagged">🧪 Recalled</b>
-                  </div>
-                  <div class="cosmetic">Drugs</div>
-                  <div class="cosmetic">July 9, 2025</div>
-                </div>
-              </div>
-              <div class="rectangle-container">
-                <img class="frame-child4" alt="" src="images/folic-acid.png" />
-                <div class="luminosa-beauty-parent">
-                  <b class="luminosa-beauty">Juhel Folic Acid tablets</b>
-                  <div class="badge-products3">
-                    <b class="flagged">🧪 Recalled</b>
-                  </div>
-                  <div class="cosmetic">Drugs</div>
-                  <div class="cosmetic">May 27, 2025</div>
-                </div>
-              </div>
-              <div class="rectangle-container">
-                <img class="original" alt="" src="images/zydus.png" />
-                <div class="luminosa-beauty-parent">
-                  <b class="luminosa-beauty">Zydus Pharmaceuticals</b>
-                  <div class="badge-products3">
-                    <b class="flagged">🧪 Recalled</b>
-                  </div>
-                  <div class="cosmetic">Drugs</div>
-                  <div class="cosmetic">April 29, 2025</div>
-                </div>
-              </div>
-            </div>
+  </div>
+  <!-- only display on mobile -->
+  <div class="luminosa" id="lumin">
+    <div class="lumi-i">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Luminosa Beauty</h5>
+      <p class="flag">⚠️Flagged</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
-            <!-- Approved Products -->
-            <b class="recently-added-products">Approved Products</b>
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
-            <div id="approvedPro" class="product-scroll">
-              <!-- Products will be dynamically added here -->
-            </div>
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+  </div>
 
+  <h3>Approved Products</h3>
+  <div class="luminosa" id="lum">
+   <div class="lumi-i">
+      <img src="../images/Rectangle 14-8.png" alt="">
+      <div class="beauty">
+      <h5>Anosan Aqua</h5>
+      <p class="verif">✅ Verified</p>
+      <p class="cos">Drugs</p>
+      <p class="date">2022-11-23</p>
+      </div>
+   </div>
+  
+    <div class="lumi-ii">
+      <img src="../images/Rectangle 14-4.png" alt="">
+      <div class="beauty">
+      <h5>3-Xon Cream</h5>
+      <p class="verif">✅ Verified</p>
+      <p class="cos">Drugs</p>
+      <p class="date">2024-09-25</p>
+      </div>
+   </div>
+  </div>
+  <!-- only display on mobile -->
+  <div class="luminosa" id="lumin">
+    
+    <div class="lumi-i">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Luminosa Beauty</h5>
+      <p class="flag">⚠️Flagged</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
-            <!-- Fake/Unsafe Products -->
-            <b class="harmful-fake-unregistered"
-              >Harmful, Fake, Unregistered, Unsafe Products</b
-            >
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+    
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+  </div>
 
-            <div id="fakePro" class="product-scroll">
-              <!-- Products will be dynamically added here -->
-            </div>
+  <h3>Harmful,Fake,Unregistered,Unsafe Products</h3>
+  <div class="luminosa" id="lum">
+    <div class="lumi-i">
+      <img src="../images/Rectangle 14-5.png" alt="">
+      <div class="beauty">
+      <h5>Herceptin (Trastuzumab)</h5>
+      <p class="feit">⚠️ Counterfeit</p>
+      <p class="cos">Drugs</p>
+      <p class="date">2022-11-23</p>
+      </div>
+   </div>
+  
+    <div class="lumi-ii">
+      <img src="../images/Rectangle 14-2.png" alt="">
+      <div class="beauty">
+      <h5>3-Xon Cream</h5>
+      <p class="feit">⚠️ Counterfeit</p>
+      <p class="cos">Drugs</p>
+      <p class="date">2024-11-20</p>
+      </div>
+   </div>
+  </div>
+      <!-- only display on mobile -->
+  <div class="luminosa" id="lumin">
+    <div class="lumi-i">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Luminosa Beauty</h5>
+      <p class="flag">⚠️Flagged</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
 
-            
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+    
+     <div class="lumi-ii" id="lumin">
+      <img src="../images/Rectangle 13-1.png" alt="">
+      <div class="beauty">
+      <h5>Faux Glow</h5>
+      <p class="fake">❌Fake</p>
+      <p class="cos">Cosmetic</p>
+      <p class="date">23/072025</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="view"><a href="../All-fake-products/all-fake-products.html" target="_blank">View all product listed<i class="fas fa-arrow-right"></i></a></div>
+</main>
 
-
-
-            <div class="view-all-product" href="#"></div>
-            <a href="../all-fake-products/all-fake-products.html"
-              >View all product listed</a
-            >
-            <i class="fa-solid fa-arrow-right" style="color: #00c503"></i>
-          </div>
-          <!-- <div class="view-all-product" id="viewAllProduct"></div> -->
-          <!-- </div> -->
-          <p class="latest-news">Latest News & Alerts</p>
-          <div class="latest-news-container">
-            <div class="dropdown-container">
-              <div class="dropdown-item">
-                <button class="dropdown-btn">
-                  How to Spot Fake Drugs & Products
-                  <span class="arrow"
-                    ><i
-                      class="fa-solid fa-chevron-down"
-                      style="color: #000000"
-                    ></i
-                  ></span>
-                </button>
-                <div class="spot-fake-drug-content">
-                  <div class="faq-dropdown">
+<!-- Latest News -->
+<article>
+   <h3>Latest News & Alerts</h3>
+   <div class="latest">
+    <div class="products">
+      <input type="checkbox" name="" id="toggle">
+      <label for="toggle" class="informed">How to Spot Fake Drugs & Products<span class="arrow"><i class="fa-solid fa-chevron-down" style="color: #000000"></i></span></label>
+        <div class="faq-dropdown">
                     <p>
                       Knowing what to look for can protect you and your loved
                       ones. Here are simple ways to spot counterfeit or harmful
@@ -311,21 +466,13 @@
                         unverified online shops
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <button class="dropdown-btn">
-                  Stay informed with real-time safety alerts, products...
-                  <span class="arrow"
-                    ><i
-                      class="fa-solid fa-chevron-down"
-                      style="color: #000000"
-                    ></i
-                  ></span>
-                </button>
-                <div class="stay-informed">
-                  <div class="faq-dropdown">
+        </div>
+    </div>
+
+    <div class="products">
+      <input type="checkbox" name="" id="toggle-i">
+      <label for="toggle-i" class="informed">Stay informed with real-time safety alerts, products...<span class="arrow"><i class="fa-solid fa-chevron-down" style="color: #000000"></i></span></label>
+       <div class="faq-dropdown">
                     <p>Recent product Recall</p>
                     <p>Date: July 12, 2025</p>
                     <span>Product: "painaaway Forte Tablets"</span>
@@ -334,59 +481,37 @@
                       Avoid using Batch #PF2023A.
                     </p>
                     <p>Action: Return to pharmacy or report on MedCheck</p>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <button class="dropdown-btn">
-                  Safety Tip of the Week...
-                  <span class="arrow"
-                    ><i
-                      class="fa-solid fa-chevron-down"
-                      style="color: #000000"
-                    ></i
-                  ></span>
-                </button>
-                <div class="safety-tip">
-                  <div class="faq-dropdown">
-                    <p>
-                      Always inspect seals and tamper-proof labels. A broken
-                      seal = a broken trust
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <button class="dropdown-btn">
-                  Fake Baby Formula Ring Busted in Lagos...
-                  <span class="arrow"
-                    ><i
-                      class="fa-solid fa-chevron-down"
-                      style="color: #000000"
-                    ></i
-                  ></span>
-                </button>
-                <div class="fake-baby-formula">
-                  <div class="faq-dropdown">
-                    Authorities interception 5,000 units of counterfeits baby
-                    formula with no nutritional value. Always verify with
-                    MedCheck before purchase.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section class="table">
-            <h2 id="caption" class="sr-only">Verified Stores and Locations</h2>
-            <table>
-              <th>
-                <tr>
+      </div>
+    </div>
+
+    <div class="products">
+      <input type="checkbox" name="" id="toggle-ii">
+      <label for="toggle-ii" class="informed">Safety Tip of the Week<span class="arrow"><i class="fa-solid fa-chevron-down"style="color: #000000"></i></span></label>
+      <div class="faq-dropdown">
+        <p>Always inspect seals and tamper-proof labels. A broken seal = a broken trust</p>
+      </div>
+    </div>
+
+    <div class="products">
+      <input type="checkbox" name="" id="toggle-iii">
+      <label for="toggle-iii" class="informed">Fake Baby Formula Ring Busted in Lagos<span class="arrow"><i class="fa-solid fa-chevron-down"style="color: #000000"></i></span></p></label>
+       <div class="faq-dropdown">
+                   <p> Authorities interception 5,000 units of counterfeits baby formula with no nutritional value. Always verify with MedCheck before purchase.</p>
+      </div>
+    </div>
+
+   </div>
+
+   <h2>Verified Stores and Locations</h2>
+   <table class="tablei">
+              <tr>
+                <th>
                   Pharmacy Name
-                </tr>
-                <tr>
+                </th>
+                <th>
                   Location
-                </tr>
-              </th>
+                </th>
+              </tr>
               <tr>
                 <td>Alpha Pharmacy &amp; Stores Limited</td>
                 <td>Lagos, Ikeja</td>
@@ -415,539 +540,290 @@
                 <td>Skylark Pharmacy</td>
                 <td>Wuse, Abuja</td>
               </tr>
-            </table>
-          </section>
-        </div>
-        <!-- Community Gist -->
-        <div class="post-1-parent">
-          <b class="community-gist">Community Gist</b>
-          <div class="group-parent">
-            <div class="ellipse-parent">
-              <img class="group-child" alt="" src="images/small-man.svg" />
-              <div class="mr-abiodun-parent">
-                <div class="mr-abiodun">Mr Abiodun</div>
-                <div class="lagos-nigeria">Lagos, Nigeria.</div>
-              </div>
-            </div>
-            <img class="frame-child" alt="" src="images/plus.svg" />
-          </div>
-          <div class="post-1">
-            <div class="post-1-inner">
-              <div class="ellipse-group">
-                <img class="frame-item" alt="" src="images/small-man.svg" />
-                <div class="frame-wrapper">
-                  <div class="mr-abiodun-group">
-                    <div class="miss-jennier">Mr Abiodun</div>
-                    <div class="h">4h</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="all-comment">
-              <div class="title">
-                <div class="police-adopt-early-container">
-                  <p class="police-adopt-early">
-                    Police adopt early warning kit for dangerous drugs.
-                  </p>
-                  <p class="police-adopt-early">&nbsp;</p>
-                  <p class="police-adopt-early">
-                    Devon and Cornwall Police use handheld devices to detect
-                    dangerous synthetic drugs in real time.
-                  </p>
-                </div>
-              </div>
-              <img
-                class="picvidoe-icon"
-                alt=""
-                src="images/synthetic-drug-1.png"
-              />
-              <div class="views-bar">
-                <div class="comments-parent">
-                  <div class="comments">320 comments</div>
-                  <div class="comments">95.5k views</div>
-                </div>
-                <div class="k-parent">
-                  <div class="k">1.1k</div>
-                  <div class="component-3">
-                    <img class="clip-path-group" alt="" src="images/like.svg" />
-                  </div>
-                </div>
-              </div>
-              <div class="comments1">
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/jenny.svg"
-                  />
-                  <div class="frame-group">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                    </div>
-                    <div class="i-have-same-experience-too-it-wrapper">
-                      <div class="i-have-same">
-                        I have same experience too, it very harmful to the body.
-                        people should stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-woman.svg"
-                  />
-                  <div class="frame-container">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Fortune</div>
-                    </div>
-                    <div class="i-experienced-something-simila-wrapper">
-                      <div class="i-experienced-something">
-                        I experienced something similar and it's quite harmful
-                        to one's body. Individuals should cease buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-man.svg"
-                  />
-                  <div class="frame-div">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Abidoun Adegbola</div>
-                    </div>
-                    <div class="my-experience-is-similar-its-wrapper">
-                      <div class="i-experienced-something">
-                        My experience is similar, it's really detrimental to the
-                        body. everyone must stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="l1-parent">
-              <div class="write-comments">
-                <textarea
-                  name="comment"
-                  id="comment"
-                  placeholder="I Write comments..."
-                ></textarea>
-                <img
-                  class="vuesaxlinearsend-icon"
-                  alt=""
-                  src="images/send.svg"
-                />
-              </div>
+   </table>
+
+    <table class="table-ii">
+      <tr><th>Alpha Pharmacy & Stores Limited</th></tr>
+        <tr><td>Lagos, Ikeja</td></tr>
+
+      <tr><th>CMargs Pharmacy & Wellmart</th></tr>
+        <tr><td>Lokogoma, Abuja</td></tr>
+
+      <tr> <th>Medplus Pharmacy (chain)</th></tr>
+        <tr><td>Herbert Macaulay Way, Yaba, Lagos</td></tr>
+
+      <tr><th>Help Pharmacy Lagos</th></tr>
+        <tr><td>Ago Palace Way, Okota, Lagos</td></tr>
+
+      <tr><th>Medplus Pharmacy – The Palms, Lekki</th></tr>
+        <tr><td>Lekki, Lagos</td></tr>
+
+      <tr><th>Naza Pharmacy / Life Link / others</th></tr>
+      <tr><td>Gwagwalada, Abuja</td></tr>
+
+      <tr><th>Skylark Pharmacy</th></tr>
+      <tr><td>Wuse, Abuja</td></tr>
+    </table>
+</article>
+    </div>
+
+       <!-- Community Gist -->
+    <div class="Community-Gist">
+      <h1> Community Gist</h1>
+       
+  <div class="Gists">
+        <div class="mister-ab">
+          <img src="../images/small-man.svg" alt="">
+          <div class="name">
+            <p>Mr Abiodun</p>
+            <div class="location">
+              <p>Lagos, Nigeria</p>
             </div>
           </div>
-          <div class="post-2">
-            <div class="post-1-inner">
-              <div class="ellipse-group">
-                <img class="frame-item" alt="" src="images/small-woman.svg" />
-                <div class="frame-wrapper">
-                  <div class="mr-abiodun-group">
-                    <div class="miss-jennier">Miss Fortune</div>
-                    <div class="h">4h</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="all-comment">
-              <div class="title">
-                <div class="police-adopt-early-container">
-                  <p class="police-adopt-early">
-                    Police adopt early warning kit for dangerous drugs
-                  </p>
-                  <p class="police-adopt-early">&nbsp;</p>
-                  <p class="police-adopt-early">
-                    Devon and Cornwall Police use handheld devices to detect
-                    dangerous synthetic drugs in real time.
-                  </p>
-                </div>
-              </div>
-              <img class="picvidoe-icon" alt="" src="images/vidoe-1.png" />
-              <div class="views-bar">
-                <div class="comments-parent">
-                  <div class="comments">320 comments</div>
-                  <div class="comments">95.5k views</div>
-                </div>
-                <div class="k-parent">
-                  <div class="k">1.1k</div>
-                  <div class="component-3">
-                    <img class="clip-path-group" alt="" src="images/like.svg" />
-                  </div>
-                </div>
-              </div>
-              <div class="comments1">
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/jenny.svg"
-                  />
-                  <div class="frame-group">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                    </div>
-                    <div class="i-have-same-experience-too-it-wrapper">
-                      <div class="i-have-same">
-                        I have same experience too, it very harmful to the body.
-                        people should stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-woman.svg"
-                  />
-                  <div class="frame-container">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Fortune</div>
-                    </div>
-                    <div class="i-experienced-something-simila-wrapper">
-                      <div class="i-experienced-something">
-                        I experienced something similar and it's quite harmful
-                        to one's body. Individuals should cease buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-man.svg"
-                  />
-                  <div class="frame-div">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Abidoun Adegbola</div>
-                    </div>
-                    <div class="my-experience-is-similar-its-wrapper">
-                      <div class="i-experienced-something">
-                        My experience is similar, it's really detrimental to the
-                        body. everyone must stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="l1-parent">
-              <div class="write-comments">
-                <textarea
-                  name="comment"
-                  id="comment"
-                  placeholder="I Write comments..."
-                ></textarea>
-                <img
-                  class="vuesaxlinearsend-icon"
-                  alt=""
-                  src="images/send.svg"
-                />
-              </div>
+          <span class="plus"><i class="fas fa-plus"></i>
+</span>
+        </div>
+
+        <div class="post-1">
+          <div class="post-1-linear">
+            <img src="../images/small-man.svg" alt="">
+          <div class="name">
+            <p>Mr Abiodun</p>
+            <div class="location">
+              <p>4h</p>
             </div>
           </div>
-          <div class="post-2">
-            <div class="post-1-inner">
-              <div class="ellipse-group">
-                <img class="frame-item" alt="" src="images/jennier.svg" />
-                <div class="frame-wrapper">
-                  <div class="mr-abiodun-group">
-                    <div class="miss-jennier">Miss Jennier</div>
-                    <div class="h">4h</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="all-comment">
-              <div class="title">
-                <div class="police-adopt-early-container">
-                  <p class="police-adopt-early">
-                    Police adopt early warning kit for dangerous drugs
-                  </p>
-                  <p class="police-adopt-early">&nbsp;</p>
-                  <p class="police-adopt-early">
-                    Devon and Cornwall Police use handheld devices to detect
-                    dangerous synthetic drugs in real time.
-                  </p>
-                </div>
-              </div>
-              <img class="picvidoe-icon" alt="" src="images/vidoe.png" />
+          </div>
+        
+           <div class="police">
+        <p class="adopt">Police adopt early warning kit for dangerous drugs. </p>
+        <p class="devon">Devon and Cornwall Police use handheld devices to detect dangerous synthetic drugs in real time.</p>
+           </div>
 
-              <div class="views-bar">
-                <div class="comments-parent">
-                  <div class="comments">320 comments</div>
-                  <div class="comments">95.5k views</div>
-                </div>
-                <div class="k-parent">
-                  <div class="k">1.1k</div>
-                  <div class="component-3">
-                    <img class="clip-path-group" alt="" src="images/like.svg" />
-                  </div>
-                </div>
-              </div>
-              <div class="comments1">
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/jenny.svg"
-                  />
-                  <div class="frame-group">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                    </div>
-                    <div class="i-have-same-experience-too-it-wrapper">
-                      <div class="i-have-same">
-                        I have same experience too, it very harmful to the body.
-                        people should stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-woman.svg"
-                  />
-                  <div class="frame-container">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Miss Fortune</div>
-                    </div>
-                    <div class="i-experienced-something-simila-wrapper">
-                      <div class="i-experienced-something">
-                        I experienced something similar and it's quite harmful
-                        to one's body. Individuals should cease buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-cards">
-                  <img
-                    class="comment-cards-child"
-                    alt=""
-                    src="images/small-man.svg"
-                  />
-                  <div class="frame-div">
-                    <div class="miss-jennifer-wrapper">
-                      <div class="miss-jennifer">Abidoun Adegbola</div>
-                    </div>
-                    <div class="my-experience-is-similar-its-wrapper">
-                      <div class="i-experienced-something">
-                        My experience is similar, it's really detrimental to the
-                        body. everyone must stop buying it.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+           <div class="tablets">
+            <img src="../images/synthetic-drug-1.png" alt="tablet">
+            <div class="emoji">
+              <span><i class="fas fa-heart" style="font-size:24px; color:red;"></i>1.1k</span>
+              <div class="views">
+             <p class="three-twenty">320 comments</p>
+             <p class="nine-five">95.5k views</p>
               </div>
             </div>
-            <div class="l1-parent">
-              <div class="write-comments">
-                <textarea
-                  name="comment"
-                  id="comment"
-                  placeholder="I Write comments..."
-                ></textarea>
-                <img
-                  class="vuesaxlinearsend-icon"
-                  alt=""
-                  src="images/send.svg"
-                />
+         <!-- review/comment -->
+            <div class="miss-jen">
+              <img src="../images/Ellipse 3.png" alt="">
+              <div class="review">
+                <h6>Miss Jennifer</h6>
+                <p>I have same experience too, it very harmful to the body. people should stop buying it.</p>
               </div>
+            </div>
+            <div class="miss-jen">
+              <img src="../images/Ellipse 2.png" alt="">
+              <div class="reviewi">
+                <h6>Miss Fortune</h6>
+                <p>I experienced something similar and it's quite harmful to one's body.Individuals should cease buying it.</p>
+              </div>
+            </div>
+
+            <!-- write comment -->
+             <div class="write-comment">
+              <textarea name="write" id="" placeholder="I write comment...."></textarea>
+              <button type="submit"><i class="far fa-paper-plane"></i></button>
+             </div>
+           </div>
+
+
+
+
+        </div>
+        <div class="post-1">
+          <div class="post-1-linear">
+            <img src="../images/Ellipse 2.png" alt="">
+          <div class="name">
+            <p>Miss Fortune</p>
+            <div class="location">
+              <p>4h</p>
             </div>
           </div>
+          </div>
+        
+           <div class="police">
+        <p class="adopt">Police adopt early warning kit for dangerous drugs. </p>
+        <p class="devon">Devon and Cornwall Police use handheld devices to detect dangerous synthetic drugs in real time.</p>
+           </div>
+
+           <div class="tablets">
+            <img src="../images/vidoe-1.png" alt="tablet">
+            <div class="emoji">
+              <span><i class="fas fa-heart" style="font-size:24px; color:red;"></i>1.1k</span>
+              <div class="views">
+             <p class="three-twenty">320 comments</p>
+             <p class="nine-five">95.5k views</p>
+              </div>
+            </div>
+         <!-- review/comment -->
+            <div class="miss-jen">
+              <img src="../images/Ellipse 3.png" alt="">
+              <div class="review">
+                <h6>Miss Jennifer</h6>
+                <p>I have same experience too, it very harmful to the body. people should stop buying it.</p>
+              </div>
+            </div>
+            <div class="miss-jen">
+              <img src="../images/Ellipse 2.png" alt="">
+              <div class="reviewi">
+                <h6>Miss Fortune</h6>
+                <p>I experienced something similar and it's quite harmful to one's body.Individuals should cease buying it.</p>
+              </div>
+            </div>
+
+            <!-- write comment -->
+             <div class="write-comment">
+              <textarea name="write" id="" placeholder="I write comment...."></textarea>
+              <button type="submit"><i class="far fa-paper-plane"></i></button>
+             </div>
+           </div>
+
+
+
+
         </div>
-      </div>
-    </main>
-    <aside>
-      <div class="scrolling">
-        <div class="scrolling__track">
-          <div class="scrolling-content">
-            <div class="scrolling-item">
-              <img
-                src="images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"
-                alt="Nafdac-Nigeria"
-              />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Health Assur Ltd Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Arla Food Inc. Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Dano Milk Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Farmcrowdy Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Milo Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Nestle Logo.png" alt="Nestle-logo" />
-            </div>
-            <div class="scrolling-item">
-              <img
-                src="images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"
-                alt="Nafdac-Nigeria"
-              />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Dano Milk Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Milo Logo.png" alt="" />
+        <div class="post-1">
+          <div class="post-1-linear">
+            <img src="../images/Ellipse 2 (1).png" alt="">
+          <div class="name">
+            <p>Miss jennier</p>
+            <div class="location">
+              <p>4h</p>
             </div>
           </div>
-          <div class="scrolling-content">
-            <div class="scrolling-item">
-              <img
-                src="images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"
-                alt="Nafdac-Nigeria"
-              />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Health Assur Ltd Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Arla Food Inc. Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Dano Milk Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Farmcrowdy Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Milo Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Nestle Logo.png" alt="Nestle-logo" />
-            </div>
-            <div class="scrolling-item">
-              <img
-                src="images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"
-                alt="Nafdac-Nigeria"
-              />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Dano Milk Logo.png" alt="" />
-            </div>
-            <div class="scrolling-item">
-              <img src="images/Milo Logo.png" alt="" />
-            </div>
           </div>
-        </div>
-      </div>
-    </aside>
-    <!-- ===== Footer Section ===== -->
-    <footer class="footer">
-      <!-- Logo -->
-      <div class="logo">
-        <img src="images/logo.svg" alt="Medcheck logo" />
-        <b>Medcheck</b>
-      </div>
-      <hr class="divider" />
-      <!-- Footer Links -->
-      <div class="footer-links">
-        <!-- Newsletter -->
-        <div class="newsletter">
-          <p>Subscribe to our</p>
-          <p>Newsletter</p>
-          <div class="input-container">
-            <input type="email" placeholder="Email address" />
-            <button class="btn">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </div>
+        
+           <div class="police">
+        <p class="adopt">Police adopt early warning kit for dangerous drugs. </p>
+        <p class="devon">Devon and Cornwall Police use handheld devices to detect dangerous synthetic drugs in real time.</p>
+           </div>
+
+           <div class="tablets">
+            <img src="../images/vidoe.png" alt="tablet">
+            <div class="emoji">
+              <span><i class="fas fa-heart" style="font-size:24px; color:red;"></i>1.1k</span>
+              <div class="views">
+             <p class="three-twenty">320 comments</p>
+             <p class="nine-five">95.5k views</p>
+              </div>
+            </div>
+         <!-- review/comment -->
+            <div class="miss-jen">
+              <img src="../images/Ellipse 3.png" alt="">
+              <div class="review">
+                <h6>Miss Jennifer</h6>
+                <p>I have same experience too, it very harmful to the body. people should stop buying it.</p>
+              </div>
+            </div>
+            <div class="miss-jen">
+              <img src="../images/Ellipse 2.png" alt="">
+              <div class="reviewi">
+                <h6>Miss Fortune</h6>
+                <p>I experienced something similar and it's quite harmful to one's body.Individuals should cease buying it.</p>
+              </div>
+            </div>
+
+            <!-- write comment -->
+             <div class="write-comment">
+               <textarea name="write" id="" placeholder="I write comment...."></textarea>
+              <button type="submit"><i class="far fa-paper-plane"></i></button>
+             </div>
+           </div>
+
+
+
+
         </div>
 
-        <!-- Services -->
-        <div class="links footer-services">
-          <h4>Services</h4>
-          <ul>
-            <li>
-              <a href="../verify_product/verify_product.html">Verify Product</a>
-            </li>
-            <li>
-              <a href="../report_product/report_product.html">Report Product</a>
-            </li>
-            <li><a href="#">Awareness</a></li>
-            <li><a href="../what_we_do/what_we_do.html">What we Do</a></li>
-          </ul>
-        </div>
 
-        <!-- More -->
-        <div class="links footer-more">
-          <h4>More</h4>
-          <ul>
-            <li><a href="../about_us/about_us.html">About Us</a></li>
-            <li><a href="../our_team/our_team.html">Our Team</a></li>
-            <li>
-              <a href="../testimonials/testimonials.html">Testimonials</a>
-            </li>
-            <li><a href="../faqs/faqs.html">FAQs</a></li>
-          </ul>
-        </div>
-        <!-- Help -->
-        <div class="links footer-help">
-          <h4>Help</h4>
-          <ul>
-            <li><a href="../contact_us/contact__us.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Footer Bottom (legal + socials) -->
-      <div class="footer-bottom">
-        <div class="legal">
-          <a href="../terms_conditions/terms_conditions.html"
-            >Terms & Conditions</a
-          >
-          <a href="../privacy_policy/privacy_policy.html">Privacy Policy</a>
-        </div>
-        <div class="socials">
-          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
-        </div>
-      </div>
-      <!-- Copyright -->
-      <div class="copyright">
-        <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
-      </div>
-    </footer>
 
-    <script>
-      const buttons = document.querySelectorAll(".dropdown-btn");
 
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const content = btn.nextElementSibling;
 
-          if (content.style.display === "block") {
-            content.style.display = "none";
-            btn.classList.remove("open");
-          } else {
-            content.style.display = "block";
-            btn.classList.add("open");
-          }
-        });
-      });
-    </script>
 
-    <script src="awareness.js"></script>
-  </body>
+    </div>
+     
+    </div>
+    </section>
+    <!-- scrolling of images -->
+ <div class="scrolling">
+  <div class="scroll">
+    <img src="../images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"alt="Nafdac-Nigeria"/>
+    <img src="../images/Nestle Logo.png" alt="">
+    <img src="../images/Milo Logo.png" alt="">
+    <img src="../images/Farmcrowdy Logo.png" alt="">
+    <img src="../images/Dano Milk Logo.png" alt="">
+    <img src="../images/Arla Food Inc. Logo.png" alt="">
+    <img src="../images/Health Assur Ltd Logo.png" alt="" />
+    <img src="../images/NB.png" alt="">
+    
+    <img src="../images/NAFDAC NIGERIA_id6HgPDDuO_0 1.png"alt="Nafdac-Nigeria"/>
+    <img src="../images/Nestle Logo.png" alt="">
+    <img src="../images/Milo Logo.png" alt="">
+    <img src="../images/Farmcrowdy Logo.png" alt="">
+    <img src="../images/Dano Milk Logo.png" alt="">
+    <img src="../images/Arla Food Inc. Logo.png" alt="">
+    <img src="../images/Health Assur Ltd Logo.png" alt="" />
+    <img src="../images/NB.png" alt="">
+    </div>
+   </div>
+
+   <footer>
+        <div class="medlogo">
+            <img src="./Asset/medicon.png" alt="">
+            <h3>MedCheck</h3>
+        </div>
+        <div class="explore">
+            <div class="form">
+                <p class="subscribe">Subscribe to our newsletter</p>
+                <div class="mail">
+                    <label for="mail">Email address</label>
+                    <input type="email" name="mail" id="mail">
+                    <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="service">
+                <a href="http://" target="_blank" class="differ">Services</a>
+                <a href="http://" target="_blank" >verify Product</a>
+                <a href="http://" target="_blank">Report Product</a>
+                <a href="http://" target="_blank">Awereness</a>
+                <a href="http://" target="_blank">What we Do</a>
+            </div>
+            <div class="more">
+                <a href="http://" target="_blank" class="differ">More</a>
+                <a href="http://" target="_blank">About Us</a>
+                <a href="./index.html">Our Team</a>
+                <a href="http://" target="_blank">Testimonies</a>
+                <a href="http://" target="_blank">FAQS</a>
+            </div>
+            <div class="help">
+                <a href="http://" target="_blank" class="differ">Help</a>
+                <a href="http://" target="_blank">Contact us</a>
+            </div>
+        </div>
+        <div class="terms">
+           <div class="condition">
+            <a href="">Terms &amp;Conditions</a>
+            <a href="" class="privacy">Privacy Policy</a>
+           </div>
+           <div class="social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+           </div>
+        </div>
+        <div class="rights">
+            <p>&copy;2025 MedCheck. All Rights Reserved.</p>
+        </div>
+   </footer>
+  </div>
+
+  <script src="awareness.js"></script>
+
+</body>
 </html>

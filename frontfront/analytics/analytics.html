@@ -1,560 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="MedCheck Analytics Dashboard - Comprehensive insights into product verifications and reports">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MedCheck Analytics Dashboard - Comprehensive insights into product verifications and reports"
+    />
     <title>MedCheck - Analytics Dashboard</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;500;600;700&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;500;600;700&display=swap"
+    />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./analytics.css">
-</head>
-<body>
+    <link rel="stylesheet" href="analytics.css" />
+  </head>
+  <body>
     <!-- Main Analytics Page Container -->
     <main class="analytics-dashboard" role="main">
+      <!-- Header Section -->
+      <header class="main-header">
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+          <div class="logo-section">
+            <img
+              src="logo.svg"
+              alt="MedCheck Logo"
+              class="logo-icon"
+              loading="lazy"
+            />
+            <div class="brand-name">Medcheck</div>
+          </div>
+          <div class="header-actions">
+            <!-- Notification Toggle -->
+            <label
+              for="notification-toggle"
+              class="notification-btn"
+              aria-label="Toggle Notifications"
+            >
+              <img src="Frame 161.svg" alt="Notifications" loading="lazy" />
+            </label>
+            <!-- Menu Toggle -->
+            <label for="menu-toggle" class="menu-btn" aria-label="Toggle Menu">
+              <img src="menu-line.svg" alt="Menu" loading="lazy" />
+            </label>
+          </div>
+        </div>
 
-        <!-- Header Section -->
-        <header class="main-header">
-            <!-- Mobile Header -->
-            <div class="mobile-header">
-                <div class="logo-section">
-                    <img src="logo.svg" alt="MedCheck Logo" class="logo-icon" loading="lazy">
-                    <div class="brand-name">Medcheck</div>
-                </div>
-                <div class="header-actions">
-                    <!-- Notification Toggle -->
-                    <label for="notification-toggle" class="notification-btn" aria-label="Toggle Notifications">
-                        <img src="Frame 161.svg" alt="Notifications" loading="lazy">
-                    </label>
-                    <!-- Menu Toggle -->
-                    <label for="menu-toggle" class="menu-btn" aria-label="Toggle Menu">
-                        <img src="menu-line.svg" alt="Menu" loading="lazy">
-                    </label>
-                </div>
-            </div>
+        <!-- Desktop Header -->
+        <div class="desktop-header desktop-only">
+          <div class="logo-section">
+            <img
+              src="logo.svg"
+              alt="MedCheck Logo"
+              class="logo-icon"
+              loading="lazy"
+            />
+            <h1 class="brand-name">Medcheck</h1>
+          </div>
+        </div>
+      </header>
 
-            <!-- Desktop Header -->
-            <div class="desktop-header desktop-only">
-                <div class="logo-section">
-                    <img src="logo.svg" alt="MedCheck Logo" class="logo-icon" loading="lazy">
-                    <h1 class="brand-name">Medcheck</h1>
-                </div>
-            </div>
-        </header>
-
-        <section class="inner-main">
-
-            <!-- Page Title Section -->
-            <section class="page-title-section">
-                <h1 class="page-title">Analytics</h1>
-                <p class="page-subtitle">Comprehensive insights into product verifications and reports</p>
-            </section>
-
-            <!-- Key Metrics Section -->
-            <section class="metrics-section" aria-label="Key Performance Metrics">
-                <div class="metrics-grid">
-                    <!-- Total Verifications Card -->
-                    <article class="metric-card">
-                        <div class="metric-content">
-                            <h2 class="metric-title">
-                                Total<br>
-                                Verifications
-                            </h2>
-                            <div class="metric-data">
-                                <div class="metric-value">1,248</div>
-                                <div class="metric-change positive">
-                                    +12.5% vs previous<br>
-                                    period
-                                </div>
-                            </div>
-                        </div>
-                        <img src="verified-badge-line.svg" alt="Verified Badge" class="metric-icon" loading="lazy">
-                    </article>
-
-                    <!-- Counterfeit Products Card -->
-                    <article class="metric-card">
-                        <div class="metric-content">
-                            <h2 class="metric-title">
-                                Counterfeit<br>
-                                Products
-                            </h2>
-                            <div class="metric-data">
-                                <div class="metric-value">87</div>
-                                <div class="metric-change negative">
-                                    -3.2% vs previous<br>
-                                    period
-                                </div>
-                            </div>
-                        </div>
-                        <img src="error-warning-line.svg" alt="Warning Icon" class="metric-icon" loading="lazy">
-                    </article>
-
-                    <!-- Reports Submitted Card -->
-                    <article class="metric-card">
-                        <div class="metric-content">
-                            <h2 class="metric-title">
-                                Reports<br>
-                                Submitted
-                            </h2>
-                            <div class="metric-data">
-                                <div class="metric-value">156</div>
-                                <div class="metric-change positive">
-                                    +8.7% vs previous<br>
-                                    period
-                                </div>
-                            </div>
-                        </div>
-                        <img src="calendar.svg" alt="Calendar Icon" class="metric-icon" loading="lazy">
-                    </article>
-
-                    <!-- Active Users Card -->
-                    <article class="metric-card">
-                        <div class="metric-content">
-                            <h2 class="metric-title">
-                                Active<br>
-                                Users
-                            </h2>
-                            <div class="metric-data">
-                                <div class="metric-value">584</div>
-                                <div class="metric-change positive">
-                                    +21.3% vs previous<br>
-                                    period
-                                </div>
-                            </div>
-                        </div>
-                        <img src="bar-chart-fill.svg" alt="Bar Chart Icon" class="metric-icon" loading="lazy">
-                    </article>
-                </div>
-            </section>
-
-            <!-- Charts Section -->
-            <section class="charts-section" aria-label="Analytics Charts">
-                <div class="charts-grid">
-
-                    <!-- Verification Trends Chart -->
-                    <article class="chart-card trends-chart">
-                        <header class="chart-header">
-                            <h2 class="chart-title">Verification Trends</h2>
-                            <p class="chart-subtitle">Monthly verification activity</p>
-                        </header>
-                        <div class="chart-area">
-                            <!-- Chart Background -->
-                            <!-- <img src="Rectangle 16.svg" alt="" class="chart-background" loading="lazy"> -->
-
-                            <!-- Month Labels -->
-                            <div class="month-labels">
-                                <span class="month">Jan</span>
-                                <span class="month">Feb</span>
-                                <span class="month">Mar</span>
-                                <span class="month">Apr</span>
-                                <span class="month">May</span>
-                                <span class="month">Jun</span>
-                                <span class="month">Jul</span>
-                                <span class="month current">Aug</span>
-                                <span class="month">Sep</span>
-                                <span class="month">Oct</span>
-                                <span class="month">Nov</span>
-                                <span class="month">Dec</span>
-                            </div>
-
-                            <!-- Chart Bars -->
-                            <div class="chart-bars">
-                                <div class="bar bar-1"></div>
-                                <div class="bar bar-2"></div>
-                                <div class="bar bar-3"></div>
-                                <div class="bar bar-4"></div>
-                                <div class="bar bar-5"></div>
-                                <div class="bar bar-6"></div>
-                                <div class="bar bar-7"></div>
-                                <div class="bar bar-8"></div>
-                                <div class="bar bar-9"></div>
-                                <div class="bar bar-10"></div>
-                                <div class="bar bar-11"></div>
-                                <div class="bar bar-12"></div>
-                            </div>
-
-                            <!-- Chart Trend Indicator -->
-                            <div class="trend-indicator">
-                                <img src="Rectangle 29.svg" alt="" class="trend-background" loading="lazy">
-                                <div class="trend-content">
-                                    <span class="trend-value">35%</span>
-                                    <img src="Vector.svg" alt="" class="trend-arrow" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Counterfeit Products Distribution -->
-                    <article class="chart-card donut-chart">
-                        <header class="chart-header">
-                            <h2 class="chart-title">Counterfeit Products</h2>
-                            <p class="chart-subtitle">Distribution by product category</p>
-                        </header>
-                        <div class="chart-container">
-                            <div class="donut-chart-area">
-                                <!-- Chart Center -->
-                                <div class="donut-center">
-                                    <div class="center-label">Total Value</div>
-                                    <div class="center-value">72</div>
-                                </div>
-                                <img src="Container.svg" alt="Donut Chart" class="donut-visual" loading="lazy">
-                            </div>
-
-                            <!-- Legend -->
-                            <div class="chart-legend">
-                                <div class="legend-header">
-                                    <span class="legend-title">Label</span>
-                                    <span class="legend-percent">%</span>
-                                </div>
-                                <div class="legend-items">
-                                    <div class="legend-item">
-                                        <span class="legend-color color-drugs"></span>
-                                        <span class="legend-label">Drugs</span>
-                                        <span class="legend-value">28.6%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-food"></span>
-                                        <span class="legend-label">Food</span>
-                                        <span class="legend-value">42.9%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-drinks"></span>
-                                        <span class="legend-label">Drinks</span>
-                                        <span class="legend-value">28.6%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-cosmetics"></span>
-                                        <span class="legend-label">Cosmetic</span>
-                                        <span class="legend-value">28.6%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-products"></span>
-                                        <span class="legend-label">Products</span>
-                                        <span class="legend-value">14.3%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-others"></span>
-                                        <span class="legend-label">Others</span>
-                                        <span class="legend-value">14.3%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Additional Charts Section -->
-            <section class="additional-charts" aria-label="Additional Analytics">
-                <div class="charts-grid">
-
-                    <!-- Product Categories Bar Chart -->
-                    <article class="chart-card bar-chart">
-                        <header class="chart-header">
-                            <h2 class="chart-title">Product Categories</h2>
-                            <p class="chart-subtitle">Distribution of verified products by category</p>
-                        </header>
-                        <div class="bar-chart-container">
-                            <div class="bar-item">
-                                <div class="bar-label">Drugs</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 35%"></div>
-                                </div>
-                                <div class="bar-percent">35%</div>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar-label">Food</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 25%"></div>
-                                </div>
-                                <div class="bar-percent">25%</div>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar-label">Drinks</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 15%"></div>
-                                </div>
-                                <div class="bar-percent">15%</div>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar-label">Cosmetics</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 14%"></div>
-                                </div>
-                                <div class="bar-percent">14%</div>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar-label">Products</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 13%"></div>
-                                </div>
-                                <div class="bar-percent">13%</div>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar-label">Others</div>
-                                <div class="bar-visual">
-                                    <div class="bar-fill" style="width: 10%"></div>
-                                </div>
-                                <div class="bar-percent">10%</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Geographic Distribution Donut Chart -->
-                    <article class="chart-card donut-chart">
-                        <header class="chart-header">
-                            <h2 class="chart-title">Geographic Distribution</h2>
-                            <p class="chart-subtitle">Verification activity by region</p>
-                        </header>
-                        <div class="chart-container">
-                            <div class="donut-chart-area">
-                                <div class="donut-center">
-                                    <div class="center-label">Total Value</div>
-                                    <div class="center-value">72</div>
-                                </div>
-                                <img src="Container.svg" alt="Geographic Distribution Chart" class="donut-visual"
-                                    loading="lazy">
-                            </div>
-
-                            <div class="chart-legend">
-                                <div class="legend-header">
-                                    <span class="legend-title">Label</span>
-                                    <span class="legend-percent">%</span>
-                                </div>
-                                <div class="legend-items">
-                                    <div class="legend-item">
-                                        <span class="legend-color color-lagos"></span>
-                                        <span class="legend-label">Lagos</span>
-                                        <span class="legend-value">32%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-abuja"></span>
-                                        <span class="legend-label">Abuja</span>
-                                        <span class="legend-value">24%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-port"></span>
-                                        <span class="legend-label">Port Harcourt</span>
-                                        <span class="legend-value">21%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-kano"></span>
-                                        <span class="legend-label">Kano</span>
-                                        <span class="legend-value">18%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-oshogbo"></span>
-                                        <span class="legend-label">Oshogbo</span>
-                                        <span class="legend-value">15%</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color color-others-geo"></span>
-                                        <span class="legend-label">Others</span>
-                                        <span class="legend-value">11%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Recent Activity Section -->
-            <section class="recent-activity" aria-label="Recent Activity">
-                <h2 class="section-title">Recent Activity</h2>
-                <div class="activity-table">
-                    <!-- Table Header -->
-                    <div class="activity-header">
-                        <span class="header-activity">ACTIVITY</span>
-                        <span class="header-user">USER</span>
-                        <span class="header-product">PRODUCT</span>
-                        <span class="header-location">LOCATION</span>
-                        <span class="header-time">TIME</span>
-                    </div>
-
-                    <!-- Activity Rows -->
-                    <div class="activity-rows">
-                        <div class="activity-row">
-                            <span class="activity-type">Verification</span>
-                            <span class="activity-user">John Doe</span>
-                            <span class="activity-product">Food</span>
-                            <span class="activity-location">Enugu</span>
-                            <span class="activity-time">10 mins ago</span>
-                        </div>
-                        <div class="activity-row">
-                            <span class="activity-type">Report</span>
-                            <span class="activity-user">Sarah Zin</span>
-                            <span class="activity-product">Drug</span>
-                            <span class="activity-location">Kaduna</span>
-                            <span class="activity-time">2 hrs ago</span>
-                        </div>
-                        <div class="activity-row">
-                            <span class="activity-type">Verification</span>
-                            <span class="activity-user">Mike Chen</span>
-                            <span class="activity-product">Cosmetics</span>
-                            <span class="activity-location">Oshogbo</span>
-                            <span class="activity-time">5 hrs ago</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Desktop Navigation (Desktop Only) -->
-            <nav class="desktop-nav desktop-only" aria-label="Desktop Navigation">
-                <div class="nav-items">
-                    <div class="nav-item">
-                        <img src="home-4-line.svg" alt="" class="nav-icon" loading="lazy">
-                        <a class="nav-label">Dashboard</a>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <img src="box-3-line.svg" alt="" class="nav-icon" loading="lazy">
-                        <span class="nav-label">Products</span>
-                        <img src="arrow-drop-down-line.svg" alt="" class="nav-arrow" loading="lazy">
-                    </div>
-                    <div class="nav-item">
-                        <img src="news-line.svg" alt="" class="nav-icon" loading="lazy">
-                        <span class="nav-label">Awareness</span>
-                    </div>
-                    <div class="nav-item">
-                        <img src="profile-circle.svg" alt="" class="nav-icon" loading="lazy">
-                        <span class="nav-label">Users</span>
-                    </div>
-                    <div class="nav-item active">
-                        <img src="bar-chart-2-line.svg" alt="" class="nav-icon" loading="lazy">
-                        <span class="nav-label">Analytics</span>
-                    </div>
-                    <div class="nav-item">
-                        <img src="settings-3-line.svg" alt="" class="nav-icon" loading="lazy">
-                        <span class="nav-label">Settings</span>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Desktop User Controls (Desktop Only) -->
-            <div class="desktop-controls desktop-only">
-                <img src="Ellipse 1.svg" alt="User Profile" class="user-avatar" loading="lazy">
-                <img src="Group 23.png" alt="User Status" class="user-status" loading="lazy">
-                <label for="desktop-notification-toggle" class="desktop-notification-btn"
-                    aria-label="Toggle Notifications">
-                    <img src="notification-2-fill.svg" alt="Notifications" loading="lazy">
-                </label>
-            </div>
+      <section class="inner-main">
+        <!-- Page Title Section -->
+        <section class="page-title-section">
+          <h1 class="page-title">Analytics</h1>
+          <p class="page-subtitle">
+            Comprehensive insights into product verifications and reports
+          </p>
         </section>
 
+        <!-- Key Metrics Section -->
+        <section class="metrics-section" aria-label="Key Performance Metrics">
+          <div class="metrics-grid">
+            <!-- Total Verifications Card -->
+            <article class="metric-card">
+              <div class="metric-content">
+                <h2 class="metric-title">
+                  Total<br />
+                  Verifications
+                </h2>
+                <div class="metric-data">
+                  <div class="metric-value">1,248</div>
+                  <div class="metric-change positive">
+                    +12.5% vs previous<br />
+                    period
+                  </div>
+                </div>
+              </div>
+              <img
+                src="verified-badge-line.svg"
+                alt="Verified Badge"
+                class="metric-icon"
+                loading="lazy"
+              />
+            </article>
+
+            <!-- Counterfeit Products Card -->
+            <article class="metric-card">
+              <div class="metric-content">
+                <h2 class="metric-title">
+                  Counterfeit<br />
+                  Products
+                </h2>
+                <div class="metric-data">
+                  <div class="metric-value">87</div>
+                  <div class="metric-change negative">
+                    -3.2% vs previous<br />
+                    period
+                  </div>
+                </div>
+              </div>
+              <img
+                src="error-warning-line.svg"
+                alt="Warning Icon"
+                class="metric-icon"
+                loading="lazy"
+              />
+            </article>
+
+            <!-- Reports Submitted Card -->
+            <article class="metric-card">
+              <div class="metric-content">
+                <h2 class="metric-title">
+                  Reports<br />
+                  Submitted
+                </h2>
+                <div class="metric-data">
+                  <div class="metric-value">156</div>
+                  <div class="metric-change positive">
+                    +8.7% vs previous<br />
+                    period
+                  </div>
+                </div>
+              </div>
+              <img
+                src="calendar.svg"
+                alt="Calendar Icon"
+                class="metric-icon"
+                loading="lazy"
+              />
+            </article>
+
+            <!-- Active Users Card -->
+            <article class="metric-card">
+              <div class="metric-content">
+                <h2 class="metric-title">
+                  Active<br />
+                  Users
+                </h2>
+                <div class="metric-data">
+                  <div class="metric-value">584</div>
+                  <div class="metric-change positive">
+                    +21.3% vs previous<br />
+                    period
+                  </div>
+                </div>
+              </div>
+              <img
+                src="bar-chart-fill.svg"
+                alt="Bar Chart Icon"
+                class="metric-icon"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section" aria-label="Analytics Charts">
+          <div class="charts-grid">
+            <!-- Verification Trends Chart -->
+            <article class="chart-card trends-chart">
+              <header class="chart-header">
+                <h2 class="chart-title">Verification Trends</h2>
+                <p class="chart-subtitle">Monthly verification activity</p>
+              </header>
+              <div class="chart-area">
+                <!-- Chart Background -->
+                <!-- <img src="Rectangle 16.svg" alt="" class="chart-background" loading="lazy"> -->
+
+                <!-- Month Labels -->
+                <div class="month-labels">
+                  <span class="month">Jan</span>
+                  <span class="month">Feb</span>
+                  <span class="month">Mar</span>
+                  <span class="month">Apr</span>
+                  <span class="month">May</span>
+                  <span class="month">Jun</span>
+                  <span class="month">Jul</span>
+                  <span class="month current">Aug</span>
+                  <span class="month">Sep</span>
+                  <span class="month">Oct</span>
+                  <span class="month">Nov</span>
+                  <span class="month">Dec</span>
+                </div>
+
+                <!-- Chart Bars -->
+                <div class="chart-bars">
+                  <div class="bar bar-1"></div>
+                  <div class="bar bar-2"></div>
+                  <div class="bar bar-3"></div>
+                  <div class="bar bar-4"></div>
+                  <div class="bar bar-5"></div>
+                  <div class="bar bar-6"></div>
+                  <div class="bar bar-7"></div>
+                  <div class="bar bar-8"></div>
+                  <div class="bar bar-9"></div>
+                  <div class="bar bar-10"></div>
+                  <div class="bar bar-11"></div>
+                  <div class="bar bar-12"></div>
+                </div>
+
+                <!-- Chart Trend Indicator -->
+                <div class="trend-indicator">
+                  <img
+                    src="Rectangle 29.svg"
+                    alt=""
+                    class="trend-background"
+                    loading="lazy"
+                  />
+                  <div class="trend-content">
+                    <span class="trend-value">35%</span>
+                    <img
+                      src="Vector.svg"
+                      alt=""
+                      class="trend-arrow"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Counterfeit Products Distribution -->
+            <article class="chart-card donut-chart">
+              <header class="chart-header">
+                <h2 class="chart-title">Counterfeit Products</h2>
+                <p class="chart-subtitle">Distribution by product category</p>
+              </header>
+              <div class="chart-container">
+                <div class="donut-chart-area">
+                  <!-- Chart Center -->
+                  <div class="donut-center">
+                    <div class="center-label">Total Value</div>
+                    <div class="center-value">72</div>
+                  </div>
+                  <img
+                    src="Container.svg"
+                    alt="Donut Chart"
+                    class="donut-visual"
+                    loading="lazy"
+                  />
+                </div>
+
+                <!-- Legend -->
+                <div class="chart-legend">
+                  <div class="legend-header">
+                    <span class="legend-title">Label</span>
+                    <span class="legend-percent">%</span>
+                  </div>
+                  <div class="legend-items">
+                    <div class="legend-item">
+                      <span class="legend-color color-drugs"></span>
+                      <span class="legend-label">Drugs</span>
+                      <span class="legend-value">28.6%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-food"></span>
+                      <span class="legend-label">Food</span>
+                      <span class="legend-value">42.9%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-drinks"></span>
+                      <span class="legend-label">Drinks</span>
+                      <span class="legend-value">28.6%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-cosmetics"></span>
+                      <span class="legend-label">Cosmetic</span>
+                      <span class="legend-value">28.6%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-products"></span>
+                      <span class="legend-label">Products</span>
+                      <span class="legend-value">14.3%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-others"></span>
+                      <span class="legend-label">Others</span>
+                      <span class="legend-value">14.3%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Additional Charts Section -->
+        <section class="additional-charts" aria-label="Additional Analytics">
+          <div class="charts-grid">
+            <!-- Product Categories Bar Chart -->
+            <article class="chart-card bar-chart">
+              <header class="chart-header">
+                <h2 class="chart-title">Product Categories</h2>
+                <p class="chart-subtitle">
+                  Distribution of verified products by category
+                </p>
+              </header>
+              <div class="bar-chart-container">
+                <div class="bar-item">
+                  <div class="bar-label">Drugs</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 35%"></div>
+                  </div>
+                  <div class="bar-percent">35%</div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">Food</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 25%"></div>
+                  </div>
+                  <div class="bar-percent">25%</div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">Drinks</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 15%"></div>
+                  </div>
+                  <div class="bar-percent">15%</div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">Cosmetics</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 14%"></div>
+                  </div>
+                  <div class="bar-percent">14%</div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">Products</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 13%"></div>
+                  </div>
+                  <div class="bar-percent">13%</div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">Others</div>
+                  <div class="bar-visual">
+                    <div class="bar-fill" style="width: 10%"></div>
+                  </div>
+                  <div class="bar-percent">10%</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Geographic Distribution Donut Chart -->
+            <article class="chart-card donut-chart">
+              <header class="chart-header">
+                <h2 class="chart-title">Geographic Distribution</h2>
+                <p class="chart-subtitle">Verification activity by region</p>
+              </header>
+              <div class="chart-container">
+                <div class="donut-chart-area">
+                  <div class="donut-center">
+                    <div class="center-label">Total Value</div>
+                    <div class="center-value">72</div>
+                  </div>
+                  <img
+                    src="Container.svg"
+                    alt="Geographic Distribution Chart"
+                    class="donut-visual"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="chart-legend">
+                  <div class="legend-header">
+                    <span class="legend-title">Label</span>
+                    <span class="legend-percent">%</span>
+                  </div>
+                  <div class="legend-items">
+                    <div class="legend-item">
+                      <span class="legend-color color-lagos"></span>
+                      <span class="legend-label">Lagos</span>
+                      <span class="legend-value">32%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-abuja"></span>
+                      <span class="legend-label">Abuja</span>
+                      <span class="legend-value">24%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-port"></span>
+                      <span class="legend-label">Port Harcourt</span>
+                      <span class="legend-value">21%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-kano"></span>
+                      <span class="legend-label">Kano</span>
+                      <span class="legend-value">18%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-oshogbo"></span>
+                      <span class="legend-label">Oshogbo</span>
+                      <span class="legend-value">15%</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color color-others-geo"></span>
+                      <span class="legend-label">Others</span>
+                      <span class="legend-value">11%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section class="recent-activity" aria-label="Recent Activity">
+          <h2 class="section-title">Recent Activity</h2>
+          <div class="activity-table">
+            <!-- Table Header -->
+            <div class="activity-header">
+              <span class="header-activity">ACTIVITY</span>
+              <span class="header-user">USER</span>
+              <span class="header-product">PRODUCT</span>
+              <span class="header-location">LOCATION</span>
+              <span class="header-time">TIME</span>
+            </div>
+
+            <!-- Activity Rows -->
+            <div class="activity-rows">
+              <div class="activity-row">
+                <span class="activity-type">Verification</span>
+                <span class="activity-user">John Doe</span>
+                <span class="activity-product">Food</span>
+                <span class="activity-location">Enugu</span>
+                <span class="activity-time">10 mins ago</span>
+              </div>
+              <div class="activity-row">
+                <span class="activity-type">Report</span>
+                <span class="activity-user">Sarah Zin</span>
+                <span class="activity-product">Drug</span>
+                <span class="activity-location">Kaduna</span>
+                <span class="activity-time">2 hrs ago</span>
+              </div>
+              <div class="activity-row">
+                <span class="activity-type">Verification</span>
+                <span class="activity-user">Mike Chen</span>
+                <span class="activity-product">Cosmetics</span>
+                <span class="activity-location">Oshogbo</span>
+                <span class="activity-time">5 hrs ago</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Desktop Navigation (Desktop Only) -->
+        <nav class="desktop-nav desktop-only" aria-label="Desktop Navigation">
+          <div class="nav-items">
+            <div class="nav-item">
+              <img
+                src="home-4-line.svg"
+                alt=""
+                class="nav-icon"
+                loading="lazy"
+              />
+              <a class="nav-label">Dashboard</a>
+            </div>
+            <div class="nav-item dropdown">
+              <img
+                src="box-3-line.svg"
+                alt=""
+                class="nav-icon"
+                loading="lazy"
+              />
+              <span class="nav-label">Products</span>
+              <img
+                src="arrow-drop-down-line.svg"
+                alt=""
+                class="nav-arrow"
+                loading="lazy"
+              />
+            </div>
+            <div class="nav-item">
+              <img src="news-line.svg" alt="" class="nav-icon" loading="lazy" />
+              <span class="nav-label">Awareness</span>
+            </div>
+            <div class="nav-item">
+              <img
+                src="profile-circle.svg"
+                alt=""
+                class="nav-icon"
+                loading="lazy"
+              />
+              <span class="nav-label">Users</span>
+            </div>
+            <div class="nav-item active">
+              <img
+                src="bar-chart-2-line.svg"
+                alt=""
+                class="nav-icon"
+                loading="lazy"
+              />
+              <span class="nav-label">Analytics</span>
+            </div>
+            <div class="nav-item">
+              <img
+                src="imagesettings-3-line.svg"
+                alt=""
+                class="nav-icon"
+                loading="lazy"
+              />
+              <span class="nav-label">Settings</span>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Desktop User Controls (Desktop Only) -->
+        <div class="desktop-controls desktop-only">
+          <img
+            src="Ellipse 1.svg"
+            alt="User Profile"
+            class="user-avatar"
+            loading="lazy"
+          />
+          <img
+            src="Group 23.png"
+            alt="User Status"
+            class="user-status"
+            loading="lazy"
+          />
+          <label
+            for="desktop-notification-toggle"
+            class="desktop-notification-btn"
+            aria-label="Toggle Notifications"
+          >
+            <img
+              src="notification-2-fill.svg"
+              alt="Notifications"
+              loading="lazy"
+            />
+          </label>
+        </div>
+      </section>
     </main>
 
     <!-- Footer Section -->
     <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <img src="logo.svg" alt="MedCheck Logo" class="footer-logo-icon" loading="lazy">
-                    <div class="footer-brand-name">Medcheck</div>
-                </div>
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <img
+              src="logo.svg"
+              alt="MedCheck Logo"
+              class="footer-logo-icon"
+              loading="lazy"
+            />
+            <div class="footer-brand-name">Medcheck</div>
+          </div>
 
-                <!-- Footer Links -->
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h3 class="footer-title">Quick</h3>
-                        <a href="../product-verification/product-verification.html" class="footer-link">Verification</a>
-                        <a href="#" class="footer-link">Reports</a>
-                        <a href="#" class="footer-link">Awareness</a>
-                        <a href="#" class="footer-link">Users</a>
-                        <a href="../analytics/analytics.html" class="footer-link">Analytics</a>
-                    </div>
-                </div>
-
-                <!-- Footer Legal -->
-                <div class="footer-legal">
-                    <a href="#" class="legal-link">Terms & Conditions</a>
-                    <a href="#" class="legal-link">Privacy Policy</a>
-                </div>
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <div class="footer-section">
+              <h3 class="footer-title">Quick</h3>
+              <a
+                href=".product-verification/product-verification.html"
+                class="footer-link"
+                >Verification</a
+              >
+              <a href="#" class="footer-link">Reports</a>
+              <a href="#" class="footer-link">Awareness</a>
+              <a href="#" class="footer-link">Users</a>
+              <a href=".analytics/analytics.html" class="footer-link"
+                >Analytics</a
+              >
             </div>
+          </div>
 
-            <!-- Copyright -->
-            <div class="footer-copyright">
-                © 2025 MedCheck. All Rights Reserved.
-            </div>
+          <!-- Footer Legal -->
+          <div class="footer-legal">
+            <a href="#" class="legal-link">Terms & Conditions</a>
+            <a href="#" class="legal-link">Privacy Policy</a>
+          </div>
         </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          © 2025 MedCheck. All Rights Reserved.
+        </div>
+      </div>
     </footer>
 
     <!-- Hidden Checkboxes for CSS-only interactions -->
-    <input type="checkbox" id="notification-toggle" class="hidden-checkbox">
-    <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
-    <input type="checkbox" id="desktop-notification-toggle" class="hidden-checkbox">
+    <input type="checkbox" id="notification-toggle" class="hidden-checkbox" />
+    <input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
+    <input
+      type="checkbox"
+      id="desktop-notification-toggle"
+      class="hidden-checkbox"
+    />
 
     <!-- CSS-only Notification Popup -->
     <div class="notification-popup">
-        <div class="popup-content">
-            <div class="notification-item">
-                <img src="expan" alt="User Avatar" class="notification-avatar" loading="lazy">
-                <div class="notification-text">
-                    <div class="notification-header">
-                        <span class="notification-user">Miss Jennifer</span>
-                        <span class="notification-action">View</span>
-                    </div>
-                    <div class="notification-message">Fake product everywhere</div>
-                    <div class="notification-time">20m ago</div>
-                </div>
+      <div class="popup-content">
+        <div class="notification-item">
+          <img
+            src="expan"
+            alt="User Avatar"
+            class="notification-avatar"
+            loading="lazy"
+          />
+          <div class="notification-text">
+            <div class="notification-header">
+              <span class="notification-user">Miss Jennifer</span>
+              <span class="notification-action">View</span>
             </div>
-
-            <div class="notification-item">
-                <img src="Ellipse 9.png" alt="User Avatar" class="notification-avatar" loading="lazy">
-                <div class="notification-text">
-                    <div class="notification-header">
-                        <span class="notification-user">Miss Jennifer</span>
-                        <span class="notification-action">View</span>
-                    </div>
-                    <div class="notification-message">Fake product everywhere</div>
-                    <div class="notification-time">20m ago</div>
-                </div>
-            </div>
-
-            <div class="notification-item">
-                <img src="Ellipse 9.png" alt="User Avatar" class="notification-avatar" loading="lazy">
-                <div class="notification-text">
-                    <div class="notification-header">
-                        <span class="notification-user">Miss Jennifer</span>
-                        <span class="notification-action">View</span>
-                    </div>
-                    <div class="notification-message">Fake product everywhere</div>
-                    <div class="notification-time">20m ago</div>
-                </div>
-            </div>
-
-            <div class="notification-item">
-                <img src="Ellipse 9.png" alt="User Avatar" class="notification-avatar" loading="lazy">
-                <div class="notification-text">
-                    <div class="notification-header">
-                        <span class="notification-user">Miss Jennifer</span>
-                        <span class="notification-action">View</span>
-                    </div>
-                    <div class="notification-message">Fake product everywhere</div>
-                    <div class="notification-time">20m ago</div>
-                </div>
-            </div>
+            <div class="notification-message">Fake product everywhere</div>
+            <div class="notification-time">20m ago</div>
+          </div>
         </div>
+
+        <div class="notification-item">
+          <img
+            src="Ellipse 9.png"
+            alt="User Avatar"
+            class="notification-avatar"
+            loading="lazy"
+          />
+          <div class="notification-text">
+            <div class="notification-header">
+              <span class="notification-user">Miss Jennifer</span>
+              <span class="notification-action">View</span>
+            </div>
+            <div class="notification-message">Fake product everywhere</div>
+            <div class="notification-time">20m ago</div>
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <img
+            src="Ellipse 9.png"
+            alt="User Avatar"
+            class="notification-avatar"
+            loading="lazy"
+          />
+          <div class="notification-text">
+            <div class="notification-header">
+              <span class="notification-user">Miss Jennifer</span>
+              <span class="notification-action">View</span>
+            </div>
+            <div class="notification-message">Fake product everywhere</div>
+            <div class="notification-time">20m ago</div>
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <img
+            src="Ellipse 9.png"
+            alt="User Avatar"
+            class="notification-avatar"
+            loading="lazy"
+          />
+          <div class="notification-text">
+            <div class="notification-header">
+              <span class="notification-user">Miss Jennifer</span>
+              <span class="notification-action">View</span>
+            </div>
+            <div class="notification-message">Fake product everywhere</div>
+            <div class="notification-time">20m ago</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- CSS-only Mobile Menu -->
     <nav class="mobile-menu" aria-label="Mobile Navigation">
-        <div class="menu-content">
-            <div class="menu-item">Dashboard</div>
-            <div class="menu-item">Verification</div>
-            <div class="menu-item">Reports</div>
-            <div class="menu-item">Awareness</div>
-            <div class="menu-item">User</div>
-            <div class="menu-item active">Analytics</div>
-            <div class="menu-item">Settings</div>
-            <div class="menu-item">Logout</div>
-        </div>
+      <div class="menu-content">
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Verification</div>
+        <div class="menu-item">Reports</div>
+        <div class="menu-item">Awareness</div>
+        <div class="menu-item">User</div>
+        <div class="menu-item active">Analytics</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+      </div>
     </nav>
-
-</body>
+  </body>
 </html>

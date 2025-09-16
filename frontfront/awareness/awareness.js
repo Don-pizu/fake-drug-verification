@@ -1,40 +1,40 @@
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-const API = 'https://fake-drug-verification.onrender.com/api'; // Production backend
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 
-const token = localStorage.getItem('token');
+const token = localStorage.getItem("token");
 
-if(!token)
-	window.location.href = "../index/index.html";
+if (!token) window.location.href = "./index.html";
 
-const recentPro = document.getElementById('recentPro');
-const approvedPro = document.getElementById('approvedPro');
-const fakePro = document.getElementById('fakePro');
-
-
+const recentPro = document.getElementById("recentPro");
+const approvedPro = document.getElementById("approvedPro");
+const fakePro = document.getElementById("fakePro");
 
 // Helper to render product card
 function createProductCard(verify, isApproved) {
-  const div = document.createElement('div');
-  div.classList.add('product-card');
+  const div = document.createElement("div");
+  div.classList.add("product-card");
 
-  const image = document.createElement('img');
-  image.src = verify.image ? `${api}${verify.image}` : 'images/placeholder.png';
+  const image = document.createElement("img");
+  image.src = verify.image ? `${api}${verify.image}` : "images/placeholder.png";
   image.alt = verify.name;
-  image.classList.add('product-image');
+  image.classList.add("product-image");
 
-  const name = document.createElement('h4');
+  const name = document.createElement("h4");
   name.textContent = verify.name;
 
-  const authentic = document.createElement('span');
+  const authentic = document.createElement("span");
   authentic.textContent = verify.authentic ? "✅ Verified" : "❌ Fake";
-  authentic.classList.add('product-badge', isApproved ? 'badge-approved' : 'badge-fake');
+  authentic.classList.add(
+    "product-badge",
+    isApproved ? "badge-approved" : "badge-fake"
+  );
 
-  const category = document.createElement('p');
+  const category = document.createElement("p");
   category.textContent = `Category: ${verify.category}`;
 
-  const expiry = document.createElement('p');
+  const expiry = document.createElement("p");
   expiry.textContent = `Expiry: ${verify.expiry}`;
 
   div.appendChild(image);
@@ -46,80 +46,71 @@ function createProductCard(verify, isApproved) {
   return div;
 }
 
-
 // Fetch recent products
 async function fetchRecent() {
   const res = await fetch(`${API}/verify?limit=4`, {
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { Authorization: `Bearer ${token}` },
   });
 
   const data = await res.json();
 
   if (res.ok && Array.isArray(data.verifyAll)) {
     recentPro.innerHTML = "";
-    data.verifyAll.forEach(product => {
+    data.verifyAll.forEach((product) => {
       const card = createProductCard(product, product.authentic);
       recentPro.appendChild(card);
     });
   } else {
     console.error("Invalid response:", data);
-    alert(data.message || 'Could not load recent products');
+    alert(data.message || "Could not load recent products");
   }
 }
-
-
-
-
 
 // Fetch verified drugs
 async function fetchVerified() {
   const res = await fetch(`${API}/verify?authentic=true&limit=4`, {
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { Authorization: `Bearer ${token}` },
   });
 
   const data = await res.json();
 
   if (res.ok && Array.isArray(data.verifyAll)) {
     approvedPro.innerHTML = "";
-    data.verifyAll.forEach(verify => {
+    data.verifyAll.forEach((verify) => {
       const card = createProductCard(verify, true);
       approvedPro.appendChild(card);
     });
   } else {
     console.error("Invalid response:", data);
-  	alert(data.message || 'Nafdac Reg is invalid');
+    alert(data.message || "Nafdac Reg is invalid");
   }
 }
 
 // Fetch counterfeit drugs
 async function fetchCounterfeit() {
   const res = await fetch(`${API}/verify?authentic=false&limit=4`, {
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { Authorization: `Bearer ${token}` },
   });
 
   const data = await res.json();
 
   if (res.ok && Array.isArray(data.verifyAll)) {
     fakePro.innerHTML = "";
-    data.verifyAll.forEach(verify => {
+    data.verifyAll.forEach((verify) => {
       const card = createProductCard(verify, false);
       fakePro.appendChild(card);
     });
   } else {
-  	console.error("Invalid response:", data);
-    alert(data.message || 'Nafdac Reg is invalid');
+    console.error("Invalid response:", data);
+    alert(data.message || "Nafdac Reg is invalid");
   }
 }
 
-
-
-
 //LOGOUT BUTTON
-const logoutBtn = document.getElementById('logloglog')
+const logoutBtn = document.getElementById("logloglog");
 
 // get logged-in user details
 const userId = localStorage.getItem("userId");
-
 
 // Logout
 if (logoutBtn) {
@@ -128,10 +119,9 @@ if (logoutBtn) {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("role");
-    window.location.href = "../index/index.html";
+    window.location.href = ".index/index.html";
   });
 }
-
 
 //FOR profile image
 
@@ -139,7 +129,7 @@ async function loadUserProfile() {
   try {
     const res = await fetch(`${API}/auth/profile`, {
       headers: {
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     });
 
@@ -159,18 +149,14 @@ async function loadUserProfile() {
     if (profilePic) {
       profilePic.src = data.profileImage
         ? `${API}${data.profileImage}`
-        : "../images/admin-images/Ellipse 1.svg"; // fallback
+        : "images/images/Ellipse 1.svg"; // fallback
     }
-
   } catch (err) {
     console.error("Profile error:", err.message);
   }
 }
 
-
-
 //List all awareness in drop
-
 
 // ---------------------------
 // Fetch and render awareness (latest 4)
@@ -179,7 +165,7 @@ async function fetchAwareness() {
   try {
     const res = await fetch(`${API}/awareness?page=1&limit=4`, {
       headers: {
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     });
 
@@ -188,7 +174,7 @@ async function fetchAwareness() {
 
     if (!res.ok) throw new Error(data.message || "Failed to load awareness");
 
-    const awarenessList = data.awareNess || [];
+    const awarenessList = data.awareness || [];
 
     const container = document.querySelector(".mobile-dashboard-notification");
     container.innerHTML = ""; // clear old
@@ -203,7 +189,11 @@ async function fetchAwareness() {
       item.classList.add("notification-default");
       item.innerHTML = `
         <img class="notification-default-child"
-          src="${a.image ? `http://localhost:5000${a.image}` : "../images/admin-images/profile-female.svg"}"
+          src="${
+            a.image
+              ? `http://localhost:5000${a.image}`
+              : "images/images/profile-female.svg"
+          }"
           alt="awareness"
         />
         <div class="mobile-dashboard-notification-frame-parent">
@@ -211,23 +201,18 @@ async function fetchAwareness() {
             <div class="miss-jennifer">${a.title}</div>
             <div class="view-wrapper"><div class="view">View</div></div>
           </div>
-          <div class="fake-product-everywhere">${a.description || "No description"}</div>
+          <div class="fake-product-everywhere">${
+            a.description || "No description"
+          }</div>
           <div class="m-ago">${new Date(a.createdAt).toLocaleDateString()}</div>
         </div>
       `;
       container.appendChild(item);
     });
-
   } catch (err) {
     console.error("Awareness error:", err.message);
   }
 }
-
-
-
-
-
-
 
 loadUserProfile();
 fetchAwareness();

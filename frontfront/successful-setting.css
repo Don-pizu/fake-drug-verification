@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+}
+.successful {
+    max-width: 100%;
+  width: 334px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 30px;
+  background: #ffffff;
+}
+.successful img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.done{
+    padding-block: 1rem;
+}
+.done a {
+  display: block;
+  width: 304px !important;
+  height: 44px;
+  margin: 0 auto;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  max-width: 100%;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #009200;
+}
+.done a:hover{
+    background: #00C503;
+}

@@ -52,6 +52,7 @@ nav a:hover {
 .service-dropdown:hover .service-content,
 .more-dropdown:hover .more-content {
   display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .service-content a:hover,
 .more-content a:hover {
@@ -99,6 +100,7 @@ nav a:hover {
 .service-dropdown {
   position: relative;
   display: inline-block;
+  z-index: 999;
 }
 .dropdown img:nth-of-type(2) {
   position: absolute;

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.03em;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;;
+}
+.pw-reset_container {
+    background: #fff;
+  max-width: 410px;
+  height: 300px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+.pw-reset_container h2{
+    padding-bottom: 1rem;
+    font-size: 24px;
+}
+.pw-reset_container p{
+    font-weight: 500;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #00C503;
+    border-radius: 10px;
+    font-size: 16px;
+}
+input:focus{
+    border-color: #B2FDC3;
+    outline: none;
+}
+form h3{
+    text-align: left;
+    /* font-size: 16px; */
+    padding-top: 1rem;
+}
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  background: #007900;
+  height: 44px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover{
+    background: #00C503;
+}
+.verify-p{
+    font-weight: 500;
+    padding-block: 0.5rem;
+}
