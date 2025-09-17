@@ -37,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
           previewImg.src = e.target.result;
           previewImg.style.display = "block";
           previewText.style.display = "none";
+
+          // Apply specific size (customize as needed)
+        previewImg.style.width = "280px";  
+        previewImg.style.height = "150px";  
+        previewImg.style.objectFit = "cover"; 
+        previewImg.style.borderRadius = "10px"; 
+        previewImg.style.border = "2px solid #ccc"; 
+
         };
         reader.readAsDataURL(file);
       } else {
