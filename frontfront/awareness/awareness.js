@@ -17,13 +17,9 @@ function createProductCard(verify, isApproved) {
   div.classList.add("product-card");
 
   const image = document.createElement("img");
-  image.src = verify.image ? `https://fake-drug-verification.onrender.com${verify.image}` : "images/placeholder.png";
+  image.src = verify.image ? `${verify.image}` : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");
-
-
-  const details = document.createElement("div");
-  details.classList.add("product-details");
 
   const name = document.createElement("h4");
   name.textContent = verify.name;

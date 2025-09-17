@@ -164,8 +164,8 @@
                 <p class="total-products">Listed</p>
               </b>
               <div class="parent">
-                <p class="number">124</p>
-                <p class="from-last-month">+12% from last month</p>
+                <p class="number" id="total-products">0</p>
+                <p class="from-last-month" id="percent-products">+0% from last month</p>
               </div>
             </div>
           </div>
@@ -176,8 +176,8 @@
                 <p class="total-reported">Products</p>
               </b>
               <div class="parent">
-                <p class="number">800</p>
-                <p class="this-month">+2% this month</p>
+                <p class="number" id="reported-products">0</p>
+                <p class="this-month" id="percent-reported">+0% this month</p>
               </div>
             </div>
           </div>
@@ -188,8 +188,8 @@
                 <p class="total-products">Verified</p>
               </b>
               <div class="parent">
-                <p class="number">20</p>
-                <p class="from-last-month">+12% from last month</p>
+                <p class="number" id="verified-products">0</p>
+                <p class="from-last-month" id="percent-verified">+0% from last month</p>
               </div>
             </div>
           </div>
@@ -200,8 +200,8 @@
                 <p class="total-new">Location</p>
               </b>
               <div class="parent">
-                <p class="number">16</p>
-                <p class="from-last-month">+0% from last month</p>
+                <p class="number" id="new-locations">0</p>
+                <p class="from-last-month" id="percent-locations">+0% from last month</p>
               </div>
             </div>
           </div>
@@ -223,410 +223,10 @@
       </section>
       <section>
         <h2>All products</h2>
-        <div class="product-card-container">
-          <div class="product-card">
-            <img src="../images/luminosa.png" alt="" />
-            <div class="luminosa-beauty-parent">
-              <div>
-                <b class="luminosa-beauty">Luminosa Beauty</b>
-                <div class="badge-products">
-                  <b class="flagged">⚠️ FLAGGED</b>
-                </div>
-                <div class="cosmetic">Cosmetic</div>
-                <div class="cosmetic">23/07/2025</div>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/faux-glow.png" alt="" />
-            <div class="faux-glow-parent">
-              <b class="faux-glow">Faux Glow</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/lamer.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Lamer</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/anosan.png" alt="" />
-            <div class="anosan-aqua-parent">
-              <b class="anosan-aqua">Anosan Aqua</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drinks">Drinks</div>
-              <div class="drinks">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/x-son.png" alt="" />
-            <div class="xon-cream-parent">
-              <b class="xon-cream">3-Xon Cream</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">2024-09-25</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/dextrose.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">10% Dextrose </b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">2021-08-03</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/amoxivue.png" alt="" />
-            <div class="amoxivue-parent">
-              <b class="amoxivue">Amoxivue</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/folic-acid.png" alt="" />
-            <div class="juhel-folic-acid-parent">
-              <b class="juhel-folic-acid">Juhel Folic Acid</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/zydus.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Zydus Pharmaceu</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/HErceptin.png" alt="" />
-            <div class="herceptin-parent">
-              <b class="herceptin">Herceptin </b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="combiart-parent">
-              <b class="combiart">COMBIART</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-            <img src="../images/Combiat.png" alt="" />
-          </div>
-          <div class="product-card">
-            <img src="../images/phesgo.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Phesgo</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/luminosa.png" alt="" />
-            <div>
-              <div class="luminosa-beauty-parent">
-                <b class="luminosa-beauty">Luminosa Beauty</b>
-                <div class="badge-products">
-                  <b class="flagged">⚠️ FLAGGED</b>
-                </div>
-                <div class="cosmetic">Cosmetic</div>
-                <div class="cosmetic">23/07/2025</div>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/faux-glow.png" alt="" />
-            <div class="faux-glow-parent">
-              <b class="faux-glow">Faux Glow</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/lamer.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Lamer</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/anosan.png" alt="" />
-            <div class="anosan-aqua-parent">
-              <b class="anosan-aqua">Anosan Aqua</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drinks">Drinks</div>
-              <div class="drinks">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/x-son.png" alt="" />
-            <div class="xon-cream-parent">
-              <b class="xon-cream">3-Xon Cream</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">2024-09-25</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/dextrose.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">10% Dextrose </b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">2021-08-03</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/amoxivue.png" alt="" />
-            <div class="amoxivue-parent">
-              <b class="amoxivue">Amoxivue</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/folic-acid.png" alt="" />
-            <div class="juhel-folic-acid-parent">
-              <b class="juhel-folic-acid">Juhel Folic Acid</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/zydus.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Zydus Pharmaceu</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/HErceptin.png" alt="" />
-            <div class="herceptin-parent">
-              <b class="herceptin">Herceptin </b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/Combiat.png" alt="" />
-            <div class="combiart-parent">
-              <b class="combiart">COMBIART</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/phesgo.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Phesgo</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/luminosa.png" alt="" />
-            <div>
-              <div class="luminosa-beauty-parent">
-                <b class="luminosa-beauty">Luminosa Beauty</b>
-                <div class="badge-products">
-                  <b class="flagged">⚠️ FLAGGED</b>
-                </div>
-                <div class="cosmetic">Cosmetic</div>
-                <div class="cosmetic">23/07/2025</div>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/faux-glow.png" alt="" />
-            <div class="faux-glow-parent">
-              <b class="faux-glow">Faux Glow</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/lamer.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Lamer</b>
-              <div class="badge-products">
-                <b class="fake">❌ Fake</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/anosan.png" alt="" />
-            <div class="anosan-aqua-parent">
-              <b class="anosan-aqua">Anosan Aqua</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drinks">Drinks</div>
-              <div class="drinks">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/x-son.png" alt="" />
-            <div class="xon-cream-parent">
-              <b class="xon-cream">3-Xon Cream</b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="cosmetic">Cosmetic</div>
-              <div class="cosmetic">2024-09-25</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/dextrose.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">10% Dextrose </b>
-              <div class="badge-products">
-                <b class="verified">✅ Verified</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">2021-08-03</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/amoxivue.png" alt="" />
-            <div class="amoxivue-parent">
-              <b class="amoxivue">Amoxivue</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/folic-acid.png" alt="" />
-            <div class="juhel-folic-acid-parent">
-              <b class="juhel-folic-acid">Juhel Folic Acid</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/zydus.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Zydus Pharmaceu</b>
-              <div class="badge-products">
-                <b class="recalled">🧪 Recalled</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/HErceptin.png" alt="" />
-            <div class="herceptin-parent">
-              <b class="herceptin">Herceptin </b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/Combiat.png" alt="" />
-            <div class="combiart-parent">
-              <b class="combiart">COMBIART</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="../images/phesgo.png" alt="" />
-            <div class="lume-parent">
-              <b class="lume">Phesgo</b>
-              <div class="badge-products">
-                <b class="counterfeit">⚠️ Counterfeit</b>
-              </div>
-              <div class="drugs">Drugs</div>
-              <div class="drugs">23/07/2025</div>
-            </div>
-          </div>
-        </div>
+
+
+        <div class="product-card-container" id="allProduct"></div>
+
       </section>
     </main>
     <!-- ===== Footer Section ===== -->
@@ -696,5 +296,7 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="fake-products.js"></script>
   </body>
 </html>
