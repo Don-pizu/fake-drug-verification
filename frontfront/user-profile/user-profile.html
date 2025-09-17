@@ -3,16 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MedCheck - All fake products</title>
-    <link rel="stylesheet" href="fake-products.css" />
-    <link rel="icon" href="../images/logo.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Profile | MedCheck</title>
+    <link rel="stylesheet" href="../user-profile/user-profile.css" />
   </head>
   <body>
     <header class="header">
@@ -155,79 +147,41 @@
       </div>
     </header>
     <main>
-      <section class="total-product-parent">
-        <div class="total-products-container">
-          <div class="frame-1">
-            <div class="total-products-listed-parent">
-              <b class="total-products-listed-container">
-                <p class="total-products">Total Products</p>
-                <p class="total-products">Listed</p>
-              </b>
-              <div class="parent">
-                <p class="number" id="total-products">0</p>
-                <p class="from-last-month" id="percent-products">+0% from last month</p>
-              </div>
+      <div class="main-section">
+        <form class="form-container">
+          <h4>Profile</h4>
+          <img class="profile" src="../images/small-man.svg" alt="" />
+          <div>
+            <div class="input-div">
+              <label for="name"><img src="../images/user.svg" alt="" /></label>
+              <input type="text" placeholder="Abiodun Adegbola" />
+            </div>
+            <div class="input-div">
+              <label for="name"
+                ><img src="../images/mail-line.svg" alt=""
+              /></label>
+              <input type="text" placeholder="vfe051020babiodun@gmail.com" />
+            </div>
+            <div class="input-div">
+              <label for="name"><img src="../images/Group.svg" alt="" /></label>
+              <input type="text" placeholder="+234 810222700835" />
+            </div>
+            <div class="input-div">
+              <label for="location"
+                ><img src="../images/location.svg" alt=""
+              /></label>
+              <input type="text" placeholder="Ogun State" />
             </div>
           </div>
-          <div class="frame-2">
-            <div class="total-reported-products-parent">
-              <b class="total-reported-products-container">
-                <p class="total-reported">Total Reported</p>
-                <p class="total-reported">Products</p>
-              </b>
-              <div class="parent">
-                <p class="number" id="reported-products">0</p>
-                <p class="this-month" id="percent-reported">+0% this month</p>
-              </div>
-            </div>
-          </div>
-          <div class="frame-1">
-            <div class="total-products-verified-parent">
-              <b class="total-products-verified-container">
-                <p class="total-products">Total Products</p>
-                <p class="total-products">Verified</p>
-              </b>
-              <div class="parent">
-                <p class="number" id="verified-products">0</p>
-                <p class="from-last-month" id="percent-verified">+0% from last month</p>
-              </div>
-            </div>
-          </div>
-          <div class="frame-2">
-            <div class="total-new-location-parent">
-              <b class="total-new-location-container">
-                <p class="total-new">Total New</p>
-                <p class="total-new">Location</p>
-              </b>
-              <div class="parent">
-                <p class="number" id="new-locations">0</p>
-                <p class="from-last-month" id="percent-locations">+0% from last month</p>
-              </div>
-            </div>
-          </div>
+          <a href="../search-successful/search-successful.html">Save change</a>
+        </form>
+        <div class="profile-image">
+          <img
+            src="../images/Gemini_Generated_Image_8ef5px8ef5px8ef5 1.png"
+            alt=""
+          />
         </div>
-      </section>
-      <section class="search-con">
-        <div class="search-input">
-          <form class="name-of-drugs"><input type="text" /></form>
-          <select id="options" name="options">
-            <option value="category">Category</option>
-            <option value="all">All</option>
-            <option value="drugs">drugs</option>
-            <option value="drinks">Drinks</option>
-            <option value="foods">Foods</option>
-            <option value="cosmetic"></option>
-          </select>
-          <i class="fa-solid fa-magnifying-glass xl" style="color: #00ab00"></i>
-        </div>
-      </section>
-      <section>
-        <h2>All products</h2>
-
-
-        <div class="product-card-container" id="allProduct"></div>
-
-      </section>
+      </div>
     </main>
     <!-- ===== Footer Section ===== -->
     <footer class="footer">
@@ -296,7 +250,5 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <script src="fake-products.js"></script>
   </body>
 </html>

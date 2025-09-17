@@ -18,7 +18,6 @@ body {
   font-family: "DM Sans", sans-serif;
   width: 100%;
 }
-/* Header Section */
 button {
   background: transparent;
   border: none;
@@ -55,6 +54,7 @@ nav a:hover {
 .service-dropdown:hover .service-content,
 .more-dropdown:hover .more-content {
   display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .service-content a:hover,
 .more-content a:hover {
@@ -277,105 +277,95 @@ nav a:hover {
 .dropdown-content {
   display: block;
 }
-/* Testimonials section */
-.what-we-do {
-  padding-block: 9rem;
-  width: 100%;
+
+/* Main Section */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  height: 100%;
+  gap: 20px;
+  padding-block: 5rem;
 }
-.testimonies-0 {
-  width: 189px;
-  font-size: 36px;
-  letter-spacing: -0.03em;
-  line-height: 40px;
-  display: inline-block;
-  color: var(--white-color);
-  text-align: center;
-}
-.see-what-our {
-  font-size: 1.5rem;
-  letter-spacing: -0.03em;
-}
-.testimonials {
-  height: 300px;
-  width: 100%;
-  background: var(--main-color);
-  color: var(--white-color);
-  text-align: center;
-}
-.testimonial-container {
-  height: 1600px;
-  max-height: 100%;
-}
-.testimonies-parent {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
-  grid-template-rows: auto;
-  grid-auto-flow: dense;
-  gap: 1.8rem;
-  width: 90%;
-  margin: 0 auto;
-  padding-block: 2rem;
-}
-.testimonies {
-  box-shadow: 1px 4px 22.4px rgba(64, 64, 64, 0.25);
-  border-radius: 15px;
-  background-color: #fafafa;
+.form-container {
+  border-radius: 25px;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 52px;
+  box-sizing: border-box;
+  gap: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: #1a1a1a;
+  height: 630px;
+  border-radius: 20px;
+  width: 585px;
+  padding: 20px;
+}
+.profile{
+  width: 100px;
+  height: 100px;
+}
+form input::placeholder {
+  color: #1a1a1a;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+form input:focus {
+  background-color: transparent;
+}
+.input-div input {
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background-color: transparent;
+}
+.input-div {
+  width: 441px;
+  max-width: 100%;
+  height: 54px;
+  border-radius: 25px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  padding: 5px 25px;
+  gap: 5px;
+  margin: 10px;
+  color: #333;
+}
+.input-div::placeholder{
+  font-size: 18px;
+}
+form a {
+  width: 441px;
+  max-width: 100%;
+  position: relative;
+  border-radius: 10px;
+  background-color: #009200;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  gap: 24px;
-  text-align: center;
-  font-size: 30px;
-  color: #333;
-  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  color: #fff;
 }
-.testimonies:hover {
-  background: var(--hover-color);
+form button:hover {
+  background: var(--lighter-green);
 }
-.testimonies-child {
-  width: 100px;
-  max-height: 100%;
+.profile-image img {
+  width: 585px;
+  height: 430px;
   object-fit: cover;
-}
-.medcheck-helped-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.medcheck-helped-me {
-  letter-spacing: -0.03em;
-  line-height: 36px;
-  display: inline-block;
-  font-size: 30px;
-  width: 343px;
-}
-.name {
-  letter-spacing: -0.03em;
-  font-size: 30px;
-  font-weight: 600;
-  padding-block: 1rem;
-}
-.rating {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.testimonies:hover .medcheck-helped-parent {
-  transform: translateY(-10px); /* pushes content upward */
-}
-.testimonies:hover .rating {
-  opacity: 1;
-  transform: translateY(0); /* slides the rating up */
-}
-.star {
-  color: var(--lighter-green);
-  margin: 0 2px;
-}
-.star:last-child {
-  opacity: 0.5; /* make the last star lighter */
+  max-width: 100%;
 }
 /* ===== Footer Styling ===== */
 .footer {
@@ -429,7 +419,7 @@ b {
   border-bottom: 1px solid #4caf50;
   margin-top: 3.4rem;
 }
-.input-container input{
+.input-container input {
   width: 100%;
   flex: 1;
   background: transparent;
@@ -519,17 +509,11 @@ input::placeholder {
   font-size: 20px;
 }
 @media (max-width: 1207px) {
-  .testimonial-container {
-    height: 100%;
-  }
   .last {
     align-self: center;
   }
 }
 @media (max-width: 800px) {
-  .testimonial-container {
-    height: 100%;
-  }
   .nav-btn {
     display: none;
   }
@@ -542,15 +526,9 @@ input::placeholder {
   }
 }
 @media (max-width: 768px) {
-  .testimonial-container {
-    height: 100vh;
-  }
   .header {
     width: 95%;
     justify-content: space-between;
-  }
-  .testimonial-container {
-    height: 100%;
   }
   footer {
     padding: 2rem;
@@ -569,8 +547,8 @@ input::placeholder {
     margin-top: 0.5rem;
   }
   .newsletter {
-   margin: 0rem;
-   padding-block: 2rem;
+    margin: 0rem;
+    padding-block: 2rem;
   }
   .newsletter p {
     width: 139.6px;
@@ -579,21 +557,23 @@ input::placeholder {
   .input-container {
     margin-top: 2rem;
   }
-  .links h4{
+  .links h4 {
     padding-top: 1rem;
   }
   .footer-bottom {
-   display: block;
+    display: block;
     padding-block: 1rem;
   }
-  .socials{
+  .socials {
     display: block;
-
   }
-  .legal{
+  .legal {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
     white-space: nowrap;
-    gap: 3rem;
+    gap: 1.2rem;
   }
 }
 @media (max-width: 480px) {
@@ -603,23 +583,10 @@ input::placeholder {
   .links ul li {
     margin-top: 0.5rem;
   }
-  /* .newsletter{
-    order: 4;
-  } */
-}
-@media (max-width: 340px) {
-  .testimonies {
-    width: 90%;
+  .form-container{
+    height: 100vh;
   }
-  .medcheck-helped-me {
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    width: 100%;
-    padding-block: 0.5rem;
-  }
-  .name {
-    font-size: 22px;
-    padding-block: 1rem;
+  .profile-image {
+    display: none;
   }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Report sucessful</title>
+    <title>Report successful</title>
     <link rel="icon" href="images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,11 +23,13 @@
         padding: 0;
         box-sizing: border-box;
         background: #f1f1f1;
+        width: 100%;
       }
       .container {
         background: #fff;
         border-radius: 20px;
         width: 335px;
+        max-width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -42,22 +44,33 @@
         width: 238px;
         text-align: center;
       }
-      .button {
+      .button a {
         display: flex;
-      }
-      .button button {
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        max-width: 100%;
         width: 281px;
         height: 44px;
-        border: none;
-        background: transparent;
         background: #009200;
         color: #fff;
         border-radius: 10px;
         font-size: 16px;
         cursor: pointer;
       }
-      button:hover {
+      .button a:hover {
         background: #00c503;
+      }
+      @media (max-width: 500px) {
+        .button a:hover {
+          background: #009200;
+        }
+        .container {
+          width: 300px;
+        }
+        /* .button{
+          width: 250px;
+        } */
       }
     </style>
   </head>
@@ -74,7 +87,9 @@
           <p class="thank-you-for">
             Check your history for your report progress.
           </p>
-          <div class="button"><button>Done</button></div>
+          <div class="button">
+            <a href="../report-a-product/report-a-product.html">Done</a>
+          </div>
         </div>
       </div>
     </main>

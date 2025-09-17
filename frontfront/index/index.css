@@ -144,6 +144,7 @@ nav a:hover {
 .btc-big-parent {
   display: flex;
   gap: 6em;
+  margin-inline: 10px;
 }
 .verify-product,
 .report-product {
@@ -780,16 +781,16 @@ input::placeholder {
   }
 }
 @media (max-width: 1114px) {
-  .protect-family__text{
-   margin: 5px;
+  .protect-family__text {
+    margin: 5px;
   }
-  .protects-your-family-container{
+  .protects-your-family-container {
     font-size: 50px;
   }
   .benefit-of-medcheck {
-  background-size: cover;
-}
-  .easily-verify-the{
+    background-size: cover;
+  }
+  .easily-verify-the {
     padding-block: 1rem;
   }
   .more-than-25000-user-trust-me-parent {
@@ -816,7 +817,7 @@ input::placeholder {
   .productVerify__container {
     height: 100%;
   }
-  .card{
+  .card {
     width: 95%;
     margin: 0 auto;
   }
@@ -837,29 +838,29 @@ input::placeholder {
   .benefit-text p {
     text-align: center;
   }
-  .faq-container{
+  .faq-container {
     padding-block: 3rem;
   }
   .side-faq-image {
     display: none;
   }
-  summary{
+  summary {
     width: 95%;
   }
-  .call-to-action-parent{
+  .call-to-action-parent {
     margin-bottom: 2rem;
   }
-  .call-to-action-parent{
+  .call-to-action-parent {
     flex-direction: column;
   }
-  .call-to-action-parent span{
+  .call-to-action-parent span {
     font-size: 20px;
     height: 96px;
     width: 313px;
     line-height: normal;
     text-align: center;
   }
-  .call-to-action-parent a{
+  .call-to-action-parent a {
     width: 197px;
     height: 64px;
     white-space: nowrap;
@@ -913,6 +914,7 @@ input::placeholder {
     gap: 6rem;
   }
 }
+
 @media (max-width: 480px) {
   .family-image {
     display: none;
@@ -975,7 +977,7 @@ input::placeholder {
   .partners {
     display: none;
   }
-  .frequently-asked-questions{
+  .frequently-asked-questions {
     background: var(--main-color);
     font-size: 16px;
     display: flex;
@@ -984,7 +986,7 @@ input::placeholder {
     height: 44px;
     color: var(--white-color);
   }
-  .question-mark{
+  .question-mark {
     display: none;
   }
   .what-we-do {
@@ -993,7 +995,7 @@ input::placeholder {
     color: #4d4d4d;
     margin: 0 auto;
   }
-  .what-we-do p{
+  .what-we-do p {
     width: 335px;
   }
   .protects-your-family-container {

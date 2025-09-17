@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OUR-TEAM</title>
-    <link rel="icon" type="image/x-icon" href="images/logo (1).svg" />
+    <link rel="icon" type="../images/x-icon" href="../images/logo (1).svg" />
     <link rel="stylesheet" href="our-team.css" />
     <link
       rel="stylesheet"
@@ -12,709 +12,752 @@
     />
   </head>
   <body>
-    <div class="ourteam">
+    <header class="header">
+      <div class="logo">
+        <div class="logo-parent" id="frameContainer">
+          <img class="logo-icon" alt="" src="../images/logo-1.svg" />
+          <span class="medcheck">Medcheck</span>
+        </div>
+      </div>
       <nav>
-        <div class="logo">
-          <img src="images/logo-1.svg" alt="MedChecklogo" />
-          <a href="index.html">MedCheck</a>
-        </div>
-        <div class="more">
-          <ul>
-            <li><a href="homepage/homepage.html">Home</a></li>
-            <li class="head">
-              <a href="#">Our Service</a>
-              <div class="dropdown-i">
-                <a href="verify-profuct.html">Verify product</a>
-                <a href="report-a-product.html">Report Product</a>
-                <a href="awareness/awareness.html">Awareness</a>
-                <a href="#">Logout</a>
-              </div>
-            </li>
-            <li class="head">
-              <a href="#">More</a>
-              <div class="dropdown-i">
-                <a href="testimonials.html">Testimonies</a>
-                <a href="our-team.html">Our Teams</a>
-                <a href="Faq.html">FAQS</a>
-                <a href="history/history.html">History</a>
-                <a href="about-us.html">About us</a>
-                <a href="contact-us/contact-us.html">Contact Us</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="icon">
-          <div class="notification">
-            <img
-              src="images/Frame 161.svg"
-              alt="notification-icon"
-              class="notify"
-            />
-            <div class="dropdown">
-              <div class="defaultchild">
-                <div>
-                  <img src="images/small-woman.svg" alt="" />
-                  <p class="miss">Miss Jennifer <span>view</span></p>
-                </div>
-                <p class="fake">Fake Product everywhere</p>
-                <span>20m ago</span>
-              </div>
-              <div class="defaultchild">
-                <div>
-                  <img src="images/small-woman.svg" alt="" />
-                  <p class="miss">Miss Jennifer <span>view</span></p>
-                </div>
-                <p class="fake">Fake Product everywhere</p>
-                <span>20m ago</span>
-              </div>
-              <div class="defaultchild">
-                <div>
-                  <img src="images/small-woman.svg" alt="" />
-                  <p class="miss">Miss Jennifer <span>view</span></p>
-                </div>
-                <p class="fake">Fake Product everywhere</p>
-                <span>20m ago</span>
-              </div>
-              <div class="defaultchild">
-                <div>
-                  <img src="images/small-woman.svg" alt="" />
-                  <p class="miss">Miss Jennifer <span>view</span></p>
-                </div>
-                <p class="fake">Fake Product everywhere</p>
-                <span>20m ago</span>
-              </div>
-              <div class="defaultchild">
-                <div>
-                  <img src="images/small-woman.svg" alt="" />
-                  <p class="miss">Miss Jennifer <span>view</span></p>
-                </div>
-                <p class="fake">Fake Product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
+        <button class="nav-btn"><a href="index.html">Home</a></button>
+        <div class="service-dropdown">
+          <button class="nav-btn">Our Services</button>
+          <div class="service-content">
+            <a href="../verify-product/verify-product.html">Verify Product</a>
+            <a href="../report-a-product/report-a-product.html"
+              >Report Product</a
+            >
+            <a href="../awareness/awareness.html"></a>Awareness</a>
           </div>
-
-          <img src="images/small-man.svg" class="anime" alt="" />
-
-          <div class="menuicon">
-            <img src="images/menu-line.svg" alt="menu" class="menui" />
-
-            <div class="options">
-              <div class="menu">
-                <a href="verify-profuct.html">Verify Product</a>
-                <a href="report-a-product.html">Report Product</a>
-                <a href="awareness/awareness.html">Awareness</a>
-                <a href="profile/profile.html">Profile</a>
-                <a href="history/history.html">History</a>
-                <a href="community-gist/community-gist.html">Community</a>
-                <a href="testimonials.html">Testimonies</a>
-                <a href="our-team.html">Our Team</a>
-                <a href="about-us.html">About Us</a>
-                <a href="contact-us/contact-us.html">Contact Us</a>
-                <a href="#">Logout</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="expand">
-            <img
-              src="images/expand-up-down-line.svg"
-              alt="expand"
-              class="xpand"
-            />
-
-            <div class="dropdowni">
-              <a href="profile/profile.html">Profile</a>
-              <a href="history/history.html">History</a>
-              <a href="#">Logout</a>
-            </div>
+        </div>
+        <div class="more-dropdown">
+          <button class="nav-btn">More</button>
+          <div class="more-content">
+            <a href="../testimonials/testimonials.html">Testimonies</a>
+            <a href="../our-team/our-team.html">Our Teams</a>
+            <a href="../Faq/Faq.html">FAQS</a>
+            <a href="../history/history.html">History</a>
+            <a href="../about-us/about-us.html">About US</a>
+            <a href="../contact-us/contact-us.html">Contact Us</a>
           </div>
         </div>
       </nav>
-
-      <section>
-        <h3>Meet the Team</h3>
-        <p>
-          Each individual brings a wealth experiences,creativity <br />and
-          passion to our organization.
-        </p>
+      <div class="nav2">
+        <!-- bell icon -->
+        <div class="dropdown" id="dropdown">
+          <img
+            class="group-child"
+            alt=""
+            src="../images/notification-2-fill.svg"
+            id="dropdrop"
+          />
+          <img src="../images/Ellipse 8.svg" alt="" />
+          <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="group-item"
+          src="../images/Ellipse 1.svg"
+          alt=""
+          id="profilePic"
+        />
+        <div class="dropdown-2">
+          <img
+            class="group-inner"
+            alt=""
+            src="../images/expand-up-down-line.svg"
+            id="frameIcon1"
+          />
+          <div class="dropdown-content-1">
+            <div class="link"><a href="#">Profile</a></div>
+            <div class="link"><a href="#">History</a></div>
+            <div class="link"><a href="#" id="logloglog">Logout</a></div>
+          </div>
+        </div>
+        <div class="hamburger">
+          <button class="dropdownbtn">
+            <img src="../images/menu-line.svg" alt="" />
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <ul>
+              <li class="menu">
+                <a class="service" href="../verify-product/verify-product.html"
+                  >Verify Product</a
+                >
+              </li>
+              <li class="menu">
+                <a
+                  class="service"
+                  href="../report-a-product/report-a-product.html"
+                  >Report Product</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../awareness/awareness.html"
+                  >Awareness</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../profile/profile.html">Profile</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../history/history.html">History</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="community-gist.html">Community</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="index.html">Testimonies</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../our-team/our-team.html">Our Team</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../about-us/about-us.html">About Us</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../contact-us/contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../signin/signin.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="meet-our-team">
+        <div class="team-header">
+          <h3>Meet the Team</h3>
+          <p>
+            Each individual brings a wealth experiences,creativity <br />and
+            passion to our organization.
+          </p>
+        </div>
       </section>
-
-      <main>
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Olaleye.png" alt="" />
-              <h3 class="name">Daniel Olaleye</h3>
-              <p class="role">Project Manager</p>
-            </div>
-            <div class="content">
-              <h3>Daniel Olaleye</h3>
-              <p class="pro">Project Manager</p>
-              <p class="project-manager">
-                I am the project manager of the team.
-              </p>
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Daniel_olaleye</p>
-              </div>
-            </div>
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Olaleye.png" alt="" />
+            <h3 class="name">Daniel Olaleye</h3>
+            <p class="role">Project Manager</p>
           </div>
-
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Ojo.png" alt="" />
-              <h3 class="name">Ojo Ogunjemilua</h3>
-              <p class="role">Project Manager</p>
-            </div>
-            <div class="content">
-              <h3>Ojo Ogunjemilua</h3>
-              <p class="pro">Project Manager</p>
-              <p class="project-manager">
-                I am a result driven Project Manager with a strong track record
-                of leading cross-functional teams to deliver high impact
-                projects on time, within scope, and on budget. With a solid
-                background in project planning, stakeholder communication, risk
-                management, and performance monitoring, I bring structure,
-                clarity, and efficiency to complex initiatives.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p>Ogunjemilua Augustine</p>
+          <div class="content">
+            <h3>Daniel Olaleye</h3>
+            <p class="pro">Project Manager</p>
+            <p class="project-manager">I am the project manager of the team.</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
-            </div>
-          </div>
-
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mrs Deborah.png" alt="" />
-              <h3 class="name">Deborah Makinde</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Deborah Makinde</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                I’m Deborah from the Data Analytics Team. I’m the team lead our
-                sub group. I joined the rest of my team to search for data and
-                cleaned it as well. I also instructed us to come up with our
-                analysis individually as we’d be picking the best
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="infoii">Adeyemi Deborah</p>
-              </div>
+              <p class="info">Daniel_olaleye</p>
             </div>
           </div>
         </div>
 
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Miss Abolanle.png" alt="" />
-              <h3 class="name">Abolanle Shotonwa</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-
-            <div class="content">
-              <h3>Abolanle Shotonwa</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                I'm a successful data analyst and I have successfully analyzed
-                the data set on the ongoing project, verification of fake drugs,
-                drinks (med check)
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="infoi">@Shotonwaabolan2</p>
-              </div>
-            </div>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Ojo.png" alt="" />
+            <h3 class="name">Ojo Ogunjemilua</h3>
+            <p class="role">Project Manager</p>
           </div>
+          <div class="content">
+            <h3>Ojo Ogunjemilua</h3>
+            <p class="pro">Project Manager</p>
+            <p class="project-manager">
+              I am a result driven Project Manager with a strong track record of
+              leading cross-functional teams to deliver high impact projects on
+              time, within scope, and on budget. With a solid background in
+              project planning, stakeholder communication, risk management, and
+              performance monitoring, I bring structure, clarity, and efficiency
+              to complex initiatives.
+            </p>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Abdullahi.png" alt="" />
-              <h3 class="name">Abdullahi Ajiboye</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Abdullahi Ajiboye</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                As a data analyst, i work together with my teammate to find a
-                topic to work on, find dataset for pre analysis and build
-                dashboard for report and recommendation and also attend meetings
-                regularly
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">@Ajiboye147</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
-            </div>
-          </div>
-
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Miss Bolajoko.png" alt="" />
-              <h3 class="name">Bolajoko Olatunbosun</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Bolajoko Olatunbosun</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                As a data analyst it’s my role to analyze data and make people
-                understand the points in the dataset.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Kehindetrends</p>
-              </div>
+              <p>Ogunjemilua Augustine</p>
             </div>
           </div>
         </div>
 
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Bello.png" alt="" />
-              <h3 class="name">Bello Bolaji</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Bello Bolaji</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                I’m bolaji a data analyst and I contributed I sourcing for data
-                and coming up with analysis as well.
-              </p>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mrs Deborah.png" alt="" />
+            <h3 class="name">Deborah Makinde</h3>
+            <p class="role">Data Analyst</p>
+          </div>
+          <div class="content">
+            <h3>Deborah Makinde</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              I’m Deborah from the Data Analytics Team. I’m the team lead our
+              sub group. I joined the rest of my team to search for data and
+              cleaned it as well. I also instructed us to come up with our
+              analysis individually as we’d be picking the best
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">@itz__krespo</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="infoii">Adeyemi Deborah</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Beyere.png" alt="" />
-              <h3 class="name">Bayere Reuben</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Bayere Reuben</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                I am a skilled Data Analyst with expertise in Excel, Power BI,
-                Tableau, SQL, and Python. In this ongoing capstone project, I
-                will be responsible for supporting both the pre-analysis and
-                post-analysis phases, focusing on data preparation, insight
-                generation, and decision support.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">@Dejiclicks</p>
-              </div>
-            </div>
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Miss Abolanle.png" alt="" />
+            <h3 class="name">Abolanle Shotonwa</h3>
+            <p class="role">Data Analyst</p>
           </div>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Miss Esther.png" alt="" />
-              <h3 class="name">Esther Okoli</h3>
-              <p class="role">Data Analyst</p>
-            </div>
-            <div class="content">
-              <h3>Esther Okoli</h3>
-              <p class="pro">Data Analyst</p>
-              <p class="project-manager">
-                I am Esther Onyinyechi Okoli from the data analytics track, I
-                contribute to the project by running analysis on data to draw
-                insights that can helps us improve on pre existing solutions
-                regarding our project idea: verification of fake product.
-              </p>
+          <div class="content">
+            <h3>Abolanle Shotonwa</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              I'm a successful data analyst and I have successfully analyzed the
+              data set on the ongoing project, verification of fake drugs,
+              drinks (med check)
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Gifted_st</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="infoi">@Shotonwaabolan2</p>
             </div>
           </div>
         </div>
 
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Abiodun.png" alt="" />
-              <h3 class="name">Abiodun Adegbola</h3>
-              <p class="role">UI/UX Designer</p>
-            </div>
-            <div class="content">
-              <h3>Abiodun Adegbola</h3>
-              <p class="pro">UI/UX Designer</p>
-              <p class="project-manager">
-                I’m a product designer, i work along with my team on the project
-                “Medcheck”
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" />
-                </div>
-                <p class="infoii">Abiodun Adegbola</p>
-              </div>
-            </div>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Abdullahi.png" alt="" />
+            <h3 class="name">Abdullahi Ajiboye</h3>
+            <p class="role">Data Analyst</p>
           </div>
+          <div class="content">
+            <h3>Abdullahi Ajiboye</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              As a data analyst, i work together with my teammate to find a
+              topic to work on, find dataset for pre analysis and build
+              dashboard for report and recommendation and also attend meetings
+              regularly
+            </p>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Miss Fortune.png" alt="" />
-              <h3 class="name">Fortune Nwachukwu</h3>
-              <p class="role">UI/UX Designer</p>
-            </div>
-            <div class="content">
-              <h3>Fortune Nwachukwu</h3>
-              <p class="pro">UI/UX Designer</p>
-              <p class="project-manager">
-                My name is Fortune and I am part of the design team for
-                MedCheck.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Adanne_mba5</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
-            </div>
-          </div>
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Miss Jennifer.png" alt="" />
-              <h3 class="name">Jennifer Ogwuche</h3>
-              <p class="role">UI/UX Designer</p>
-            </div>
-            <div class="content">
-              <h3>Jennifer Ogwuche</h3>
-              <p class="pro">UI/UX Designer</p>
-              <p class="project-manager">
-                As a UI/UX Designer on our Verification of Fake Drugs, Products,
-                and Drinks (MedCheck) project, I play a crucial role in crafting
-                an intuitive and user-friendly interface for a platform that
-                helps users verify the authenticity of drugs/products. My
-                responsibility is to design visually appealing and functional
-                layouts that streamline the verification process, ensuring a
-                seamless experience for users. I collaborate closely with the
-                development team to implement designs that meet user needs,
-                prioritize accessibility, and enhance overall platform
-                usability. Through user research, wireframing, and prototyping,
-                I contribute to creating a trusted and efficient platform for
-                verifying authentic products.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Jennyjepet</p>
-              </div>
+              <p class="info">@Ajiboye147</p>
             </div>
           </div>
         </div>
 
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Basit.png" alt="" />
-              <h3 class="name">Basit Ajibade</h3>
-              <p class="role">Front-End Engineer</p>
-            </div>
-            <div class="content">
-              <h3>Basit Ajibade</h3>
-              <p class="pro">Front-End Engineer</p>
-              <p class="project-manager">
-                In this project, I will be contributing by designing and coding
-                the front-end interface using HTML and CSS.
-              </p>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Miss Bolajoko.png" alt="" />
+            <h3 class="name">Bolajoko Olatunbosun</h3>
+            <p class="role">Data Analyst</p>
+          </div>
+          <div class="content">
+            <h3>Bolajoko Olatunbosun</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              As a data analyst it’s my role to analyze data and make people
+              understand the points in the dataset.
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="infoii">_ajibadetomeewa</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="info">Kehindetrends</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Babatunde.png" alt="" />
-              <h3 class="name">IMOLEAYO BABATUNDE</h3>
-              <p class="role">Front-End Engineer</p>
-            </div>
-            <div class="content">
-              <h3>IMOLEAYO BABATUNDE</h3>
-              <p class="pro">Front-End Engineer</p>
-              <p class="project-manager">
-                I am the Frontend Engineer for the MedCheck project. My primary
-                responsibility is to build the user interface of the mobile app,
-                translating the UI/UX designs into a functional and accessible
-                experience for users. I am also collaborating with the UI/UX
-                team to align the layout with the designs and prepare for smooth
-                API integration once the backend is ready. My focus is to make
-                the app responsive, user-friendly, and efficient for real-world
-                use.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">this_imoleayo</p>
-              </div>
-            </div>
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Bello.png" alt="" />
+            <h3 class="name">Bello Bolaji</h3>
+            <p class="role">Data Analyst</p>
           </div>
+          <div class="content">
+            <h3>Bello Bolaji</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              I’m bolaji a data analyst and I contributed I sourcing for data
+              and coming up with analysis as well.
+            </p>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Ms Busayo.png" alt="" />
-              <h3 class="name">Busayo Shittu</h3>
-              <p class="role">Front-End Engineer</p>
-            </div>
-            <div class="content">
-              <h3>Busayo Shittu</h3>
-              <p class="pro">Front-End Engineer</p>
-              <p class="project-manager">
-                I'm in the Front-End engineering department and I'm coding out
-                the design from the Product design team.
-              </p>
-
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Omoge_Sayo</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="info">@itz__krespo</p>
             </div>
           </div>
         </div>
 
-        <div class="frameparent">
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Asiru.png" alt="" />
-              <h3 class="name">Adedolapo Asiru</h3>
-              <p class="role">Back End Engineer</p>
-            </div>
-            <div class="content">
-              <h3>Adedolapo Asiru</h3>
-              <p class="pro">Back End Engineer</p>
-              <p class="project-manager">
-                Design system architecture, Server-Side Development, Develop API
-                for product verification and Database Management.
-              </p>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Beyere.png" alt="" />
+            <h3 class="name">Bayere Reuben</h3>
+            <p class="role">Data Analyst</p>
+          </div>
+          <div class="content">
+            <h3>Bayere Reuben</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              I am a skilled Data Analyst with expertise in Excel, Power BI,
+              Tableau, SQL, and Python. In this ongoing capstone project, I will
+              be responsible for supporting both the pre-analysis and
+              post-analysis phases, focusing on data preparation, insight
+              generation, and decision support.
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">_a.abdullah__</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="info">@Dejiclicks</p>
             </div>
           </div>
+        </div>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Rectangle 9 (16).png" alt="" />
-              <h3 class="name">CHIDOZIE OBASI</h3>
-              <p class="role">Cybersecurity</p>
-            </div>
-            <div class="content">
-              <h3>CHIDOZIE OBASI</h3>
-              <p class="pro">Cybersecurity</p>
-              <p class="project-manager">
-                I am a data driven and deatail cybersecurity analyst. My part in
-                the project is to perform threar modeling on the end product,
-                perform vulnerability scanning and check, map out and advise the
-                team on threat mitigation strategies. API for product
-                verification and Database Management.
-              </p>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Miss Esther.png" alt="" />
+            <h3 class="name">Esther Okoli</h3>
+            <p class="role">Data Analyst</p>
+          </div>
+          <div class="content">
+            <h3>Esther Okoli</h3>
+            <p class="pro">Data Analyst</p>
+            <p class="project-manager">
+              I am Esther Onyinyechi Okoli from the data analytics track, I
+              contribute to the project by running analysis on data to draw
+              insights that can helps us improve on pre existing solutions
+              regarding our project idea: verification of fake product.
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="infoi">charles_freeman_01</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
               </div>
+              <p class="info">Gifted_st</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="frame">
-            <div class="framei">
-              <img src="images/Mr Victor.png" alt="" />
-              <h3 class="name">Shedrack Victor</h3>
-              <p class="role">Cybersecurity</p>
-            </div>
-            <div class="content">
-              <h3>Shedrack Victor</h3>
-              <p class="pro">Cybersecurity</p>
-              <p class="project-manager">
-                My name is Victor SHEDRACK and I’m currently a cybersecurity
-                student with a strong interest in threat analysis, vulnerability
-                assessment, and data protection. I’ve worked on several hands-on
-                projects involving tools like Wireshark, Nmap, and Nessus, and
-                recently contributed to a capstone project focused on securing
-                and verifying fake drugs and other valuable products. I enjoy
-                problem-solving and working on systems that require strong
-                security and compliance.
-              </p>
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Abiodun.png" alt="" />
+            <h3 class="name">Abiodun Adegbola</h3>
+            <p class="role">UI/UX Designer</p>
+          </div>
+          <div class="content">
+            <h3>Abiodun Adegbola</h3>
+            <p class="pro">UI/UX Designer</p>
+            <p class="project-manager">
+              I’m a product designer, i work along with my team on the project
+              “Medcheck”
+            </p>
 
-              <div class="handle">
-                <div class="media">
-                  <img src="images/facebook-circle-fill.svg" alt="" />
-                  <img src="images/004-instagram.png" alt="" />
-                  <img src="images/linkedin-box-fill.svg" alt="" />
-                  <img src="images/twitter-x-line.png" alt="" />
-                </div>
-                <p class="info">Shedvic Andeta</p>
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" />
               </div>
+              <p class="infoii">Abiodun Adegbola</p>
             </div>
           </div>
         </div>
-      </main>
 
-      <footer>
-        <div class="medlogo">
-          <img src="./Asset/logo.png" alt="" />
-          <h3>MedCheck</h3>
-        </div>
-        <div class="explore">
-          <div class="form">
-            <p class="subscribe">Subscribe to our newsletter</p>
-            <div class="mail">
-              <label for="mail">Email address</label>
-              <input type="email" name="mail" id="mail" />
-              <button type="submit">
-                <i class="fas fa-chevron-right"></i>
-              </button>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Miss Fortune.png" alt="" />
+            <h3 class="name">Fortune Nwachukwu</h3>
+            <p class="role">UI/UX Designer</p>
+          </div>
+          <div class="content">
+            <h3>Fortune Nwachukwu</h3>
+            <p class="pro">UI/UX Designer</p>
+            <p class="project-manager">
+              My name is Fortune and I am part of the design team for MedCheck.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">Adanne_mba5</p>
             </div>
           </div>
-          <div class="service">
-            <a href="http://" target="_blank" class="differ">Services</a>
-            <a href="http://" target="_blank">verify Product</a>
-            <a href="http://" target="_blank">Report Product</a>
-            <a href="http://" target="_blank">Awereness</a>
-            <a href="http://" target="_blank">What we Do</a>
+        </div>
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Miss Jennifer.png" alt="" />
+            <h3 class="name">Jennifer Ogwuche</h3>
+            <p class="role">UI/UX Designer</p>
           </div>
-          <div class="more">
-            <a href="http://" target="_blank" class="differ">More</a>
-            <a href="http://" target="_blank">About Us</a>
-            <a href="./index.html">Our Team</a>
-            <a href="http://" target="_blank">Testimonies</a>
-            <a href="http://" target="_blank">FAQS</a>
-          </div>
-          <div class="help">
-            <a href="http://" target="_blank" class="differ">Help</a>
-            <a href="http://" target="_blank">Contact us</a>
+          <div class="content">
+            <h3>Jennifer Ogwuche</h3>
+            <p class="pro">UI/UX Designer</p>
+            <p class="project-manager">
+              As a UI/UX Designer on our Verification of Fake Drugs, Products,
+              and Drinks (MedCheck) project, I play a crucial role in crafting
+              an intuitive and user-friendly interface for a platform that helps
+              users verify the authenticity of drugs/products. My responsibility
+              is to design visually appealing and functional layouts that
+              streamline the verification process, ensuring a seamless
+              experience for users. I collaborate closely with the development
+              team to implement designs that meet user needs, prioritize
+              accessibility, and enhance overall platform usability. Through
+              user research, wireframing, and prototyping, I contribute to
+              creating a trusted and efficient platform for verifying authentic
+              products.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">Jennyjepet</p>
+            </div>
           </div>
         </div>
-        <div class="terms">
-          <div class="condition">
-            <a href="">Terms &amp;Conditions</a>
-            <a href="" class="privacy">Privacy Policy</a>
+      </div>
+
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Basit.png" alt="" />
+            <h3 class="name">Basit Ajibade</h3>
+            <p class="role">Front-End Engineer</p>
           </div>
-          <div class="social">
-            <a href="https://www.facebook.com" target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="https://www.x.com" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="https://www.instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
+          <div class="content">
+            <h3>Basit Ajibade</h3>
+            <p class="pro">Front-End Engineer</p>
+            <p class="project-manager">
+              In this project, I will be contributing by designing and coding
+              the front-end interface using HTML and CSS.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="infoii">_ajibadetomeewa</p>
+            </div>
           </div>
         </div>
-        <div class="rights">
-          <p>&copy;2025 MedCheck. All Rights Reserved.</p>
+
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Babatunde.png" alt="" />
+            <h3 class="name">IMOLEAYO BABATUNDE</h3>
+            <p class="role">Front-End Engineer</p>
+          </div>
+          <div class="content">
+            <h3>IMOLEAYO BABATUNDE</h3>
+            <p class="pro">Front-End Engineer</p>
+            <p class="project-manager">
+              I am the Frontend Engineer for the MedCheck project. My primary
+              responsibility is to build the user interface of the mobile app,
+              translating the UI/UX designs into a functional and accessible
+              experience for users. I am also collaborating with the UI/UX team
+              to align the layout with the designs and prepare for smooth API
+              integration once the backend is ready. My focus is to make the app
+              responsive, user-friendly, and efficient for real-world use.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">this_imoleayo</p>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Ms Busayo.png" alt="" />
+            <h3 class="name">Busayo Shittu</h3>
+            <p class="role">Front-End Engineer</p>
+          </div>
+          <div class="content">
+            <h3>Busayo Shittu</h3>
+            <p class="pro">Front-End Engineer</p>
+            <p class="project-manager">
+              I'm in the Front-End engineering department and I'm coding out the
+              design from the Product design team.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">Omoge_Sayo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frameparent">
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Asiru.png" alt="" />
+            <h3 class="name">Adedolapo Asiru</h3>
+            <p class="role">Back End Engineer</p>
+          </div>
+          <div class="content">
+            <h3>Adedolapo Asiru</h3>
+            <p class="pro">Back End Engineer</p>
+            <p class="project-manager">
+              Design system architecture, Server-Side Development, Develop API
+              for product verification and Database Management.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">_a.abdullah__</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Rectangle 9 (16).png" alt="" />
+            <h3 class="name">CHIDOZIE OBASI</h3>
+            <p class="role">Cybersecurity</p>
+          </div>
+          <div class="content">
+            <h3>CHIDOZIE OBASI</h3>
+            <p class="pro">Cybersecurity</p>
+            <p class="project-manager">
+              I am a data driven and deatail cybersecurity analyst. My part in
+              the project is to perform threar modeling on the end product,
+              perform vulnerability scanning and check, map out and advise the
+              team on threat mitigation strategies. API for product verification
+              and Database Management.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="infoi">charles_freeman_01</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="framei">
+            <img src="../images/Mr Victor.png" alt="" />
+            <h3 class="name">Shedrack Victor</h3>
+            <p class="role">Cybersecurity</p>
+          </div>
+          <div class="content">
+            <h3>Shedrack Victor</h3>
+            <p class="pro">Cybersecurity</p>
+            <p class="project-manager">
+              My name is Victor SHEDRACK and I’m currently a cybersecurity
+              student with a strong interest in threat analysis, vulnerability
+              assessment, and data protection. I’ve worked on several hands-on
+              projects involving tools like Wireshark, Nmap, and Nessus, and
+              recently contributed to a capstone project focused on securing and
+              verifying fake drugs and other valuable products. I enjoy
+              problem-solving and working on systems that require strong
+              security and compliance.
+            </p>
+
+            <div class="handle">
+              <div class="media">
+                <img src="../images/facebook-circle-fill.svg" alt="" />
+                <img src="../images/004-instagram.png" alt="" />
+                <img src="../images/linkedin-box-fill.svg" alt="" />
+                <img src="../images/twitter-x-line.png" alt="" />
+              </div>
+              <p class="info">Shedvic Andeta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ===== Footer Section ===== -->
+    <footer class="footer">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Medcheck logo" />
+        <b>Medcheck</b>
+      </div>
+      <hr class="divider" />
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <!-- Services -->
+        <div class="links footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Verify Product</a></li>
+            <li><a href="#">Report Product</a></li>
+            <li><a href="../awareness/awareness.html"></a></li>
+            <li><a href="#">What we Do</a></li>
+          </ul>
+        </div>
+        <!-- More -->
+        <div class="links footer-more">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- Help -->
+        <div class="links footer-help">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="newsletter">
+          <p>Subscribe to our</p>
+          <p>Newsletter</p>
+          <div class="input-container">
+            <input type="email" placeholder="Email address" />
+            <button class="btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom (legal + socials) -->
+      <div class="footer-bottom">
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
+        </div>
+        <div class="legal">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
