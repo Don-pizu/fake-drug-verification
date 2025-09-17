@@ -9,7 +9,7 @@ const rptContainer = document.getElementById("rpt-container");
 
 
 if (!token) 
-  window.location.href = "./index.html";
+  window.location.href = "../index.html";
 
 // Preview uploaded image
 const fileInput = document.getElementById("fileUpload");
