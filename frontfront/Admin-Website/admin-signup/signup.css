@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 /* ========================================
    RESPONSIVE SIGNUP PAGE STYLES
    Mobile-first approach with breakpoints:
@@ -21,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000;
@@ -493,8 +494,7 @@ textarea {
 .social-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  gap: 3rem;
   padding: 15px 20px;
   border: 1px solid #999;
   border-radius: 25px;
@@ -536,7 +536,7 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.03em;
-  color: #666;
+  color: black !important;
   margin: 0;
 }
 
@@ -549,7 +549,13 @@ textarea {
 .login-text:hover {
   text-decoration: underline;
 }
-
+#userRole{
+  border: none;
+  outline: none;
+  background: #fff;
+  width: 300px;
+  height: 24px;
+}
 /* ========================================
    FOOTER - MOBILE ONLY
 ======================================== */
@@ -943,7 +949,7 @@ textarea {
     padding: 40px;
     max-width: none;
     width: 100%;
-    background-image: url(../assets/images/form_background.png);
+    background-image: url(../images/form_background.png);
     background-repeat: no-repeat;
     background-size: fit;
     background-position-x: 20%;
