@@ -79,7 +79,8 @@ exports.register = async (req, res, next) => {
 		res.status(201).json({ 
 	      message: 'User registered. Verify OTP sent to email',
 	      _id: user._id,
-	      email: user.email
+	      email: user.email,
+         role: user.role
        });
 
 
