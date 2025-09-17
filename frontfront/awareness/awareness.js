@@ -1,11 +1,11 @@
 // Set the backend API URL
-//const API = 'http://localhost:5000/api'; // Uncomment this for local testing
+const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+  //const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
   
 const token = localStorage.getItem("token");
 
-if (!token) window.location.href = "./index.html";
+if (!token) window.location.href = "../index.html";
 
 const recentPro = document.getElementById("recentPro");
 const approvedPro = document.getElementById("approvedPro");
@@ -17,9 +17,13 @@ function createProductCard(verify, isApproved) {
   div.classList.add("product-card");
 
   const image = document.createElement("img");
-  image.src = verify.image ? `${api}${verify.image}` : "images/placeholder.png";
+  image.src = verify.image ? `https://fake-drug-verification.onrender.com${verify.image}` : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");
+
+
+  const details = document.createElement("div");
+  details.classList.add("product-details");
 
   const name = document.createElement("h4");
   name.textContent = verify.name;
@@ -32,7 +36,7 @@ function createProductCard(verify, isApproved) {
   );
 
   const category = document.createElement("p");
-  category.textContent = `Category: ${verify.category}`;
+  category.textContent = `Category: ${verify.category || verify.catgory || "N/A"}`;
 
   const expiry = document.createElement("p");
   expiry.textContent = `Expiry: ${verify.expiry}`;
@@ -214,10 +218,11 @@ async function fetchAwareness() {
   }
 }
 
+
+// Call them when page loads
 loadUserProfile();
 fetchAwareness();
 
-// Call them when page loads
 fetchRecent();
 fetchVerified();
 fetchCounterfeit();

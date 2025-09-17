@@ -166,7 +166,9 @@
         <b class="report-a-product">Report A Product</b>
         <div class="frame-parent">
 
-          <form class="emails-input-parent">
+          <form class="emails-input-parent" id="reportForm">
+
+             <!-- Product Name -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -176,6 +178,8 @@
               /></label>
               <input type="text" id="productName" placeholder="Product Name" />
             </div>
+
+             <!-- Location -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -184,25 +188,6 @@
                   src="../images/location.svg"
               /></label>
               <input type="text" id="location" placeholder="Location" />
-            </div>
-
-
-
-            <form class="emails-input-parent" id="reportForm">
-            <!-- Product Name -->
-            <div class="emails-input">
-              <label for="productName">
-                <img class="vuesaxlinearuser-icon" src="../images/user.svg" alt="Product" />
-              </label>
-              <input type="text" id="productName" class="input" placeholder="Product Name" required />
-            </div>
-
-            <!-- Location -->
-            <div class="emails-input">
-              <label for="location">
-                <img class="vuesaxlinearuser-icon" src="../images/location.svg" alt="Location" />
-              </label>
-              <input type="text" id="location" class="input" placeholder="Location" required />
             </div>
 
             <!-- Category -->
