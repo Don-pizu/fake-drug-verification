@@ -57,8 +57,6 @@ document
               data.image
                 ? `https://fake-drug-verification.onrender.com${data.image}`
                 : "assets/images/default.png"
-                ? `${API}${data.image}`
-                : "images/default.png"
             }" alt="${data.name}">
 	          <h2 class="vfy-name">${data.name}</h2>
 	          <span class="vfy-badge ${
