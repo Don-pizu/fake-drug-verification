@@ -302,15 +302,12 @@ textarea {
   border-radius: 25px;
   padding: 15px 20px;
   gap: 15px;
-  transition: border-color 0.2s ease;
 }
-
 .input-wrapper:focus-within {
   border-color: #00e331;
   outline: 2px solid rgba(0, 227, 49, 0.1);
   outline-offset: 2px;
 }
-
 .input-icon {
   width: 24px;
   height: 24px;
