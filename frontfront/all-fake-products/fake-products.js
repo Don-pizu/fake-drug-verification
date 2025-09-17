@@ -1,11 +1,11 @@
 // Set the backend API URL
-//const API = 'http://localhost:5000/api'; // Uncomment this for local testing
+const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+//const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 
 const token = localStorage.getItem("token");
 
-if (!token) window.location.href = "index.html";
+if (!token) window.location.href = "../index.html";
 
 const allProduct = document.getElementById("allProduct");
 const totalProductsEl = document.getElementById("total-products");
@@ -18,6 +18,22 @@ const percentReportedEl = document.getElementById("percent-reported");
 const percentVerifiedEl = document.getElementById("percent-verified");
 const percentLocationsEl = document.getElementById("percent-locations");
 
+
+
+//for this type of date 27 Sept 2025
+// Format date function
+function formatDate(dateStr) {
+  if (!dateStr) return "N/A";
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+
+
 // Fetch stats from backend
 async function fetchDashboardStats() {
   try {
@@ -27,22 +43,22 @@ async function fetchDashboardStats() {
     const data = await res.json();
 
     if (res.ok) {
-      totalProductsEl.textContent = data.totalProducts;
-      reportedProductsEl.textContent = data.totalReportedProducts;
-      verifiedProductsEl.textContent = data.totalVerifiedProducts;
-      newLocationsEl.textContent = data.totalNewLocations;
+    totalProductsEl.textContent = data.totalProducts || 0;
+    reportedProductsEl.textContent = data.totalReportedProducts || 0;
+    verifiedProductsEl.textContent = data.totalVerifiedProducts || 0;
+    newLocationsEl.textContent = data.totalNewLocations || 0;
 
-      percentProductsEl.textContent = `${data.percentProducts}% from last month`;
-      percentReportedEl.textContent = `${data.percentReportedProducts}% from last month`;
-      percentVerifiedEl.textContent = `${data.percentVerifiedProducts}% from last month`;
-      percentLocationsEl.textContent = `${data.percentNewLocations}% from last month`;
-
-    } else {
-      console.error("Error:", data);
+    percentProductsEl.textContent = `${data.percentProducts ?? 0}% from last month`;
+    percentReportedEl.textContent = `${data.percentReportedProducts ?? 0}% from last month`;
+    percentVerifiedEl.textContent = `${data.percentVerifiedProducts ?? 0}% from last month`;
+    percentLocationsEl.textContent = `${data.percentNewLocations ?? 0}% from last month`;
+   
+   } else {
+        console.error("Error:", data);
+      }
+    } catch (err) {
+      console.error("Error fetching dashboard stats:", err);
     }
-  } catch (err) {
-    console.error("Error fetching dashboard stats:", err);
-  }
 }
 
 
@@ -50,12 +66,17 @@ async function fetchDashboardStats() {
 // Helper to render product card
 function createProductCard(verify, isApproved) {
   const div = document.createElement("div");
-  div.classList.add("product-card-box");
+  div.classList.add("product-card");
 
+  // Image
   const image = document.createElement("img");
   image.src = verify.image ? `${API}${verify.image}` : "images/placeholder.png";
   image.alt = verify.name;
-  image.classList.add("product-card-image");
+  image.classList.add("product-image");
+
+  // Details
+  const details = document.createElement("div");
+  details.classList.add("product-details");
 
   const name = document.createElement("h4");
   name.textContent = verify.name;
@@ -69,16 +90,22 @@ function createProductCard(verify, isApproved) {
   );
 
   const category = document.createElement("p");
-  category.textContent = `Category: ${verify.category}`;
-  category.classList.add("product-card-category");
+  category.textContent = `Category: ${verify.category || verify.catgory || "N/A"}`;
 
   const expiry = document.createElement("p");
-  expiry.textContent = `Expiry: ${verify.expiry}`;
-  expiry.classList.add("product-card-expiry");
+  expiry.textContent = `Expiry: ${formatDate(verify.expiry)}`;
 
-  div.append(image, name, authentic, category, expiry);
+  // Append in proper order
+  details.append(name, authentic, category, expiry);
+  div.append(image, details);
+
   return div;
 }
+
+
+
+
+
 
 // Fetch all products
 async function fetchAllProducts() {
@@ -218,4 +245,5 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchAllProducts();
   loadUserProfile();
   fetchAwareness();
+  formatDate();
 });

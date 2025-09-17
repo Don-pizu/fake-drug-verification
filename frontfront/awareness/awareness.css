@@ -776,3 +776,104 @@ footer .rights{
       overflow-x: auto;    /* allow horizontal scrolling */
    }
 }
+
+
+
+/*=====   Backend font =====*/
+
+/* ==== PRODUCT CARD (like your screenshot) ==== */
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Small product image */
+.product-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f8f9fa;
+  flex-shrink: 0;
+}
+
+/* Details wrapper */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Product name */
+.product-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+
+.product-details p,
+.product-badge {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Category + expiry */
+.product-details p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Badge styles */
+.product-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 4px 0;
+  width: fit-content;
+}
+
+/* Approved */
+.badge-approved {
+  background: #e6f9ed;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Fake / Unsafe */
+.badge-fake {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Harmful */
+.badge-harmful {
+  background: #fff4e5;
+  color: #b45309;
+  border: 1px solid #fed7aa;
+}
+
+/* Unregistered */
+.badge-unregistered {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}

@@ -166,7 +166,9 @@
         <b class="report-a-product">Report A Product</b>
         <div class="frame-parent">
 
-          <form class="emails-input-parent">
+          <form class="emails-input-parent" id="reportForm">
+
+             <!-- Product Name -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -176,6 +178,8 @@
               /></label>
               <input type="text" id="productName" placeholder="Product Name" />
             </div>
+
+             <!-- Location -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -186,63 +190,58 @@
               <input type="text" id="location" placeholder="Location" />
             </div>
 
-
-
+            <!-- Category -->
             <div class="frame-group">
-              <span>Category</span>
-              <option value=""></option>
-              <div class="frame-wrapper">
-               <div class="frame-wrapper">
-                <div class="title-wrapper">
-                  <div class="title">Category</div>
-                </div>
-              </div>
+              <span class="title">Category</span>
               <div id="list1" class="dropdown-check-list" tabindex="100">
-                <label for="category">Category</label>
-                <select id="category" required>
-                <option value="" class="anchor">Select Category</option>
-                <option value="beverages">Beverages</option>
-                <option value="drugs">Drugs & Pharmaceuticals</option>
-                <option value="cosmetics">Cosmetics & Personal Care</option>
-                <option value="chemical">Chemicals & Household</option>
-                <option value="devices">Medical Devices</option>
-              </select>
-
+                <label for="category" class="category-label">Select Category</label>
+                <select id="category" class="input" required>
+                  <option value="" class="anchor">Select Category</option>
+                  <option value="beverages">Beverages</option>
+                  <option value="drugs">Drugs & Pharmaceuticals</option>
+                  <option value="cosmetics">Cosmetics & Personal Care</option>
+                  <option value="chemical">Chemicals & Household</option>
+                  <option value="devices">Medical Devices</option>
+                </select>
               </div>
             </div>
 
+            <!-- NAFDAC Reg No -->
             <div class="emails-input">
-              <label for="nafdacReg"><img src="../images/note.svg" alt="" /></label>
-              <input type="text" id="nafdacReg" placeholder="NAFDAC Reg No." required />
+              <label for="nafdacReg">
+                <img src="../images/note.svg" alt="NAFDAC Reg No." />
+              </label>
+              <input type="text" id="nafdacReg" class="input" placeholder="NAFDAC Reg No." required />
             </div>
 
+            <!-- Batch Number -->
             <div class="emails-input">
-              <label for="batchNo"><img src="../images/note.svg" alt="" /></label>
-              <input type="text" id="batchNo" placeholder="Batch Number" />
+              <label for="batchNo">
+                <img src="../images/note.svg" alt="Batch Number" />
+              </label>
+              <input type="text" id="batchNo" class="input" placeholder="Batch Number" />
             </div>
 
+            <!-- Description -->
             <div class="emails-input">
-              <label for="issues-input">
-                <img class="vuesaxlinearuser-icon" alt="" src="../images/note.svg"
-              /></label>
-              <input
-                type="text"
-                id="description"
-                placeholder="Description of Issue"
-              />
+              <label for="description">
+                <img class="vuesaxlinearuser-icon" src="../images/note.svg" alt="Description" />
+              </label>
+              <textarea id="description" class="input" placeholder="Description of Issue" rows="4"></textarea>
             </div>
 
-             <div class="emails-input">
-              <label for="fileUpload"><img src="../images/image.svg" alt="" /></label>
-              <input type="file" id="fileUpload" accept="image/*" />
+            <!-- Image Upload -->
+            <div class="emails-input">
+              <label for="fileUpload">
+                <img src="../images/image.svg" alt="Upload" />
+              </label>
+              <input type="file" id="fileUpload" class="input" accept="image/*" />
             </div>
 
-
-            <button id="openPopup" class="verify-1">Save report</button>
+            <!-- Submit Button -->
+            <button id="openPopup" class="verify-1" type="submit">Save Report</button>
             <div id="rpt-container"></div>
           </form>
-
-
 
         </div>
       </div>
