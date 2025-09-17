@@ -42,7 +42,7 @@ document.querySelector('.verify-btn').addEventListener('click', async (e) => {
 
 		   alert("Account verified successfully");
 
-		    window.location.href = "../admin-dashboard.html";
+		    window.location.href = "../admin-dashboard/admin-dashboard.html";
 		} else {
 		    alert(data.message || "Verification failed");
 		  }
