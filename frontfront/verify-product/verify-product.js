@@ -55,7 +55,7 @@ document
 	        <div class="vfy-body">
 	          <img src="${
               data.image
-                ? `${API}${data.image}`
+                ? `https://fake-drug-verification.onrender.com${data.image}`
                 : "assets/images/default.png"
                 ? `${API}${data.image}`
                 : "images/default.png"
