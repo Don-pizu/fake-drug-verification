@@ -416,7 +416,9 @@ body {
 .component-27 {
   width: 100%;
 }
-
+iframe{
+  margin: 0 auto;
+}
 .our-service,
 .our-service-7 {
   display: block;

@@ -44,7 +44,7 @@ async function loadUserProfile() {
     if (profilePic) {
       profilePic.src = data.profileImage
         ? `${API}${data.profileImage}`
-        : "images/images/Ellipse 1.svg"; // fallback
+        : ".images/images/Ellipse 1.svg"; // fallback
     }
   } catch (err) {
     console.error("Profile error:", err.message);
@@ -86,8 +86,13 @@ async function fetchAwareness() {
         <img class="notification-default-child"
           src="${
             a.image
+<<<<<<< HEAD
+              ? `http://localhost:5000${a.image}`
+              : ".images/images/profile-female.svg"
+=======
               ? `${API}${a.image}`
               : "images/images/profile-female.svg"
+>>>>>>> 80500e6015f1abd0f1aa36e809e9bf18fbec474b
           }"
           alt="awareness"
         />

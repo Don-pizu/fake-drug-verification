@@ -2,9 +2,9 @@
 
 // API endpoint
 // Set the backend API URL
-const API = 'http://localhost:5000/api'; // Uncomment this for local testing
+//const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-//const API = 'https://fake-drug-verification.onrender.com/api'; // Production backend
+  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 
   const params = new URLSearchParams(window.location.search);
   const token = window.location.pathname.split("/").pop();

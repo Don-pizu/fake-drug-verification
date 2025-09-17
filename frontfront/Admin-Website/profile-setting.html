@@ -3,31 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>MedCheck/profile setting</title>
-    <link rel="stylesheet" href="../profile-setting/profile-setting.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MedCheck profile Setting</title>
+    <link rel="stylesheet" href="profile-setting.css" />
+        <link rel="icon" href="images/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <div class="header">
         <div class="logo">
-          <img src="../admin-images/logo.svg" alt="medcheck-logo" />
-          <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
+          <img src="images/logo.svg" alt="medcheck-logo" />
+          <a href=".dashboard/dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
           <div class="dropdown">
-            <img src="../admin-images/notification-2-fill (1).svg" alt="" />
-            <img
-              src="../admin-images/notification-dot.svg"
-              alt="notification"
-            />
+            <img src="images/notification-2-fill (1).svg" alt="" />
+            <img src="images/notification-dot.svg" alt="notification" />
             <div id="myDropdown" class="dropdown-content">
               <div class="mobile-dashboard-notification">
                 <div class="notification-default">
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="../admin-images/profile-female.svg"
+                    src="images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -46,7 +50,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="../admin-images/profile-female.svg"
+                    src="images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -65,7 +69,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="../admin-images/profile-female.svg"
+                    src="images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -84,7 +88,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="../admin-images/profile-female.svg"
+                    src="images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -103,30 +107,28 @@
             </div>
           </div>
           <div class="menu-line">
-            <img src="../admin-images/menu-line.svg" alt="menu-line" />
+            <img src="images/menu-line.svg" alt="menu-line" />
             <div class="menu-content">
-              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
-                >Dashboard</a
-              >
+              <a href=".dashboard/dashboard.html" target="_self">Dashboard</a>
               <a
-                href="../../images/product-verification/product-verification.html"
+                href="images/product-verification/product-verification.html"
                 target="_blank"
                 >Verification</a
               >
               <a href="#">Reports</a>
-              <a href="../">Awareness</a>
+              <a href=".">Awareness</a>
               <a href="#">User</a>
-              <a href="../analytics/analytics.html">Analytics</a>
-              <a href="../profile-setting/profile-setting.html">Settings</a>
-              <a href="../admin-signin/login.html" target="_blank">Logout</a>
+              <a href=".analytics/analytics.html">Analytics</a>
+              <a href=".profile-setting/profile-setting.html">Settings</a>
+              <a href=".login.html" target="_blank">Logout</a>
             </div>
           </div>
           <div class="profile">
-            <a href="#"><img src="../admin-images/Ellipse 1.svg" alt="" /></a>
+            <a href="#"><img src="images/Ellipse 1.svg" alt="" /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
-              <img src="../admin-images/expand-up-down-line.svg" alt="" />
+              <img src="images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
               <a href="#">logout</a>
@@ -137,17 +139,14 @@
     </header>
     <nav>
       <div class="nav">
-        <a href="../admin-dashboard/admin-dashboard.html" class="homepage">
-          <img
-            src="../admin-images/home-4-line.svg"
-            alt="dashboard-icon"
-          />Dashboard
+        <a href=".dashboard/dashboard.html" class="homepage">
+          <img src="images/home-4-line.svg" alt="dashboard-icon" />Dashboard
         </a>
         <div class="multiselect">
           <div class="selectBox" onclick="showBoxes()">
             <div class="product">
-              <a href="../product-verification/product-verification.html">
-                <img src="../admin-images/box-3-line.svg" alt="" />Product
+              <a href=".product-verification/product-verification.html">
+                <img src="images/box-3-line.svg" alt="" />Product
                 <i
                   class="fa-solid fa-chevron-down fa-2xs"
                   style="color: #00c503"
@@ -156,36 +155,30 @@
             </div>
           </div>
           <div id="checkboxes">
-            <a href="../product-verification/product-verification.html"
+            <a href=".product-verification/product-verification.html"
               ><img
-                src="../admin-images/search-normal.svg"
+                src="images/search-normal.svg"
                 alt="Verification"
               />Verification</a
             >
             <img src="" alt="" />
             <a href="#">
-              <img src="../admin-images/danger.svg" alt="Report" />Report</a
+              <img src="images/danger.svg" alt="Report" />Report</a
             >
           </div>
         </div>
         <a href="#">
-          <img
-            src="../admin-images/news-line.svg"
-            alt="Awareness"
-          />Awareness</a
+          <img src="images/news-line.svg" alt="Awareness" />Awareness</a
         >
         <a href="">
-          <img src="../admin-images/profile-circle.svg" alt="User" />Users
+          <img src="images/profile-circle.svg" alt="User" />Users
         </a>
-        <a href="../analytics/analytics.html">
-          <img
-            src="../admin-images/bar-chart-2-line.svg"
-            alt="analytics"
-          />Analytics
+        <a href=".analytics/analytics.html">
+          <img src="images/bar-chart-2-line.svg" alt="analytics" />Analytics
         </a>
         <a href="">
           <img
-            src="../admin-images/settings-3-line.svg"
+            src="images/settings-3-line.svg"
             alt="settings-icon"
           />Settings
         </a>
@@ -194,50 +187,48 @@
     <main>
       <div class="profile-setting">
         <h1>Profile Settings</h1>
-        <p>Manage yor account details and preferences</p>
+        <p>Manage your account details and preferences</p>
       </div>
       <div class="profile-form">
         <form>
           <div class="form-image">
-            <img src="../admin-images/female.svg" alt="" />
+            <img src="images/female.svg" alt="" />
           </div>
           <div class="Form-fill">
-            <label for="name"
-              ><img src="../admin-images/user.svg" alt=""
-            /></label>
+            <label for="name"><img src="images/user.svg" alt="" /></label>
             <input type="text" placeholder="Miss Jennifer" required />
           </div>
           <div class="Form-fill">
             <label for="name"
-              ><img src="../admin-images/mail-line.svg" alt=""
+              ><img src="images/mail-line.svg" alt=""
             /></label>
             <input type="email" placeholder="Email" required />
           </div>
           <div class="Form-fill">
-            <label for="tel"
-              ><img src="../admin-images/Group.svg" alt=""
-            /></label>
+            <label for="tel"><img src="images/Group.svg" alt="" /></label>
             <input type="tel" placeholder="Phone Number" />
           </div>
           <div class="Form-fill">
             <label for="location"
-              ><img src="../admin-images/location.svg" alt=""
+              ><img src="images/location.svg" alt=""
             /></label>
             <input type="text" placeholder="Location" required />
           </div>
           <div class="Form-fill">
             <label for="password"
-              ><img src="../admin-images/lock.svg" alt=""
+              ><img src="images/lock.svg" alt=""
             /></label>
             <input type="password" placeholder="Change Password" />
           </div>
-          <div class="btn"><a href="../profile-setting/successful-setting.html">Save Change</a></div>
+          <div class="btn">
+            <a href=".profile-setting/successful-setting.html">Save Change</a>
+          </div>
         </form>
       </div>
     </main>
-        <footer>
+    <footer>
       <div class="logo">
-        <img src="../admin-images/logo.svg" alt="Medcheck-logo" />
+        <img src="images/logo.svg" alt="Medcheck-logo" />
         <span>MedCheck</span>
       </div>
       <hr class="divider" />
@@ -246,7 +237,7 @@
           <li class="solid-text">Quick</li>
           <li>Dashboard</li>
           <li>
-            <a href="../product-verification/product-verification.html"
+            <a href=".product-verification/product-verification.html"
               >Verification</a
             >
           </li>

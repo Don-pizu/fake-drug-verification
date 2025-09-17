@@ -36,7 +36,7 @@ document.querySelector(".verify-btn").addEventListener("click", async (e) => {
 
     if (res.ok) {
       alert("Account verified successfully");
-      window.location.href = "./signin/signin.html";
+      window.location.href = "../signin/signin.html";
     } else {
       alert(data.message || "Verification failed");
     }

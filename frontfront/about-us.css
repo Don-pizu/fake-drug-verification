@@ -32,42 +32,99 @@ body {
    LAYOUT CONTAINER
 ======================================== */
 .about-us {
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: white;
 }
 
 /* ========================================
    HEADER STYLES
 ======================================== */
 .header {
-  background: #fff;
-  position: fixee;
+  /* background: #fff;
+  display: flex;
+  margin: 20px;
   top: 0;
-  z-index: 100;
+  z-index: 100; */
+  display: flex;
+      align-items: center;
 }
-
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px 100px;
+      background-color: white;
 }
 
 /* Logo */
-.logo-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: #1a1a1a;
+.navbar-logo {
+  width: 40px;
+      height: 40px;
+      margin-right: 10px;
 }
+
+.navbar-brand {
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+    }
+
+  .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar-right img.icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar-right .notification {
+      position: relative;
+    }
+    
+    /* Center nav links */
+    .navbar-center {
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar-center a {
+      text-decoration: none;
+      color: limegreen;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .navbar-right .notification .dot {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    /* Bottom green bar */
+  .bottom-bar {
+      height: 10px;
+      background-color: darkgreen;}
 
 .logo-icon {
   width: 40px;
   height: auto;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 100px;
 }
 
 .brand-name {
@@ -375,7 +432,8 @@ div.more > *:hover {
 .green-background {
   background-color: #005f00;
   width: 100%;
-  padding: 4rem 2rem 6rem;
+  height: 600px;
+  /* padding: 4rem 2rem 6rem; */
   text-align: center;
   position: relative;
   z-index: 1;
@@ -388,13 +446,14 @@ div.more > *:hover {
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
   line-height: 40px;
+  padding-top: 7rem;
 }
 
 .hero-subtitle {
   font-size: 1.875rem;
   font-weight: 500;
   color: #e5feeb;
-  margin-bottom: 0;
+  margin-bottom: 3rem;
   letter-spacing: -0.03em;
   line-height: 36px;
 }
@@ -408,15 +467,16 @@ div.more > *:hover {
   width: 1300px;
   max-width: 100%;
   z-index: 2;
-  top: 160px;
+  top: 420px;
 }
 
 /* Description Section - Below team images */
 .description-section {
   max-width: 1300px;
-  margin: 8rem auto 4rem;
+  /* margin: 1rem auto 4rem; */
+  margin-left: 5rem;
   padding: 0 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .description-content {
@@ -431,7 +491,7 @@ div.more > *:hover {
   margin-bottom: 2rem;
   letter-spacing: -0.03em;
   line-height: 40px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .description-text p {
@@ -446,48 +506,69 @@ div.more > *:hover {
 /* Values Section */
 .values-section {
   max-width: 1200px;
-  margin: 12rem auto 4rem;
-  padding: 0 2rem;
+  /* margin: 12rem auto 4rem; */
+  padding-left:6rem;
 }
 
 .value-item {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  padding: 2rem 0;
-  flex-direction: row-reverse;
+  padding-top: 2rem;
+  /* gap: 3rem; */
+  /* margin-bottom: 4rem; */
+  /* padding: 2rem 0; */
+  /* flex-direction: row-reverse; */
 }
 
-.value-item.reverse {
-  flex-direction: row-reverse;
+ .value-item-reverse {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+} 
+.value-text-two{
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #555;
+  text-align: justify;
+  width: 78%;
+  
 }
-
 .value-image {
-  flex: 0 0 400px;
-  width: 400px;
-  height: 300px;
+  /* flex: 0 0 400px; */
+  width: 350px;
+  /* height: 200px; */
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  border: 2px solid white;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
+}
+.value-image-two{
+  width: 350px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 2px solid white;
+  flex-direction:row-reverse;
+  position: absolute;
+  left: 950px;
+  top: 1700px;
 }
 
 .value-content {
-  flex: 1;
-  padding: 1rem 0;
+   padding: 0;
 }
 
 .value-title {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .value-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.3;
   color: #555;
+  text-align: justify;
+  width: 110%;
 }
 
 /* Team Section */
@@ -543,14 +624,16 @@ div.more > *:hover {
 .footer {
   background: #005f00;
   color: white;
-  padding: 3rem 0 1rem;
-  margin-top: auto;
+  padding: 1rem 0 1rem;
+  padding-top: 80px;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 90%;
+  /* margin: 0 auto; */
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-left: 50px;
+
 }
 
 .footer-brand {
@@ -575,8 +658,9 @@ div.more > *:hover {
 .footer-sections {
   display: grid;
   /* width: 90vw; */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 5rem;
+  /* margin-left: 5rem; */
   margin-bottom: 2rem;
   /* border: 2px solid red; */
   justify-content: space-evenly;
@@ -593,7 +677,7 @@ div.more > *:hover {
 .footer-section nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  /* gap: 0.5rem; */
 }
 
 .footer-section nav a {

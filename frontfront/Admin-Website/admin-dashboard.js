@@ -7,7 +7,7 @@
 //const API = 'http://localhost:5000/api';
 
 // For production, switch to Render:
-const API = "https://fake-drug-verification.onrender.com/api";
+  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 
 // ---------------------------
 // Token check

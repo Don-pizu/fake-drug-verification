@@ -82,7 +82,7 @@ const allowedOrigins = [
   'http://localhost:5173',   // If frontend serves on 5000
   //'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend 
-  'https://medcheck-website.netlify.app'  // deployed frontend  
+  //'https://medcheck-website.netlify.app'  // deployed frontend  
   
   ]; 
 
@@ -111,7 +111,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 //to work from vercel frontend i will have to comment this static out
-//app.use(express.static(path.join(__dirname, "frontfront"))); // serve frontend static
+app.use(express.static(path.join(__dirname, "frontfront"))); // serve frontend static
 
 
 

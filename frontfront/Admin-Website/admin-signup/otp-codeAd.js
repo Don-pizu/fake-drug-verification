@@ -3,7 +3,7 @@
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-const API = 'https://fake-drug-verification.onrender.com/api'; // Production backend
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend // Production backend
 
 //Parse query params
 const urlParams = new URLSearchParams(window.location.search);
@@ -33,8 +33,16 @@ document.querySelector('.verify-btn').addEventListener('click', async (e) => {
 	    const data = await res.json();
 
 	    if (res.ok) {
-		    alert("Account verified successfully");
-		    window.location.href = "../signin.html";
+
+		    // Save user details from backend response
+		  localStorage.setItem("token", data.token);
+		  localStorage.setItem("userId", data._id);
+		  localStorage.setItem("role", data.role);
+		  localStorage.setItem("username", data.username);
+
+		   alert("Account verified successfully");
+
+		    window.location.href = "../admin-dashboard.html";
 		} else {
 		    alert(data.message || "Verification failed");
 		  }

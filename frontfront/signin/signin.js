@@ -28,9 +28,12 @@ document.querySelector(".btn").addEventListener("click", async (e) => {
     if (res.ok) {
       //Save token for future requests
       localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data._id);
+      localStorage.setItem("role", data.role);
+      localStorage.setItem("username", data.username);
 
       alert("Login successful!");
-      window.location.href = "./index.html";
+      window.location.href = "../index.html";
     } else {
       alert(data.message || "Login failed");
     }

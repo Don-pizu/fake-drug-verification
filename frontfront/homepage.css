@@ -111,21 +111,17 @@ nav a:hover {
 }
 .family-image img {
   object-fit: cover;
-  /* max-width: 100%; */
 }
 .protects-your-family-container {
   font-size: 60px;
   letter-spacing: -0.03em;
   line-height: 60px;
-  display: inline-block;
-  font-family: "DM Sans";
   text-align: left;
   color: #4d4d4d;
   font-weight: 600;
 }
 .protect-family__text {
   max-width: 100%;
-  height: auto;
   height: 548px;
 }
 .counterfeit-harmful {
@@ -783,7 +779,19 @@ input::placeholder {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1114px) {
+  .protect-family__text{
+   margin: 5px;
+  }
+  .protects-your-family-container{
+    font-size: 50px;
+  }
+  .benefit-of-medcheck {
+  background-size: cover;
+}
+  .easily-verify-the{
+    padding-block: 1rem;
+  }
   .more-than-25000-user-trust-me-parent {
     display: flex;
     flex-direction: column;

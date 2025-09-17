@@ -9,7 +9,11 @@ const token = localStorage.getItem("token");
 
 const vfyContainer = document.getElementById("vfy-container");
 
+
+//if (!token) window.location.href = ".index/index.html";
+
 if (!token) window.location.href = "index.html";
+
 
 document
   .querySelector(".verification-form")
@@ -53,6 +57,8 @@ document
               data.image
                 ? `${API}${data.image}`
                 : "assets/images/default.png"
+                ? `http://localhost:5000${data.image}`
+                : "images/default.png"
             }" alt="${data.name}">
 	          <h2 class="vfy-name">${data.name}</h2>
 	          <span class="vfy-badge ${

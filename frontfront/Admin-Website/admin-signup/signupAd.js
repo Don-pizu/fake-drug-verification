@@ -1,7 +1,7 @@
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-const API = 'https://fake-drug-verification.onrender.com/api'; // Production backend
+  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 
 
 
@@ -26,6 +26,9 @@ document.querySelector('.signup-form').addEventListener('submit', async (e) => {
     const data = await res.json();
 
     if (res.ok) {
+      // After successful registration
+      localStorage.setItem("userId", data._id);
+      localStorage.setItem("role", data.role);
       alert('User registered. Verify OTP sent to email');
       // Redirect to OTP page with username + email
       window.location.href = `verification-linkAd.html?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`;

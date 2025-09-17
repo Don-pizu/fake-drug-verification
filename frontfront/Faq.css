@@ -130,7 +130,7 @@ nav .notification .dropdown{
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: none;
-  height: 28rem;
+  height: 29rem;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -227,6 +227,9 @@ section .medcheck{
 	background-color: #fff;
     width: 90%;
 }
+section input{
+    display: none;
+}
 section p{
     width: 550px;
 }
@@ -245,12 +248,15 @@ section .medcheck .a-rrow{
 section .medcheck ul{
  list-style: none;
 }
-section .medcheck:hover .arrowdown{
-	display: block;
+section input:checked ~ .arrowdown{
+  display: block;
 }
 section .medcheck:hover{
-	background-color: #15d218;
+	background-color: #E5FEEB;
 	cursor: pointer;
+}
+section input:checked + label span{
+  transform: rotate(180deg);
 }
 article{
     width: 50%;
@@ -303,6 +309,11 @@ footer .mail input{
     background-color: transparent;
     color: #fff;
 }
+footer input::placeholder {
+  color: white;
+  opacity: 0.9;
+  font-size: 17px;
+}
  footer .service, .more, .help{
     display: flex;
     flex-direction: column;
@@ -316,6 +327,7 @@ footer button{
     border-top-right-radius: 10px;
 	width: 3rem;
 	height: 40px;
+    margin-left: 8rem;
 }
 
 footer a{
@@ -354,7 +366,7 @@ footer .rights{
     nav{
     padding-top: 30px;
     display: flex;
-    gap: 10rem;
+    gap: 8rem;
 }
 nav .more ul{
     list-style: none;
@@ -366,7 +378,7 @@ nav .more ul{
      justify-content: center;
 }
 nav .icon{
-    left: 18rem;
+    left: 10rem;
 }
 section .pics{
     margin-left: -2rem;
@@ -525,17 +537,9 @@ section .pics{
         margin: 2rem 0px 1rem 0px;
         width: 8rem;
     } 
-    footer .mail{
-        display: flex;
-        gap: 10px;
-    }
     footer button{
-        height: 70px;
-        width: 5rem;
-    }
-    footer label{
-        position: relative;
-        top: 1rem;
+        height: 60px;
+        margin-left: 4rem;
     }
     footer .terms{
         display: flex;
@@ -580,9 +584,7 @@ section .pics{
     footer .mail{
         width: 320px;
     }
-    footer button{
-        width: 8rem;
-    }
+    
     footer .terms{
         font-size: 15px;
     }
@@ -599,7 +601,7 @@ section .pics{
 
 @media (max-width:360px) {
     nav .icon{
-        left: 14rem !important;
+        left: 17rem !important;
     }
     nav .notification .dropdown{
         left: -10rem;
@@ -616,7 +618,7 @@ section .pics{
         padding: 22px;
     }
     footer .mail{
-        width: 310px;
+        width: 300px;
     }
     footer .form, .service, .more, .help{
     font-size: 16px !important;
