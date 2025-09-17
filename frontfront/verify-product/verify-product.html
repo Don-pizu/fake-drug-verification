@@ -175,11 +175,6 @@
           <header class="section-header">
             <h1>Verify A Product</h1>
           </header>
-
-	<link rel="stylesheet" href="verify-product.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap" />
-</head>
 <body>
 	<div class="verify-product-page">
 		<!-- Header Section -->
@@ -248,9 +243,7 @@
           </div>
         </section>
       </main>
-
-
-      <!-- Footer Section -->
+<!-- Footer Section -->
       <footer class="footer">
         <!-- Logo -->
         <div class="logo">
@@ -318,188 +311,9 @@
         </div>
       </footer>
     </div>
+    
+	<script src="verify-product.js"></script>
   </body>
 </html>
 
-					<!-- Profile Picture -->
-					<img src="../images/imoleayo_user.jpg" alt="Profile" class="profile-pic">
-					<img src="../images/imoleayo_user.jpg" alt="Profile" class="profile-pic" id="profilePic">
-
-					<!-- Profile Menu -->
-					<div class="profile-menu-container">
-						<input type="checkbox" id="profile-menu-toggle" class="popup-toggle" hidden>
-						<label for="profile-menu-toggle" class="profile-menu-trigger" aria-label="Profile menu">
-							<img src="../images/Frame 162.svg" alt="Menu">
-						</label>
-
-						<nav class="profile-menu-popup">
-							<a href=".profile/profile.html" class="menu-item">Profile</a>
-							<a href=".history/history.html" class="menu-item">History</a>
-							<a href=".signin.html" class="menu-item logout">Logout</a>
-						</nav>
-					</div>
-
-					<!-- Mobile Menu -->
-					<div class="mobile-menu-container">
-						<input type="checkbox" id="mobile-menu-toggle" class="popup-toggle" hidden>
-						<label for="mobile-menu-toggle" class="mobile-menu-trigger" aria-label="Mobile menu">
-							<img src="../images/menu-line.svg" alt="Menu">
-						</label>
-
-						<nav class="mobile-menu-popup">
-							<a href="#" class="mobile-menu-item">Verify Product</a>
-							<a href="#" class="mobile-menu-item">Report Product</a>
-							<a href="#" class="mobile-menu-item">Awareness</a>
-							<a href="#" class="mobile-menu-item">Profile</a>
-							<a href="#" class="mobile-menu-item">History</a>
-							<a href="#" class="mobile-menu-item">Community</a>
-							<a href="#" class="mobile-menu-item">Testimonies</a>
-							<a href="#" class="mobile-menu-item">Our Team</a>
-							<a href="#" class="mobile-menu-item">About Us</a>
-							<a href="#" class="mobile-menu-item">Contact Us</a>
-							<a href="#" class="mobile-menu-item logout">Logout</a>
-						</nav>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-		<!-- Hero Image (Desktop Only) -->
-		<!-- <div class="hero-image">
-			<img src="../images/Gemini_Generated_Image_ryq9pbryq9pbryq9 3.png" alt="MedCheck Hero" class="hero-bg">
-		</div> -->
-		<style>
-			/*MOBILE RESTRICTION*/
-			@media(max-width: 480px) {
-				.form-aside-background {
-					display: none;
-				}
-			}
-		</style>
-		<!-- Main Content -->
-		<main class="main-content">
-			<!-- Verify Product Section -->
-			<div class="form-aside-background"></div>
-			<section class="verify-section">
-				<header class="section-header">
-					<h1>Verify A Product</h1>
-				</header>
-
-				<div class="verification-container">
-					<!-- NAFDAC Number Input Section -->
-					<section class="nafdac-input-section">
-						<form class="verification-form" action="#" method="post">
-							<div class="input-group">
-								<label for="nafdac-number" class="sr-only">NAFDAC Registration Number</label>
-								<div class="input-wrapper">
-									<img src="../images/vuesax/linear/vuesax/linear/user.svg" alt="" class="input-icon"
-										aria-hidden="true">
-									<input type="text" id="nafdac-number" name="nafdac_number"
-										placeholder="NAFDAC Number e.g A4-5576" required>
-								</div>
-								<p class="helper-text">Make sure you enter the correct digits</p>
-							</div>
-
-							<button type="submit" class="verify-button">
-								<span>Verify</span>
-							</button>
-						</form>
-						<div id="vfy-container"></div>
-					</section>
-
-					<!-- OR Divider -->
-					<div class="divider-section">
-						<div class="divider-line"></div>
-						<span class="divider-text">OR</span>
-						<div class="divider-line"></div>
-					</div>
-
-					<!-- QR Code Scanner Section -->
-					<section class="qr-scanner-section">
-						<div class="qr-scanner-container">
-							<img src="../images/QR Code.svg" alt="QR Code Scanner" class="qr-icon">
-							<h3 class="qr-title">Click here to scan with your camera</h3>
-							<button type="button" class="camera-button">
-								<span>Use Camera</span>
-							</button>
-						</div>
-					</section>
-				</div>
-			</section>
-		</main>
-
-		<!-- Footer Section -->
-		<footer class="footer">
-			<div class="footer-content">
-				<div class="footer-brand">
-					<a href="#" class="footer-logo">
-						<img src="../images/logo.svg" alt="MedCheck Logo">
-						<span>Medcheck</span>
-					</a>
-				</div>
-
-				<div class="footer-sections">
-					<div class="footer-section">
-						<h3>Services</h3>
-						<nav>
-							<a href="#">Verify Product</a>
-							<a href="#">Report Product</a>
-							<a href="#">Awareness</a>
-							<a href="#">What we Do</a>
-						</nav>
-					</div>
-
-					<div class="footer-section">
-						<h3>More</h3>
-						<nav>
-							<a href="#">About Us</a>
-							<a href="#">Our Team</a>
-							<a href="#">FAQs</a>
-							<a href="#">Testimonies</a>
-						</nav>
-					</div>
-
-					<div class="footer-section">
-						<h3>Help</h3>
-						<nav>
-							<a href="#">Contact Us</a>
-						</nav>
-					</div>
-
-					<div class="footer-section newsletter-section">
-						<h3>Subscribe to our newsletter</h3>
-						<form class="newsletter-form" action="#" method="post">
-							<label for="newsletter-email" class="sr-only">Email address</label>
-							<div class="newsletter-input">
-								<input type="email" id="newsletter-email" name="email" placeholder="Email address"
-									required>
-								<button type="submit" aria-label="Subscribe">
-									<img src="../images/Submit.svg" alt="Submit">
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-
-				<div class="footer-bottom">
-					<div class="footer-legal">
-						<a href="#">Terms & Conditions</a>
-						<a href="#">Privacy Policy</a>
-					</div>
-
-					<div class="social-links">
-						<a href="#" aria-label="Facebook"><img src="../images/001-facebook.svg" alt="Facebook"></a>
-						<a href="#" aria-label="Twitter"><img src="../images/003-twitter.svg" alt="Twitter"></a>
-						<a href="#" aria-label="Instagram"><img src="../images/004-instagram.png" alt="Instagram"></a>
-					</div>
-				</div>
-
-				<p class="copyright">© 2025 MedCheck. All Rights Reserved.</p>
-			</div>
-		</footer>
-	</div>
-
-	<script src="verify-product.js"></script>
-</body>
-</html>
-
+	
