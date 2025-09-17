@@ -79,28 +79,24 @@
     <main class="bg-image">
       <img class="bg" src="../images/background-image-sign-in.png" alt="" />
       <section class="form">
-        <div class="sign-in-container">
+        <form class="sign-in-container">
           <b class="sign-in">Sign in</b>
 
           <!-- Username -->
           <br /><br /><br />
           <div class="input-box">
-            <img src="../images/user.svg" alt="" />
+           <label for=""> <img src="../images/user.svg" alt="" /></label>
             <input type="text" id="username" placeholder="Username" required />
           </div>
           <!-- Password -->
           <div class="input-box">
-            <img src="../images/lock.svg" alt="" />
+            <label for=""> <img src="../images/lock.svg" alt="" /></label>
             <input
               type="password"
               id="password"
               placeholder="••••••••••••••••••••"
               required
             />
-            <i
-              class="fa-solid fa-eye-slash toggle-password"
-              id="togglePassword"
-            ></i>
           </div>
           <!-- Options -->
           <div class="options">
@@ -132,13 +128,9 @@
           </div>
           <!-- Signup -->
           <p class="signup">
-<<<<<<< HEAD
             Don't have an account? <a href="../signup/signup.html">Signup</a>
-=======
-            Don’t have an account? <a href="../signup/signup.html">Signup</a>
->>>>>>> 80500e6015f1abd0f1aa36e809e9bf18fbec474b
           </p>
-        </div>
+        </form>
       </section>
     </main>
 
