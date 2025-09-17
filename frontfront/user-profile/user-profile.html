@@ -3,29 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" href="images/logo.svg" />
-    <title>What We Do</title>
-    <link rel="stylesheet" href="what-we-do.css" />
+    <title>Profile | MedCheck</title>
+    <link rel="stylesheet" href="../user-profile/user-profile.css" />
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <div class="logo-parent" id="frameContainer">
-          <img class="logo-icon" alt="" src="images/logo (1).svg" />
+          <img class="logo-icon" alt="" src="../images/logo-1.svg" />
           <span class="medcheck">Medcheck</span>
         </div>
       </div>
       <nav>
-        <button class="nav-btn">
-          <a href=".homepage/homepage.html">Home</a>
-        </button>
+        <button class="nav-btn"><a href="index/index.html">Home</a></button>
         <div class="service-dropdown">
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
@@ -54,18 +44,13 @@
           <img
             class="group-child"
             alt=""
-            src="images/notification-2-fill.svg"
-          />
-          <img
-            src="images/small-man.svg"
-            alt=""
-            src="images/notification-2-fill.svg"
+            src="../images/notification-2-fill.svg"
             id="dropdrop"
           />
-          <img src="images/Ellipse 8.svg" alt="" />
+          <img src="../images/Ellipse 8.svg" alt="" />
           <div class="notification">
             <div class="item">
-              <img src="images/dropdown-image.svg" alt="profile" />
+              <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
                 <h5>Miss Jennifer <a href="#">View</a></h5>
                 <p>Fake product everywhere</p>
@@ -73,7 +58,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="images/dropdown-image.svg" alt="profile" />
+              <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
                 <h5>Miss Jennifer <a href="#">View</a></h5>
                 <p>Fake product everywhere</p>
@@ -81,7 +66,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="images/dropdown-image.svg" alt="profile" />
+              <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
                 <h5>Miss Jennifer <a href="#">View</a></h5>
                 <p>Fake product everywhere</p>
@@ -89,7 +74,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="images/dropdown-image.svg" alt="profile" />
+              <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
                 <h5>Miss Jennifer <a href="#">View</a></h5>
                 <p>Fake product everywhere</p>
@@ -97,7 +82,7 @@
               </div>
             </div>
             <div class="item">
-              <img src="images/dropdown-image.svg" alt="profile" />
+              <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
                 <h5>Miss Jennifer <a href="#">View</a></h5>
                 <p>Fake product everywhere</p>
@@ -108,7 +93,7 @@
         </div>
         <img
           class="group-item"
-          src="images/Ellipse 1.svg"
+          src="../images/Ellipse 1.svg"
           alt=""
           id="profilePic"
         />
@@ -116,7 +101,7 @@
           <img
             class="group-inner"
             alt=""
-            src="images/expand-up-down-line.svg"
+            src="../images/expand-up-down-line.svg"
             id="frameIcon1"
           />
           <div class="dropdown-content-1">
@@ -127,15 +112,17 @@
         </div>
         <div class="hamburger">
           <button class="dropdownbtn">
-            <img src="images/menu-line.svg" alt="" />
+            <img src="../images/menu-line.svg" alt="" />
           </button>
           <div id="myDropdown" class="dropdown-content">
             <ul>
               <li class="menu">
-                <a class="service" href="#">Verify Product</a>
+                <a class="service" href="verify.product.html">Verify Product</a>
               </li>
               <li class="menu">
-                <a class="service" href="report-a-product.html"
+                <a
+                  class="service"
+                  href="./report-a-product/report-a-product.html"
                   >Report Product</a
                 >
               </li>
@@ -153,120 +140,54 @@
               <li class="menu"><a class="service" href="#">Our Team</a></li>
               <li class="menu"><a class="service" href="#">About Us</a></li>
               <li class="menu"><a class="service" href="#">Contact Us</a></li>
-              <li class="menu">
-                <a class="service" href="#" id="logloglog">Logout</a>
-              </li>
+              <li class="menu"><a class="service" href="#">Logout</a></li>
             </ul>
           </div>
         </div>
       </div>
     </header>
-    <!-- main section -->
     <main>
-      <section class="first-image">
-        <div class="first-image0">
-          <img src="images/family-image.png" alt="" />
+      <div class="main-section">
+        <form class="form-container">
+          <h4>Profile</h4>
+          <img class="profile" src="../images/small-man.svg" alt="" />
+          <div>
+            <div class="input-div">
+              <label for="name"><img src="../images/user.svg" alt="" /></label>
+              <input type="text" placeholder="Abiodun Adegbola" />
+            </div>
+            <div class="input-div">
+              <label for="name"
+                ><img src="../images/mail-line.svg" alt=""
+              /></label>
+              <input type="text" placeholder="vfe051020babiodun@gmail.com" />
+            </div>
+            <div class="input-div">
+              <label for="name"><img src="../images/Group.svg" alt="" /></label>
+              <input type="text" placeholder="+234 810222700835" />
+            </div>
+            <div class="input-div">
+              <label for="location"
+                ><img src="../images/location.svg" alt=""
+              /></label>
+              <input type="text" placeholder="Ogun State" />
+            </div>
+          </div>
+          <a href="../search-successful/search-successful.html">Save change</a>
+        </form>
+        <div class="profile-image">
+          <img
+            src="../images/Gemini_Generated_Image_8ef5px8ef5px8ef5 1.png"
+            alt=""
+          />
         </div>
-      </section>
-      <section class="wwd">
-        <div class="what-we-do">
-          <h2>What We Do</h2>
-          <p>
-            At MedCheck, we're a the mission to protect you from counterfeit,
-            expired, and unregistered products.
-          </p>
-          <p>
-            Our platform empowers everyday consumers to make safer, smarter
-            choices <span class="erase">— right from their phone</span>.
-          </p>
-        </div>
-      </section>
-      <section class="productVerify-frame">
-        <div class="container">
-          <!-- Real Cards -->
-          <div class="card">
-            <div><img src="images/flex1.png" alt="Product Verification" /></div>
-            <div class="scan-a-barcode">
-              <h2>Product Verification</h2>
-              <p>
-                Scan the barcode or enter the NAFDAC registration number to
-                instantly check authenticity and approval status of drugs,
-                foods, drinks, and cosmetics.
-              </p>
-            </div>
-            <a href="#">Verify Product</a>
-          </div>
-          <div class="card">
-            <div><img src="images/flex2.png" alt="Product Reporting" /></div>
-            <div class="found-a-suspicious-container">
-              <h2>Product Reporting</h2>
-              <p class="found-a-suspicious">
-                Found a suspicious item or seller? Report it directly through
-                MedCheck.
-              </p>
-              <p class="found-a-suspicious">
-                We forward verified reports to relevant authorities and alert
-                the community.
-              </p>
-            </div>
-            <a href="#">Report Product</a>
-          </div>
-          <div class="card">
-            <div><img src="images/flex3.png" alt="Public Awareness" /></div>
-            <div class="we-keep-you">
-              <h2>Public Awareness</h2>
-              <p>
-                We keep you informed with real-time alerts on flagged products,
-                safety warnings, and educational tips to help avoid harmful
-                goods.
-              </p>
-            </div>
-            <a href="#">Read More</a>
-          </div>
-          <!-- Extra 3 (only for mobile view) -->
-          <div class="card extra">
-            <div><img alt="vision-statement" src="images/flex4.png" /></div>
-            <div>
-              <h2>Vision Statement</h2>
-              <p>
-                To become the leading digital platform in Africa for eliminating
-                counterfeit products, fostering a world where every consumer can
-                make safe, informed choices — confidently, instantly, and
-                securely.
-              </p>
-            </div>
-          </div>
-          <div class="card extra">
-            <div><img alt="mission-statement" src="images/flex5.png" /></div>
-            <div>
-              <h2 class="mission-statement">Mission Statement</h2>
-              <p class="to-empower-consumers">
-                To empower consumers with simple, reliable tools to verify the
-                authenticity of drugs, foods, drinks, and cosmetics before
-                purchase, helping prevent harm and saving lives through
-                technology, transparency, and awareness.
-              </p>
-            </div>
-          </div>
-          <div class="card extra">
-            <div><img alt="Core-value" src="images/flex6.png" /></div>
-            <div>
-              <h2 class="core-value">Core Value</h2>
-              <p class="we-aim-to">
-                We aim to build and maintain trust between consumers, producers,
-                and regulators by ensuring transparent, accurate product
-                verification.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
     <!-- ===== Footer Section ===== -->
     <footer class="footer">
       <!-- Logo -->
       <div class="logo">
-        <img src="images/logo.svg" alt="Medcheck logo" />
+        <img src="../images/logo.svg" alt="Medcheck logo" />
         <b>Medcheck</b>
       </div>
       <hr class="divider" />
@@ -314,14 +235,14 @@
       </div>
       <!-- Footer Bottom (legal + socials) -->
       <div class="footer-bottom">
-        <div class="legal">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
-        </div>
         <div class="socials">
           <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
           <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
           <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
+        </div>
+        <div class="legal">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
       <!-- Copyright -->
@@ -329,7 +250,5 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <script src="what-we-do.js"></script>
   </body>
 </html>

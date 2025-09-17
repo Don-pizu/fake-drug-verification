@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedCheck - Admin Dashboard</title>
     <link rel="stylesheet" href="admin-dashboard.css" />
-        <link rel="icon" href="images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -18,21 +18,25 @@
   <body>
     <header>
       <div class="header">
-        <div class="logo">      
-          <img src="images/logo.svg" alt="medcheck-logo" />
+        <div class="logo">
+          <img src="../images/logo.svg" alt="medcheck-logo" />
           <a href="#">MedCheck</a>
         </div>
         <div class="header-2">
           <div class="dropdown">
-            <img src="images/notification-2-fill (1).svg" alt="" />
-            <img src="images/notification-dot.svg" alt="notification" id="dropdrop" />
+            <img src="../images/notification-2-fill (1).svg" alt="" />
+            <img
+              src="../images/notification-dot.svg"
+              alt="notification"
+              id="dropdrop"
+            />
             <div id="myDropdown" class="dropdown-content">
               <div class="mobile-dashboard-notification">
                 <div class="notification-default">
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -51,7 +55,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -70,7 +74,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -89,7 +93,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -107,43 +111,38 @@
               </div>
             </div>
           </div>
-          <div class="menu-line">
-            <img src="images/menu-line.svg" alt="menu-line" />
-            <div class="menu-content">
-              <a href="admin-dashboard.html" target="_self"
-                >Dashboard</a
+          <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()"><img src="../images/menu-line.svg" alt="menu-line" /></div>
+            <div class="menu-links" id="menuLinks">
+             <a href="admin-dashboard.html" target="_self">Dashboard</a>
+              <a href="product-verification.html" target="_blank"
+                >Verification</a
               >
+              <a href="index.html" target="_self">Dashboard</a>
               <a
-                href="product-verification.html"
+                href=".product-verification/product-verification.html"
                 target="_blank"
                 >Verification</a
               >
-
-                <a href="index.html" target="_self">Dashboard</a>
-              <a href=".product-verification/product-verification.html" target="_blank">Verification</a>          
-
-              <a href="">Reports</a>
-              <a href="">Awareness</a>
-              <a href="user-page.html">User</a>
+              <a href="../product-report/product-report.html">Reports</a>
+              <a href="../awareness/.awareness.html">Awareness</a>
+              <a href="../user-page/user-page.html">User</a>
               <a href="analytics.html">Analytics</a>
               <a href="profile-setting.html">Settings</a>
-              <a href=".adminlogin-sign.html" target="_blank" id="logloglog">Logout</a>
+              <a href="../login.html" id="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
-
-            <a href="#"
-              ><img src="images/Ellipse 1.svg" alt=""
-            /></a>
+            <a href="#"><img src="../images/Ellipse 1.svg" alt="" /></a>
           </div>
           <div class="logout-dropdown">
-          <div class="logout-dropdown">
-            <button class="drop-button">
-              <img src="images/expand-up-down-line.svg" alt="" />
-            </button>
-            <div class="logout">
-              <a href="#" id="logloglog">logout</a>
-
+            <div class="logout-dropdown">
+              <button class="drop-button">
+                <img src="../images/expand-up-down-line.svg" alt="" />
+              </button>
+              <div class="logout">
+                <a href="#" id="logloglog">logout</a>
+              </div>
             </div>
           </div>
         </div>
@@ -153,13 +152,13 @@
       <div class="nav">
         <ul>
           <li class="homepage">
-            <img src="images/home-4-line.svg" alt="dashboard-icon" />
+            <img src="../images/home-4-line.svg" alt="dashboard-icon" />
             <a id="dashboard" href="index.html">Dashboard</a>
           </li>
           <div class="multiselect">
             <div class="selectBox" onclick="showBoxes()">
               <div class="product">
-                <img src="images/box-3-line.svg" alt="" />
+                <img src="../images/box-3-line.svg" alt="" />
                 <a href="#">Product</a>
                 <i
                   class="fa-solid fa-chevron-down fa-2xs"
@@ -170,36 +169,35 @@
             <div id="checkboxes">
               <ul>
                 <li>
-                  <img
-                    src="images/search-normal.svg"
-                    alt="Verification"
-                  />
-                  <a href="product-verification.html" target="_blank">Verification</a>
+                  <img src="../images/search-normal.svg" alt="Verification" />
+                  <a href="product-verification.html" target="_blank"
+                    >Verification</a
+                  >
                 </li>
                 <li>
-                  <img src="images/danger.svg" alt="Report" />
+                  <img src="../images/danger.svg" alt="Report" />
                   <a href="#">Report</a>
                 </li>
               </ul>
             </div>
           </div>
           <li>
-            <img src="images/news-line.svg" alt="Awareness" />
-            <a href="#">Awareness</a>
+            <img src="../images/news-line.svg" alt="Awareness" />
+            <a href="../awareness/awareness.html"></a>
           </li>
           <li>
-            <img src="images/profile-circle.svg" alt="User" /><a href="#"
+            <img src="../images/profile-circle.svg" alt="User" /><a href="#"
               >Users</a
             >
           </li>
           <li>
-            <img src="images/bar-chart-2-line.svg" alt="analytics" /><a
+            <img src="../images/bar-chart-2-line.svg" alt="analytics" /><a
               href="#"
               >Analytics</a
             >
           </li>
           <li>
-            <img src="images/settings-3-line.svg" alt="settings-icon" /><a
+            <img src="../images/settings-3-line.svg" alt="settings-icon" /><a
               href="#"
               >Settings</a
             >
@@ -231,7 +229,7 @@
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="images/verified-badge-line.svg"
+              src="../images/verified-badge-line.svg"
             />
           </div>
           <div class="total__parent">
@@ -249,7 +247,7 @@
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="images/error-warning-line.svg"
+              src="../images/error-warning-line.svg"
             />
           </div>
           <div class="total__parent">
@@ -265,7 +263,7 @@
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="images/calendar-1.svg"
+              src="../images/calendar-1.svg"
             />
           </div>
           <div class="total__parent">
@@ -279,7 +277,7 @@
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="images/bar-chart-fill.svg"
+              src="../images/bar-chart-fill.svg"
             />
           </div>
         </div>
@@ -505,7 +503,7 @@
     </main>
     <footer>
       <div class="logo">
-        <img src="images/logo.svg" alt="Medcheck-logo" />
+        <img src="../images/logo.svg" alt="Medcheck-logo" />
         <span>MedCheck</span>
       </div>
       <hr class="divider" />
@@ -513,9 +511,13 @@
         <ul>
           <li class="solid-text">Quick</li>
           <li>Dashboard</li>
-          <li><a href=".product-verification/product-verification.html">Verification</a></li>
+          <li>
+            <a href=".product-verification/product-verification.html"
+              >Verification</a
+            >
+          </li>
           <li><a href="#">Reports</a></li>
-          <li><a href="#">Awareness</a></li>
+          <li><a href="../awareness/awareness.html"></a></li>
           <li><a href="#">Users</a></li>
           <li><a href="#">Analytics</a></li>
           <li><a href="#">Settings</a></li>
@@ -542,6 +544,21 @@
         }
       }
     </script>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menuLinks');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Optional: Close the menu when clicking outside
+  // document.addEventListener('click', function(event) {
+  //   const menu = document.getElementById('menuLinks');
+  //   const icon = document.querySelector('.hamburger-icon');
+  //   if (!menu.contains(event.target) && !icon.contains(event.target)) {
+  //     menu.style.display = 'none';
+  //   }
+  // });
+</script>
 
     <script src="dashboard.js"></script>
   </body>
