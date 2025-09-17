@@ -57,7 +57,7 @@ document
               data.image
                 ? `${API}${data.image}`
                 : "assets/images/default.png"
-                ? `http://localhost:5000${data.image}`
+                ? `${API}${data.image}`
                 : "images/default.png"
             }" alt="${data.name}">
 	          <h2 class="vfy-name">${data.name}</h2>
@@ -190,7 +190,7 @@ async function fetchAwareness() {
         <img class="notification-default-child"
           src="${
             a.image
-              ? `http://localhost:5000${a.image}`
+              ? `${API}${a.image}`
               : "images/images/profile-female.svg"
           }"
           alt="awareness"
