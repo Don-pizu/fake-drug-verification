@@ -165,6 +165,7 @@
       <div class="report-a-product-parent">
         <b class="report-a-product">Report A Product</b>
         <div class="frame-parent">
+
           <form class="emails-input-parent">
             <div class="emails-input">
               <label for="product-name"
@@ -184,44 +185,20 @@
               /></label>
               <input type="text" id="location" placeholder="Location" />
             </div>
-            <select class="frame-group">
+
+
+
+            <div class="frame-group">
               <span>Category</span>
               <option value=""></option>
-<<<<<<< HEAD
               <div class="frame-wrapper">
-=======
                <div class="frame-wrapper">
->>>>>>> 80500e6015f1abd0f1aa36e809e9bf18fbec474b
                 <div class="title-wrapper">
                   <div class="title">Category</div>
                 </div>
               </div>
               <div id="list1" class="dropdown-check-list" tabindex="100">
-<<<<<<< HEAD
-=======
-
-
-                <!--
->>>>>>> 80500e6015f1abd0f1aa36e809e9bf18fbec474b
-                <span class="anchor">Select</span>
-                <ul class="items">
-                  <li><span>Beverages</span><input type="checkbox"  value="beverages" /></li>
-                  <li>
-                    <span>Drugs & Pharmaceu...</span><input type="checkbox" value="drugs" />
-                  </li>
-                  <li>
-                    <span>Cosmestics & Person...</span><input type="checkbox" value="cosmetics" />
-                  </li>
-                  <li>
-                    <span>Chemicals & Hous...</span><input type="checkbox" value="chemical" />
-                  </li>
-                  <li><span>Medical Devices</span><input type="checkbox" value="devices" /></li>
-<<<<<<< HEAD
-                </ul>
-              </div> 
-=======
-                </ul>  -->
-
+                <label for="category">Category</label>
                 <select id="category" required>
                 <option value="" class="anchor">Select Category</option>
                 <option value="beverages">Beverages</option>
@@ -232,8 +209,18 @@
               </select>
 
               </div>
->>>>>>> 80500e6015f1abd0f1aa36e809e9bf18fbec474b
-            </select>
+            </div>
+
+            <div class="emails-input">
+              <label for="nafdacReg"><img src="../images/note.svg" alt="" /></label>
+              <input type="text" id="nafdacReg" placeholder="NAFDAC Reg No." required />
+            </div>
+
+            <div class="emails-input">
+              <label for="batchNo"><img src="../images/note.svg" alt="" /></label>
+              <input type="text" id="batchNo" placeholder="Batch Number" />
+            </div>
+
             <div class="emails-input">
               <label for="issues-input">
                 <img class="vuesaxlinearuser-icon" alt="" src="../images/note.svg"
@@ -244,50 +231,19 @@
                 placeholder="Description of Issue"
               />
             </div>
+
+             <div class="emails-input">
+              <label for="fileUpload"><img src="../images/image.svg" alt="" /></label>
+              <input type="file" id="fileUpload" accept="image/*" />
+            </div>
+
+
             <button id="openPopup" class="verify-1">Save report</button>
             <div id="rpt-container"></div>
           </form>
 
-          <form class="emails-input-group">
-            <div class="emails-input">
-              <label for="nafdac-number">
-                <img
-                  class="vuesaxlinearuser-icon"
-                  alt=""
-                  src="../images/magicpen.svg"
-              /></label>
-              <input
-                type="text"
-                id="nafdacReg"
-                placeholder="NAFDAC Number e.g A4-5576"
-              />
-            </div>
-            <div class="emails-input">
-              <label for="batch-no">
-                <img
-                  class="vuesaxlinearuser-icon"
-                  alt=""
-                  src="../images/dashboard-fill.svg"
-              /></label>
-              <input
-                type="text"
-                id="batchNo"
-                placeholder="Batch Number (optional)"
-              />
-            </div>
-            <div class="frame-container">
-              <div class="frame-wrapper">
-                <b class="upload-photo">Upload Photo </b>
-              </div>
-              <div class="upload-container">
-                <h3>Upload Photo</h3>
-                <p>Tap to upload a photo of the product</p>
-                <label for="fileUpload" class="upload-btn">Upload</label>
-                <input type="file" id="fileUpload" hidden />
-              </div>
-            </div>
-            <button class="verify">Save report</button>
-          </form>
+
+
         </div>
       </div>
     </main>

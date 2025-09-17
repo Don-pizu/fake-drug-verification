@@ -145,7 +145,7 @@ exports.updateReport = async (req, res, next) => {
 
 		// update image if new one is uploaded
 	    if (req.file) {
-	      getVeri.image = `/uploads/${req.file.filename}`;
+	      getRepo.image = `/uploads/${req.file.filename}`;
 	    }
 
 		await getRepo.save();
