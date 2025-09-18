@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedCheck - Analytics Dashboard</title>
     <link rel="stylesheet" href="analytics.css" />
+       <link rel="icon" href="../images/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -108,16 +109,16 @@
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
-              <img src="../images/menu-line.svg" alt="menu-line" />
+              <img class="menu-line" src="../images/menu-line.svg" alt="menu-line" />
             </div>
             <div class="menu-links" id="menuLinks">
-              <a href="admin-dashboard.html" target="_self">Dashboard</a>
-              <a href="product-verification.html" target="_blank"
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
+              <a href="../product-verification/product-verification.html" target="_blank"
                 >Verification</a
               >
-              <a href="index.html" target="_self">Dashboard</a>
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
               <a
-                href=".product-verification/product-verification.html"
+                href="../product-verification/product-verification.html"
                 target="_blank"
                 >Verification</a
               >
@@ -125,7 +126,7 @@
               <a href="../awareness/.awareness.html">Awareness</a>
               <a href="../user-page/user-page.html">User</a>
               <a href="analytics.html">Analytics</a>
-              <a href="profile-setting.html">Settings</a>
+              <a href="../profile-setting/profile-setting.html">Settings</a>
               <a href="../login.html" id="logloglog">Logout</a>
             </div>
           </div>
@@ -137,7 +138,7 @@
               <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="#">logout</a>
+              <a href="../login.html">logout</a>
             </div>
           </div>
         </div>
@@ -153,7 +154,7 @@
           <li>
             <span class="products-btn"
               ><img src="../images/box-3-line.svg" alt="products-icon" />
-              <a href="product-verification.html">Products</a
+              <a href="#">Products</a
               ><i
                 class="fa-solid fa-chevron-up fa-2xs"
                 style="color: #00c503"
@@ -162,30 +163,30 @@
           </li>
           <li class="verification">
             <img src="../images/search-normal.svg" alt="" />
-            <a href="product-verification.html">Verification</a>
+            <a href="../product-verification/product-verification.html">Verification</a>
           </li>
           <li>
             <img src="../images/danger.svg" alt="" />
-            <a href="#">Reports</a>
+            <a href="../product-report/product-report.html">Reports</a>
           </li>
           <li>
             <img src="../images/news-line.svg" alt="Awareness" />
-            <button><a href="../awareness/awareness.html"></a></button>
+            <button><a href="../awareness/awareness.html">Awareness</a></button>
           </li>
           <li>
-            <img src="../images/profile-circle.svg" alt="User" /><a href="#"
+            <img src="../images/profile-circle.svg" alt="User" /><a href="../user-page/user-page.html"
               >Users</a
             >
           </li>
           <li>
             <img src="../images/bar-chart-2-line.svg" alt="analytics" /><a
-              href="#"
+              href="../analytics/analytics.html"
               >Analytics</a
             >
           </li>
           <li>
             <img src="../images/settings-3-line.svg" alt="settings-icon" /><a
-              href="#"
+              href="../profile-setting/profile-setting.html"
               >Settings</a
             >
           </li>
@@ -208,7 +209,7 @@
               <p class="total__text">Total Verification</p>
               <div class="parent">
                 <p class="number">1,248</p>
-                <p class="percentage colored">+12.5% VS previous Period</p>
+                <p class="percentage">+12.5% vs previous Period</p>
               </div>
             </div>
             <img
@@ -219,24 +220,24 @@
           </div>
           <div class="total__parent">
             <div class="total-record-container">
-              <p class="total__text">Total products</p>
+              <p class="total__text">Counterfeit Products</p>
               <div class="parent">
-                <p class="b">1,248</p>
-                <p class="percentage">+12.5% vs previous</p>
+                <p class="b">87</p>
+                <p class="percentage">-3.2% vs previous period</p>
               </div>
             </div>
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="../images/verified-badge-line.svg"
+              src="../images/error-warning-line-1.svg"
             />
           </div>
           <div class="total__parent">
             <div class="total-products-verified">
-              <p class="total__text">Counterfeit Products</p>
+              <p class="total__text">Reports Submitted</p>
               <div class="parent">
-                <p class="b">584</p>
-                <p class="percentage">New alerts available</p>
+                <p class="b">156</p>
+                <p class="percentage">+8.7% vs previous period</p>
               </div>
             </div>
             <img
@@ -247,16 +248,16 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified-parent">
-              <p class="total__text">Total Verified</p>
+              <p class="total__text">Active <br> Users</p>
               <div class="parent">
-                <p class="b">1,248</p>
-                <p class="percentage">+12.5% Vs previous</p>
+                <p class="b">584</p>
+                <p class="percentage">+21.3% Vs previous period</p>
               </div>
             </div>
             <img
               class="verified-badge-line-icon"
               alt=""
-              src="../images/verified-badge-line.svg"
+              src="../images/bar-chart-fill.svg"
             />
           </div>
         </div>
@@ -514,13 +515,13 @@
       <div class="quick">
         <ul>
           <li class="solid-text">Quick</li>
-          <li>Dashboard</li>
-          <li><a href="#">Verification</a></li>
-          <li><a href="#">Reports</a></li>
+          <li><a href="../admin-dashboard/admin-dashboard.html">Dashboard</a></li>
+          <li><a href="../product-verification/product-verification.html">Verification</a></li>
+          <li><a href="../product-report/product-report.html">Reports</a></li>
           <li><a href="../awareness/awareness.html"></a></li>
-          <li><a href="#">Users</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><a href="../user-page/user-page.html">Users</a></li>
+          <li><a href="../analytics/analytics.html">Analytics</a></li>
+          <li><a href="../profile-setting/profile-setting.html">Settings</a></li>
         </ul>
       </div>
       <div class="condition">

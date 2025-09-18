@@ -91,6 +91,7 @@ header {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  display: none;
 }
 .menu-links {
   display: none;
@@ -516,9 +517,6 @@ b {
   font-size: 24px;
   color: #005f00;
 }
-.total-reported-products {
-  color: var(--colored-color);
-}
 .total-products-verified,
 .total-reported-products {
   font-size: 24px;
@@ -545,22 +543,22 @@ b {
 .total__text {
   font-size: 24px;
   font-weight: 700;
-  width: 150px;
+  width: 199px;
   font-size: 24px;
   letter-spacing: -0.03em;
   line-height: 32px;
+  white-space: wrap;
   color: #005f00;
   text-align: left;
 }
 .percentage {
-  width: 100%;
+  width: 199px;
   font-size: 20px;
   letter-spacing: -0.03em;
   line-height: 28px;
-  display: inline-block;
   color: #33f95e;
   text-align: left;
-  white-space: nowrap;
+  white-space: wrap;
   font-weight: 600;
 }
 .parent p:nth-of-type(1) {
@@ -1137,7 +1135,7 @@ footer {
   table td {
     white-space: nowrap;
   }
-  .menu-line {
+  .hamburger-menu {
     display: block;
   }
 }
@@ -1171,11 +1169,17 @@ footer {
     font-size: 16px;
     font-weight: 500;
   }
+  .dashboard{
+    padding-block: 0rem;
+  }
   .dashboard-parent h2 {
     font-size: 20px;
   }
   .dashboard-parent p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .chartContainer{
+    padding-block: 1rem;
   }
   .total-numbers-container {
     margin-top: 3rem;

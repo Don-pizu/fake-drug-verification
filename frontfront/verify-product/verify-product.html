@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Verify Product - MedCheck</title>
-     <link rel="icon" href="../images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
 
     <link rel="stylesheet" href="verify-product.css" />
     <link
@@ -24,298 +24,257 @@
     />
   </head>
   <body>
-    <div class="verify-product-page">
-      <!-- Header Section -->
-      <header class="header">
-        <div class="logo">
-          <div class="logo-parent" id="frameContainer">
-            <img class="logo-icon" alt="" src="../images/logo-1.svg" />
-            <span class="medcheck">Medcheck</span>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-parent" id="frameContainer">
+          <img class="logo-icon" alt="" src="../images/logo-1.svg" />
+          <span class="medcheck">Medcheck</span>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-btn">
+          <a href="index/index.html">Home</a>
+        </button>
+        <div class="service-dropdown">
+          <button class="nav-btn">Our Services</button>
+          <div class="service-content">
+            <a href="verify.product.html">Verify Product</a>
+            <a href="./report-a-product/report-a-product.html"
+              >Report Product</a
+            >
+            <a href=".awareness/awareness.html">Awareness</a>
           </div>
         </div>
-        <nav>
-          <button class="nav-btn">
-            <a href="index/index.html">Home</a>
+        <div class="more-dropdown">
+          <button class="nav-btn">More</button>
+          <div class="more-content">
+            <a href=".testimonials.html">Testimonies</a>
+            <a href=".our-team.html">Our Teams</a>
+            <a href=".Faq.html">FAQS</a>
+            <a href=".history/history.html">History</a>
+            <a href=".about-us.html">About US</a>
+            <a href=".contact-us/contact-us.html">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav2">
+        <!-- bell icon -->
+        <div class="dropdown" id="dropdown">
+          <img
+            class="group-child"
+            alt=""
+            src="../images/notification-2-fill.svg"
+            id="dropdrop"
+          />
+          <img src="../images/Ellipse 8.svg" alt="" />
+          <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="group-item" src="../images/Ellipse 1.svg" alt="" />
+        <div class="dropdown-2">
+          <img
+            class="group-inner"
+            alt=""
+            src="../images/expand-up-down-line.svg"
+            id="frameIcon1"
+          />
+          <div class="dropdown-content-1">
+            <div class="link"><a href="#">Profile</a></div>
+            <div class="link"><a href="#">History</a></div>
+            <div class="link"><a href="#" id="logloglog">Logout</a></div>
+          </div>
+        </div>
+        <div class="hamburger">
+          <button class="dropdownbtn">
+            <img src="../images/menu-line.svg" alt="" />
           </button>
-          <div class="service-dropdown">
-            <button class="nav-btn">Our Services</button>
-            <div class="service-content">
-              <a href="verify.product.html"
-                >Verify Product</a
-              >
-              <a href="./report-a-product/report-a-product.html"
-                >Report Product</a
-              >
-              <a href=".awareness/awareness.html">Awareness</a>
-            </div>
+          <div id="myDropdown" class="dropdown-content">
+            <ul>
+              <li class="menu">
+                <a class="service" href="verify.product.html">Verify Product</a>
+              </li>
+              <li class="menu">
+                <a
+                  class="service"
+                  href="./report-a-product/report-a-product.html"
+                  >Report Product</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="awareness-page.html">Awareness</a>
+              </li>
+              <li class="menu"><a class="service" href="#">Profile</a></li>
+              <li class="menu"><a class="service" href="#">History</a></li>
+              <li class="menu">
+                <a class="service" href="community-gist.html">Community</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="index.html">Testimonies</a>
+              </li>
+              <li class="menu"><a class="service" href="#">Our Team</a></li>
+              <li class="menu"><a class="service" href="#">About Us</a></li>
+              <li class="menu"><a class="service" href="#">Contact Us</a></li>
+              <li class="menu">
+                <a class="service" href="#" id="logloglog">Logout</a>
+              </li>
+            </ul>
           </div>
-          <div class="more-dropdown">
-            <button class="nav-btn">More</button>
-            <div class="more-content">
-              <a href=".testimonials.html">Testimonies</a>
-              <a href=".our-team.html">Our Teams</a>
-              <a href=".Faq.html">FAQS</a>
-              <a href=".history/history.html">History</a>
-              <a href=".about-us.html">About US</a>
-              <a href=".contact-us/contact-us.html">Contact Us</a>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <section class="verification-product-container">
+        <div class="form-aside-background">
+          <img src="../images/flex1.png" alt="" />
+        </div>
+        <div class="verification-container">
+          <form class="verification-form" action="#" method="post">
+            <div class="section-header">
+              <p>Verify A Product</p>
             </div>
+            <div class="input-wrapper">
+              <label for="nafdac-number">
+                <img src="../images/user.svg" alt=""
+              /></label>
+              <input
+                type="text"
+                id="nafdac-number"
+                name="nafdac_number"
+                placeholder="NAFDAC Number e.g A4-5576"
+                required
+              />
+            </div>
+            <p class="helper-text">Make sure you enter the correct digits</p>
+            <button type="submit" class="verify-button">Verify</button>
+          </form>
+          <!-- OR Divider -->
+          <div class="divider-section">
+            <div class="divider-line"></div>
+            <span class="divider-text">OR</span>
+            <div class="divider-line"></div>
           </div>
-        </nav>
-        <div class="nav2">
-          <!-- bell icon -->
-          <div class="dropdown" id="dropdown">
+          <!-- QR Code Scanner Section -->
+          <div class="qr-scanner-container">
             <img
-              class="group-child"
-              alt=""
-              src="../images/notification-2-fill.svg" id="dropdrop"
+              src="../images/QR Code.svg"
+              alt="QR Code Scanner"
+              class="qr-icon"
             />
-            <img src="../images/Ellipse 8.svg" alt="" />
-            <div class="notification">
-              <div class="item">
-                <img src="../images/dropdown-image.svg" alt="profile" />
-                <div class="info">
-                  <h5>Miss Jennifer <a href="#">View</a></h5>
-                  <p>Fake product everywhere</p>
-                  <span>20m ago</span>
-                </div>
-              </div>
-              <div class="item">
-                <img src="../images/dropdown-image.svg" alt="profile" />
-                <div class="info">
-                  <h5>Miss Jennifer <a href="#">View</a></h5>
-                  <p>Fake product everywhere</p>
-                  <span>20m ago</span>
-                </div>
-              </div>
-              <div class="item">
-                <img src="../images/dropdown-image.svg" alt="profile" />
-                <div class="info">
-                  <h5>Miss Jennifer <a href="#">View</a></h5>
-                  <p>Fake product everywhere</p>
-                  <span>20m ago</span>
-                </div>
-              </div>
-              <div class="item">
-                <img src="../images/dropdown-image.svg" alt="profile" />
-                <div class="info">
-                  <h5>Miss Jennifer <a href="#">View</a></h5>
-                  <p>Fake product everywhere</p>
-                  <span>20m ago</span>
-                </div>
-              </div>
-              <div class="item">
-                <img src="../images/dropdown-image.svg" alt="profile" />
-                <div class="info">
-                  <h5>Miss Jennifer <a href="#">View</a></h5>
-                  <p>Fake product everywhere</p>
-                  <span>20m ago</span>
-                </div>
-              </div>
-            </div>
+            <h3 class="qr-title">Click here to scan with your camera</h3>
+            <button type="button" class="camera-button">Use Camera</button>
           </div>
-          <img class="group-item" src="../images/Ellipse 1.svg" alt="" />
-          <div class="dropdown-2">
-            <img
-              class="group-inner"
-              alt=""
-              src="../images/expand-up-down-line.svg"
-              id="frameIcon1"
-            />
-            <div class="dropdown-content-1">
-              <div class="link"><a href="#">Profile</a></div>
-              <div class="link"><a href="#">History</a></div>
-              <div class="link"><a href="#" id="logloglog">Logout</a></div>
-            </div>
-          </div>
-          <div class="hamburger">
-            <button class="dropdownbtn">
-              <img src="../images/menu-line.svg" alt="" />
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Medcheck logo" />
+        <b>Medcheck</b>
+      </div>
+      <hr class="divider" />
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <!-- Services -->
+        <div class="links footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Verify Product</a></li>
+            <li><a href="#">Report Product</a></li>
+            <li><a href="#">Awareness</a></li>
+            <li><a href="#">What we Do</a></li>
+          </ul>
+        </div>
+        <!-- More -->
+        <div class="links footer-more">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- Help -->
+        <div class="links footer-help">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="newsletter">
+          <p>Subscribe to our</p>
+          <p>Newsletter</p>
+          <div class="input-container">
+            <input type="email" placeholder="Email address" />
+            <button class="btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
             </button>
-            <div id="myDropdown" class="dropdown-content">
-              <ul>
-                <li class="menu">
-                  <a
-                    class="service"
-                    href="verify.product.html"
-                    >Verify Product</a
-                  >
-                </li>
-                <li class="menu">
-                  <a
-                    class="service"
-                    href="./report-a-product/report-a-product.html"
-                    >Report Product</a
-                  >
-                </li>
-                <li class="menu">
-                  <a class="service" href="awareness-page.html">Awareness</a>
-                </li>
-                <li class="menu"><a class="service" href="#">Profile</a></li>
-                <li class="menu"><a class="service" href="#">History</a></li>
-                <li class="menu">
-                  <a class="service" href="community-gist.html">Community</a>
-                </li>
-                <li class="menu">
-                  <a class="service" href="index.html">Testimonies</a>
-                </li>
-                <li class="menu"><a class="service" href="#">Our Team</a></li>
-                <li class="menu"><a class="service" href="#">About Us</a></li>
-                <li class="menu"><a class="service" href="#">Contact Us</a></li>
-                <li class="menu"><a class="service" href="#" id="logloglog">Logout</a></li>
-              </ul>
-            </div>
           </div>
         </div>
-      </header>
-      <!-- Main Content -->
-      <main class="main-content">
-        <!-- Verify Product Section -->
-        <div class="form-aside-background"></div>
-        <section class="verify-section">
-          <header class="section-header">
-            <h1>Verify A Product</h1>
-          </header>
-<body>
-	<div class="verify-product-page">
-		<!-- Header Section -->
-		<header class="header">
-			<nav class="navbar">
-				<a href="#" class="logo-link" id="logoLink">
-					<img class="logo-icon" src="../images/logo.svg" alt="MedCheck Logo">
-					<span class="brand-name">Medcheck</span>
-				</a>
-
-
-          <div class="verification-container">
-            <!-- NAFDAC Number Input Section -->
-            <section class="nafdac-input-section">
-              <form class="verification-form" action="#" method="post">
-                <div class="input-group">
-                  <label for="nafdac-number" class="sr-only"
-                    >NAFDAC Registration Number</label
-                  >
-                  <div class="input-wrapper">
-                    <img
-                      src="../images/vuesax/linear/vuesax/linear/user.svg"
-                      alt=""
-                      class="input-icon"
-                      aria-hidden="true"
-                    />
-                    <input
-                      type="text"
-                      id="nafdac-number"
-                      name="nafdac_number"
-                      placeholder="NAFDAC Number e.g A4-5576"
-                      required
-                    />
-                  </div>
-                  <p class="helper-text">
-                    Make sure you enter the correct digits
-                  </p>
-                </div>
-                <button type="submit" class="verify-button">
-                  Verify
-                </button>
-              </form>
-              <div id="vfy-container"></div>
-
-            </section>
-
-            <!-- OR Divider -->
-            <div class="divider-section">
-              <div class="divider-line"></div>
-              <span class="divider-text">OR</span>
-              <div class="divider-line"></div>
-            </div>
-
-            <!-- QR Code Scanner Section -->
-            <section class="qr-scanner-section">
-              <div class="qr-scanner-container">
-                <img
-                  src="../images/QR Code.svg"
-                  alt="QR Code Scanner"
-                  class="qr-icon"
-                />
-                <h3 class="qr-title">Click here to scan with your camera</h3>
-                <button type="button" class="camera-button">
-                  <span>Use Camera</span>
-                </button>
-              </div>
-            </section>
-          </div>
-        </section>
-      </main>
-<!-- Footer Section -->
-      <footer class="footer">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Medcheck logo" />
-          <b>Medcheck</b>
+      </div>
+      <!-- Footer Bottom (legal + socials) -->
+      <div class="footer-bottom">
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
         </div>
-        <hr class="divider" />
-        <!-- Footer Links -->
-        <div class="footer-links">
-          <!-- Services -->
-          <div class="links footer-services">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#">Verify Product</a></li>
-              <li><a href="#">Report Product</a></li>
-              <li><a href="../awareness/awareness.html"></a></li>
-              <li><a href="#">What we Do</a></li>
-            </ul>
-          </div>
-          <!-- More -->
-          <div class="links footer-more">
-            <h4>More</h4>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">FAQs</a></li>
-            </ul>
-          </div>
-          <!-- Help -->
-          <div class="links footer-help">
-            <h4>Help</h4>
-            <ul>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="newsletter">
-            <p>Subscribe to our</p>
-            <p>Newsletter</p>
-            <div class="input-container">
-              <input type="email" placeholder="Email address" />
-              <button class="btn">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
+        <div class="legal">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
         </div>
-        <!-- Footer Bottom (legal + socials) -->
-        <div class="footer-bottom">
-          <div class="socials">
-            <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
-            <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
-          </div>
-          <div class="legal">
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-          </div>
-        </div>
-        <!-- Copyright -->
-        <div class="copyright">
-          <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
-        </div>
-      </footer>
-    </div>
-    
-	<script src="verify-product.js"></script>
+      </div>
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="verify-product.js"></script>
   </body>
 </html>
-
-	

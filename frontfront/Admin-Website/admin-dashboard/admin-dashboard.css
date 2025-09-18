@@ -91,6 +91,9 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.menu-line{
+  display: none;
+}
 .hamburger-menu {
   position: relative;
   display: inline-block;
