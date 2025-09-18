@@ -1,114 +1,103 @@
+//verify-product.js
+
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
 const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-  
+
 const token = localStorage.getItem("token");
 
-if (!token) window.location.href = "../index.html";
+const vfyContainer = document.getElementById("vfy-container");
 
-const recentPro = document.getElementById("recentPro");
-const approvedPro = document.getElementById("approvedPro");
-const fakePro = document.getElementById("fakePro");
+if (!token) window.location.href = "index.html";
 
-// Helper to render product card
-function createProductCard(verify, isApproved) {
-  const div = document.createElement("div");
-  div.classList.add("product-card");
+document
+  .querySelector(".verification-form")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const image = document.createElement("img");
-  image.src = verify.image ? `https://fake-drug-verification.onrender.com${verify.image}` : "images/placeholder.png";
-  image.alt = verify.name;
-  image.classList.add("product-image");
+    const nafdacReg = document.getElementById("nafdac-number").value.trim();
 
+    if (!nafdacReg) {
+      alert("Nafdac number is required");
+      return;
+    }
 
-  const details = document.createElement("div");
-  details.classList.add("product-details");
+    try {
+      const res = await fetch(`${API}/verify/${nafdacReg}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
 
-  const name = document.createElement("h4");
-  name.textContent = verify.name;
+      const data = await res.json();
 
-  const authentic = document.createElement("span");
-  authentic.textContent = verify.authentic ? "✅ Verified" : "❌ Fake";
-  authentic.classList.add(
-    "product-badge",
-    isApproved ? "badge-approved" : "badge-fake"
-  );
+      if (res.ok) {
+        // Clear previous modal
+        vfyContainer.innerHTML = "";
 
-  const category = document.createElement("p");
-  category.textContent = `Category: ${verify.category || verify.catgory || "N/A"}`;
+        // Create overlay
+        const overlay = document.createElement("div");
+        overlay.classList.add("vfy-overlay");
 
-  const expiry = document.createElement("p");
-  expiry.textContent = `Expiry: ${verify.expiry}`;
+        // Create modal
+        const modal = document.createElement("div");
+        modal.classList.add("vfy-modal", "vfy-active");
 
-  div.appendChild(image);
-  div.appendChild(name);
-  div.appendChild(authentic);
-  div.appendChild(category);
-  div.appendChild(expiry);
+        modal.innerHTML = `
+          <div class="vfy-header">
+            <span>Verification Result</span>
+            <button id="vfy-close">&times;</button>
+          </div>
+          <div class="vfy-body">
+            <img src="${
+              data.image
+                ? `https://fake-drug-verification.onrender.com${data.image}`
+                : "assets/images/default.png"
+            }" alt="${data.name}">
+            <h2 class="vfy-name">${data.name}</h2>
+            <span class="vfy-badge ${
+              data.authentic ? "vfy-authentic" : "vfy-counterfeit"
+            }">
+              ${data.authentic ? "✔ Authentic" : "⚠ Counterfeit"}
+            </span>
+            <p class="vfy-line">Category: ${data.category || "N/A"}</p>
+            <p class="vfy-line"><strong>Reg. No:</strong> ${data.nafdacReg}</p>
+            <p class="vfy-line"><strong>Expired:</strong> ${
+              data.expiry || "N/A"
+            }</p>
+            <button class="vfy-done" id="vfy-done">Done</button>
+            <div class="vfy-safety">
+              <strong>⚠ Safety Reminder</strong>
+              Always verify a product before using it on your body.
+              Fake or unapproved items can cause serious harm. Use only trusted sources.
+            </div>
+          </div>
+        `;
 
-  return div;
-}
+        vfyContainer.appendChild(overlay);
+        vfyContainer.appendChild(modal);
 
-// Fetch recent products
-async function fetchRecent() {
-  const res = await fetch(`${API}/verify?limit=4`, {
-    headers: { Authorization: `Bearer ${token}` },
+        // Close handlers
+        document.getElementById("vfy-close").addEventListener("click", () => {
+          overlay.remove();
+          modal.remove();
+        });
+        document.getElementById("vfy-done").addEventListener("click", () => {
+          overlay.remove();
+          modal.remove();
+        });
+        overlay.addEventListener("click", () => {
+          overlay.remove();
+          modal.remove();
+        });
+      } else {
+        alert(data.message || "Nafdac Reg is invalid");
+      }
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+      console.error(err);
+    }
   });
-
-  const data = await res.json();
-
-  if (res.ok && Array.isArray(data.verifyAll)) {
-    recentPro.innerHTML = "";
-    data.verifyAll.forEach((product) => {
-      const card = createProductCard(product, product.authentic);
-      recentPro.appendChild(card);
-    });
-  } else {
-    console.error("Invalid response:", data);
-    alert(data.message || "Could not load recent products");
-  }
-}
-
-// Fetch verified drugs
-async function fetchVerified() {
-  const res = await fetch(`${API}/verify?authentic=true&limit=4`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-
-  const data = await res.json();
-
-  if (res.ok && Array.isArray(data.verifyAll)) {
-    approvedPro.innerHTML = "";
-    data.verifyAll.forEach((verify) => {
-      const card = createProductCard(verify, true);
-      approvedPro.appendChild(card);
-    });
-  } else {
-    console.error("Invalid response:", data);
-    alert(data.message || "Nafdac Reg is invalid");
-  }
-}
-
-// Fetch counterfeit drugs
-async function fetchCounterfeit() {
-  const res = await fetch(`${API}/verify?authentic=false&limit=4`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-
-  const data = await res.json();
-
-  if (res.ok && Array.isArray(data.verifyAll)) {
-    fakePro.innerHTML = "";
-    data.verifyAll.forEach((verify) => {
-      const card = createProductCard(verify, false);
-      fakePro.appendChild(card);
-    });
-  } else {
-    console.error("Invalid response:", data);
-    alert(data.message || "Nafdac Reg is invalid");
-  }
-}
 
 //LOGOUT BUTTON
 const logoutBtn = document.getElementById("logloglog");
@@ -123,7 +112,7 @@ if (logoutBtn) {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("role");
-    window.location.href = ".index/index.html";
+    window.location.href = "index.html";
   });
 }
 
@@ -153,7 +142,7 @@ async function loadUserProfile() {
     if (profilePic) {
       profilePic.src = data.profileImage
         ? `${API}${data.profileImage}`
-        : "images/images/Ellipse 1.svg"; // fallback
+        : "images/Ellipse 1.svg"; // fallback
     }
   } catch (err) {
     console.error("Profile error:", err.message);
@@ -218,11 +207,5 @@ async function fetchAwareness() {
   }
 }
 
-
-// Call them when page loads
 loadUserProfile();
 fetchAwareness();
-
-fetchRecent();
-fetchVerified();
-fetchCounterfeit();
