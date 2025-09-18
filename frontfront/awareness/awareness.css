@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 *{
-	margin: 0%;
-	padding: 0%;
-	box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 .awareness{
      font-family: 'DM Sans', sans-serif;
-	 background-color: #fff;
+     background-color: #fff;
      overflow: hidden;
 }
 nav .logo{
@@ -137,9 +137,9 @@ nav .notification .dropdown{
 nav .defaultchild{
     position: relative;
     width: 100%;
-  	border-radius: 0px 10px 10px 10px;
-  	background-color: #fff;
-  	border-bottom: 2px solid #00ab00;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #fff;
+    border-bottom: 2px solid #00ab00;
     padding: 10px;
 }
 nav .defaultchild .miss{
@@ -627,8 +627,8 @@ footer button{
     background-color: #a4fca4;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-	width: 3rem;
-	height: 40px;
+    width: 3rem;
+    height: 40px;
 }
 footer a{
    width: 150px;
@@ -781,7 +781,7 @@ footer .rights{
 
 /*=====   Backend font =====*/
 
-/* ==== PRODUCT CARD (like your screenshot) ==== */
+/* ==== PRODUCT CARD (like your screenshot) ==== 
 .product-card {
   display: flex;
   align-items: center;
@@ -799,7 +799,7 @@ footer .rights{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Small product image */
+/* Small product image *
 .product-image {
   width: 250px;
   height: 250px;
@@ -809,7 +809,7 @@ footer .rights{
   flex-shrink: 0;
 }
 
-/* Details wrapper */
+/* Details wrapper *
 .product-details {
   display: flex;
   flex-direction: column;
@@ -817,7 +817,7 @@ footer .rights{
   flex: 1;
 }
 
-/* Product name */
+/* Product name *
 .product-details h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -832,14 +832,14 @@ footer .rights{
   margin: 0;
 }
 
-/* Category + expiry */
+/* Category + expiry *
 .product-details p {
   margin: 0;
   font-size: 0.85rem;
   color: #555;
 }
 
-/* Badge styles */
+/* Badge styles *
 .product-badge {
   display: inline-block;
   padding: 4px 10px;
@@ -850,30 +850,128 @@ footer .rights{
   width: fit-content;
 }
 
-/* Approved */
+/* Approved *
 .badge-approved {
   background: #e6f9ed;
   color: #15803d;
   border: 1px solid #bbf7d0;
 }
 
-/* Fake / Unsafe */
+/* Fake / Unsafe *
 .badge-fake {
   background: #fee2e2;
   color: #b91c1c;
   border: 1px solid #fecaca;
 }
 
-/* Harmful */
+/* Harmful *
 .badge-harmful {
   background: #fff4e5;
   color: #b45309;
   border: 1px solid #fed7aa;
 }
 
-/* Unregistered */
+/* Unregistered *
 .badge-unregistered {
   background: #f3f4f6;
   color: #374151;
   border: 1px solid #e5e7eb;
+}
+
+*/
+/* 🧱 Container: Flex row (image left, info right) */
+.product-card {
+  display: flex;
+  flex-direction: row; /* This ensures image on left, info on right */
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  margin-bottom: 20px;
+  gap: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼️ Image (Always on the left) */
+.product-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  order: 0; /* Force it to be first even if accidentally misordered */
+}
+
+/* 🧾 Info on the right */
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 200px;
+  order: 1;
+}
+
+/* 📛 Product Name */
+.product-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* 🏷️ Badge */
+.product-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.badge-approved {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.badge-fake {
+  background-color: #fff4e5;
+  color: #d9534f;
+  border: 1px solid #f5c6cb;
+}
+
+/* 📁 Category & Date */
+.product-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 Responsive (Optional) */
+@media (max-width: 600px) {
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+    margin-bottom: 12px;
+  }
+
+  .product-info {
+    align-items: center;
+  }
 }

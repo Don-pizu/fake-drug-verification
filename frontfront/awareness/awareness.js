@@ -11,15 +11,36 @@ const recentPro = document.getElementById("recentPro");
 const approvedPro = document.getElementById("approvedPro");
 const fakePro = document.getElementById("fakePro");
 
+
+// Helper to format expiry date
+function formatDate(dateStr) {
+  if (!dateStr) return "N/A";
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+
+
+
 // Helper to render product card
 function createProductCard(verify, isApproved) {
   const div = document.createElement("div");
   div.classList.add("product-card");
 
   const image = document.createElement("img");
-  image.src = verify.image ? `${verify.image}` : "images/placeholder.png";
+  image.src = verify.image
+    ? `https://fake-drug-verification.onrender.com${verify.image}`
+    : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");
+
+  // Create the text/info block
+  const info = document.createElement("div");
+  info.classList.add("product-info");
 
   const name = document.createElement("h4");
   name.textContent = verify.name;
@@ -32,19 +53,26 @@ function createProductCard(verify, isApproved) {
   );
 
   const category = document.createElement("p");
-  category.textContent = `Category: ${verify.category || verify.catgory || "N/A"}`;
+  category.textContent = `Category: ${
+    verify.category ? verify.category : verify.catgory || "N/A"
+  }`;
 
   const expiry = document.createElement("p");
-  expiry.textContent = `Expiry: ${verify.expiry}`;
+  expiry.textContent = formatDate(verify.expiry);
 
+  // Append all text into info div
+  info.appendChild(name);
+  info.appendChild(authentic);
+  info.appendChild(category);
+  info.appendChild(expiry);
+
+  // Append image first (left), then info (right)
   div.appendChild(image);
-  div.appendChild(name);
-  div.appendChild(authentic);
-  div.appendChild(category);
-  div.appendChild(expiry);
+  div.appendChild(info);
 
   return div;
 }
+
 
 // Fetch recent products
 async function fetchRecent() {
@@ -66,6 +94,9 @@ async function fetchRecent() {
   }
 }
 
+
+
+
 // Fetch verified drugs
 async function fetchVerified() {
   const res = await fetch(`${API}/verify?authentic=true&limit=4`, {
@@ -86,6 +117,9 @@ async function fetchVerified() {
   }
 }
 
+
+
+
 // Fetch counterfeit drugs
 async function fetchCounterfeit() {
   const res = await fetch(`${API}/verify?authentic=false&limit=4`, {
@@ -105,6 +139,9 @@ async function fetchCounterfeit() {
     alert(data.message || "Nafdac Reg is invalid");
   }
 }
+
+
+
 
 //LOGOUT BUTTON
 const logoutBtn = document.getElementById("logloglog");
