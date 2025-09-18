@@ -288,7 +288,6 @@ textarea {
 .avatar-text p {
   margin: 0;
 }
-
 /* Form groups */
 .form-group {
   position: relative;
@@ -313,28 +312,25 @@ textarea {
   height: 24px;
   flex-shrink: 0;
 }
-
 .input-wrapper input {
   flex: 1;
   border: none;
   background: none;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.03em;
   color: #000;
 }
-
 .input-wrapper input::placeholder {
   color: #b3b3b3;
   font-weight: 400;
+  font-size: 18px;
 }
-
 /* Password wrapper with toggle */
 .password-wrapper {
   position: relative;
 }
-
 .password-toggle {
   display: flex;
   align-items: center;

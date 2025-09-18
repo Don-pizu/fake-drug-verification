@@ -183,7 +183,7 @@
           </div>
           <li>
             <img src="../images/news-line.svg" alt="Awareness" />
-            <a href="../awareness/awareness.html"></a>
+            <a href="../awareness/awareness.html">Awareness</a>
           </li>
           <li>
             <img src="../images/profile-circle.svg" alt="User" /><a href="#"
@@ -551,13 +551,13 @@
   }
 
   // Optional: Close the menu when clicking outside
-  // document.addEventListener('click', function(event) {
-  //   const menu = document.getElementById('menuLinks');
-  //   const icon = document.querySelector('.hamburger-icon');
-  //   if (!menu.contains(event.target) && !icon.contains(event.target)) {
-  //     menu.style.display = 'none';
-  //   }
-  // });
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menuLinks');
+    const icon = document.querySelector('.hamburger-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
 </script>
 
     <script src="dashboard.js"></script>
