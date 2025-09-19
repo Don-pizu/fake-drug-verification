@@ -160,7 +160,7 @@ header {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
   background: transparent;
 }
 .btn a {
@@ -168,7 +168,7 @@ header {
   color: var(--white-color);
 }
 .input-box input::placeholder{
-  font-size: 16px;
+  font-size: 18px;
 }
 /* Options */
 .options {
@@ -202,10 +202,10 @@ header {
   opacity: 0;
   cursor: pointer;
 }
-/* Custom box */
 .checkmark {
   width: 25px;
   height: 25px;
+  font-size: 16px;
   background-color: transparent;
   border: 1px solid #00c853;
   border-radius: 4px;
@@ -213,12 +213,10 @@ header {
   display: inline-block;
   position: relative;
 }
-/* When checked */
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #00c853; /* green */
+  background-color: #00c853;
   border: none;
 }
-/* Add checkmark */
 .checkmark::after {
   content: "";
   position: absolute;
@@ -240,14 +238,14 @@ header {
   padding: 25px;
   border: none;
   border-radius: 15px;
-  background: green;
+  background: #009200;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: background 0.3s;
 }
-.btn:hover {
-  background: var(--login-hover);
+.btn:focus{
+  border: 2px solid #00FF37;
 }
 /* Divider */
 .divider {
@@ -295,6 +293,7 @@ header {
   text-decoration: none;
   color: var(--black-color);
   font-weight: 700;
+  font-size: 18px;
 }
 .social-btn:hover {
   background: #e5feeb !important;
@@ -350,5 +349,8 @@ header {
   }
   .divider {
     padding-block: 0px;
+  }
+  .btn{
+    background: #009200;
   }
 }

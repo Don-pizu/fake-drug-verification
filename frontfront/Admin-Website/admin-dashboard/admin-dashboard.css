@@ -90,12 +90,10 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.menu-line{
-  display: none;
-}
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  display: none;
 }
 .menu-links {
   display: none;
@@ -269,8 +267,8 @@ nav {
 .homepage a {
   color: var(--white-color) !important;
 }
-.nav ul li,
-.product {
+.nav ul li
+ {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -286,11 +284,13 @@ nav {
   padding: 10px 20px;
   gap: 20px;
 }
-.product {
-  justify-content: space-around;
+.product a {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
-nav li:hover,
-.product a:hover {
+nav li:hover, .product a:hover {
   background: #009200;
   color: var(--white-color) !important;
 }
@@ -307,11 +307,12 @@ nav ul li a:hover {
 }
 .product i {
   transition: transform 0.3s ease;
+  padding-left: 1rem;
 }
 
-.open i {
+/* .product i {
   transform: rotate(180deg);
-}
+} */
 .multiselect,
 .selectBox {
   width: 204px;
@@ -844,7 +845,7 @@ footer {
   table td {
     white-space: nowrap;
   }
-  .menu-line {
+  .hamburger-menu {
     display: block;
   }
   .divider {

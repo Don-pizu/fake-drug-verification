@@ -258,7 +258,7 @@ nav {
   color: var(--white-color) !important;
 }
 .nav ul li,
-.product {
+.product-1 {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -274,29 +274,26 @@ nav {
   padding: 10px 20px;
   gap: 20px;
 }
-.product {
+.product-1 {
   justify-content: space-around;
 }
 nav li:hover,
-.product a:hover {
+.product-1 a:hover {
   background: #009200;
 }
 nav ul li a:hover {
   color: var(--white-color) !important;
 }
 .nav li a,
-.product a {
+.product-1 a {
   text-decoration: none;
   color: var(--sub-color);
 }
-.product a, .chevron {
+.product-1 i {
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
-.product .fa-chevron-up {
-  transition: transform 0.3s ease;
-}
-
-.product .fa-chevron-up {
+.product i {
   transform: rotate(180deg);
 }
 .multiselect,
@@ -343,11 +340,12 @@ main {
 .create {
   border-radius: 10px;
   border: 1px solid #005f00;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 30px;
+  min-width: 169px;
+  height: 44px;
   text-align: left;
   font-size: 18px;
   text-decoration: none;
@@ -367,16 +365,18 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+  padding-block: 2rem;
 }
 .awareness-card {
   box-shadow: -5px 6px 19.4px rgba(169, 169, 169, 0.25);
   border-radius: 5px;
   background-color: #fff;
   width: 330px;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   padding: 30px;
-  box-sizing: border-box;
   gap: 15px;
   text-align: left;
   font-size: 24px;
@@ -386,7 +386,7 @@ main {
   font-size: 20px;
   letter-spacing: -0.03em;
   line-height: 28px;
-  display: inline-block;
+  white-space: nowrap;
   color: #33f95e;
   text-align: left;
 }
@@ -401,15 +401,13 @@ main {
 .frame-parent {
   width: 100%;
   max-width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 31px;
-  text-align: left;
   font-size: 18px;
   color: #1a1a1a;
-  font-family: "DM Sans";
+  white-space: nowrap;
 }
 .frame-group {
   align-self: stretch;
@@ -419,7 +417,6 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  box-sizing: border-box;
   gap: 0px;
   color: #fff;
 }
@@ -429,19 +426,12 @@ main {
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 .post {
   width: 218px;
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 28px;
   font-weight: 500;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 .type-wrapper {
   width: 123px;
@@ -449,24 +439,17 @@ main {
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 .type {
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 28px;
   font-weight: 500;
-  display: -webkit-inline-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
 }
 .status-wrapper {
   width: 127px;
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 .created-on-wrapper {
   display: flex;
@@ -478,22 +461,18 @@ main {
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 .action-wrapper {
   width: 107px;
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 .frame-container,
 .frame-parent7 {
-  max-width: 100%;
-  align-self: stretch;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-sizing: border-box;
   height: 64px;
   display: flex;
   align-items: center;
@@ -506,7 +485,6 @@ main {
   display: flex;
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
   text-align: center;
   font-size: 16px;
   color: #fff;
@@ -518,14 +496,12 @@ main {
 }
 .component-8 {
   width: 48px;
-  box-shadow: 0px 2px 14.2px rgba(102, 102, 102, 0.25);
   border-radius: 5px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  box-sizing: border-box;
   gap: 20px;
 }
 .upload-line-icon {
@@ -599,7 +575,7 @@ main {
 }
 .faqs-dropdown-parent {
   height: 100%;
-  width: 749px;
+  width: 710px;
   border-radius: 25px;
   background-color: #f1f1f1;
   display: flex;
@@ -627,7 +603,7 @@ main {
   text-overflow: ellipsis;
   font-size: 24px;
   user-select: none;
-  width: 100%;
+  width: 638px;
 }
 .custom-dropdown .fa-chevron-down {
   transition: transform 0.3s ease;
@@ -640,6 +616,7 @@ main {
   border-top: none;
   background: #b2fdc3;
   font-size: 18px;
+  width: 638px;
 }
 .verified-store-and-location-parent {
   width: 100%;
@@ -647,7 +624,6 @@ main {
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
-  box-sizing: border-box;
   gap: 10px;
   text-align: left;
   font-size: 24px;
@@ -747,17 +723,15 @@ main {
 }
 .audience-parent {
   padding: 2px;
-  width: 230px;
+  width: 265px;
   height: 207px;
   margin-top: 2rem;
   max-width: 100%;
-  position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   background-color: var(--white-color);
   display: flex;
   align-items: flex-start;
-  text-align: left;
 }
 .engagement-rate-parent {
   width: 206px;
@@ -765,17 +739,17 @@ main {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 0px 0px 10px;
+  margin-bottom: 10px;
 }
 .engagement-rate {
   letter-spacing: -0.03em;
-  line-height: 28px;
+  /* line-height: 28px; */
   font-size: 20px;
   letter-spacing: -0.03em;
   line-height: 28px;
   display: inline-block;
   font-weight: 600;
   color: #1a1a1a;
-  text-align: left;
 }
 .of-viewers-who {
   width: 200px;
@@ -783,9 +757,7 @@ main {
   letter-spacing: -0.03em;
   line-height: 28px;
   font-weight: 500;
-  font-family: "DM Sans";
   color: #4d4d4d;
-  text-align: left;
 }
 /* FOOTER */
 footer {
@@ -836,7 +808,11 @@ footer {
   text-align: center;
   margin-top: 6rem;
 }
-/* Footer */
+@media (max-width: 1004px) {
+  .frame-parent {
+    overflow-x: scroll;
+  }
+}
 @media (max-width: 768px) {
   body {
     height: 100vh;
@@ -901,6 +877,28 @@ footer {
   content {
     width: 95%;
     margin: 0 auto;
+  }
+  .three-side-box_1 {
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .awareness {
+    font-size: 20px;
+  }
+  .manage-posts {
+    display: none;
+  }
+  .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 335px;
+    margin: 0 auto;
+  }
+  .recent-post {
+    overflow: scroll;
   }
   .logo img {
     width: 30px;
