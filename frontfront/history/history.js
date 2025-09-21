@@ -7,10 +7,16 @@ const token = localStorage.getItem("token");
 
 if (!token) {
   // redirect to login if no token
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
 
 const productList = document.getElementById("productTableBody");
+const beverages = document.getElementById("beverages");
+const drugs = document.getElementById("drugs");
+const cosmetics = document.getElementById("cosmetics");
+const chemical = document.getElementById("chemical");
+const devices = document.getElementById("devices")
+const totalProduct = document.getElementById("totalProduct");
 
 // Fetch all verify records
 async function fetchProducts() {
@@ -52,27 +58,108 @@ function renderProducts(products) {
 
   products.forEach((p) => {
     const row = document.createElement("tr");
-    row.classList.add("product-row");
 
+    // Format expiry/created date (DD/MM/YYYY)
+    const date = p.expiryDate
+      ? new Date(p.expiryDate).toLocaleDateString("en-GB") // example: 26/05/2026
+      : p.createdAt
+      ? new Date(p.createdAt).toLocaleDateString("en-GB")
+      : "N/A";
+    
     row.innerHTML = `
-      <td>${p.name || "Unnamed"}</td>
-      <td>
+       <td>${p.name || "Unnamed"}</td>
+      
+        <td>
         <span class="status-badge ${
           p.authentic ? "status-auth" : "status-fake"
         }">
           ${p.authentic ? "✅ Authentic" : "❌ Fake"}
         </span>
-      </td>
-      <td>${p.category || "N/A"}</td>
-      <td>${p.nafdacReg || "N/A"}</td>
-      <td>${
-        p.createdAt ? new Date(p.createdAt).toLocaleDateString() : "N/A"
-      }</td>
+        </td>
+        <td>${p.category || "N/A"}</td>
+        <td>${p.nafdacReg || "N/A"}</td>
+        <td>${date}</td>
     `;
 
     productList.appendChild(row);
   });
 }
+
+
+
+
+
+
+function updateDonut(id, percentage) {
+  const donut = document.getElementById(id);
+  if (donut) {
+    donut.style.background = `conic-gradient(
+      green 0% ${percentage}%,
+      red ${percentage}% 100%
+    )`;
+    donut.innerHTML = `<p>${percentage}%</p>`;
+  }
+}
+
+
+
+// Get verify product categories in %
+async function getCounts() {
+  try {
+    const res = await fetch(`${API}/verifyStats`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const data = await res.json();
+    console.log("Stats Response:", data);
+
+    // Cosmetic
+    updateDonut("cosmetic", data.cosmetics.percentage);
+
+    // Beverages
+    updateDonut("beverages", data.beverages.percentage);
+
+    // Chemical
+    updateDonut("chemical", data.chemical.percentage);
+
+    // Drugs
+    updateDonut("drugs", data.drugs.percentage);
+
+    // Devices
+    updateDonut("devices", data.devices.percentage);
+
+     // Totals
+    const total = data.totalProducts || 0;
+    const verified = data.totalVerified || 0;
+    const reported = data.totalReported || 0;
+    const percentage = data.totalPercentage || 0;
+
+    // Update donut for totals
+    updateDonut("totalProduct", percentage);
+
+    document.getElementById("totalProduct").innerHTML = `<p>${total}</p>`;
+    document.getElementById("totalVerified").textContent = `${verified} Verified`;
+    document.getElementById("totalReported").textContent = `${reported} Reported`;
+
+  } catch (err) {
+    console.error("Error fetching stats:", err.message);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 //LOGOUT BUTTON
 const logoutBtn = document.getElementById("logloglog");
@@ -184,6 +271,7 @@ async function fetchAwareness() {
   }
 }
 
+getCounts();
 loadUserProfile();
 fetchAwareness();
 

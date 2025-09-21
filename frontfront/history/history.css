@@ -632,3 +632,79 @@ footer .rights{
       gap: 2rem;
     }
   }
+
+
+
+/*=======Backend======*/
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.product-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.status-auth {
+  background: #0f9d58;
+  color: #fff;
+}
+
+.status-fake {
+  background: #e74c3c;
+  color: #fff;
+}
+
+
+
+
+=============
+
+.number {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid red;  /* reported */
+  border-right-color: limegreen; /* verified */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.donut {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(green 0% 0%, red 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.donut span {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+}
+
