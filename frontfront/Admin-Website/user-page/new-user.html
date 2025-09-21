@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Post</title>
-       <link rel="icon" href="../images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,7 @@
         align-items: center;
         height: 100vh;
       }
-      html{
+      html {
         scroll-behavior: smooth;
       }
       .popup {
@@ -32,33 +32,15 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin: 10px;
+        height: 90%;
+        margin-top: 3rem;
       }
 
       .popup h2 {
         text-align: center;
         font-size: 20px;
         margin-bottom: 15px;
-      }
-
-      .image-upload {
-        background: #fafafa;
-        border-bottom: 1.5px solid #808080;
-        border-radius: 10px;
-        padding: 40px 10px;
-        text-align: center;
-        color: #aaa;
-        cursor: pointer;
-        margin-bottom: 15px;
-        font-size: 14px;
-        width: 331px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      input[type="file"] {
-        display: none;
       }
       .post-form {
         width: 340px;
@@ -67,11 +49,12 @@
         border-radius: 25px;
         color: #fff;
         display: flex;
+        justify-content: center;
         align-items: center;
         background: #fafafa;
         margin: 10px;
       }
-      .popup {
+      .popup label{
         margin: 10px;
       }
       .popup input {
@@ -81,11 +64,9 @@
         background: transparent;
         margin: 10px;
       }
-
-      textarea {
-        border-radius: 12px;
-        resize: none;
-        height: 80px;
+      .role{
+        color: #00c503;
+        font-size: 18px;
       }
       .category-select {
         display: flex;
@@ -109,7 +90,7 @@
         width: 200px;
         height: 44px;
       }
-      .publish {
+      .add-user {
         background: #009200;
         color: #fff;
         border: none;
@@ -121,57 +102,43 @@
         font-weight: bold;
       }
 
-      .publish:hover {
+      .add-user:hover {
         background: #00c503;
       }
     </style>
   </head>
   <body>
     <form class="popup">
-      <h2>Add New Post</h2>
-
-      <!-- Image Upload -->
-      <!-- Image Upload with Preview -->
-      <label for="file-upload" class="image-upload" id="previewBox">
-        <span id="previewText">Add Image</span>
-        <img
-          id="previewImg"
-          src=""
-          alt="Preview"
-          style="
-            max-width: 100%;
-            display: none;
-            border-radius: 10px;
-            margin-top: 10px;
-          "
-        />
-        <input id="file-upload" type="file" accept="image/*" />
-      </label>
+      <h2>Add New User</h2>
       <div class="post-form">
-        <input
-          type="text"
-          placeholder="Title/Product name"
-          id="postName"
-          required
-        />
+        <label for="name"><img src="../images/user.svg" alt="" /></label>
+        <input type="text" placeholder="Enter Name" id="postName" required />
       </div>
       <div class="post-form">
-        <input type="text" placeholder="Nafdac reg" id="postNafdac" required />
+        <label for="email"><img src="../images/mail-line.svg" alt="" /></label>
+        <input type="email" placeholder="Enter Email" id="" required />
+      </div>
+      <div class="post-form">
+        <label for="phonenumber"
+          ><img src="../images/Group.svg" alt=""
+        /></label>
+        <input type="tel" placeholder="Enter Phone Number" id="" required />
       </div>
       <div class="category-select">
-        <label>Category</label>
+        <label class="role" for="role">Role</label>
         <select id="categoryR" required>
-          <option>Beverages</option>
-          <option>Drugs</option>
-          <option>Cosmetics</option>
-          <option>Chemical</option>
-          <option>Devices</option>
+          <option>User</option>
+          <option>Admin</option>
         </select>
       </div>
       <div class="post-form">
-        <input type="date" placeholder="Expiry" id="postExpiry" required />
+        <label for="phonenumber"><img src="../images/lock.svg" alt="" /></label>
+        <input type="password" placeholder="Create Password" id="" required />
       </div>
-
+      <div class="post-form">
+        <label for="password"><img src="../images/lock.svg" alt="" /></label>
+        <input type="password" placeholder="COnfirm Password" id="" required />
+      </div>
       <div class="category-select">
         <label>Authentic</label>
         <select id="authenticT">
@@ -180,10 +147,7 @@
         </select>
       </div>
 
-      <button class="publish">Publish</button>
+      <button class="add-user">Add User</button>
     </form>
-
-    <script src="post.js?v=2"></script>
-
   </body>
 </html>

@@ -28,7 +28,6 @@ body {
     "nav content content"
     "footer footer footer";
   grid-template-columns: 1fr 2fr 2fr;
-
   background: var(--white-color);
 }
 /* Header Section */
@@ -91,12 +90,10 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.menu-line{
-  display: none;
-}
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  display: none;
 }
 .menu-links {
   display: none;
@@ -249,28 +246,6 @@ header {
 .logout-dropdown:hover .logout {
   display: block;
 }
-/* .logout {
-  display: none;
-  position: absolute;
-  right: 5px;
-  top: 40px;
-  background-color: var(--white-color);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  text-align: right;
-  border-radius: 5px;
-}
-
-.logout a:hover {
-  background-color: #00e331;
-  color: var(--white-color);
-  border-radius: 10px;
-}
-.logout-dropdown:hover .logout {
-  display: block;
-} */
-/*  */
 header,
 main,
 nav,
@@ -292,8 +267,8 @@ nav {
 .homepage a {
   color: var(--white-color) !important;
 }
-.nav ul li,
-.product {
+.nav ul li
+ {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -309,11 +284,13 @@ nav {
   padding: 10px 20px;
   gap: 20px;
 }
-.product {
-  justify-content: space-around;
+.product a {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
-nav li:hover,
-.product a:hover {
+nav li:hover, .product a:hover {
   background: #009200;
   color: var(--white-color) !important;
 }
@@ -330,11 +307,12 @@ nav ul li a:hover {
 }
 .product i {
   transition: transform 0.3s ease;
+  padding-left: 1rem;
 }
 
-.open i {
+/* .product i {
   transform: rotate(180deg);
-}
+} */
 .multiselect,
 .selectBox {
   width: 204px;
@@ -647,6 +625,9 @@ b {
   background: #666666;
 }
 /* Numbers Container */
+.ratings{
+  margin: 10px;
+}
 .total-numbers-container {
   display: flex;
   justify-content: space-between;
@@ -825,28 +806,6 @@ footer {
   margin-top: 6rem;
 }
 /* Footer */
-@media (max-width: 900px) {
-  .divider {
-    display: none;
-  }
-  footer {
-    display: block;
-    height: 100%;
-  }
-  .logo {
-    margin: 10px;
-  }
-  .quick ul li {
-    margin: 10px;
-    padding-block: 0.2rem;
-  }
-  .quick ul li {
-    display: block;
-  }
-  .condition {
-    justify-content: space-around;
-  }
-}
 @media (max-width: 768px) {
   body {
     height: 100vh;
@@ -886,7 +845,7 @@ footer {
   table td {
     white-space: nowrap;
   }
-  .menu-line {
+  .hamburger-menu {
     display: block;
   }
   .divider {

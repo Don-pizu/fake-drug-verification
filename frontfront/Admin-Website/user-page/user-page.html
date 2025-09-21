@@ -17,20 +17,20 @@
     <header>
       <div class="header">
         <div class="logo">
-          <img src="images/logo.svg" alt="medcheck-logo" />
+          <img src="../images/logo.svg" alt="medcheck-logo" />
           <a href="#">MedCheck</a>
         </div>
         <div class="header-2">
           <div class="dropdown">
-            <img src="images/notification-2-fill (1).svg" alt="" />
-            <img src="images/notification-dot.svg" alt="notification" />
+            <img src="../images/notification-2-fill (1).svg" alt="" />
+            <img src="../images/notification-dot.svg" alt="notification" />
             <div id="myDropdown" class="dropdown-content">
               <div class="mobile-dashboard-notification">
                 <div class="notification-default">
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -49,7 +49,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -68,7 +68,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -87,7 +87,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -105,27 +105,41 @@
               </div>
             </div>
           </div>
-          <div class="menu-line">
-            <img src="images/menu-line.svg" alt="menu-line" />
-            <div class="menu-content">
-              <a href="index.html" target="_self">Dashboard</a>
+          <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+              <img
+                src="../images/menu-line.svg"
+                alt="menu-line"
+                class="menu-line"
+              />
+            </div>
+            <div class="menu-links" id="menuLinks">
+              <a href="admin-dashboard.html" target="_self">Dashboard</a>
               <a href="product-verification.html" target="_blank"
                 >Verification</a
               >
-              <a href="#">Reports</a>
-              <a href="">Awareness</a>
-              <a href="user-page.html">User</a>
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
+                >Dashboard</a
+              >
+              <a
+                href=".product-verification/product-verification.html"
+                target="_blank"
+                >Verification</a
+              >
+              <a href="../product-report/product-report.html">Reports</a>
+              <a href="../awareness/.awareness.html">Awareness</a>
+              <a href="../user-page/user-page.html">User</a>
               <a href="analytics.html">Analytics</a>
               <a href="profile-setting.html">Settings</a>
-              <a href=".login.html">Logout</a>
+              <a href="../login.html" id="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
-            <a href="#"><img src="images/Ellipse 1.svg" alt="profile" /></a>
+            <a href="#"><img src="../images/Ellipse 1.svg" alt="profile" /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
-              <img src="images/expand-up-down-line.svg" alt="" />
+              <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
               <a href="">logout</a>
@@ -138,13 +152,13 @@
       <div class="nav">
         <ul>
           <li class="homepage">
-            <img src="images/home-4-line.svg" alt="dashboard-icon" />
+            <img src="../images/home-4-line.svg" alt="dashboard-icon" />
             <a id="dashboard" href="index.html">Dashboard</a>
           </li>
           <div class="multiselect">
             <div class="selectBox" onclick="showBoxes()">
               <div class="product">
-                <img src="images/box-3-line.svg" alt="" />
+                <img src="../images/box-3-line.svg" alt="" />
                 <a href="#">Product</a>
                 <i
                   class="fa-solid fa-chevron-down fa-2xs"
@@ -155,34 +169,35 @@
             <div id="checkboxes">
               <ul>
                 <li>
-                  <img src="images/search-normal.svg" alt="Verification" />
+                  <img src="../images/search-normal.svg" alt="Verification" />
                   <a href="product-verification.html" target="_blank"
                     >Verification</a
                   >
                 </li>
                 <li>
-                  <img src="images/danger.svg" alt="Report" />
+                  <img src="../images/danger.svg" alt="Report" />
                   <a href="#">Report</a>
                 </li>
               </ul>
             </div>
           </div>
           <li>
-            <img src="images/news-line.svg" alt="Awareness" />
+            <img src="../images/news-line.svg" alt="Awareness" />
             <a href="../awareness/awareness.html"></a>
           </li>
           <li>
-            <img src="images/profile-circle.svg" alt="User" /><a href="#"
+            <img src="../images/profile-circle.svg" alt="User" /><a href="#"
               >Users</a
             >
           </li>
           <li>
-            <img src="images/bar-chart-2-line.svg" alt="analytics" /><a href="#"
+            <img src="../images/bar-chart-2-line.svg" alt="analytics" /><a
+              href="#"
               >Analytics</a
             >
           </li>
           <li>
-            <img src="images/settings-3-line.svg" alt="settings-icon" /><a
+            <img src="../images/settings-3-line.svg" alt="settings-icon" /><a
               href="#"
               >Settings</a
             >
@@ -196,16 +211,14 @@
           <h1>Users Management</h1>
           <p>Manage user accouts, roles and permissions</p>
         </div>
-        <div class="add-new-user">
-          <a href="">Add a new user</a>
-        </div>
+        <button class="add-new-user">Add a new user</button>
       </section>
       <section class="user-card-container">
         <div class="user-card">
           <div>
             <div class="card-title total-user">
               <span>Total Users</span>
-              <img src="images/pages-line.svg" alt="" />
+              <img src="../images/pages-line.svg" alt="" />
             </div>
             <div class="number">
               <h2>5000+</h2>
@@ -216,7 +229,7 @@
           <div>
             <div class="card-title">
               <span>Active User This Week</span>
-              <img src="images/calendar-todo-fill.svg" alt="" />
+              <img src="../images/calendar-todo-fill.svg" alt="" />
             </div>
             <div class="number">
               <h2>40</h2>
@@ -228,7 +241,7 @@
           <div>
             <div class="card-title">
               <span>New Users this Month</span>
-              <img src="images/message.svg" alt="" />
+              <img src="../images/message.svg" alt="" />
             </div>
             <div class="number">
               <h2>300</h2>
@@ -242,95 +255,96 @@
       </section>
       <section>
         <h2 class="title">Users</h2>
-
-        <table class="user-table">
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Role</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="info">
-              <td>Mike Obi</td>
-              <td>User</td>
-              <td><span class="status offline"></span> offline</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Jane Doe</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Usman Ali</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Pharm Chigozie Obi</td>
-              <td>User</td>
-              <td><span class="status offline"></span> offline</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Amanda Lee</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Abubakar Ismail</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Nkechi Rufus</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Bolanle Yinka</td>
-              <td>User</td>
-              <td><span class="status offline"></span> offline</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Sarah Lawal</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="user-table-con">
+          <table class="user-table">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="info">
+                <td>Mike Obi</td>
+                <td>User</td>
+                <td><span class="status offline"></span> offline</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Jane Doe</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Usman Ali</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Pharm Chigozie Obi</td>
+                <td>User</td>
+                <td><span class="status offline"></span> offline</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Amanda Lee</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Abubakar Ismail</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Nkechi Rufus</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Bolanle Yinka</td>
+                <td>User</td>
+                <td><span class="status offline"></span> offline</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+              <tr class="info">
+                <td>Sarah Lawal</td>
+                <td>User</td>
+                <td><span class="status online"></span> online</td>
+                <td>
+                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <section>
-        <h2 class="title-1">Admin</h2>
-        <table class="user-table admin">
+        <h2 class="title-1">Admin/Staff</h2>
+        <div class="admin-table-con">  <table class="user-table admin">
           <thead>
             <tr>
               <th>Username</th>
@@ -345,7 +359,7 @@
               <td>User</td>
               <td><span class="status offline"></span> offline</td>
               <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
+                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
               </td>
             </tr>
             <tr class="info">
@@ -353,7 +367,7 @@
               <td>User</td>
               <td><span class="status online"></span> online</td>
               <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
+                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
               </td>
             </tr>
             <br />
@@ -362,16 +376,16 @@
               <td>User</td>
               <td><span class="status online"></span> online</td>
               <td>
-                <img src="images/delete-bin-5-line (1).svg" alt="delete" />
+                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
               </td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
     </main>
     <footer>
       <div class="logo">
-        <img src="images/logo.svg" alt="Medcheck-logo" />
+        <img src="../images/logo.svg" alt="Medcheck-logo" />
         <span>MedCheck</span>
       </div>
       <hr class="divider" />
@@ -397,5 +411,20 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menuLinks");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+      }
+
+      // Optional: Close the menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("menuLinks");
+        const icon = document.querySelector(".hamburger-icon");
+        if (!menu.contains(event.target) && !icon.contains(event.target)) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>

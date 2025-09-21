@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedCheck - Analytics Dashboard</title>
-    <link rel="stylesheet" href="analytics.css" />
-       <link rel="icon" href="../images/logo.svg" />
+    <link rel="stylesheet" href="../analytics/analytics.css" />
+    <link rel="icon" href="../images/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -109,14 +109,24 @@
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
-              <img class="menu-line" src="../images/menu-line.svg" alt="menu-line" />
+              <img
+                class="menu-line"
+                src="../images/menu-line.svg"
+                alt="menu-line"
+              />
             </div>
             <div class="menu-links" id="menuLinks">
-              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
-              <a href="../product-verification/product-verification.html" target="_blank"
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
+                >Dashboard</a
+              >
+              <a
+                href="../product-verification/product-verification.html"
+                target="_blank"
                 >Verification</a
               >
-              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
+                >Dashboard</a
+              >
               <a
                 href="../product-verification/product-verification.html"
                 target="_blank"
@@ -163,7 +173,9 @@
           </li>
           <li class="verification">
             <img src="../images/search-normal.svg" alt="" />
-            <a href="../product-verification/product-verification.html">Verification</a>
+            <a href="../product-verification/product-verification.html"
+              >Verification</a
+            >
           </li>
           <li>
             <img src="../images/danger.svg" alt="" />
@@ -174,7 +186,8 @@
             <button><a href="../awareness/awareness.html">Awareness</a></button>
           </li>
           <li>
-            <img src="../images/profile-circle.svg" alt="User" /><a href="../user-page/user-page.html"
+            <img src="../images/profile-circle.svg" alt="User" /><a
+              href="../user-page/user-page.html"
               >Users</a
             >
           </li>
@@ -248,7 +261,10 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified-parent">
-              <p class="total__text">Active <br> Users</p>
+              <p class="total__text">
+                Active <br />
+                Users
+              </p>
               <div class="parent">
                 <p class="b">584</p>
                 <p class="percentage">+21.3% Vs previous period</p>
@@ -515,13 +531,21 @@
       <div class="quick">
         <ul>
           <li class="solid-text">Quick</li>
-          <li><a href="../admin-dashboard/admin-dashboard.html">Dashboard</a></li>
-          <li><a href="../product-verification/product-verification.html">Verification</a></li>
+          <li>
+            <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="../product-verification/product-verification.html"
+              >Verification</a
+            >
+          </li>
           <li><a href="../product-report/product-report.html">Reports</a></li>
           <li><a href="../awareness/awareness.html"></a></li>
           <li><a href="../user-page/user-page.html">Users</a></li>
           <li><a href="../analytics/analytics.html">Analytics</a></li>
-          <li><a href="../profile-setting/profile-setting.html">Settings</a></li>
+          <li>
+            <a href="../profile-setting/profile-setting.html">Settings</a>
+          </li>
         </ul>
       </div>
       <div class="condition">
@@ -537,13 +561,13 @@
       }
 
       // Optional: Close the menu when clicking outside
-      // document.addEventListener('click', function(event) {
-      //   const menu = document.getElementById('menuLinks');
-      //   const icon = document.querySelector('.hamburger-icon');
-      //   if (!menu.contains(event.target) && !icon.contains(event.target)) {
-      //     menu.style.display = 'none';
-      //   }
-      // });
+      document.addEventListener('click', function(event) {
+        const menu = document.getElementById('menuLinks');
+        const icon = document.querySelector('.hamburger-icon');
+        if (!menu.contains(event.target) && !icon.contains(event.target)) {
+          menu.style.display = 'none';
+        }
+      });
     </script>
     <script src="pie.js"></script>
   </body>
