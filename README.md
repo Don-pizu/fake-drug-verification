@@ -79,9 +79,9 @@ project-root/
 
 
 
-API Endpoints
+## API Endpoints
 
-Auth Routes
+## Auth Routes
 Method       Endpoint                 Description              Access
 POST    api/auth/register          Register a new user         Public
 POST    api/auth/verifyOtp         Verify OTP code             Public
@@ -94,7 +94,7 @@ GET     api/auth/me                Get user profile            Private
 PUT     api/auth/update            Update user                 Private
 
 
-Verify Routes
+## Verify Routes
 
 Method	            Endpoint	                        Description	                                Access
 POST	            /api/verify	                    Create a product record (with image)	        Private
@@ -105,7 +105,7 @@ PUT					/api/verify/:id					Update product (Admin/Author)					Private
 DELETE				/api/verify/:id					Delete product (Admin/Author)					Private
 
 
-Awareness Routes
+## Awareness Routes
 
 Method				Endpoint							Description									Access
 POST				/api/awareness					Create awareness post (with image)				Private
@@ -114,7 +114,7 @@ GET					/api/awareness/:id				Get awareness post by ID						Public
 PUT					/api/awareness/:id				Update awareness post							Private
 DELETE				/api/awareness/:id				Delete awareness post							Private
 
-Report Routes
+## Report Routes
 
 Method				Endpoint							Description									Access
 POST				/api/report						Create a report (with image)					Private
@@ -123,19 +123,30 @@ GET					/api/report/:nafdacReg			Get report by NAFDAC Reg						Public
 PUT					/api/report/:id					Update report									Private
 DELETE				/api/report/:id					Delete report									Private
 
-Dashboard Route
+## Dashboard Route
 
 Method				Endpoint							Description									Access
 GET					/api/dashboard					Get dashboard stats (monthly/total)				Private
 
-Profile Image Routes
+## Profile Image Routes
 
 Method				Endpoint							Description									Access
 POST				/api/upload-image				Upload a profile image							Private
 
-Stats Routes
+## Stats Routes
 Method				Endpoint							Description									Access
 GET					/api/stats						Get system statistics							Private (Admin)
+
+
+## Report Routes
+
+Method				Endpoint							Description									Access
+POST				/api/feedbacks		             Create feedback        					    Public
+GET					/api/feedbacks					 Get all feedbacks								Private
+GET					/api/feedbacks/:id			     Get feedbacks by id						    Private
+PUT					/api/feedbacks/:id				 Update feedbacks								Private
+DELETE				/api/feedbacks/:id				 Delete feedbacks								Private
+
 
 
 

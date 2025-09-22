@@ -654,3 +654,13 @@ footer {
   margin-top: 2rem;
 }
 }
+
+
+
+
+
+/*=====Backend====*/
+#userList td, 
+#adminList td {
+  color: black !important;
+}

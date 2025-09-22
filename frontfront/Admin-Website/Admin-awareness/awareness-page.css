@@ -912,3 +912,41 @@ footer {
     display: block;
   }
 }
+
+
+
+
+
+/*=======Backend ====== */
+/* Awareness table rows */
+#postList .frame-group {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  background-color: #fff;   /* white background */
+  color: #000;              /* black text */
+  padding: 10px;
+   border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#postList .frame-group:hover {
+  background-color: #f9f9f9; /* subtle hover */
+}
+
+.frame-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.frame-group .type, 
+.frame-group .post {
+  text-align: center;
+}
+
+
+
+

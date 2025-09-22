@@ -22,6 +22,7 @@ const awarenessRoutes = require('./routes/awarenessRoutes');
 const profileImageRoutes = require('./routes/profileImageRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const statsRoutes = require("./routes/statsRoutes");
+const feedbackRoutes = require("./routes/feedbackRoutes");
 
 
 //DB connection
@@ -124,5 +125,6 @@ app.use('/api', awarenessRoutes);
 app.use('/api', profileImageRoutes);
 app.use('/api', dashboardRoutes);
 app.use("/api", statsRoutes);
+app.use("/api", feedbackRoutes);
 
 module.exports = app;

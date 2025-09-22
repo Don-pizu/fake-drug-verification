@@ -77,7 +77,7 @@ exports.allAwareness = async (req, res, next) => {
 		const skip = (parseInt(page) - 1) * parseInt(limit);
 
 		const awareNess = await Awareness.find(query)
-		 								.populate('user')
+		 								.populate('user', "username email")
 		 								.skip(skip)
 		 								.limit(parseInt(limit))
 		 								.sort({createdAt: -1});

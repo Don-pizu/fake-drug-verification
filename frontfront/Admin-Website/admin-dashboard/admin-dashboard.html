@@ -219,7 +219,7 @@
         <div class="dashboard-parent">
           <h1 class="dashboard2">Dashboard</h1>
           <p class="welcome-back-john">
-            Welcome back, John! Here's your verification overview
+            Welcome back! Here's your verification overview
           </p>
         </div>
       </div>
@@ -231,8 +231,8 @@
                 Total Products Verified
               </p>
               <div class="parent">
-                <p class="number">1,248</p>
-                <p class="from-last-month">+12% from last month</p>
+                <p class="number" id="totalProduct">0</p>
+                <p class="from-last-month" id="percent-totalProduct">+0% from last month</p>
               </div>
             </div>
             <img
@@ -247,9 +247,9 @@
                 Total Reported products
               </p>
               <div class="parent">
-                <p class="b">800</p>
-                <p style="color: #f44336" class="from-last-month">
-                  +2% this month
+                <p class="b" id="totalReport">0</p>
+                <p style="color: #f44336" class="from-last-month" id="percent-totalReport">
+                  +0% this month
                 </p>
               </div>
             </div>
@@ -261,12 +261,12 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified-parent">
-              <p style="width: 199px" class="total-products-verified">
+              <p style="width: 199px" class="total-products-verified" >
                 Total Awareness/ Alerts
               </p>
               <div class="parent">
-                <p class="b">20</p>
-                <p class="from-last-month">New alerts available</p>
+                <p class="b" id="totalAwareness">0</p>
+                <p class="from-last-month" id="percent-totalAwareness"> +0 New alerts available</p>
               </div>
             </div>
             <img
@@ -279,8 +279,8 @@
             <div class="total-products-verified-parent">
               <p class="total-products-verified">Active <br />Users</p>
               <div class="parent">
-                <p class="b">584</p>
-                <p class="from-last-month">+New alerts available</p>
+                <p class="b" id="totalUsers">0</p>
+                <p class="from-last-month" id="percent-totalUsers">+0 New alerts available</p>
               </div>
             </div>
             <img
@@ -420,92 +420,13 @@
                 <th>Date</th>
               </tr>
             </thead>
+
+
             <tbody>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge fake">❌ Fake</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge safe">🟢 Safe to Use</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge unauthorized">🚫 Unauthorized</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge unsafe">🧪 Unsafe</span></td>
-                <td>Cosmetics</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge verify">🔍 Verify</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
+              <tbody id="productTableBody"></tbody>
             </tbody>
+
+
           </table>
         </div>
       </section>
@@ -538,6 +459,7 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
+    
     <script src="../pie.js"></script>
     <script>
       var expanded = false;
@@ -568,7 +490,8 @@
         }
       });
     </script>
+    
 
-    <script src="dashboard.js"></script>
+    <script src="admin-dashboard.js"></script>
   </body>
 </html>
