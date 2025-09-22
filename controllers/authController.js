@@ -250,7 +250,7 @@ exports.forgotPassword = async (req, res) => {
     await user.save();
 
     // Build reset URL
-    const resetUrl = `https://medcheck-website.netlify.app//api/auth/reset-password/${resetToken}`; ///////change to frontend link
+    const resetUrl = `https://fake-drug-verification.onrender.com/api/auth/reset-password/${resetToken}`; ///////change to frontend link
 
     // send via email
     await sendOtpEmail(user.email, `Reset your password using this link: ${resetUrl}`);

@@ -4,6 +4,7 @@
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
 const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
 
@@ -141,7 +142,7 @@ async function loadUserProfile() {
     const profilePic = document.getElementById("profilePic");
     if (profilePic) {
       profilePic.src = data.profileImage
-        ? `${API}${data.profileImage}`
+        ? `${APP}${data.profileImage}`
         : "images/Ellipse 1.svg"; // fallback
     }
   } catch (err) {

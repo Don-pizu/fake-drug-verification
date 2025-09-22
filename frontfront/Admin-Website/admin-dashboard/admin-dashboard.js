@@ -6,8 +6,19 @@
 // Local testing:
 //const API = 'http://localhost:5000/api';
 
-// For production, switch to Render:
+// const API = 'http://localhost:5000/api'; // Local backend
   const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+
+  // ================= USER ROLE CHECK =================
+  const userId = localStorage.getItem("userId");
+  const userRole = localStorage.getItem("role");
+  const token = localStorage.getItem("token");
+
+  if (userRole !== "admin") {
+    alert("You are not an admin");
+    window.location.href = "https://fake-drug-verification.onrender.com";
+  }
 
 // ---------------------------
 // Token check

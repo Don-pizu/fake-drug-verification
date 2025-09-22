@@ -221,8 +221,8 @@
             <div class="total-record-container">
               <p class="total__text">Total Verification</p>
               <div class="parent">
-                <p class="number">1,248</p>
-                <p class="percentage">+12.5% vs previous Period</p>
+                <p class="number" id="verified-products">0</p>
+                <p class="percentage" id="percent-verified">+0% vs previous Period</p>
               </div>
             </div>
             <img
@@ -235,8 +235,8 @@
             <div class="total-record-container">
               <p class="total__text">Counterfeit Products</p>
               <div class="parent">
-                <p class="b">87</p>
-                <p class="percentage">-3.2% vs previous period</p>
+                <p class="b" id="reported-products">0</p>
+                <p class="percentage" id="percent-reported">+0% vs previous period</p>
               </div>
             </div>
             <img
@@ -247,10 +247,10 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified">
-              <p class="total__text">Reports Submitted</p>
+              <p class="total__text" >Reports Submitted</p>
               <div class="parent">
-                <p class="b">156</p>
-                <p class="percentage">+8.7% vs previous period</p>
+                <p class="b" id="total-products">0</p>
+                <p class="percentage" id="percent-products">+0% vs previous period</p>
               </div>
             </div>
             <img
@@ -266,8 +266,8 @@
                 Users
               </p>
               <div class="parent">
-                <p class="b">584</p>
-                <p class="percentage">+21.3% Vs previous period</p>
+                <p class="b" id="total-users">0</p>
+                <p class="percentage" id="percent-users">+0% Vs previous period</p>
               </div>
             </div>
             <img
@@ -570,5 +570,6 @@
       });
     </script>
     <script src="pie.js"></script>
+    <script src="analytics.js"></script>
   </body>
 </html>

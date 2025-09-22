@@ -23,6 +23,7 @@ router.get('/dashboard', protect, async (req, res) => {
     const totalReportedProducts = await Report.countDocuments();
     const totalVerifiedProducts = await Verify.countDocuments({ authentic: true });
     const users = await User.find({}, "location");
+    const totalUsers = await User.countDocuments();
     const uniqueLocations = new Set(users.map(u => u.location).filter(Boolean));
 
     // ===== CURRENT MONTH =====
@@ -34,6 +35,9 @@ router.get('/dashboard', protect, async (req, res) => {
         .map(u => u.location)
         .filter(Boolean)
     );
+    const currentUsers = await User.countDocuments({
+      createdAt: { $gte: startOfMonth, $lt: endOfMonth }
+    });
 
     // ===== LAST MONTH =====
     const lastProducts = await Verify.countDocuments({ createdAt: { $gte: startOfLastMonth, $lt: endOfLastMonth } });
@@ -44,6 +48,9 @@ router.get('/dashboard', protect, async (req, res) => {
         .map(u => u.location)
         .filter(Boolean)
     );
+    const lastUsers = await User.countDocuments({
+      createdAt: { $gte: startOfLastMonth, $lt: endOfLastMonth }
+    });
 
     // ===== % CHANGE =====
     const percentChange = (current, last) => {
@@ -56,6 +63,8 @@ router.get('/dashboard', protect, async (req, res) => {
       totalProducts,
       totalReportedProducts,
       totalVerifiedProducts,
+      totalUsers,
+      percentUsers: percentChange(currentUsers, lastUsers),
       totalNewLocations: uniqueLocations.size,
       percentProducts: percentChange(currentProducts, lastProducts),
       percentReportedProducts: percentChange(currentReports, lastReports),

@@ -2,6 +2,7 @@
 
 //LOGOUT BUTTON
 const logoutBtn = document.getElementById("logloglog");
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 // Logout
 if (logoutBtn) {

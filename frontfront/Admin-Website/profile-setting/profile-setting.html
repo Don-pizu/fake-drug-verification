@@ -189,39 +189,48 @@
         <h1>Profile Settings</h1>
         <p>Manage your account details and preferences</p>
       </div>
+
+
+
       <div class="profile-form">
         <form class="profile-form-inner">
           <div class="form-image">
-            <img src="../images/female.svg" alt="" />
+            <img src="../images/female.svg" alt="" id="profile-avatar"/>
+            <input type="file" id="avatarInput" accept="image/*" style="display:none;" />
           </div>
           <div class="Form-fill">
             <label for="name"><img src="../images/user.svg" alt="" /></label>
-            <input type="text" placeholder="Miss Jennifer" required />
+            <input type="text" placeholder="Miss Jennifer" id="fullname" required />  
           </div>
           <div class="Form-fill">
             <label for="name"
               ><img src="../images/mail-line.svg" alt=""
             /></label>
-            <input type="email" placeholder="Email" required />
+            <input type="email" placeholder="Email" id="email" required />
           </div>
           <div class="Form-fill">
             <label for="tel"><img src="../images/Group.svg" alt="" /></label>
-            <input type="tel" placeholder="Phone Number" />
+            <input type="tel" placeholder="Phone Number" id="phone" />
           </div>
           <div class="Form-fill">
             <label for="location"
               ><img src="../images/location.svg" alt=""
             /></label>
-            <input type="text" placeholder="Location" required />
+            <input type="text" placeholder="Location" id="location" required />
           </div>
+
+          <!-- we cannot have function to change password here
           <div class="Form-fill">
             <label for="password"
               ><img src="../images/lock.svg" alt=""
             /></label>
             <input type="password" placeholder="Change Password" />
           </div>
+          -->
+          
           <div class="btn">
-            <a href=".profile-setting/successful-setting.html">Save Change</a>
+            <button type="submit">Save Change</button>
+            
           </div>
         </form>
       </div>
@@ -254,5 +263,7 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
+
+    <script src="profile-setting.js"></script>
   </body>
 </html>

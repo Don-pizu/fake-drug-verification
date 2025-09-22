@@ -170,3 +170,29 @@ exports.deleteAwareness = async (req, res, next) =>{
 	}
 }
 
+
+
+// GET stats (total, recent, %)
+exports.getAwarenessStats = async (req, res) => {
+  try {
+    const total = await Awareness.countDocuments();
+
+    // recent = posts in last 30 days
+    const last30Days = new Date();
+    last30Days.setDate(last30Days.getDate() - 30);
+
+    const recent = await Awareness.countDocuments({
+      createdAt: { $gte: last30Days }
+    });
+
+    const percentRecent = total > 0 ? ((recent / total) * 100).toFixed(1) : 0;
+
+    res.json({
+      total,
+      recent,
+      percentRecent
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};

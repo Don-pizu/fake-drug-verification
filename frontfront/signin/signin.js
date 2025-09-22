@@ -3,7 +3,8 @@
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
-//const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 document.querySelector(".btn").addEventListener("click", async (e) => {
   e.preventDefault();

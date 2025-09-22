@@ -148,32 +148,36 @@
     </header>
     <main>
       <div class="main-section">
-        <form class="form-container">
+        <form class="form-container" id="profileForm">
           <h4>Profile</h4>
-          <img class="profile" src="../images/small-man.svg" alt="" />
+          <img class="profile" src="../images/small-man.svg" alt="" id="profile-avatar" />
+          <input type="file" id="avatarInput" accept="image/*" style="display:none;" />
           <div>
             <div class="input-div">
               <label for="name"><img src="../images/user.svg" alt="" /></label>
-              <input type="text" placeholder="Abiodun Adegbola" />
+              <input type="text" placeholder="Abiodun Adegbola" id="fullname" />
             </div>
             <div class="input-div">
               <label for="name"
                 ><img src="../images/mail-line.svg" alt=""
               /></label>
-              <input type="text" placeholder="vfe051020babiodun@gmail.com" />
+              <input type="text" placeholder="Email" id="email" />
             </div>
             <div class="input-div">
               <label for="name"><img src="../images/Group.svg" alt="" /></label>
-              <input type="text" placeholder="+234 810222700835" />
+              <input type="text" placeholder="Phone Number" id="phone" />
             </div>
             <div class="input-div">
               <label for="location"
                 ><img src="../images/location.svg" alt=""
               /></label>
-              <input type="text" placeholder="Ogun State" />
+              <input type="text" placeholder="Location" id="location" />
             </div>
           </div>
-          <a href="../search-successful/search-successful.html">Save change</a>
+          <div class="btn">
+            <button type="submit">Save Change</button>
+            
+          </div>
         </form>
         <div class="profile-image">
           <img
@@ -250,5 +254,7 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="user-profile.js"></script>
   </body>
 </html>
