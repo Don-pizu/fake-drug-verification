@@ -31,10 +31,30 @@ connectDB();
 // Security hardening
 //helmet
 app.use(
-  helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" }  // browser will not block the access of files from backend to frontebd
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "https://cdn.jsdelivr.net",
+        "'unsafe-eval'",   // ✅ needed for tesseract.js
+      ],
+      workerSrc: ["'self'", "blob:"],
+      childSrc: ["'self'", "blob:"],
+      connectSrc: [
+        "'self'",
+        "blob:",
+        "data:",
+        "https://cdn.jsdelivr.net",   // ✅ allow worker importScripts
+      ],
+      imgSrc: ["'self'", "data:", "blob:"],  // 👈 FIX: allow blob: images
+    },
   })
 );
+
+
+
 
 //mongoSanitize
 app.use((req, res, next) => {

@@ -197,6 +197,9 @@
             <span class="divider-text">OR</span>
             <div class="divider-line"></div>
           </div>
+
+
+
           <!-- QR Code Scanner Section -->
           <div class="qr-scanner-container">
             <img
@@ -204,9 +207,18 @@
               alt="QR Code Scanner"
               class="qr-icon"
             />
+
             <h3 class="qr-title">Click here to scan with your camera</h3>
-            <button type="button" class="camera-button">Use Camera</button>
+            <button type="button" class="camera-button" id="cameraBtn">Use Camera</button>
+
+            <!-- Hidden input for OCR capture -->
+            <input type="file" id="ocr-input" accept="image/*" capture="camera" style="display:none;" />
+            <div id="ocr-result" class="ocr-result"></div>
           </div>
+
+
+
+
         </div>
       </section>
     </main>
@@ -277,6 +289,17 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
+    
+
+    <!-- Tesseract.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+
+    <script>
+   console.log("Tesseract:", window.Tesseract);
+</script>
+
     <script src="verify-product.js"></script>
   </body>
 </html>

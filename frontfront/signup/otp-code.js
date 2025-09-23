@@ -10,6 +10,75 @@ const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get("username");
 const email = urlParams.get("email");
 
+
+
+// OTP auto focus handling
+const otpInputs = document.querySelectorAll(".code-inputs input");
+
+otpInputs.forEach((input, index) => {
+  input.addEventListener("input", (e) => {
+    const value = e.target.value;
+    if (value && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus(); // move to next
+    }
+
+    // Auto-submit if last box is filled
+    if (index === otpInputs.length - 1 && value) {
+      document.querySelector(".verify-btn").click();
+    }
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" && !input.value && index > 0) {
+      otpInputs[index - 1].focus(); // move back
+    }
+  });
+});
+
+// Handle Verify button click
+document.querySelector(".verify-btn").addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  // Collect OTP from 4 inputs
+  const otp = Array.from(otpInputs).map((input) => input.value).join("");
+
+  if (otp.length !== 4) {
+    alert("Please enter the 4-digit code");
+    return;
+  }
+
+  try {
+    const res = await fetch(`${API}/auth/verifyOtp`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, otp }),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      // Save user details from backend response
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data._id);
+      localStorage.setItem("role", data.role);
+      localStorage.setItem("username", data.username);
+
+      alert("Account verified successfully");
+      window.location.href = "../signin/signin.html";
+    } else {
+      alert(data.message || "Verification failed");
+    }
+  } catch (err) {
+    alert("Something went wrong. Please try again.");
+    console.error(err);
+  }
+});
+
+
+
+
+
+/*
 // Handle Verify button click
 document.querySelector(".verify-btn").addEventListener("click", async (e) => {
   e.preventDefault();
@@ -45,6 +114,11 @@ document.querySelector(".verify-btn").addEventListener("click", async (e) => {
     console.error(err);
   }
 });
+*/
+
+
+
+
 
 //Handle resend OtP
 document.querySelector(".resend-link").addEventListener("click", async (e) => {
