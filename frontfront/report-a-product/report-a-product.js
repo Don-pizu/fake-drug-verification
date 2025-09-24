@@ -1,9 +1,9 @@
 // Set the backend API URL
-const API = 'http://localhost:5000/api'; // Uncomment this for local testing
-const APP = 'http://localhost:5000';
+//const API = 'http://localhost:5000/api'; // Uncomment this for local testing
+//const APP = 'http://localhost:5000';
 
-//const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-//const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
 const rptContainer = document.getElementById("rpt-container");
