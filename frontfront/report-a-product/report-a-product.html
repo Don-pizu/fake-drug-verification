@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="report-a-product.css" />
-        <link rel="icon" href="images/logo.svg" />
+    <link rel="icon" href="images/logo.svg" />
     <title>Report a product</title>
   </head>
   <body>
@@ -21,7 +21,9 @@
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
             <a href="verify.product.html">Verify Product</a>
-            <a href="./report-a-product/report-a-product.html">Report Product</a>
+            <a href="./report-a-product/report-a-product.html"
+              >Report Product</a
+            >
             <a href=".awareness/awareness.html">Awareness</a>
           </div>
         </div>
@@ -94,7 +96,7 @@
           class="group-item"
           src="../images/Ellipse 1.svg"
           alt=""
-          id="profilePic"
+          class="profilePic"
         />
         <div class="dropdown-2">
           <img
@@ -107,7 +109,7 @@
             <div class="link"><a href=".profile/profile.html">Profile</a></div>
             <div class="link"><a href=".history/history.html">History</a></div>
             <div class="link">
-              <a href=".logout/logout.html" id="logloglog">Logout</a>
+              <a href=".logout/logout.html" class="logloglog">Logout</a>
             </div>
           </div>
         </div>
@@ -152,7 +154,7 @@
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".logout/logout.html" id="logloglog"
+                <a class="service" href=".logout/logout.html" class="logloglog"
                   >Logout</a
                 >
               </li>
@@ -165,10 +167,8 @@
       <div class="report-a-product-parent">
         <b class="report-a-product">Report A Product</b>
         <div class="frame-parent">
-
           <form class="emails-input-parent" id="reportForm">
-
-             <!-- Product Name -->
+            <!-- Product Name -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -179,7 +179,7 @@
               <input type="text" id="productName" placeholder="Product Name" />
             </div>
 
-             <!-- Location -->
+            <!-- Location -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -194,7 +194,9 @@
             <div class="frame-group">
               <span class="title">Category</span>
               <div id="list1" class="dropdown-check-list" tabindex="100">
-                <label for="category" class="category-label">Select Category</label>
+                <label for="category" class="category-label"
+                  >Select Category</label
+                >
                 <select id="category" class="input" required>
                   <option value="" class="anchor">Select Category</option>
                   <option value="beverages">Beverages</option>
@@ -211,7 +213,13 @@
               <label for="nafdacReg">
                 <img src="../images/note.svg" alt="NAFDAC Reg No." />
               </label>
-              <input type="text" id="nafdacReg" class="input" placeholder="NAFDAC Reg No." required />
+              <input
+                type="text"
+                id="nafdacReg"
+                class="input"
+                placeholder="NAFDAC Reg No."
+                required
+              />
             </div>
 
             <!-- Batch Number -->
@@ -219,15 +227,29 @@
               <label for="batchNo">
                 <img src="../images/note.svg" alt="Batch Number" />
               </label>
-              <input type="text" id="batchNo" class="input" placeholder="Batch Number" />
+              <input
+                type="text"
+                id="batchNo"
+                class="input"
+                placeholder="Batch Number"
+              />
             </div>
 
             <!-- Description -->
             <div class="emails-input">
               <label for="description">
-                <img class="vuesaxlinearuser-icon" src="../images/note.svg" alt="Description" />
+                <img
+                  class="vuesaxlinearuser-icon"
+                  src="../images/note.svg"
+                  alt="Description"
+                />
               </label>
-              <textarea id="description" class="input" placeholder="Description of Issue" rows="4"></textarea>
+              <textarea
+                id="description"
+                class="input"
+                placeholder="Description of Issue"
+                rows="4"
+              ></textarea>
             </div>
 
             <!-- Image Upload -->
@@ -235,14 +257,20 @@
               <label for="fileUpload">
                 <img src="../images/image.svg" alt="Upload" />
               </label>
-              <input type="file" id="fileUpload" class="input" accept="image/*" />
+              <input
+                type="file"
+                id="fileUpload"
+                class="input"
+                accept="image/*"
+              />
             </div>
 
             <!-- Submit Button -->
-            <button id="openPopup" class="verify-1" type="submit">Save Report</button>
+            <button id="openPopup" class="verify-1" type="submit">
+              Save Report
+            </button>
             <div id="rpt-container"></div>
           </form>
-
         </div>
       </div>
     </main>
@@ -276,7 +304,9 @@
               <a href="verify.product.html">Verify Product</a>
             </li>
             <li>
-              <a href="./report-a-product/report-a-product.html">Report Product</a>
+              <a href="./report-a-product/report-a-product.html"
+                >Report Product</a
+              >
             </li>
             <li><a href=".awareness/">Awareness</a></li>
             <li><a href=".we-we-do/what-we-do.html">What we Do</a></li>
@@ -323,6 +353,6 @@
       };
     </script>
 
-    <script src="report-a-product.js"></script>
+    <!-- <script src="report-a-product.js"></script> -->
   </body>
 </html>

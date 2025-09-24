@@ -98,6 +98,8 @@ nav a:hover {
   background: var(--lighter-green);
   color: var(--white-color);
 }
+
+/* MAIN SECTION */
 .main-section {
   display: flex;
   justify-content: space-between;
@@ -125,11 +127,9 @@ nav a:hover {
   height: 548px;
 }
 .counterfeit-harmful {
-  margin: 0;
   color: #00ab00;
 }
 .products {
-  margin: 0;
   white-space: pre-wrap;
 }
 .easily-verify-the {
@@ -139,7 +139,7 @@ nav a:hover {
   line-height: 40px;
   color: #4d4d4d;
   text-align: left;
-  padding-block: 4rem;
+  padding-block: 3.8rem;
 }
 .btc-big-parent {
   display: flex;
@@ -174,6 +174,7 @@ nav a:hover {
   background-color: #fff;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 50px 25px;
   gap: 30px;
@@ -186,13 +187,12 @@ nav a:hover {
   font-weight: 600;
 }
 .medcheck {
-  margin: 0;
   color: #00ab00;
 }
 .span {
   color: #003cff;
 }
-.logo-parent {
+.logo-parent-container {
   display: flex;
   align-items: center;
   padding: 10px 5px;
@@ -216,10 +216,12 @@ nav a:hover {
 }
 .benefit-of-medcheck {
   background: url("../images/-bg-2.png") no-repeat;
-  height: 900px;
+  height: 800px;
   background-size: cover;
+  padding-block: 2rem;
 }
 .frame-parent {
+  width: 98%;
   border-radius: 50px;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0);
@@ -227,12 +229,13 @@ nav a:hover {
   border: 1.5px groove var(--white-color);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
 }
 .benefit-medcheck-parent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 10px;
   row-gap: 5rem;
-  margin: 20px;
 }
 .benefit-header {
   width: 95%;
@@ -276,7 +279,7 @@ nav a:hover {
 .what-we-do h2 {
   font-size: 36px;
   color: #333;
-  padding-block: 2rem;
+  padding-block: 1.5rem;
   text-align: center;
 }
 .what-we-do {
@@ -370,15 +373,14 @@ nav a:hover {
 .our-mission {
   width: 95%;
   margin: 0 auto;
+  margin-bottom: 7rem;
 }
 .our-mission h2 {
   width: 1200px;
-  position: relative;
   font-size: 36px;
   letter-spacing: -0.03em;
   line-height: 40px;
-  display: inline-block;
-  font-family: "DM Sans";
+  padding-block: 3rem;
   color: #424242;
   text-align: left;
 }
@@ -410,17 +412,22 @@ nav a:hover {
   text-align: left;
 }
 /* Testimonial-section */
+.testimonial-parent {
+  text-align: center;
+  margin: 15px;
+}
 .testimonies-0 {
-  width: 189px;
   font-size: 36px;
   letter-spacing: -0.03em;
-  line-height: 40px;
-  color: var(--white-color) !important;
+  color: var(--white-color);
 }
 .see-what-our {
-  font-size: 1.5rem;
+  width: 394px;
+  font-size: 30px;
   letter-spacing: -0.03em;
-  color: var(--white-color) !important;
+  font-weight: 500;
+  color: #dbefdc;
+  padding-top: 10px;
 }
 .testimonials {
   height: 150px;
@@ -439,9 +446,10 @@ nav a:hover {
   grid-template-rows: auto;
   grid-auto-flow: dense;
   gap: 1.8rem;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding-block: 2rem;
+  margin-top: 2rem;
 }
 .testimonies {
   box-shadow: 1px 4px 22.4px rgba(64, 64, 64, 0.25);
@@ -551,6 +559,7 @@ nav a:hover {
   flex-direction: column;
   row-gap: 5rem;
   padding-block: 3rem;
+  margin-top: 2rem;
 }
 .partners h2 {
   font-size: 36px;
@@ -781,21 +790,145 @@ input::placeholder {
   }
 }
 @media (max-width: 1114px) {
-  .protect-family__text {
-    margin: 5px;
+  .more-than-25000 {
+    white-space: nowrap;
+  }
+  .logo-parent {
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 900px) {
+  .family-image img {
+    width: 700px;
+    height: auto;
   }
   .protects-your-family-container {
     font-size: 50px;
-  }
-  .benefit-of-medcheck {
-    background-size: cover;
+    line-height: normal;
+    padding-top: 60px;
   }
   .easily-verify-the {
-    padding-block: 1rem;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    line-height: normal;
+    padding-block: 2rem;
+  }
+  .btc-big-parent {
+    display: flex;
+    gap: 6rem;
+    padding-top: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .logo-parent-container {
+    display: block;
+    margin-left: 9rem;
+  }
+}
+@media (max-width: 850px) {
+  .family-image img {
+    width: 470px;
+    height: auto;
+  }
+  .protects-your-family-container {
+    font-size: 36px;
+    width: 400px;
+    padding-top: 21px;
+  }
+  .easily-verify-the {
+    font-size: 25px;
+    width: 365px;
+    margin: 10px;
+    padding-top: 1rem;
+  }
+  .btc-big-parent {
+    display: flex;
+    gap: 3rem;
+    padding-top: 0px;
+  }
+  .verify-product,
+  .report-product {
+    padding: 15px;
+    border-radius: 10px;
   }
   .more-than-25000-user-trust-me-parent {
+    background-color: #fff;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 25px;
+  }
+  .logo-parent-container {
+    display: flex;
+    margin-left: 9rem;
+  }
+  .faq-container {
+    background: var(--white-color);
+  }
+  .side-faq-image {
+    display: none;
+  }
+  .faq-parent {
+    margin: 0 auto;
+  }
+  .benefit-of-medcheck {
+    height: 1100px;
+  }
+  .benefit-medcheck-parent {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  .benefit-text {
+    width: 255px;
+    height: auto;
+  }
+  .benefit-text h2 {
+    width: 270px;
+    font-size: 27px;
+  }
+  .partners {
+    margin-top: 55rem;
+    height: 40vh;
+  }
+  .our-mission {
+    margin-block: 60px;
+  }
+  .our-mission-parent {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .protects-your-family-container {
+    font-size: 34px;
+  }
+  .easily-verify-the {
+    font-size: 25px;
+    width: 315px;
+    margin: 10px;
+    padding-top: 1rem;
+  }
+  .btc-big-parent {
+    display: flex;
+    gap: 3rem;
+    padding-top: 0px;
+  }
+  .verify-product,
+  .report-product {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .more-than-25000-user-trust-me-parent {
+    display: block;
+  }
+  .logo-parent-container {
+    margin-left: 0rem;
+  }
+  .logo-parent-container img {
+    width: 170px;
   }
 }
 @media (max-width: 768px) {
@@ -822,36 +955,46 @@ input::placeholder {
     margin: 0 auto;
   }
   .benefit-of-medcheck {
-    background: none;
-    height: 100%;
-    width: 90%;
-    margin: 0 auto;
+    background: #f1f1f1;
+    height: 1800px;
     padding-block: 2rem;
   }
-  .benefit-header {
-    font-size: 20px;
+  .benefit-medcheck-parent {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
   .benefit-text {
-    margin: 0 auto;
+    width: 310px;
+    height: 330px;
+    margin: 20px;
+  }
+  .benefit-text h2 {
+    width: 270px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .benefit-text p {
+    font-size: 30px;
   }
   .benefit-text h2,
   .benefit-text p {
     text-align: center;
   }
+  .logo-parent-container img {
+    width: 160px;
+  }
+  .found-a-suspicious-container, .scan-a-barcode, .we-keep-you{
+    /* display: flex; */
+    margin: 0 auto;
+  }
   .faq-container {
     padding-block: 3rem;
-  }
-  .side-faq-image {
-    display: none;
   }
   summary {
     width: 95%;
   }
   .call-to-action-parent {
     margin-bottom: 2rem;
-  }
-  .call-to-action-parent {
-    flex-direction: column;
   }
   .call-to-action-parent span {
     font-size: 20px;
@@ -872,6 +1015,7 @@ input::placeholder {
     gap: 2rem;
   }
   .divider {
+    justify-content: center;
     display: none;
   }
   .footer-links {
@@ -914,7 +1058,6 @@ input::placeholder {
     gap: 6rem;
   }
 }
-
 @media (max-width: 480px) {
   .family-image {
     display: none;
@@ -954,7 +1097,7 @@ input::placeholder {
     text-align: left;
     margin-right: 7rem;
   }
-  .logo-parent img {
+  .logo-parent-container img {
     width: 75px;
   }
   .benefit-of-medcheck {

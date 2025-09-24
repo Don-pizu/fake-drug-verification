@@ -54,6 +54,9 @@
         background: #fafafa;
         margin: 10px;
       }
+      .popup::placeholder{
+        font-size: 18px;
+      }
       .popup label{
         margin: 10px;
       }
@@ -63,10 +66,14 @@
         width: 100%;
         background: transparent;
         margin: 10px;
+        font-size: 16px;
       }
       .role{
         color: #00c503;
         font-size: 18px;
+      }
+      .group{
+        border-radius: 50px;
       }
       .category-select {
         display: flex;
@@ -101,7 +108,6 @@
         cursor: pointer;
         font-weight: bold;
       }
-
       .add-user:hover {
         background: #00c503;
       }
@@ -120,7 +126,7 @@
       </div>
       <div class="post-form">
         <label for="phonenumber"
-          ><img src="../images/Group.svg" alt=""
+          ><img class="group" src="../images/Group.svg" alt=""
         /></label>
         <input type="tel" placeholder="Enter Phone Number" id="" required />
       </div>
@@ -137,11 +143,11 @@
       </div>
       <div class="post-form">
         <label for="password"><img src="../images/lock.svg" alt="" /></label>
-        <input type="password" placeholder="COnfirm Password" id="" required />
+        <input type="password" placeholder="Confirm Password" id="" required />
       </div>
       <div class="category-select">
         <label>Authentic</label>
-        <select id="authenticT">
+        <select required id="authenticT">
           <option>True</option>
           <option>False</option>
         </select>

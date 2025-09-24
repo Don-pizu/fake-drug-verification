@@ -1,51 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-*{
-	margin: 0%;
-	padding: 0%;
-	box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-.faqs{
-     font-family: 'DM Sans', sans-serif;
-	 background-color: #fafafa;
-	 overflow-x: hidden;
-     width: 79rem;
-}nav .logo{
-    position: relative;
-    left: 4rem;
-    bottom: px;
+.faqs {
+  font-family: "DM Sans", sans-serif;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  width: 79rem;
 }
-nav .logo p{
-   position: absolute;
-   bottom: 1.3rem;
-   left: 3.5rem;
-   font-size: 18px;
+nav .logo {
+  position: relative;
+  left: 4rem;
+  bottom: px;
 }
-nav{
-    padding-top: 30px;
-    display: flex;
-    gap: 5rem;
+nav .logo p {
+  position: absolute;
+  bottom: 1.3rem;
+  left: 3.5rem;
+  font-size: 18px;
 }
-nav .more ul{
-    list-style: none;
-    height: 3rem;
-     padding: 10px;
-     margin-left: 17rem;
-     font-size: 18px;
+nav {
+  padding-top: 30px;
+  display: flex;
+  gap: 5rem;
 }
-nav .more ul li{
-    float: left;
-    margin-inline: 2rem;
+nav .more ul {
+  list-style: none;
+  height: 3rem;
+  padding: 10px;
+  margin-left: 17rem;
+  font-size: 18px;
+}
+nav .more ul li {
+  float: left;
+  margin-inline: 2rem;
 }
 nav ul li a {
-    text-decoration: none;
-     color: #00c503;
-     padding: 15px;
+  text-decoration: none;
+  color: #00c503;
+  padding: 15px;
 }
-nav .head{
+nav .head {
   max-width: 150px;
   position: relative;
 }
-nav .head .dropdown-i{
+nav .head .dropdown-i {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 3rem;
@@ -53,75 +54,75 @@ nav .head .dropdown-i{
   z-index: 999;
   display: none;
 }
-nav .head .dropdown-i a{
+nav .head .dropdown-i a {
   display: block;
 }
-nav .head .dropdown-i a:hover{
+nav .head .dropdown-i a:hover {
   background-color: #00ab00;
   color: #fff;
 }
-nav .head:hover .dropdown-i{
+nav .head:hover .dropdown-i {
   display: block;
   background-color: #fff;
 }
 nav .more > ul > li:hover > a {
-     background-color: #005f00;
-    color: white;
-    border-radius: 10px;
+  background-color: #005f00;
+  color: white;
+  border-radius: 10px;
 }
-nav .icon{
-    position: relative;
-    bottom: 12px;
-    left: 10rem;
+nav .icon {
+  position: relative;
+  bottom: 12px;
+  left: 10rem;
 }
-nav .icon .notification{
-    position: absolute;
-    top: 20px;
-    left: -60px;
-    width: 40px;
+nav .icon .notification {
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  width: 40px;
 }
-nav .anime{
-    position: absolute;
-    top: 10px;
+nav .anime {
+  position: absolute;
+  top: 10px;
 }
-nav .icon .menui{
-    display: none;
+nav .icon .menui {
+  display: none;
 }
-nav .icon .expand{
-    position: absolute;
-    top: 19px;
-    left: 5rem;
-    width: 100px;
+nav .icon .expand {
+  position: absolute;
+  top: 19px;
+  left: 5rem;
+  width: 100px;
 }
-nav .expand .dropdowni{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    top: 4rem;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    width: 12rem;
-    right: 4rem;
-    display: none;
+nav .expand .dropdowni {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 4rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 12rem;
+  right: 4rem;
+  display: none;
 }
-nav .expand a{
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: right;
-    text-decoration: none;
-    color:  #00c503;
-    font-size: 20px;
+nav .expand a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  text-decoration: none;
+  color: #00c503;
+  font-size: 20px;
 }
-nav .expand:hover .dropdowni{
-    display: block;
+nav .expand:hover .dropdowni {
+  display: block;
 }
-nav .expand a:hover{
+nav .expand a:hover {
   color: #fff;
   background-color: #00c503;
 }
-nav .notification .dropdown{
+nav .notification .dropdown {
   position: absolute;
   width: 30rem;
   left: -5rem;
@@ -134,497 +135,425 @@ nav .notification .dropdown{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-nav .defaultchild{
-    position: relative;
-    width: 100%;
-  	border-radius: 0px 10px 10px 10px;
-  	background-color: #fff;
-  	border-bottom: 2px solid #00ab00;
-    padding: 10px;
+nav .defaultchild {
+  position: relative;
+  width: 100%;
+  border-radius: 0px 10px 10px 10px;
+  background-color: #fff;
+  border-bottom: 2px solid #00ab00;
+  padding: 10px;
 }
-nav .defaultchild .miss{
-    position: absolute;
-    bottom: 3.5rem;
-    left: 4rem;
+nav .defaultchild .miss {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 4rem;
 }
 nav .defaultchild p span {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
-nav .defaultchild span{
-   color: #999;
-   margin-left: 3rem;
-   margin-bottom: 50px;
+nav .defaultchild span {
+  color: #999;
+  margin-left: 3rem;
+  margin-bottom: 50px;
 }
-nav .fake{
-    font-size: 12px;
-    position: absolute;
-    left: 4rem;
-    bottom: 2.5rem;
+nav .fake {
+  font-size: 12px;
+  position: absolute;
+  left: 4rem;
+  bottom: 2.5rem;
 }
-nav .defaultchild:hover{
-    background-color: #dbeedb;
+nav .defaultchild:hover {
+  background-color: #dbeedb;
 }
-nav .notification:hover .dropdown{
-    display: block;
-}
-nav .menuicon .options{
-        min-width: 13rem;
-        position: absolute;
-        left: -10rem;
-        top: 3.5rem;
-        display: none;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
- }
-  nav .menuicon .menu{
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        padding: 20px 10px;
-        border: 2px solid rgb(223, 219, 219);
-        border-bottom-right-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-
-section{
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-	margin-top: 12rem;
-}
-section .pics{
-	border: 6px dashed rgb(198, 194, 194);
-    border-radius: 50%;
-	padding: 5px 5px 10px 3px;
-	width: 50rem;
-	margin-left: -13rem;
-	box-shadow: 2px 2px 2px #8f8b8b;
-	margin-bottom: 2rem;
-}
-section .pics img{
-	width: 98%;
-	border-radius: 50%;
-}
-section .content{
-	width: 50%;
-	height: 53rem;
-	margin-bottom: 2rem;
-}
-section h3{
-	font-size: 31px;
-	margin-bottom: 3rem ;
-    margin-left: 1rem;
-    color: #424242;
-}
-section .big-question {
-  color: red;  
-}
-
-section .medcheck{
-	margin-bottom: 1rem;
-	padding: 15px;
-	position: relative;
-	font-size: 22px;
-	background-color: #fff;
-    width: 90%;
-}
-section input{
-    display: none;
-}
-section p{
-    width: 550px;
-}
-section .medcheck span{
-   position: absolute;
-   right: 20px;
-}
-section .medcheck .a-rrow{
-	bottom: 5px;
-    right: 1px;
-	position: absolute;
-}
-.arrowdown{
-	display: none;
-}
-section .medcheck ul{
- list-style: none;
-}
-section input:checked ~ .arrowdown{
+nav .notification:hover .dropdown {
   display: block;
 }
-section .medcheck:hover{
-	background-color: #E5FEEB;
-	cursor: pointer;
+nav .menuicon .options {
+  min-width: 13rem;
+  position: absolute;
+  left: -10rem;
+  top: 3.5rem;
+  display: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-section input:checked + label span{
-  transform: rotate(180deg);
+nav .menuicon .menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 10px;
+  border: 2px solid rgb(223, 219, 219);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
-article{
-    width: 50%;
-    margin:20px 22rem ;
-    text-align: center;
-    background-color: #005f00;
-    color: #fafafa;
-    padding: 20px;
-    display: none;
+
+footer {
+  background-color: #005f00;
+  height: 41rem;
+  color: #fff;
 }
-footer{
-    background-color: #005f00;
-    height: 41rem;
-    color: #fff;
+footer .medlogo {
+  position: relative;
+  top: 3rem;
+  left: 4rem;
+  border-bottom: 1px solid rgb(126, 124, 124);
+  padding-bottom: 3rem;
+  width: 90%;
+  margin-bottom: 5rem;
 }
-footer .medlogo{
-   position: relative;
-   top: 3rem;
-   left: 4rem;
-   border-bottom: 1px solid rgb(126, 124, 124);
-   padding-bottom: 3rem;
-   width: 90%;
-   margin-bottom: 5rem;
+footer .medlogo h3 {
+  position: absolute;
+  top: 2px;
+  left: 4rem;
+  font-size: 35px;
 }
-footer .medlogo h3{
-    position: absolute;
-    top: 2px;
-    left: 4rem;
-    font-size: 35px;
+footer .explore {
+  display: flex;
+  gap: 7rem;
+  width: 85%;
+  margin: auto;
 }
-footer .explore{
-    display: flex;
-    gap: 7rem;
-    width: 85%;
-    margin: auto;
+footer .subscribe {
+  width: 12rem;
+  font-size: 20px;
+  margin-bottom: 3rem;
 }
-footer .subscribe{
-     width: 12rem;
-     font-size: 20px;
-     margin-bottom: 3rem;
+footer .mail {
+  width: 360px;
+  border-bottom: 2px solid rgb(95, 89, 89);
+  font-size: 20px;
 }
-footer .mail{
-    width: 360px;
-    border-bottom: 2px solid rgb(95, 89, 89);
-    font-size: 20px;
-}
-footer .mail input{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: #fff;
+footer .mail input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
 }
 footer input::placeholder {
   color: white;
   opacity: 0.9;
   font-size: 17px;
 }
- footer .service, .more, .help{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 20px;
+footer .service,
+.more,
+.help {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
 }
-footer button{
-    border: none;
-    background-color: #a4fca4;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-	width: 3rem;
-	height: 40px;
-    margin-left: 8rem;
-}
-
-footer a{
-   width: 150px;
-   color: #fff;
-   text-decoration: none;
-}
-footer .differ{
-    color:  #83fc9d;
-}
-footer .terms{
-    display: flex;
-    gap: 32rem;
-    padding: 3rem;
-    width: 90%;
-    margin: auto;
-    font-size: 19px;
-}
-footer .terms .privacy{
-    margin-left: 3rem;
-}
-footer .terms .social a{
-    margin-right: 40px;
-}
-footer .rights{
-   margin-top: 50px;
-   text-align: center;
-   font-size: 25px;
+footer button {
+  border: none;
+  background-color: #a4fca4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 3rem;
+  height: 40px;
+  margin-left: 8rem;
 }
 
-@media (max-width:900px) {
-.faqs{
-     overflow-x: hidden;
-     width: 90rem;
+footer a {
+  width: 150px;
+  color: #fff;
+  text-decoration: none;
 }
-    nav{
+footer .differ {
+  color: #83fc9d;
+}
+footer .terms {
+  display: flex;
+  gap: 32rem;
+  padding: 3rem;
+  width: 90%;
+  margin: auto;
+  font-size: 19px;
+}
+footer .terms .privacy {
+  margin-left: 3rem;
+}
+footer .terms .social a {
+  margin-right: 40px;
+}
+footer .rights {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+
+@media (max-width: 900px) {
+  .faqs {
+    overflow-x: hidden;
+    width: 90rem;
+  }
+  nav {
     padding-top: 30px;
     display: flex;
     gap: 8rem;
-}
-nav .more ul{
+  }
+  nav .more ul {
     list-style: none;
     height: 3rem;
-     padding: 10px;
-     margin-left: 17rem;
-     font-size: 18px;
-     width: 80%;
-     justify-content: center;
-}
-nav .icon{
+    padding: 10px;
+    margin-left: 17rem;
+    font-size: 18px;
+    width: 80%;
+    justify-content: center;
+  }
+  nav .icon {
     left: 10rem;
-}
-section .pics{
+  }
+  section .pics {
     margin-left: -2rem;
+  }
 }
-}@media (max-width:450px) {
-    .faqs{
-        overflow: hidden;
-        width: 26rem !important;
-    }
-     nav{
-        gap: 2rem !important;
-    }
-    nav .logo{
-        left: 20px;
-    }
-    nav .logo img{
-       width: 40px; 
-    }
-    nav .logo p{
-        left: 3rem;
-        bottom: 9px;
-    }
-    nav .icon{
-        left: 18rem;
-    }
-    nav .more{
-        display: none;
-    }
-    nav .anime, .expand{
-        display: none;
-    }
-    nav .menuicon{
-        display: block;
-        position: absolute;
-        top: 20px;
-        left: -10px;
-    }
-    nav .icon .menui{
-        display: block;
-        width: 40px;
-        height: 30px;
-    }
-    nav .menuicon:hover .options{
-        display: block;
-        top: 1.5rem;
-        z-index: 999;
-    }
-    nav .menuicon a{
-        text-decoration: none;
-        color:  #00c503;
-        padding: 10px;
-        display: block;
-    }
-    nav .menuicon a:hover{
-        color: #fff;
-        background-color:  #00c503;
-    }
-    nav .notification .dropdown{
-        left: -14rem;
-        width: 18rem;
-        top: 2rem;
-        z-index: 999;
-    }
-    section{
-        margin-top: 6rem;
-        margin-inline: 1rem;
-    }
-    section .pics{
-        display: none;
-    }
-    section .content{
-        width: 100%;
-        height: 47rem;
-        margin-bottom: 5px;
-    }
-    section h3{
-        font-size: 16px;   
-        background-color: green;
-        color: #fff;
-        padding: 10px;
-        margin-bottom: 1rem;
-    }
-    section .big-question{
-        display: none;
-    }
-    section .medcheck{
-        font-size: 15px;
-         margin-left: 25px;
-    }
-    section .medcheck p{
-        width: 250px;
-    }
-    article{
-        display: block;
-        margin-left: 1rem;
-        border-radius: 20px;
-        width: 93%;
-        height: 15rem;
-        margin-bottom: 5rem;
-    }
-    article p{
-        font-size: 27px;
-        width: 20rem;
-        margin-block: 10px;
-    }
-    article button{
-        width: 69%;
-        padding: 19px;
-        margin-bottom: 4rem;
-        border-radius: 10px;
-        border: none;
-        box-shadow: 2px 2px 10px #00c503;
-        background-color: #fff;
-    }
-    article button a{
-        text-decoration: none;
-        color: #00c503;
-        font-size: 18px;
-    }
-    article button:hover,
-    article button a:hover{
-        background-color: #c9f3c9;
-        color: #495749;
-    }
-    
-    footer{
-     height: 79rem;
-    }
-    footer .medlogo{
-        left: 2rem;
-        border: none;
-        margin-bottom: 3rem;
-    }
-    footer .medlogo h3{
-        font-size: 30px;
-        border: none;
-    }
-    footer .explore{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    footer .service{
-        order: 1;
-    }
-    footer .more{
+@media (max-width: 450px) {
+  .faqs {
+    overflow: hidden;
+    width: 26rem !important;
+  }
+  nav {
+    gap: 2rem !important;
+  }
+  nav .logo {
+    left: 20px;
+  }
+  nav .logo img {
+    width: 40px;
+  }
+  nav .logo p {
+    left: 3rem;
+    bottom: 9px;
+  }
+  nav .icon {
+    left: 18rem;
+  }
+  nav .more {
+    display: none;
+  }
+  nav .anime,
+  .expand {
+    display: none;
+  }
+  nav .menuicon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+  }
+  nav .icon .menui {
+    display: block;
+    width: 40px;
+    height: 30px;
+  }
+  nav .menuicon:hover .options {
+    display: block;
+    top: 1.5rem;
+    z-index: 999;
+  }
+  nav .menuicon a {
+    text-decoration: none;
+    color: #00c503;
+    padding: 10px;
+    display: block;
+  }
+  nav .menuicon a:hover {
+    color: #fff;
+    background-color: #00c503;
+  }
+  nav .notification .dropdown {
+    left: -14rem;
+    width: 18rem;
+    top: 2rem;
+    z-index: 999;
+  }
+  section {
+    margin-top: 6rem;
+    margin-inline: 1rem;
+  }
+  section .pics {
+    display: none;
+  }
+  section .content {
+    width: 100%;
+    height: 47rem;
+    margin-bottom: 5px;
+  }
+  section h3 {
+    font-size: 16px;
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+  section .big-question {
+    display: none;
+  }
+  section .medcheck {
+    font-size: 15px;
+    margin-left: 25px;
+  }
+  section .medcheck p {
+    width: 250px;
+  }
+  article {
+    display: block;
+    margin-left: 1rem;
+    border-radius: 20px;
+    width: 93%;
+    height: 15rem;
+    margin-bottom: 5rem;
+  }
+  article p {
+    font-size: 27px;
+    width: 20rem;
+    margin-block: 10px;
+  }
+  article button {
+    width: 69%;
+    padding: 19px;
+    margin-bottom: 4rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px #00c503;
+    background-color: #fff;
+  }
+  article button a {
+    text-decoration: none;
+    color: #00c503;
+    font-size: 18px;
+  }
+  article button:hover,
+  article button a:hover {
+    background-color: #c9f3c9;
+    color: #495749;
+  }
+
+  footer {
+    height: 79rem;
+  }
+  footer .medlogo {
+    left: 2rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  footer .medlogo h3 {
+    font-size: 30px;
+    border: none;
+  }
+  footer .explore {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer .service {
+    order: 1;
+  }
+  footer .more {
     order: 2;
-    } 
-    footer .form{
-     order: 4;
-    } 
-    footer .help{
-     order: 3;
-    }
-    footer .subscribe{
-        margin: 2rem 0px 1rem 0px;
-        width: 8rem;
-    } 
-    footer button{
-        height: 60px;
-        margin-left: 4rem;
-    }
-    footer .terms{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 20px;
-        width: 100%;
-    }
-    footer .social{
-        order: 1;
-        margin-block: 30px;
-        font-size: 25px;
-    }
-    footer .condition{
-        order: 2;
-    }
+  }
+  footer .form {
+    order: 4;
+  }
+  footer .help {
+    order: 3;
+  }
+  footer .subscribe {
+    margin: 2rem 0px 1rem 0px;
+    width: 8rem;
+  }
+  footer button {
+    height: 60px;
+    margin-left: 4rem;
+  }
+  footer .terms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    width: 100%;
+  }
+  footer .social {
+    order: 1;
+    margin-block: 30px;
+    font-size: 25px;
+  }
+  footer .condition {
+    order: 2;
+  }
 }
 
-@media (max-width:390px) {
-    nav .icon{
-        left: 17rem;
-    }
-    article{
-      width: 90%;  
-    }
-    article p{
-        font-size: 25px;
-        width: 19rem; 
-        margin-block: 10px;
-        margin-left: -10px;
-    }
-    article button a{
-        font-size: 15px;
-    }
-    footer .medlogo h3{
-        font-size: 25px;
-        top: 4px;
-    }
-    footer .form, .service, .more, .help{
+@media (max-width: 390px) {
+  nav .icon {
+    left: 17rem;
+  }
+  article {
+    width: 90%;
+  }
+  article p {
+    font-size: 25px;
+    width: 19rem;
+    margin-block: 10px;
+    margin-left: -10px;
+  }
+  article button a {
+    font-size: 15px;
+  }
+  footer .medlogo h3 {
+    font-size: 25px;
+    top: 4px;
+  }
+  footer .form,
+  .service,
+  .more,
+  .help {
     font-size: 18px !important;
-    }
-    footer .mail{
-        width: 320px;
-    }
-    
-    footer .terms{
-        font-size: 15px;
-    }
-    footer .privacy{
+  }
+  footer .mail {
+    width: 320px;
+  }
+
+  footer .terms {
+    font-size: 15px;
+  }
+  footer .privacy {
     position: relative;
     left: 2rem;
-    }
-    footer .rights{
-        font-size: 20px;
-        width: 80%;
-        margin-left: 2rem;
-    }
+  }
+  footer .rights {
+    font-size: 20px;
+    width: 80%;
+    margin-left: 2rem;
+  }
 }
 
-@media (max-width:360px) {
-    nav .icon{
-        left: 17rem !important;
-    }
-    nav .notification .dropdown{
-        left: -10rem;
-    }
-    article{
-        width: 94%;
-        height: 13rem;
-    }
-     article p{
-        font-size: 23px;
-        width: 19rem; 
-    }
-    article button{
-        padding: 22px;
-    }
-    footer .mail{
-        width: 300px;
-    }
-    footer .form, .service, .more, .help{
+@media (max-width: 360px) {
+  nav .icon {
+    left: 17rem !important;
+  }
+  nav .notification .dropdown {
+    left: -10rem;
+  }
+  article {
+    width: 94%;
+    height: 13rem;
+  }
+  article p {
+    font-size: 23px;
+    width: 19rem;
+  }
+  article button {
+    padding: 22px;
+  }
+  footer .mail {
+    width: 300px;
+  }
+  footer .form,
+  .service,
+  .more,
+  .help {
     font-size: 16px !important;
-    }
-    footer .privacy{
+  }
+  footer .privacy {
     position: relative;
     left: 1rem;
-    }
+  }
 }
