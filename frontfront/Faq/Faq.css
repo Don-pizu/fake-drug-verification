@@ -781,3 +781,85 @@ input::placeholder {
     left: 1rem;
   }
 }
+
+
+
+
+
+
+/*=======Backend profilePic, Bell, logout========*/
+.awareness-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.awareness-bell {
+  cursor: pointer;
+}
+
+.mobile-dashboard-notification.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  z-index: 1000;
+  padding: 10px;
+}
+
+.mobile-dashboard-notification.dropdown.hidden {
+  display: none;
+}
+
+#profilePic {
+  width: 75px;      /* fixed width */
+  height: 75px;     /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: 2px solid #ddd; /* optional: add border */
+}
+
+
+
+////////
+/* dropdown wrapper */
+.mobile-dashboard-notification {
+  position: absolute;
+  top: 50px; /* adjust depending on your bell size */
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* hide by default */
+.hidden {
+  display: none;
+}
+
+/* each notification */
+.notification-default {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.notification-default:hover {
+  background: #f9f9f9;
+}
+
+/* image */
+.notification-default-ch
