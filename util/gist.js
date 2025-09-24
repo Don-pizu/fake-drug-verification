@@ -1,6 +1,6 @@
 // util/gist.js
 
-const Chat = require("../models/Chat");
+const Chat = require("../models/chat");
 const { Server } = require("socket.io");
 
 let users = {}; // { socketId: { username, chat } }
