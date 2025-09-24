@@ -1105,6 +1105,15 @@ input::placeholder {
   .logo-parent-container img {
     width: 75px;
   }
+  .logo-parent-container{
+    gap: 5px;
+  }
+  .cards img{
+    width: 299.45px;
+  }
+  .we-keep-you{
+    width: 299px;
+  }
   .benefit-of-medcheck {
     background: none;
     height: 100%;

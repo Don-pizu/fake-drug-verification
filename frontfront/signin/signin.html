@@ -81,22 +81,43 @@
       <section class="form">
         <form class="sign-in-container">
           <b class="sign-in">Sign in</b>
-
           <!-- Username -->
           <br /><br /><br />
-          <div class="input-box">
-            <label for=""> <img src="../images/user.svg" alt="" /></label>
-            <input type="text" id="username" placeholder="Username" required />
+          <div class="form-group">
+            <label for="email" class="sr-only"></label>
+            <div class="input-wrapper">
+              <img
+                src="../images/user.svg"
+                alt=""
+                class="input-icon"
+                loading="lazy"
+              />
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+            </div>
           </div>
-          <!-- Password -->
-          <div class="input-box">
-            <label for=""> <img src="../images/lock.svg" alt="" /></label>
-            <input
-              type="password"
-              id="password"
-              placeholder="••••••••••••••••••••"
-              required
-            />
+          <div class="form-group">
+            <label for="email" class="sr-only"></label>
+            <div class="input-wrapper">
+              <img
+                src="../images/lock.svg"
+                alt=""
+                class="input-icon"
+                loading="lazy"
+              />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••••••••••••••"
+                required
+              />
+            </div>
           </div>
           <!-- Options -->
           <div class="options">
