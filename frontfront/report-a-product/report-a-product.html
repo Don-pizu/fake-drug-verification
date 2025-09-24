@@ -103,12 +103,14 @@
             </div>
           </div> -->
         </div>
+
         <img
           class="group-item"
           src="../images/Ellipse 1.svg"
           alt=""
           id="profilePic"
         />
+
         <div class="dropdown-2">
           <img
             class="group-inner"
@@ -196,6 +198,8 @@
     <main>
       <div class="report-a-product-parent">
         <b class="report-a-product">Report A Product</b>
+
+        <div id="rpt-container"></div>
         <form class="frame-parent" id="reportForm">
           <div class="emails-input-parent">
             <div class="emails-input">
@@ -256,7 +260,7 @@
                 placeholder="Description of Issue"
               />
             </div>
-            <button id="openPopup" class="verify-1">Save report</button>
+            <button type="submit" id="openPopup" class="verify-1">Save report</button>
           </div>
           <div class="emails-input-group">
             <div class="emails-input">
@@ -267,7 +271,7 @@
                   src="../images/magicpen.svg"
               /></label>
               <input
-                id="nafdafReg"
+                id="nafdacReg"
                 type="text"
                 placeholder="NAFDAC Number e.g A4-5576"
                 required
@@ -284,7 +288,6 @@
                 type="text"
                 id="batchNo"
                 placeholder="Batch Number (optional)"
-                required
               />
             </div>
             <div class="frame-container">
@@ -300,12 +303,14 @@
                   class="input"
                   accept="image/*"
                   type="file"
-                  id="fileUpload"
                   hidden
                 />
               </div>
             </div>
             <button id="openPopup" class="verify">Save report</button>
+
+
+            <button type="submit" class="verify">Save report</button>
           </div>
         </form>
       </div>

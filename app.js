@@ -6,6 +6,9 @@ const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
 const path = require("path");
+const http = require('http');
+
+//const server = http.createServer(app);
 
 
 // NEW: security libs
@@ -23,6 +26,7 @@ const profileImageRoutes = require('./routes/profileImageRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const statsRoutes = require("./routes/statsRoutes");
 const feedbackRoutes = require("./routes/feedbackRoutes");
+const chatUploadRoutes = require("./routes/chatUpload");
 
 
 //DB connection
@@ -38,7 +42,8 @@ app.use(
       scriptSrc: [
         "'self'",
         "https://cdn.jsdelivr.net",
-        "'unsafe-eval'",   // ✅ needed for tesseract.js
+        "https://cdn.socket.io",   // allow socket.io CDN
+        "'unsafe-eval'",   //  needed for tesseract.js
       ],
       workerSrc: ["'self'", "blob:"],
       childSrc: ["'self'", "blob:"],
@@ -47,8 +52,10 @@ app.use(
         "blob:",
         "data:",
         "https://cdn.jsdelivr.net",   // ✅ allow worker importScripts
+        "https://cdn.socket.io",
+        "http://localhost:5000",
       ],
-      imgSrc: ["'self'", "data:", "blob:"],  // 👈 FIX: allow blob: images
+      imgSrc: ["'self'", "data:", "blob:", "http://localhost:5000", "https://fake-drug-verification.onrender.com"], // 👈 FIX: allow blob: images
     },
   })
 );
@@ -98,10 +105,10 @@ app.use('/api', limiter);
 
 // CORS configuration
 const allowedOrigins = [
-  'http://localhost:5000',   // If frontend serves on 5000
-  'http://localhost:3000',   // React dev
-  'http://localhost:5173',   // If frontend serves on 5000
-  'null', //To allow frontend guys to work freely for now
+  //'http://localhost:5000',   // If frontend serves on 5000
+  //'http://localhost:3000',   // React dev
+  //'http://localhost:5173',   // If frontend serves on 5000
+  //'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend 
   //'https://medcheck-website.netlify.app'  // deployed frontend  
   
@@ -136,6 +143,9 @@ app.use(express.static(path.join(__dirname, "frontfront"))); // serve frontend s
 
 
 
+// Init socket.io chat
+//initChat(server);
+
 
 //Routes
 app.use('/api/auth', authRoutes);
@@ -146,5 +156,6 @@ app.use('/api', profileImageRoutes);
 app.use('/api', dashboardRoutes);
 app.use("/api", statsRoutes);
 app.use("/api", feedbackRoutes);
+app.use("/api", chatUploadRoutes);
 
 module.exports = app;

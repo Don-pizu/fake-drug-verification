@@ -472,24 +472,39 @@
                   </div>
                 </div>
               </div>
+
+
+
+        <div id="chat-container">
+          <div id="messages" class="messages"></div>
+
+          <form id="chatForm" enctype="multipart/form-data">
+            <div id="typingIndicator" class="typing"></div>
+
+            <div class="chat-input">
+              <label for="fileInput" class="file-upload">
+                <i class="fas fa-paperclip"></i>
+                <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+              </label>
+
+              <input
+                name="comment"
+                id="messageInput"
+                placeholder="Write a comment..."
+                autocomplete="off"
+              />
+
+              <button type="submit" class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </div>
-            <div class="l1-parent">
-              <div class="write-comments">
-                <input
-                  name="comment"
-                  id="comment"
-                  placeholder="I Write comments..."
-                />
-                <img
-                  class="vuesaxlinearsend-icon"
-                  alt=""
-                  src="../images/send.svg"
-                />
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
-      </div>
+
+        
+        
+
+        </div>
     </main>
     <footer class="footer">
       <!-- Logo -->
@@ -570,6 +585,9 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
 
     <script src="community-gist.js"></script>
   </body>
