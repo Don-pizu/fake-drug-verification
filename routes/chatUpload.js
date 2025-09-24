@@ -1,7 +1,7 @@
 //routes/chatUpload.js
 
 const express = require("express");
-const Chat = require("../models/Chat");
+const Chat = require("../models/chat");
 const multer = require("multer");
 const path = require("path");
 
