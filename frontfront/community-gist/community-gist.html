@@ -4,14 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="community-gist.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=[object Object]&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=[object Object]&display=swap"
-    />
+    <link rel="icon" href="../images/logo.svg" />
+    <title>Commnunity Gist</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -22,18 +16,17 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index/index.html">
+      <div class="logo-parent">
+        <a href="../homepage/homepage.html">
           <img src="../images/logo.svg" alt="medcheck-logo"
-        /></a>
-        <span class="medcheck">MedCheck</span>
+        />MedCheck</a>
       </div>
       <div class="nav2">
         <!-- bell icon -->
         <div class="dropdown" id="dropdown">
-          <img alt="" src="../images/notification-2-fill.svg" />
+          <img id="profilePic" alt="" src="../images/notification-2-fill.svg" />
           <img src="../images/Ellipse 8.svg" alt="" />
-          <div class="notification">
+          <!-- <div class="notification">
             <div class="item">
               <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
@@ -74,7 +67,7 @@
                 <span>20m ago</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="hamburger">
           <button class="dropdownbtn">
@@ -83,45 +76,47 @@
           <div id="myDropdown" class="dropdown-content">
             <ul>
               <li class="menu">
-                <a class="service" href="verify.product.html">Verify Product</a>
+                <a class="service" href="../verify-product/verify-product.html">Verify Product</a>
               </li>
               <li class="menu">
                 <a
                   class="service"
-                  href="./report-a-product/report-a-product.html"
+                  href="../report-a-product/report-a-product.html"
                   >Report Product</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".awareness/awareness.html"
+                <a class="service" href="../awareness/awareness.html"
                   >Awareness</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".profile/profile.html">Profile</a>
+                <a class="service" href="../profile/profile.html">Profile</a>
               </li>
-              <li class="menu"><a class="service" href="#">History</a></li>
+              <li class="menu"><a class="service" href="../history/history.html">History</a></li>
               <li class="menu">
-                <a class="service" href=".community-gist/community-gist.html"
+                <a class="service" href="../community-gist/community-gist.html"
                   >Community</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".testimonials.html">Testimonies</a>
+                <a class="service" href="../testimonials/testimonials.html">Testimonies</a>
               </li>
               <li class="menu">
-                <a class="service" href=".our-team.html">Our Team</a>
+                <a class="service" href="../our-team/our-team.html">Our Team</a>
               </li>
               <li class="menu">
-                <a class="service" href=".about-us.html">About Us</a>
+                <a class="service" href="../about-us/about-us.html">About Us</a>
               </li>
               <li class="menu">
-                <a class="service" href=".contact-us/contact-us.html"
+                <a class="service" href="../contact-us/contact-us.html"
                   >Contact Us</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".logout/logout.html">Logout</a>
+                <a class="service logloglog" href="../signin/signin.html"
+                  >Logout</a
+                >
               </li>
             </ul>
           </div>
@@ -180,7 +175,11 @@
                 <div class="k-parent">
                   <div class="k">1.1k</div>
                   <div class="component-3">
-                    <img class="clip-path-group" alt="" src="../images/like.svg" />
+                    <img
+                      class="clip-path-group"
+                      alt=""
+                      src="../images/like.svg"
+                    />
                   </div>
                 </div>
               </div>
@@ -259,7 +258,11 @@
           <div class="post-2">
             <div class="post-1-inner">
               <div class="ellipse-group">
-                <img class="frame-item" alt="" src="../images/small-woman.svg" />
+                <img
+                  class="frame-item"
+                  alt=""
+                  src="../images/small-woman.svg"
+                />
                 <div class="frame-wrapper">
                   <div class="mr-abiodun-group">
                     <div class="miss-jennier">Miss Fortune</div>
@@ -290,7 +293,11 @@
                 <div class="k-parent">
                   <div class="k">1.1k</div>
                   <div class="component-3">
-                    <img class="clip-path-group" alt="" src="../images/like.svg" />
+                    <img
+                      class="clip-path-group"
+                      alt=""
+                      src="../images/like.svg"
+                    />
                   </div>
                 </div>
               </div>
@@ -401,7 +408,11 @@
                 <div class="k-parent">
                   <div class="k">1.1k</div>
                   <div class="component-3">
-                    <img class="clip-path-group" alt="" src="../images/like.svg" />
+                    <img
+                      class="clip-path-group"
+                      alt=""
+                      src="../images/like.svg"
+                    />
                   </div>
                 </div>
               </div>
@@ -483,7 +494,7 @@
     <footer class="footer">
       <!-- Logo -->
       <div class="logo">
-        <a href="index/index.html">
+        <a href="../index.html">
           <img src="../images/logo.svg" alt="Medcheck logo"
         /></a>
         <b>Medcheck</b>
@@ -496,32 +507,32 @@
           <h4>Services</h4>
           <ul>
             <li>
-              <a href="verify.product.html">Verify Product</a>
+              <a href="../verify-product/verify-product.html">Verify Product</a>
             </li>
             <li>
-              <a href="./report-a-product/report-a-product.html"
+              <a href="../report-a-product/report-a-product.html"
                 >Report Product</a
               >
             </li>
-            <li><a href=".awareness/awareness.html">Awareness</a></li>
-            <li><a href=".we-we-do/what-we-do.html">What we Do</a></li>
+            <li><a href="../awareness/awareness.html">Awareness</a></li>
+            <li><a href="../we-we-do/what-we-do.html">What we Do</a></li>
           </ul>
         </div>
         <!-- More -->
         <div class="links footer-more">
           <h4>More</h4>
           <ul>
-            <li><a href=".about-us.html">About Us</a></li>
-            <li><a href=".our-team.html">Our Team</a></li>
-            <li><a href=".testimonials.html">Testimonials</a></li>
-            <li><a href=".Faq.html">FAQs</a></li>
+            <li><a href="../about-us/about-us.html">About Us</a></li>
+            <li><a href="../our-team/our-team.html">Our Team</a></li>
+            <li><a href="../testimonials/testimonials.html">Testimonials</a></li>
+            <li><a href="../Faq/Faq.html">FAQs</a></li>
           </ul>
         </div>
         <!-- Help -->
         <div class="links footer-help">
           <h4>Help</h4>
           <ul>
-            <li><a href=".contact-us/contact-us.html">Contact Us</a></li>
+            <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="newsletter">
@@ -548,6 +559,7 @@
             ><i class="fab fa-instagram fa-xl"></i
           ></a>
         </div>
+        <br><br>
         <div class="legal">
           <a href=".terms/condition.html">Terms & Conditions</a>
           <a href=".privacy-policy/privacy-policy.html">Privacy Policy</a>

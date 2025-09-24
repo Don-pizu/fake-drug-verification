@@ -15,11 +15,6 @@ body {
   width: 100%;
   font-family: "DM Sans", sans-serif;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -49,16 +44,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
 }
-.medcheck {
+.logo-parent a {
   font-size: 18px;
   letter-spacing: -0.03em;
   line-height: 24px;
   font-weight: 500;
-  font-family: "DM Sans";
+text-decoration: none;
   color: #1a1a1a;
-  text-align: left;
+ display: flex;
+ align-items: center;
+   gap: 1rem;
 }
 .nav2 {
   display: flex;
@@ -210,9 +206,6 @@ header {
 .hamburger img:hover,
 .dropdown-content {
   display: block;
-}
-.post-1-parent {
-  width: 100vw;
 }
 .community-gist-container {
   max-width: 100%;
@@ -775,7 +768,7 @@ b {
 .legal {
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 6rem;
   white-space: nowrap;
 }
 .legal a {
@@ -837,6 +830,10 @@ b {
   }
   .links ul li {
     margin-top: 0.5rem;
+  }
+  .legal a{
+    margin: 0px;
+   
   }
 }
 @media (max-width: 340px) {

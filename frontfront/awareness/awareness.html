@@ -18,30 +18,30 @@
       <div class="logo">
         <div class="logo-parent" id="frameContainer">
           <img class="logo-icon" alt="" src="../images/logo.svg" />
-          <span class="medcheck">Medcheck</span>
+          <a href="../homepage/homepage.html" class="medcheck">Medcheck</a>
         </div>
       </div>
       <nav>
-        <button class="nav-btn"><a href="index.html">Home</a></button>
+        <button class="nav-btn"><a href="../homepage/homepage.html">Home</a></button>
         <div class="service-dropdown">
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
             <a href="../verify-product/verify-product.html">Verify Product</a>
-            <a href="./report-a-product/report-a-product.html"
+            <a href="../report-a-product/report-a-product.html"
               >Report Product</a
             >
-            <a href=".awareness/awareness.html">Awareness</a>
+            <a href="../awareness/awareness.html">Awareness</a>
           </div>
         </div>
         <div class="more-dropdown">
           <button class="nav-btn">More</button>
           <div class="more-content">
-            <a href=".testimonials.html">Testimonies</a>
-            <a href=".our-team.html">Our Teams</a>
-            <a href=".Faq.html">FAQS</a>
-            <a href=".history/history.html">History</a>
-            <a href=".about-us.html">About US</a>
-            <a href=".contact-us/contact-us.html">Contact Us</a>
+            <a href="../testimonials/testimonials.html">Testimonies</a>
+            <a href="../our-team/our-team.html">Our Teams</a>
+            <a href="../Faq/Faq.html">FAQS</a>
+            <a href="../history/history.html">History</a>
+            <a href="../about-us/about-us.html">About US</a>
+            <a href="../contact-us/contact-us.html">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -97,7 +97,7 @@
             </div>
           </div> -->
         </div>
-        <img class="group-item" src="../images/Ellipse 1.svg" alt="" />
+        <img id="profilePic" class="group-item" src="../images/Ellipse 1.svg" alt="" />
         <div class="dropdown-2">
           <img
             class="group-inner"
@@ -168,7 +168,7 @@
             <div class="in-todays-market-container">
               <p class="">Welcome</p>
               <p class="police">
-                In today’s market, the circulation of counterfeit products
+                In today's market, the circulation of counterfeit products
                 especially in the health and beauty industries has become an
                 alarming problem.
               </p>
@@ -325,10 +325,6 @@
             <p class="harmful-fake">
               Harmful, Fake, Unregistered, Unsafe Products
             </p>
-
-            <b class="harmful-fake-unregistered"
-              >Harmful, Fake, Unregistered, Unsafe Products</b
-            >
             <div class="frame-parent10">
 
               <div id="fakePro"></div>
@@ -999,30 +995,16 @@
         </div>
       </div>
     </aside>
-    <!-- ===== Footer Section ===== -->
+      <!-- ===== Footer Section ===== -->
     <footer class="footer">
       <!-- Logo -->
-      <div class="footer-logo">
+      <div class="logo">
         <img src="../images/logo.svg" alt="Medcheck logo" />
         <a href="../homepage/homepage.html">Medcheck</a>
       </div>
       <hr class="divider" />
       <!-- Footer Links -->
       <div class="footer-links">
-        <!-- Newsletter -->
-        <div class="newsletter">
-          <p>Subscribe to our</p>
-          <p>Newsletter</p>
-          <div class="input-container">
-            <input type="email" placeholder="Email address" />
-            <button class="btn">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
         <!-- Services -->
         <div class="links footer-services">
           <h4>Services</h4>
@@ -1035,11 +1017,10 @@
                 >Report Product</a
               >
             </li>
-            <li><a href="../awareness/awareness.html">Awareness</a></li>
+            <li><a href="../awareness/awareness.html"></a></li>
             <li><a href="../what-we-do/what-we-do.html">What we Do</a></li>
           </ul>
         </div>
-
         <!-- More -->
         <div class="links footer-more">
           <h4>More</h4>
@@ -1059,17 +1040,29 @@
             <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
+        <div class="newsletter">
+          <p>Subscribe to our</p>
+          <p>Newsletter</p>
+          <div class="input-container">
+            <input type="email" placeholder="Email address" />
+            <button class="btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
       <!-- Footer Bottom (legal + socials) -->
       <div class="footer-bottom">
-        <div class="legal">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
-        </div>
         <div class="socials">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-xl"></i></a>
           <a href="https://www.x.com/"><i class="fab fa-twitter fa-xl"></i></a>
           <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-xl"></i></a>
+        </div>
+        <div class="legal">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
       <!-- Copyright -->
@@ -1094,6 +1087,6 @@
         });
       });
     </script>
-     <!-- <script src="awareness.js"></script> -->
+     <script src="awareness.js"></script>
   </body>
 </html>

@@ -17,26 +17,28 @@
         </div>
       </div>
       <nav>
-        <button class="nav-btn"><a href="index.html">Home</a></button>
+        <button class="nav-btn">
+          <a href="../homepage/homepage.html">Home</a>
+        </button>
         <div class="service-dropdown">
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
             <a href="../verify-product/verify-product.html">Verify Product</a>
-            <a href="./report-a-product/report-a-product.html"
+            <a href="../report-a-product/report-a-product.html"
               >Report Product</a
             >
-            <a href=".awareness/awareness.html">Awareness</a>
+            <a href="../awareness/awareness.html">Awareness</a>
           </div>
         </div>
         <div class="more-dropdown">
           <button class="nav-btn">More</button>
           <div class="more-content">
-            <a href=".testimonials.html">Testimonies</a>
-            <a href=".our-team.html">Our Teams</a>
-            <a href=".Faq.html">FAQS</a>
-            <a href=".history/history.html">History</a>
-            <a href=".about-us.html">About US</a>
-            <a href=".contact-us/contact-us.html">Contact Us</a>
+            <a href="../testimonials/testimonials.html">Testimonies</a>
+            <a href="../our-team/our-team.html">Our Teams</a>
+            <a href="../Faq/Faq.html">FAQS</a>
+            <a href="../history/history.html">History</a>
+            <a href="../about-us/about-us.html">About US</a>
+            <a href="../contact-us/contact-us.html">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -47,10 +49,10 @@
             class="group-child"
             alt=""
             src="../images/notification-2-fill.svg"
-            id="dropdrop"
+            id="dropbell"
           />
           <img src="../images/Ellipse 8.svg" alt="" />
-          <div class="notification">
+          <!-- <div class="notification">
             <div class="item">
               <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
@@ -91,13 +93,13 @@
                 <span>20m ago</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <img
           class="group-item"
           src="../images/Ellipse 1.svg"
           alt=""
-          class="profilePic"
+          id="profilePic"
         />
         <div class="dropdown-2">
           <img
@@ -114,7 +116,7 @@
               <a href="../history/history.html">History</a>
             </div>
             <div class="link">
-              <a href="../signin/signin.css" id="logloglog">Logout</a>
+              <a href="../index.html" class="logloglog">Logout</a>
             </div>
           </div>
         </div>
@@ -169,7 +171,9 @@
                 >
               </li>
               <li class="menu">
-                <a class="service" href="../signin/signin.html">Logout</a>
+                <a class="service logloglog" href="../signin/signin.html"
+                  >Logout</a
+                >
               </li>
             </ul>
           </div>
@@ -202,22 +206,22 @@
 
             <!-- Contact Info -->
             <div class="contact-info">
-              <div class="contact-labels">
-                <div class="e-mail">E-mail</div>
-                <div class="phone-number">phone number</div>
-              </div>
               <div class="contact-details">
-                <div class="mail-line-parent">
-                  <img
-                    class="mail-line-icon"
-                    alt=""
-                    src="../images/mail-line.svg"
-                  />
-                  <div class="support-email">support@medcheck.com</div>
+                <img
+                  class="mail-line-icon"
+                  alt=""
+                  src="../images/mail-line.svg"
+                />
+                <div class="support-email">
+                  <p class="email">E-mail</p>
+                  <p class="mail">support@medcheck.com</p>
                 </div>
-                <div class="call-parent">
-                  <img class="call-icon" alt="" src="../images/call.svg" />
-                  <div class="support-phone">+ 123 456 7890</div>
+              </div>
+              <div class="contact-labels">
+                <img src="../images/call.svg" alt="" />
+                <div class="support-phone">
+                  <p class="phone-no">Phone Number</p>
+                  <p class="no">+ 123 456 7890</p>
                 </div>
               </div>
             </div>
@@ -237,7 +241,6 @@
                     type="text"
                     id="name"
                     name="name"
-                    value="Ade.."
                     placeholder="Your Name"
                     required
                   />
@@ -251,7 +254,6 @@
                     type="email"
                     id="email"
                     name="email"
-                    value="Ade...@mail.com"
                     placeholder="Your Email"
                     required
                   />
@@ -363,9 +365,13 @@
       <!-- Footer Bottom (legal + socials) -->
       <div class="footer-bottom">
         <div class="socials">
-          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
+          <a href="https://www.facebook.com/"
+            ><i class="fab fa-facebook-f fa-xl"></i
+          ></a>
+          <a href="https://www.x.com/"><i class="fab fa-twitter fa-xl"></i></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fab fa-instagram fa-xl"></i
+          ></a>
         </div>
         <div class="legal">
           <a href="#">Terms & Conditions</a>

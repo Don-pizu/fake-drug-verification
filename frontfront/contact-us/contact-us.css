@@ -299,9 +299,10 @@ nav a:hover {
   flex: 1;
   background: #fff;
 }
-
 /* Hero Section */
-
+.hero-section{
+  padding-block: 5rem;
+}
 /* ========================================
    LAYOUT CONTAINER
 ======================================== */
@@ -330,24 +331,19 @@ nav a:hover {
   padding: 0 120px;
   align-items: start;
 }
-
 .contact-text-section {
   width: 100%;
 }
-
 .hero-subtitle {
   font-size: 24px;
-  line-height: 32px;
   letter-spacing: -0.03em;
   font-weight: 500;
   color: #b3b3b3;
-  margin: 0 0 47px 0;
 }
 
 .hero-title-container {
   margin-bottom: 87px;
 }
-
 .need-solution {
   font-size: 48px;
   line-height: 52px;
@@ -356,11 +352,9 @@ nav a:hover {
   margin: 0;
   color: #00ab00;
 }
-
 .need {
   color: #4d4d4d;
 }
-
 .for-your-product {
   font-size: 48px;
   line-height: 52px;
@@ -369,53 +363,40 @@ nav a:hover {
   margin: 0;
   color: #4d4d4d;
 }
-
 .hero-description {
   font-size: 30px;
   line-height: 36px;
   letter-spacing: -0.03em;
   color: #4d4d4d;
-  margin: 0 0 83px 0;
 }
-
 /* Contact Info */
-.contact-info {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 51px;
-  align-items: start;
-}
-
+.contact-details,
 .contact-labels {
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.e-mail,
-.phone-number {
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.03em;
-  color: #999;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 88px;
-}
-
-.mail-line-parent,
-.call-parent {
-  display: flex;
-  align-items: center;
-  gap: 41px;
+  gap: 4rem;
+  padding-block: 2rem;
 }
 .mail-line-icon,
 .call-icon {
   width: 40px;
   height: auto;
+}
+.email,
+.phone-no {
+  width: 55.1px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  line-height: 28px;
+  color: #999;
+}
+.mail,
+.no {
+  font-size: 24px;
+  letter-spacing: -0.03em;
+  line-height: 32px;
+  font-weight: 500;
+  color: #4d4d4d;
 }
 .support-email,
 .support-phone {
@@ -437,13 +418,17 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height: 100%;
 }
 
 .form-group {
   position: relative;
   width: 100%;
 }
-
+.form-group input::placeholder{
+  color: #333;
+  font-size: 16px;
+}
 .form-label {
   display: block;
   font-size: 16px;
@@ -538,8 +523,9 @@ nav a:hover {
 .chevron-right {
   background: #99fcaf;
 }
-b {
-  font-size: 1.4rem;
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
   color: var(--white-color);
 }
 .divider {
@@ -731,7 +717,6 @@ input::placeholder {
   /* Hero section mobile */
   .hero-section {
     padding: 70px 0 0;
-    margin-block: 2rem;
   }
 
   .hero-content {

@@ -368,8 +368,9 @@ nav a:hover {
 .chevron-right {
   background: #99fcaf;
 }
-b {
-  font-size: 1.4rem;
+.logo a {
+  font-size: 24px;
+  text-decoration: none;
   color: #fff;
 }
 .divider {

@@ -56,6 +56,17 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px;      /* fixed size */
+  height: 120px;     /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover;  /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto;    /* center horizontally */
+}
+
 .header-2 {
   display: flex;
   align-items: center;
@@ -393,13 +404,7 @@ form input::placeholder {
   padding-block: 3rem;
 }
 .btn {
-  display: flex;
-  justify-content: center;
-  padding-top: 0.6rem;
-}
-.btn a {
   background-color: #009200;
-  text-decoration: none;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -411,7 +416,12 @@ form input::placeholder {
   font-size: 16px;
   cursor: pointer;
 }
-.btn a:hover {
+.btn button{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn:hover {
   background: #00c503;
 }
 /* FOOTER */
@@ -540,18 +550,4 @@ footer {
     padding-block: 2rem;
     text-align: left;
   }
-}
-
-
-
-
-/*=====Backend pic ==== */
-#profile-avatar {
-  width: 120px;      /* fixed size */
-  height: 120px;     /* same height for a square */
-  border-radius: 50%; /* make it round */
-  object-fit: cover;  /* crop image to fit nicely */
-  border: 3px solid #f0f0f0; /* optional border */
-  display: block;
-  margin: 0 auto;    /* center horizontally */
 }

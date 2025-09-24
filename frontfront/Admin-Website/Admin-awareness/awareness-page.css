@@ -445,6 +445,8 @@ main {
   letter-spacing: -0.03em;
   line-height: 28px;
   font-weight: 500;
+  width: 88px;
+  margin-left: 4rem;
 }
 .status-wrapper {
   width: 127px;
