@@ -22,6 +22,7 @@ const awarenessRoutes = require('./routes/awarenessRoutes');
 const profileImageRoutes = require('./routes/profileImageRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const statsRoutes = require("./routes/statsRoutes");
+const feedbackRoutes = require("./routes/feedbackRoutes");
 
 
 //DB connection
@@ -30,10 +31,30 @@ connectDB();
 // Security hardening
 //helmet
 app.use(
-  helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" }  // browser will not block the access of files from backend to frontebd
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "https://cdn.jsdelivr.net",
+        "'unsafe-eval'",   // ✅ needed for tesseract.js
+      ],
+      workerSrc: ["'self'", "blob:"],
+      childSrc: ["'self'", "blob:"],
+      connectSrc: [
+        "'self'",
+        "blob:",
+        "data:",
+        "https://cdn.jsdelivr.net",   // ✅ allow worker importScripts
+      ],
+      imgSrc: ["'self'", "data:", "blob:"],  // 👈 FIX: allow blob: images
+    },
   })
 );
+
+
+
 
 //mongoSanitize
 app.use((req, res, next) => {
@@ -80,7 +101,7 @@ const allowedOrigins = [
   'http://localhost:5000',   // If frontend serves on 5000
   'http://localhost:3000',   // React dev
   'http://localhost:5173',   // If frontend serves on 5000
-  //'null', //To allow frontend guys to work freely for now
+  'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend 
   //'https://medcheck-website.netlify.app'  // deployed frontend  
   
@@ -124,5 +145,6 @@ app.use('/api', awarenessRoutes);
 app.use('/api', profileImageRoutes);
 app.use('/api', dashboardRoutes);
 app.use("/api", statsRoutes);
+app.use("/api", feedbackRoutes);
 
 module.exports = app;

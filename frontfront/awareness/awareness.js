@@ -2,7 +2,8 @@
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 
 const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-  
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+
 const token = localStorage.getItem("token");
 
 if (!token) window.location.href = "../index.html";
@@ -33,7 +34,7 @@ function createProductCard(verify, isApproved) {
 
   const image = document.createElement("img");
   image.src = verify.image
-    ? `https://fake-drug-verification.onrender.com${verify.image}`
+    ? `${APP}${verify.image}`
     : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");

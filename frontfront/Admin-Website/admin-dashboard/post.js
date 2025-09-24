@@ -1,22 +1,19 @@
 // post.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ================= BACKEND API =================
+ 
   // const API = 'http://localhost:5000/api'; // Local backend
   const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
   // ================= USER ROLE CHECK =================
   const userId = localStorage.getItem("userId");
   const userRole = localStorage.getItem("role");
   const token = localStorage.getItem("token");
 
-  console.log("userId:", userId);
-  console.log("userRole:", userRole);
-  console.log("token:", token);
-
   if (userRole !== "admin") {
     alert("You are not an admin");
-    window.location.href = "https://medcheck-website.netlify.app/";
+    window.location.href = "https://fake-drug-verification.onrender.com";
   }
 
   // ================= IMAGE PREVIEW =================

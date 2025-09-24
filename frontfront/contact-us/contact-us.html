@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us - MedCheck</title>
-     <link rel="icon" href="../images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
     <link rel="stylesheet" href="contact-us.css" />
   </head>
   <body>
@@ -97,7 +97,7 @@
           class="group-item"
           src="../images/Ellipse 1.svg"
           alt=""
-          id="profilePic"
+          class="profilePic"
         />
         <div class="dropdown-2">
           <img
@@ -224,7 +224,12 @@
           </div>
           <!-- Contact Form -->
           <div class="contact-form-container">
-            <form class="contact-form" action="#" method="post">
+            <form
+              class="contact-form"
+              id="feedbackForm"
+              action="javascript:void(0);"
+              novalidate
+            >
               <div class="form-group">
                 <label for="name" class="form-label">Name</label>
                 <div class="form-input">
@@ -232,7 +237,7 @@
                     type="text"
                     id="name"
                     name="name"
-                    value="Abiodun Adegbola"
+                    value="Ade.."
                     placeholder="Your Name"
                     required
                   />
@@ -246,7 +251,7 @@
                     type="email"
                     id="email"
                     name="email"
-                    value="abiodun@gmail.com"
+                    value="Ade...@mail.com"
                     placeholder="Your Email"
                     required
                   />
@@ -260,7 +265,7 @@
                     type="text"
                     id="location"
                     name="location"
-                    value="Ogun State"
+                    value="Location"
                     placeholder="Your Location"
                     required
                   />
@@ -372,6 +377,7 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
     <script src="contact-us.js"></script>
   </body>
 </html>

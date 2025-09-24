@@ -1,35 +1,30 @@
-// dashboard.js
+// admin-dashboard.js
 
-// ---------------------------
-// API URL
-// ---------------------------
-// Local testing:
-//const API = 'http://localhost:5000/api';
-
-// For production, switch to Render:
+ //const API = 'http://localhost:5000/api'; // Local backend
   const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
-// ---------------------------
-// Token check
-// ---------------------------
-const token = localStorage.getItem("token");
+  // ================= USER ROLE CHECK =================
+  const userId = localStorage.getItem("userId");
+  const userRole = localStorage.getItem("role");
+  const token = localStorage.getItem("token");
 
-if (!token) {
-  // redirect to login if no token
-  window.location.href = ".index/index.html";
-}
+  if (!token) {
+    // redirect to login if no token
+    window.location.href = "https://fake-drug-verification.onrender.com";
+  }
+  if (userRole !== "admin") {
+    alert("You are not an admin");
+    window.location.href = "https://fake-drug-verification.onrender.com";
+  }
+
+
+
+
 
 //LOGOUT BUTTON
 const logoutBtn = document.getElementById("logloglog");
 
-// get logged-in user details
-const userId = localStorage.getItem("userId");
-const userRole = localStorage.getItem("role");
-
-if (userRole !== "admin") {
-  alert("Youare not an admin");
-  window.location.href = ".index/index.html";
-}
 
 // Logout
 if (logoutBtn) {
@@ -38,7 +33,7 @@ if (logoutBtn) {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("role");
-    window.location.href = ".index/index.html";
+    window.location.href = "./index/index.html";
   });
 }
 
@@ -46,7 +41,7 @@ if (logoutBtn) {
 
 async function loadUserProfile() {
   try {
-    const res = await fetch(`${API}/auth/profile`, {
+    const res = await fetch(`${API}/auth/me`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -59,15 +54,17 @@ async function loadUserProfile() {
 
     // Show username in welcome text
     const welcomeText = document.querySelector(".welcome-back-john");
+    const username = data.username || data.name || (data.user && data.user.username);
+
     if (welcomeText) {
-      welcomeText.textContent = `Welcome back, ${data.username}! Here's your verification overview`;
+      welcomeText.textContent = `Welcome back, ${username || "User"}! Here's your verification overview`;
     }
 
     // Update profile picture
     const profilePic = document.getElementById("profilePic");
     if (profilePic) {
       profilePic.src = data.profileImage
-        ? `${API}${data.profileImage}`
+        ? `${APP}${data.profileImage}`
         : "images/images/Ellipse 1.svg"; // fallback
     }
   } catch (err) {
@@ -110,7 +107,7 @@ async function fetchAwareness() {
         <img class="notification-default-child"
           src="${
             a.image
-              ? `http://localhost:5000${a.image}`
+              ? `${APP}${a.image}`
               : "images/images/profile-female.svg"
           }"
           alt="awareness"
@@ -133,18 +130,21 @@ async function fetchAwareness() {
   }
 }
 
-// ---------------------------
-// Elements
-// ---------------------------
-const productList = document.getElementById("productTableBody");
-const totalProVeri = document.getElementById("numberTotal");
-const totalProReport = document.getElementById("bTotal");
-const totalAwareness = document.getElementById("awareTotal");
-const totalUser = document.getElementById("totalUser");
 
-// ---------------------------
+// Elements
+
+const productList = document.getElementById("productTableBody");
+const totalProVeri = document.getElementById("totalProduct");
+const totalReport = document.getElementById("totalReport");
+const totalAwareness = document.getElementById("totalAwareness");
+const totalUser = document.getElementById("totalUsers");
+
+const PercenttotalProVeri = document.getElementById("percent-totalProduct");
+const PercenttotalReport = document.getElementById("percent-totalReport");
+const PercenttotalAwareness = document.getElementById("percent-totalAwareness");
+const PercenttotalUser = document.getElementById("percent-totalUsers");
+
 // Fetch all verify records
-// ---------------------------
 async function fetchProducts() {
   try {
     const res = await fetch(`${API}/verify`, {
@@ -206,9 +206,8 @@ function renderProducts(products) {
   });
 }
 
-// ---------------------------
+
 // Fetch stats
-// ---------------------------
 async function fetchStats() {
   try {
     const res = await fetch(`${API}/stats`, {
@@ -219,33 +218,35 @@ async function fetchStats() {
     });
 
     const data = await res.json();
-    console.log("Stats Response (/stats):", data);
+  
 
     if (!res.ok) throw new Error(data.message || "Failed to fetch stats");
 
     // Some backends wrap stats inside { stats: {...} }
     const stats = data.stats || data;
 
-    console.log("Parsed Stats:", stats);
+    
 
-    totalProVeri.textContent = stats.verifiedCount ?? stats.totalVerified ?? 0;
-    totalProReport.textContent =
-      stats.reportedCount ?? stats.totalReported ?? 0;
-    totalAwareness.textContent =
-      stats.awarenessCount ?? stats.totalAwareness ?? 0;
-    totalUser.textContent = stats.userCount ?? stats.totalUsers ?? 0;
+     // Assign values
+    totalProVeri.textContent = data.totalVerifiedProducts || 0;
+    totalReport.textContent = data.reportCount || 0;
+    totalAwareness.textContent = data.awarenessCount || 0;
+    totalUser.textContent = data.userCount || 0;
+
+    // Assign percentages
+    PercenttotalProVeri.textContent = `${data.percentVerifiedProducts || 0}% from last month`;
+    PercenttotalReport.textContent = `${data.percentReport || 0}% this month`;
+    PercenttotalAwareness.textContent = `${data.percentAwareness || 0}% new alerts`;
+    PercenttotalUser.textContent = `${data.percentUsers || 0}% new users`;
+
   } catch (err) {
     console.error("Stats Error:", err.message);
-    totalProVeri.textContent = "0";
-    totalProReport.textContent = "0";
-    totalAwareness.textContent = "0";
-    totalUser.textContent = "0";
   }
 }
 
-// ---------------------------
+
+
 // Initial load
-// ---------------------------
 fetchProducts();
 fetchStats();
 loadUserProfile();

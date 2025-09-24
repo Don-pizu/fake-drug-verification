@@ -84,6 +84,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding: 5px 10px;
+    color: #00c503;
 }
 .service {
   letter-spacing: -0.03em;
@@ -142,9 +143,9 @@ header {
 /* Input fields */
 .input-box {
   margin-bottom: 20px;
-  width: 400px;
-  max-width: 100%;
-  height: 54px;
+  max-width: 400px;
+  /* max-width: 100%; */
+  height: 58px;
   border-radius: 25px;
   background-color: #fafafa;
   border-bottom: 1px solid #808080;
@@ -167,7 +168,7 @@ header {
   text-decoration: none;
   color: var(--white-color);
 }
-.input-box input::placeholder{
+.input-box input::placeholder {
   font-size: 18px;
 }
 /* Options */
@@ -244,8 +245,8 @@ header {
   cursor: pointer;
   transition: background 0.3s;
 }
-.btn:focus{
-  border: 2px solid #00FF37;
+.btn:focus {
+  border: 2px solid #00ff37;
 }
 /* Divider */
 .divider {
@@ -315,7 +316,16 @@ header {
     height: 100vh;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .signup{
+    font-size: 24px;
+    color: #333;
+  }
+}
+@media (max-width: 500px) {
   .bg {
     display: none;
   }
@@ -333,11 +343,6 @@ header {
     color: #197c1d;
     text-align: center;
   }
-  .hamburger {
-    display: block;
-  }
-}
-@media (max-width: 500px) {
   .input-box {
     width: 340px;
   }
@@ -345,12 +350,16 @@ header {
     padding-block: 10rem;
   }
   .signup {
+    font-size: 20px;
     padding: 2rem;
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
   }
   .divider {
     padding-block: 0px;
   }
-  .btn{
+  .btn {
     background: #009200;
   }
 }

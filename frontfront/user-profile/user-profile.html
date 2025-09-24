@@ -95,7 +95,7 @@
           class="group-item"
           src="../images/Ellipse 1.svg"
           alt=""
-          id="profilePic"
+          class="profilePic"
         />
         <div class="dropdown-2">
           <img
@@ -105,9 +105,15 @@
             id="frameIcon1"
           />
           <div class="dropdown-content-1">
-            <div class="link"><a href="../user-profile/user-profile.html">Profile</a></div>
-            <div class="link"><a href="../history/history.html">History</a></div>
-            <div class="link"><a href="../signin/signin.html" id="logloglog">Logout</a></div>
+            <div class="link">
+              <a href="../user-profile/user-profile.html">Profile</a>
+            </div>
+            <div class="link">
+              <a href="../history/history.html">History</a>
+            </div>
+            <div class="link">
+              <a href="../signin/signin.html" id="logloglog">Logout</a>
+            </div>
           </div>
         </div>
         <div class="hamburger">
@@ -117,7 +123,9 @@
           <div id="myDropdown" class="dropdown-content">
             <ul>
               <li class="menu">
-                <a class="service" href="../verify-product/verify-product.html">Verify Product</a>
+                <a class="service" href="../verify-product/verify-product.html"
+                  >Verify Product</a
+                >
               </li>
               <li class="menu">
                 <a
@@ -127,20 +135,42 @@
                 >
               </li>
               <li class="menu">
-                <a class="service" href="../awareness/awareness.html">Awareness</a>
-              </li>
-              <li class="menu"><a class="service" href="../user-profile/user-profile.html">Profile</a></li>
-              <li class="menu"><a class="service" href="../history/history.html">History</a></li>
-              <li class="menu">
-                <a class="service" href="../community-gist/community-gist.html">Community</a>
+                <a class="service" href="../awareness/awareness.html"
+                  >Awareness</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href="../testimonials/testimonials.html">Testimonies</a>
+                <a class="service" href="../user-profile/user-profile.html"
+                  >Profile</a
+                >
               </li>
-              <li class="menu"><a class="service" href="../our-team/our-team.html">Our Team</a></li>
-              <li class="menu"><a class="service" href="../about-us/about-us.html">About Us</a></li>
-              <li class="menu"><a class="service" href="../contact-us/contact-us.html">Contact Us</a></li>
-              <li class="menu"><a class="service" href="../signin/signin.html">Logout</a></li>
+              <li class="menu">
+                <a class="service" href="../history/history.html">History</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../community-gist/community-gist.html"
+                  >Community</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../testimonials/testimonials.html"
+                  >Testimonies</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../our-team/our-team.html">Our Team</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../about-us/about-us.html">About Us</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="../contact-us/contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="../signin/signin.html">Logout</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -148,32 +178,45 @@
     </header>
     <main>
       <div class="main-section">
-        <form class="form-container">
+        <form class="form-container" id="profileForm">
           <h4>Profile</h4>
-          <img class="profile" src="../images/small-man.svg" alt="" />
+          <img
+            class="profile"
+            src="../images/small-man.svg"
+            alt=""
+            id="profile-avatar"
+          />
+          <input
+            type="file"
+            id="avatarInput"
+            accept="image/*"
+            style="display: none"
+          />
           <div>
             <div class="input-div">
               <label for="name"><img src="../images/user.svg" alt="" /></label>
-              <input type="text" placeholder="Abiodun Adegbola" />
+              <input type="text" placeholder="Abiodun Adegbola" id="fullname" />
             </div>
             <div class="input-div">
               <label for="name"
                 ><img src="../images/mail-line.svg" alt=""
               /></label>
-              <input type="text" placeholder="vfe051020babiodun@gmail.com" />
+              <input type="text" placeholder="Email" id="email" />
             </div>
             <div class="input-div">
               <label for="name"><img src="../images/Group.svg" alt="" /></label>
-              <input type="text" placeholder="+234 810222700835" />
+              <input type="text" placeholder="Phone Number" id="phone" />
             </div>
             <div class="input-div">
               <label for="location"
                 ><img src="../images/location.svg" alt=""
               /></label>
-              <input type="text" placeholder="Ogun State" />
+              <input type="text" placeholder="Location" id="location" />
             </div>
           </div>
-          <a href="../search-successful/search-successful.html">Save change</a>
+          <div class="btn">
+            <button type="submit">Save Change</button>
+          </div>
         </form>
         <div class="profile-image">
           <img
@@ -197,8 +240,14 @@
         <div class="links footer-services">
           <h4>Services</h4>
           <ul>
-            <li><a href="../verify-product/verify-product.html">Verify Product</a></li>
-            <li><a href="../report-a-product/report-a-product.html">Report Product</a></li>
+            <li>
+              <a href="../verify-product/verify-product.html">Verify Product</a>
+            </li>
+            <li>
+              <a href="../report-a-product/report-a-product.html"
+                >Report Product</a
+              >
+            </li>
             <li><a href="../awareness/awareness.html"></a></li>
             <li><a href="../what-we-do/what-we-do.html">What we Do</a></li>
           </ul>
@@ -209,7 +258,9 @@
           <ul>
             <li><a href="../about-us/about-us.html">About Us</a></li>
             <li><a href="../our-team/our-team.html">Our Team</a></li>
-            <li><a href="../testimonials/testimonials.html">Testimonials</a></li>
+            <li>
+              <a href="../testimonials/testimonials.html">Testimonials</a>
+            </li>
             <li><a href="../Faq/Faq.html">FAQs</a></li>
           </ul>
         </div>
@@ -250,5 +301,7 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="user-profile.js"></script>
   </body>
 </html>

@@ -178,7 +178,7 @@
             <img
               class="group-icon"
               alt=""
-              src="images/imoleayo_profile.jpg" id="profilePic"
+              src="images/imoleayo_profile.jpg" class="profilePic"
             />
 
             <div class="notify">
@@ -233,7 +233,7 @@
 
 
 				<div class="card">
-					<div class="number"><p>25%</p></div>
+					<div class="number" id="cosmetic"><p>0%</p></div>
 					<div class="cardi">
 					<p class="cos">Cosmetic</p>
 					<div class="veri-rep">
@@ -250,9 +250,9 @@
 				</div>
 
 				<div class="card">
-					<div class="number"><p>50%</p></div>
+					<div class="number" id="beverages"><p>0%</p></div>
 					<div class="cardi">
-					<p class="cos">Foods</p>
+					<p class="cos">Beverages</p>
                     <div class="veri-rep">
                     <span class="green">red</span>
 					<p>verified</p>
@@ -267,9 +267,9 @@
 				</div>
 
 				<div class="card">
-					<div class="number"><p>25%</p></div>
+					<div class="number" id="chemical"><p>0%</p></div>
 					<div class="cardi">
-					<p class="cos">Drinks</p>
+					<p class="cos">Chemical</p>
 					<div class="veri-rep">
                     <span class="green">red</span>
 					<p>verified</p>
@@ -284,7 +284,7 @@
 				</div>
 
 				<div class="card">
-					<div class="number"><p>25%</p></div>
+					<div class="number" id="drugs"><p>0%</p></div>
 					<div class="cardi">
 					<p class="cos">Drugs</p>
 					<div class="veri-rep">
@@ -300,9 +300,9 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="number"><p>25%</p></div>
+					<div class="number" id="devices"><p>0%</p></div>
 					<div class="cardi">
-					<p class="cos">Others</p>
+					<p class="cos">Devices </p>
 					<div class="veri-rep">
                     <span class="green">red</span>
 					<p>verified</p>
@@ -319,163 +319,50 @@
 			</div>
 
             <div class="statii">
-                <table>
+               
+                <table class="product-table">
+                    <!--
                     <tr>
                        <th class="name">Name</th>
                         <th class="status">Status</th>
                         <th class="cat">Categories</th>
                         <th class="at">NAFDAC Number</th>
                         <th class="date">Date</th>
-                    </tr>
-                    
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="count">⚠️Counterfeit</span></td>
-                        <td class="cat"><span>Food</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
+                    </tr>      --> 
 
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="authen">🧾Authentic</span></td>
-                        <td class="cat"><span>Food</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
+                     <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>   Status</th>
+                        <th>Categories</th>
+                        <th>NAFDAC Number</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead> 
 
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="confirm"><i class="fa-solid fa-square-check custom-icon"></i>Confirm Product</span></td>
-                        <td class="cat"><span>Food</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="fa-ke">❌Fake</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="flag">⚠Flaggdd</span></td>
-                        <td class="cat"><span>Drink</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="unauthor">⛔Unauthorized</span></td>
-                        <td class="cat"><span>Drugs</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="trust">🛡️Trusted</span></td>
-                        <td class="cat"><span>Drugs</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="safe">🟢Safe to Use</span></td>
-                        <td class="cat"><span>Drugs</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status">
-                            <span class="verif">✅Verified</span>
-                        </td>
-                        <td class="cat"><span>Drugs</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="not">✖Not Approved</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                  </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="not">🕵️‍♂️Suspect Product</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="not">🚫Not Verified</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="fa-ke">❌Fake</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="trust">🛡️Trusted</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="scan">📦Scan to Check</span></td>
-                        <td class="cat"><span>Cosmetic</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">Product Name</td>
-                        <td class="status"><span class="verified-items">🗸 Verified Item</span></td>
-                        <td class="cat"><span>Drink</span></td>
-                        <td>Reg.No:A8-110681</td>
-                        <td class="date"><span>23/07/2025</span></td>
-                    </tr>
+                    <tbody id="productTableBody">
+                      <!-- Products will be injected here -->
+                    </tbody>
                     
                 </table>
                 <div class="card-two">
-					<div class="number"><p>700</p></div>
+					<div class="number" id="totalProduct"><p>0</p></div>
 					<div class="cardi">
-					<p class="cos">TOtal Product</p>
+					<p class="cos">Total Product</p>
 					<div class="veri-rep">
-                    <span class="green">red</span>
-					<p>200 Verified</p>
+                    <span class="green">green</span>
+					<p id="totalVerified">0 Verified</p>
                     </div>
 
                     <div class="veri-rep">
                         <span class="red">red</span>
-					<p>500 Reported</p>
+					<p id="totalReported">0 Reported</p>
 					</div>
 
 					</div>
 				</div>
             </div>
+
 		  </section>
 
         <footer>

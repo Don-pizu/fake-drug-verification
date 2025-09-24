@@ -541,3 +541,17 @@ footer {
     text-align: left;
   }
 }
+
+
+
+
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px;      /* fixed size */
+  height: 120px;     /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover;  /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto;    /* center horizontally */
+}

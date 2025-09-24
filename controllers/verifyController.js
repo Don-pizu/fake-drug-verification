@@ -201,3 +201,44 @@ exports.deleteReg = async (req, res, next) => {
 		res.status(500).json({ message: err.message});
 	}
 };
+
+
+//Get counts of categories
+
+exports.getStats = async (req, res) => {
+  try {
+    const categories = ["cosmetics", "drugs", "beverages", "chemical", "devices"];
+    const stats = {};
+    let totalProducts = 0;
+    let totalVerified = 0;
+    let totalReported = 0;
+
+    for (let category of categories) {
+      const total = await Verify.countDocuments({ category });
+      const verified = await Verify.countDocuments({ category, authentic: true });
+      const reported = await Verify.countDocuments({ category, authentic: false });
+
+      stats[category] = {
+        total,
+        verified,
+        reported,
+        percentage: total > 0 ? Math.round((verified / total) * 100) : 0
+      };
+
+      // accumulate totals
+      totalProducts += total;
+      totalVerified += verified;
+      totalReported += reported;
+    }
+
+    res.json({
+      ...stats,
+      totalProducts,
+      totalVerified,
+      totalReported,
+      totalPercentage: totalProducts > 0 ? Math.round((totalVerified / totalProducts) * 100) : 0
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message || "Internal server error" });
+  }
+};

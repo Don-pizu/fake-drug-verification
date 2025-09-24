@@ -131,7 +131,7 @@
               <a href="../user-page/user-page.html">User</a>
               <a href="../analytics/analytics.html">Analytics</a>
               <a href="../profile-setting/profile-setting.html">Settings</a>
-              <a href="../login.html" id="logloglog">Logout</a>
+              <a href="../login.html" class="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
@@ -221,7 +221,7 @@
               <img src="../images/pages-line.svg" alt="" />
             </div>
             <div class="number">
-              <h2>5000+</h2>
+              <h2 id="totalUsers">0+</h2>
             </div>
           </div>
         </div>
@@ -232,8 +232,8 @@
               <img src="../images/calendar-todo-fill.svg" alt="" />
             </div>
             <div class="number">
-              <h2>40</h2>
-              <strong class="percentage">50% increase from last month</strong>
+              <h2 id="activeUsers">0</h2>
+              <strong class="percentage" id="percent-activeUsers">+0% increase from last month</strong>
             </div>
           </div>
         </div>
@@ -244,9 +244,9 @@
               <img src="../images/message.svg" alt="" />
             </div>
             <div class="number">
-              <h2>300</h2>
-              <strong class="percentage wrap"
-                >50% increase from last <br />
+              <h2 id="newUsers">0</h2>
+              <strong class="percentage wrap" id="percent-newUsers"
+                >+0% increase from last <br />
                 month</strong
               >
             </div>
@@ -265,80 +265,15 @@
                 <th>Action</th>
               </tr>
             </thead>
+
+
+
             <tbody>
-              <tr class="info">
-                <td>Mike Obi</td>
-                <td>User</td>
-                <td><span class="status offline"></span> offline</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Jane Doe</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Usman Ali</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Pharm Chigozie Obi</td>
-                <td>User</td>
-                <td><span class="status offline"></span> offline</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Amanda Lee</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Abubakar Ismail</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Nkechi Rufus</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Bolanle Yinka</td>
-                <td>User</td>
-                <td><span class="status offline"></span> offline</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
-              <tr class="info">
-                <td>Sarah Lawal</td>
-                <td>User</td>
-                <td><span class="status online"></span> online</td>
-                <td>
-                  <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-                </td>
-              </tr>
+              <tbody id="userList"></tbody>
+              
             </tbody>
+
+
           </table>
         </div>
       </section>
@@ -354,31 +289,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="info">
-              <td>Mike Obi</td>
-              <td>User</td>
-              <td><span class="status offline"></span> offline</td>
-              <td>
-                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <tr class="info">
-              <td>Jane Doe</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
-            <br />
-            <tr class="info">
-              <td>Usman Ali</td>
-              <td>User</td>
-              <td><span class="status online"></span> online</td>
-              <td>
-                <img src="../images/delete-bin-5-line (1).svg" alt="delete" />
-              </td>
-            </tr>
+
+            <tbody id="adminList"></tbody>
+
+
           </tbody>
         </table></div>
       </section>
@@ -426,5 +340,7 @@
         }
       });
     </script>
+
+    <script src="user-page.js"></script>
   </body>
 </html>

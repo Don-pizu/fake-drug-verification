@@ -4,38 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="report-a-product.css" />
-    <link rel="icon" href="images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
     <title>Report a product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <div class="logo-parent" id="frameContainer">
           <img class="logo-icon" alt="medcheck-logo" src="../images/logo.svg" />
-          <span class="medcheck">Medcheck</span>
+          <a href="../homepage/homepage.html" class="medcheck">Medcheck</a>
         </div>
       </div>
       <nav>
-        <button class="nav-btn"><a href="index/index.html">Home</a></button>
+        <button class="nav-btn">
+          <a href="../homepage/homepage.html">Home</a>
+        </button>
         <div class="service-dropdown">
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
-            <a href="verify.product.html">Verify Product</a>
-            <a href="./report-a-product/report-a-product.html"
+            <a href="../verify-product/verify-product.html">Verify Product</a>
+            <a href="../report-a-product/report-a-product.html"
               >Report Product</a
             >
-            <a href=".awareness/awareness.html">Awareness</a>
+            <a href="../awareness/awareness.html">Awareness</a>
           </div>
         </div>
         <div class="more-dropdown">
           <button class="nav-btn">More</button>
           <div class="more-content">
-            <a href="index.html" target="_blank">Testimonies</a>
-            <a href=".our-team.html">Our Teams</a>
-            <a href=".Faq.html">FAQS</a>
-            <a href=".history/history.html">History</a>
-            <a href=".about-us.html">About US</a>
-            <a href=".contact-us/contact-us.html">Contact Us</a>
+            <a href="../testimonials/testimonials.html" target="_blank"
+              >Testimonies</a
+            >
+            <a href="../our-team/our-team.html">Our Teams</a>
+            <a href="../Faq/Faq.html">FAQS</a>
+            <a href="../history/history.html">History</a>
+            <a href="../about-us/about-us.html">About US</a>
+            <a href="../contact-us/contact-us.html">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -106,10 +117,14 @@
             id="frameIcon1"
           />
           <div class="dropdown-content-1">
-            <div class="link"><a href=".profile/profile.html">Profile</a></div>
-            <div class="link"><a href=".history/history.html">History</a></div>
             <div class="link">
-              <a href=".logout/logout.html" class="logloglog">Logout</a>
+              <a href="../user-profile/user-profile.html">Profile</a>
+            </div>
+            <div class="link">
+              <a href="../history/history.html">History</a>
+            </div>
+            <div class="link">
+              <a href="../index.html" class="logloglog">Logout</a>
             </div>
           </div>
         </div>
@@ -120,41 +135,56 @@
           <div id="myDropdown" class="dropdown-content">
             <ul>
               <li class="menu">
-                <a class="service" href="verify.product.html">Verify Product</a>
+                <a class="service" href="../verify-product/verify-product.html"
+                  >Verify Product</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href="report-a-product.html"
+                <a
+                  class="service"
+                  href="../report-a-product/report-a-product.html"
                   >Report Product</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href="awareness-page.html">Awareness</a>
+                <a class="service" href="../awareness/awareness.html"
+                  >Awareness</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href=".profile/profile.html">Profile</a>
+                <a class="service" href="../user-profile/user-profile.html"
+                  >Profile</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href=".history/history.html">History</a>
+                <a class="service" href="../history/history.html">History</a>
               </li>
               <li class="menu">
-                <a class="service" href=".community-gist.html">Community</a>
+                <a class="service" href="../community-gist/community-gist.html"
+                  >Community</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href=".testimonials.html">Testimonies</a>
+                <a class="service" href="../testimonials/testimonials.html"
+                  >Testimonies</a
+                >
               </li>
               <li class="menu">
-                <a class="service" href=".our-team.html">Our Team</a>
+                <a class="service" href="../our-team/our-team.html">Our Team</a>
               </li>
               <li class="menu">
-                <a class="service" href=".about-us.html">About Us</a>
+                <a class="service" href="../about-us/about-us.html">About Us</a>
               </li>
               <li class="menu">
-                <a class="service" href=".contact-us/contact-us.html"
+                <a class="service" href="../contact-us/contact-us.html"
                   >Contact Us</a
                 >
               </li>
               <li class="menu">
-                <a class="service" href=".logout/logout.html" class="logloglog"
+                <a
+                  class="service"
+                  href="../signin/signin.html"
+                  class="logloglog"
                   >Logout</a
                 >
               </li>
@@ -166,9 +196,8 @@
     <main>
       <div class="report-a-product-parent">
         <b class="report-a-product">Report A Product</b>
-        <div class="frame-parent">
-          <form class="emails-input-parent" id="reportForm">
-            <!-- Product Name -->
+        <form class="frame-parent" id="reportForm">
+          <div class="emails-input-parent">
             <div class="emails-input">
               <label for="product-name"
                 ><img
@@ -176,29 +205,36 @@
                   alt=""
                   src="../images/user.svg"
               /></label>
-              <input type="text" id="productName" placeholder="Product Name" />
+              <input
+                id="productName"
+                type="text"
+                placeholder="Product Name"
+                required
+              />
             </div>
-
-            <!-- Location -->
             <div class="emails-input">
               <label for="product-name"
                 ><img
                   class="vuesaxlinearuser-icon"
-                  alt="location"
+                  alt=""
                   src="../images/location.svg"
               /></label>
-              <input type="text" id="location" placeholder="Location" />
+              <input
+                type="text"
+                placeholder="Location"
+                id="location"
+                required
+              />
             </div>
-
-            <!-- Category -->
             <div class="frame-group">
-              <span class="title">Category</span>
+              <div class="frame-wrapper">
+                <div class="title-wrapper">
+                  <div class="title">Category</div>
+                </div>
+              </div>
               <div id="list1" class="dropdown-check-list" tabindex="100">
-                <label for="category" class="category-label"
-                  >Select Category</label
-                >
                 <select id="category" class="input" required>
-                  <option value="" class="anchor">Select Category</option>
+                  <option value="" class="anchor">Select</option>
                   <option value="beverages">Beverages</option>
                   <option value="drugs">Drugs & Pharmaceuticals</option>
                   <option value="cosmetics">Cosmetics & Personal Care</option>
@@ -207,77 +243,77 @@
                 </select>
               </div>
             </div>
-
-            <!-- NAFDAC Reg No -->
             <div class="emails-input">
-              <label for="nafdacReg">
-                <img src="../images/note.svg" alt="NAFDAC Reg No." />
-              </label>
+              <label for="issues-input">
+                <img
+                  class="vuesaxlinearuser-icon"
+                  alt=""
+                  src="../images/note.svg"
+              /></label>
               <input
+                id="description"
                 type="text"
-                id="nafdacReg"
-                class="input"
-                placeholder="NAFDAC Reg No."
+                placeholder="Description of Issue"
+              />
+            </div>
+            <button id="openPopup" class="verify-1">Save report</button>
+          </div>
+          <div class="emails-input-group">
+            <div class="emails-input">
+              <label for="nafdac-number">
+                <img
+                  class="vuesaxlinearuser-icon"
+                  alt="megin pen"
+                  src="../images/magicpen.svg"
+              /></label>
+              <input
+                id="nafdafReg"
+                type="text"
+                placeholder="NAFDAC Number e.g A4-5576"
                 required
               />
             </div>
-
-            <!-- Batch Number -->
             <div class="emails-input">
-              <label for="batchNo">
-                <img src="../images/note.svg" alt="Batch Number" />
-              </label>
+              <label for="batch-no">
+                <img
+                  class="vuesaxlinearuser-icon"
+                  alt=""
+                  src="../images/dashboard-fill.svg"
+              /></label>
               <input
                 type="text"
                 id="batchNo"
-                class="input"
-                placeholder="Batch Number"
+                placeholder="Batch Number (optional)"
+                required
               />
             </div>
-
-            <!-- Description -->
-            <div class="emails-input">
-              <label for="description">
-                <img
-                  class="vuesaxlinearuser-icon"
-                  src="../images/note.svg"
-                  alt="Description"
+            <div class="frame-container">
+              <div class="frame-wrapper">
+                <b class="upload-photo">Upload Photo </b>
+              </div>
+              <div class="upload-container">
+                <h3>Upload Photo</h3>
+                <p>Tap to upload a photo of the product</p>
+                <label for="fileUpload" class="upload-btn">Upload</label>
+                <input
+                  id="fileUpload"
+                  class="input"
+                  accept="image/*"
+                  type="file"
+                  id="fileUpload"
+                  hidden
                 />
-              </label>
-              <textarea
-                id="description"
-                class="input"
-                placeholder="Description of Issue"
-                rows="4"
-              ></textarea>
+              </div>
             </div>
-
-            <!-- Image Upload -->
-            <div class="emails-input">
-              <label for="fileUpload">
-                <img src="../images/image.svg" alt="Upload" />
-              </label>
-              <input
-                type="file"
-                id="fileUpload"
-                class="input"
-                accept="image/*"
-              />
-            </div>
-
-            <!-- Submit Button -->
-            <button id="openPopup" class="verify-1" type="submit">
-              Save Report
-            </button>
-            <div id="rpt-container"></div>
-          </form>
-        </div>
+            <button class="verify">Save report</button>
+          </div>
+        </form>
       </div>
     </main>
     <!-- ===== Footer Section ===== -->
     <footer class="footer">
       <div class="logo">
-        <img src="../images/logo.svg" alt="" /><b>Medcheck</b>
+        <img src="images/logo.svg" alt="" /><b>Medcheck</b>
       </div>
       <hr class="divider" />
       <!-- Footer Links -->
@@ -285,31 +321,31 @@
         <div class="links">
           <h4>Help</h4>
           <ul>
-            <li><a href=".contact-us/contact-us.html">Contact Us</a></li>
+            <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="links">
           <h4>More</h4>
           <ul>
-            <li><a href=".about-us.html">About Us</a></li>
-            <li><a href=".our-team.html">Our Team</a></li>
-            <li><a href=".testimonials.html">Testimonies</a></li>
-            <li><a href=".Faq.html">FAQs</a></li>
+            <li><a href="../about-us/about-us.html">About Us</a></li>
+            <li><a href="../our-team/our-team.html">Our Team</a></li>
+            <li><a href="../testimonials/testimonials.html">Testimonies</a></li>
+            <li><a href="../Faq/Faq.html">FAQs</a></li>
           </ul>
         </div>
         <div class="links">
           <h4>Services</h4>
           <ul>
             <li>
-              <a href="verify.product.html">Verify Product</a>
+              <a href="../verify-product/verify-product.html">Verify Product</a>
             </li>
             <li>
-              <a href="./report-a-product/report-a-product.html"
+              <a href="../report-a-product/report-a-product.html"
                 >Report Product</a
               >
             </li>
-            <li><a href=".awareness/">Awareness</a></li>
-            <li><a href=".we-we-do/what-we-do.html">What we Do</a></li>
+            <li><a href="../awareness/awareness.html">Awareness</a></li>
+            <li><a href="../what-we-do/what-we-do.html">What we Do</a></li>
           </ul>
         </div>
         <!--Newsletter -->
@@ -334,9 +370,17 @@
           <a href=".privacy-policy/privacy-policy.html">Privacy Policy</a>
         </div>
         <div class="socials">
-          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
+          <a
+            href="https://web.facebook.com/login.php/?_rdc=1&_rdr#"
+            target="_blank"
+            ><i class="fab fa-facebook-f fa-xl"></i
+          ></a>
+          <a href="https://www.x.com/" target="_blank"
+            ><i class="fab fa-twitter fa-xl"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fab fa-instagram fa-xl"></i
+          ></a>
         </div>
       </div>
       <!-- Bottom Section -->
