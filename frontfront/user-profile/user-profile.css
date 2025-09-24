@@ -81,11 +81,12 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .medcheck {
   font-size: 18px;
   letter-spacing: -0.03em;
+  text-decoration: none;
   line-height: 24px;
   font-weight: 500;
   color: #1a1a1a;
@@ -283,10 +284,10 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
   height: 100%;
   gap: 20px;
   padding-block: 5rem;
+  max-width: 100%;
 }
 .form-container {
   border-radius: 25px;
@@ -301,12 +302,13 @@ nav a:hover {
   text-align: center;
   font-size: 30px;
   color: #1a1a1a;
+  margin: 0 auto;
   height: 630px;
   border-radius: 20px;
-  width: 585px;
+  max-width: 585px;
   padding: 20px;
 }
-.profile{
+.profile {
   width: 100px;
   height: 100px;
 }
@@ -340,7 +342,7 @@ form input:focus {
   margin: 10px;
   color: #333;
 }
-.input-div::placeholder{
+.input-div::placeholder {
   font-size: 18px;
 }
 form a {
@@ -358,7 +360,21 @@ form a {
   font-size: 16px;
   color: #fff;
 }
-form button:hover {
+.save {
+  width: 441px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #009200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.save:hover {
   background: var(--lighter-green);
 }
 .profile-image img {
@@ -367,6 +383,17 @@ form button:hover {
   object-fit: cover;
   max-width: 100%;
 }
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px; /* fixed size */
+  height: 120px; /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover; /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
 /* ===== Footer Styling ===== */
 .footer {
   max-width: 100%;
@@ -576,30 +603,22 @@ input::placeholder {
     gap: 1.2rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .divider {
     display: none;
   }
   .links ul li {
     margin-top: 0.5rem;
   }
-  .form-container{
+  .form-container {
     height: 100vh;
   }
   .profile-image {
     display: none;
   }
 }
-
-
-
-/*=====Backend pic ==== */
-#profile-avatar {
-  width: 120px;      /* fixed size */
-  height: 120px;     /* same height for a square */
-  border-radius: 50%; /* make it round */
-  object-fit: cover;  /* crop image to fit nicely */
-  border: 3px solid #f0f0f0; /* optional border */
-  display: block;
-  margin: 0 auto;    /* center horizontally */
+@media (max-width: 500px) {
+  .input-div, .save{
+    width: 337px;
+  }
 }

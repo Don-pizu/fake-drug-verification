@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> MedCheck Products/Reports</title>
     <link rel="stylesheet" href="product-report.css" />
-        <link rel="icon" href="images/logo.svg" />
+        <link rel="icon" href="../images/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -18,20 +18,20 @@
     <header>
       <div class="header">
         <div class="logo">
-          <img src="images/logo.svg" alt="medcheck-logo" />
+          <img src="../images/logo.svg" alt="medcheck-logo" />
           <a href="admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
           <div class="dropdown">
-            <img src="images/notification-2-fill (1).svg" alt="" />
-            <img src="images/notification-dot.svg" alt="notification" />
-            <div id="myDropdown" class="dropdown-content">
+            <img  id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
+            <img src="../images/notification-dot.svg" alt="notification" />
+            <!-- <div id="myDropdown" class="dropdown-content">
               <div class="mobile-dashboard-notification">
                 <div class="notification-default">
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -50,7 +50,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -69,7 +69,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -88,7 +88,7 @@
                   <img
                     class="notification-default-child"
                     alt=""
-                    src="images/profile-female.svg"
+                    src="../images/profile-female.svg"
                   />
                   <div class="mobile-dashboard-notification-frame-parent">
                     <div class="miss-jennifer-parent">
@@ -104,45 +104,45 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="menu-line">
-            <img src="images/menu-line.svg" alt="menu-line" />
+            <img src="../images/menu-line.svg" alt="menu-line" />
             <div class="menu-content">
-              <a href="index.html" target="_self">Dashboard</a>
-              <a href="product-verification.html" target="_blank"
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
+              <a href="../product-verification/product-verification.html" target="_blank"
                 >Verification</a
               >
-              <a href="product-report.html">Reports</a>
-              <a href="Awareness.html" target="_blank">Awareness</a>
-              <a href="user-page.html">User</a>
-              <a href="analytics.html">Analytics</a>
-              <a href="profile-setting.html">Settings</a>
-              <a href="login.html">Logout</a>
+              <a href="../product-report/product-report.html">Reports</a>
+              <a href="../Admin-awareness/awareness-page.html" target="_blank">Awareness</a>
+              <a href="../user-page/user-page.html">User</a>
+              <a href="../analytics/analytics.html">Analytics</a>
+              <a href="../profile-setting/profile-setting.html">Settings</a>
+              <a href="../login.html" class="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
-            <a href="#"><img src="images/Ellipse 1.svg" alt="" /></a>
+            <a href="#" id="profilePic"><img src="../images/Ellipse 1.svg" alt="" /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
-              <img src="images/expand-up-down-line.svg" alt="" />
+              <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="#">logout</a>
+              <a href="../login.html">logout</a>
             </div>
           </div>
         </div>
       </div>
     </header>
     <nav>
-      <a class="" href="index.html" target="_self"
-        ><img src="images/home-4-line.svg" alt="" />Dashboard</a
+      <a  href="../admin-dashboard/admin-dashboard.html" target="_self"
+        ><img src="../images/home-4-line.svg" alt="" />Dashboard</a
       >
       <div class="multiselect">
         <div class="selectBox" onclick="showBoxes()">
           <a href="#">
-            <img src="images/box-3-line.svg" alt="Product" />Product
+            <img src="../images/box-3-line.svg" alt="Product" />Product
             <i
               class="fa-solid fa-chevron-down fa-2xs"
               style="color: #00c503"
@@ -150,23 +150,23 @@
           ></a>
         </div>
         <div id="checkboxes">
-          <a href="product-verification.html" target="_blank">
+          <a href="../product-verification/product-verification.html" target="_blank">
             <img
-              src="images/search-normal.svg"
+              src="../images/search-normal.svg"
               alt="Verification"
             />Verification</a
           >
-          <a href="#">  <img src="images/danger.svg" alt="Report" />Report</a>
+          <a href="../product-report/product-report.html">  <img src="../images/danger.svg" alt="Report" />Report</a>
         </div>
       </div>
-      <a href=""><img src="images/news-line.svg" alt="" />Awareness</a>
-      <a href=""><img src="images/profile-circle.svg" alt="" />Users</a>
-      <a href=""
-        ><img src="images/bar-chart-2-line.svg" alt="" />Analytics</a
+      <a href="../Admin-awareness/awareness-page.html"><img src="../images/news-line.svg" alt="" />Awareness</a>
+      <a href="../user-page/user-page.html"><img src="../images/profile-circle.svg" alt="" />Users</a>
+      <a href="../analytics/analytics.html"
+        ><img src="../images/bar-chart-2-line.svg" alt=""/>Analytics</a
       >
-      <a href="#" target="_self"
+      <a href="../profile-setting/profile-setting.html" target="_self"
         ><img
-          src="images/settings-3-line.svg"
+          src="../images/settings-3-line.svg"
           alt="settings"
         />Settings</a
       >
@@ -196,7 +196,7 @@
               <img
                 class="verified-badge-line-icon"
                 alt=""
-                src="images/calendar-1.svg"
+                src="../images/calendar-1.svg"
               />
             </div>
             <div class="total__parent">
@@ -210,7 +210,7 @@
               <img
                 class="verified-badge-line-icon"
                 alt=""
-                src="images/verified-badge-line.svg"
+                src="../images/verified-badge-line.svg"
               />
             </div>
           </div>
@@ -408,20 +408,20 @@
     </main>
     <footer>
       <div class="logo">
-        <img src="images/logo.svg" alt="Medcheck-logo" />
+        <img src="../images/logo.svg" alt="Medcheck-logo" />
         <span>MedCheck</span>
       </div>
       <hr class="divider" />
       <div class="quick">
         <ul>
           <li class="solid-text">Quick</li>
-          <li><a href="admin-dashboard.html">Dashboard</a></li>
-          <li><a href="product-verification.html">Verification</a></li>
-          <li><a href="product-report.html">Reports</a></li>
-          <li><a href="awareness.html">Awareness</a></li>
-          <li><a href="user-page.html">Users</a></li>
-          <li><a href="analytics.html">Analytics</a></li>
-          <li><a href="profile-setting.html">Settings</a></li>
+          <li><a href="../admin-dashboard/admin-dashboard.html">Dashboard</a></li>
+          <li><a href="../product-verification/product-verification.html">Verification</a></li>
+          <li><a href="../product-report/product-report.html">Reports</a></li>
+          <li><a href="../Admin-awareness/awareness-page.html">Awareness</a></li>
+          <li><a href="../user-page/user-page.html">Users</a></li>
+          <li><a href="../analytics/analytics.html">Analytics</a></li>
+          <li><a href="../profile-setting/profile-setting.html">Settings</a></li>
         </ul>
       </div>
       <div class="condition">

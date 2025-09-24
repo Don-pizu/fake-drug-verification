@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | MedCheck</title>
     <link rel="stylesheet" href="../user-profile/user-profile.css" />
+    <link rel="icon" href="../images/logo.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <div class="logo-parent" id="frameContainer">
           <img class="logo-icon" alt="" src="../images/logo-1.svg" />
-          <span class="medcheck">Medcheck</span>
+          <a href="../homepage/homepage.html" class="medcheck">Medcheck</a>
         </div>
       </div>
       <nav>
-        <button class="nav-btn"><a href="index.html">Home</a></button>
+        <button class="nav-btn"><a href="../homepage/homepage.html">Home</a></button>
         <div class="service-dropdown">
           <button class="nav-btn">Our Services</button>
           <div class="service-content">
@@ -23,7 +25,7 @@
             <a href="../report-a-product/report-a-product.html"
               >Report Product</a
             >
-            <a href=".awareness/awareness.html">Awareness</a>
+            <a href="../awareness/awareness.html">Awareness</a>
           </div>
         </div>
         <div class="more-dropdown">
@@ -112,7 +114,7 @@
               <a href="../history/history.html">History</a>
             </div>
             <div class="link">
-              <a href="../signin/signin.html" id="logloglog">Logout</a>
+              <a href="../signin/signin.html" class="logloglog">Logout</a>
             </div>
           </div>
         </div>
@@ -169,7 +171,7 @@
                 >
               </li>
               <li class="menu">
-                <a class="service" href="../signin/signin.html">Logout</a>
+                <a  class="service logloglog" href="../signin/signin.html">Logout</a>
               </li>
             </ul>
           </div>
@@ -214,9 +216,7 @@
               <input type="text" placeholder="Location" id="location" />
             </div>
           </div>
-          <div class="btn">
-            <button type="submit">Save Change</button>
-          </div>
+            <button class="save" type="submit">Save Change</button>
         </form>
         <div class="profile-image">
           <img
@@ -248,7 +248,7 @@
                 >Report Product</a
               >
             </li>
-            <li><a href="../awareness/awareness.html"></a></li>
+            <li><a href="../awareness/awareness.html">Awareness</a></li>
             <li><a href="../what-we-do/what-we-do.html">What we Do</a></li>
           </ul>
         </div>
@@ -287,9 +287,9 @@
       <!-- Footer Bottom (legal + socials) -->
       <div class="footer-bottom">
         <div class="socials">
-          <a href="#"><i class="fab fa-facebook-f fa-xl"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-xl"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-xl"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-xl"></i></a>
+          <a href="https://www.x.com/"><i class="fab fa-twitter fa-xl"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-xl"></i></a>
         </div>
         <div class="legal">
           <a href="#">Terms & Conditions</a>

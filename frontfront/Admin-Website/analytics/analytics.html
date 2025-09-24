@@ -20,13 +20,13 @@
       <div class="header">
         <div class="logo">
           <img src="../images/logo.svg" alt="medcheck-logo" />
-          <a href="#">MedCheck</a>
+          <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
           <div class="dropdown">
-            <img src="../images/notification-2-fill (1).svg" alt="" />
+            <img   id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
             <img src="../images/notification-dot.svg" alt="notification" />
-            <div id="myDropdown" class="dropdown-content">
+            <!-- <div id="myDropdown" class="dropdown-content">
               <div class="mobile-dashboard-notification">
                 <div class="notification-default">
                   <img
@@ -105,7 +105,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -135,20 +135,20 @@
               <a href="../product-report/product-report.html">Reports</a>
               <a href="../awareness/.awareness.html">Awareness</a>
               <a href="../user-page/user-page.html">User</a>
-              <a href="analytics.html">Analytics</a>
+              <a href="../analytics/analytics.html">Analytics</a>
               <a href="../profile-setting/profile-setting.html">Settings</a>
-              <a href="../login.html" id="logloglog">Logout</a>
+              <a href="../login.html" class="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
-            <a href="#"><img src="../images/Ellipse 1.svg" alt="" /></a>
+            <a href="#" id="profilePic"><img src="../images/Ellipse 1.svg" alt="" /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
               <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="../login.html">logout</a>
+              <a href="../login.html" class="logloglog">logout</a>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@
         <ul>
           <li>
             <img src="../images/home-4-line.svg" alt="dashboard-icon" />
-            <a id="dashboard" href="index.html" target="_self">Dashboard</a>
+            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
           </li>
           <li>
             <span class="products-btn"

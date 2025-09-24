@@ -325,12 +325,12 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  margin: 10px;
 }
 .emails-input {
-  width: 441px;
+  max-width: 441px;
   height: 54px;
-  max-width: 100%;
-  min-width: 0px;
+  font-size: 16px;
   align-self: stretch;
   border-radius: 25px;
   background: whitesmoke;
@@ -349,10 +349,6 @@ nav a:hover {
   width: 100%;
   font-size: 16px;
 }
-.vuesaxlinearuser-icon {
-  width: 24px;
-  height: 24px;
-}
 .frame-group {
   align-self: stretch;
   border-radius: 25px;
@@ -365,7 +361,7 @@ nav a:hover {
   gap: 15px;
   color: #000;
 }
-.input{
+.input {
   border: none;
   outline: none;
   height: 44px;
@@ -405,7 +401,7 @@ nav a:hover {
   justify-content: flex-start;
   padding: 11px 16px;
 }
-::placeholder {
+.emails-input input::placeholder {
   width: 222px;
   font-size: 16px;
   letter-spacing: -0.03em;
@@ -425,7 +421,6 @@ nav a:hover {
   font-weight: 500;
   display: flex;
   align-items: center;
-  /* border: 1px solid #ccc; */
 }
 .items span {
   text-overflow: ellipsis;
@@ -692,9 +687,6 @@ b {
   }
 }
 @media (max-width: 800px) {
-  .verify-1 {
-    display: none;
-  }
   .verify {
     display: block;
   }
@@ -703,10 +695,12 @@ b {
   }
 }
 @media (max-width: 500px) {
-  ::placeholder {
-    font-size: 14px;
-  }
   .emails-input {
-    min-width: 0px;
+    width: 307px;
+    height: 54px;
+    align-self:normal ;
+    padding: 5px 20px;
+    margin-left: rem;
+    gap: 10px;
   }
 }

@@ -1059,6 +1059,10 @@ input::placeholder {
   }
 }
 @media (max-width: 480px) {
+  .main-section {
+  height: 400px;
+  padding-top: 13rem;
+}
   .family-image {
     display: none;
   }
@@ -1096,6 +1100,7 @@ input::placeholder {
     font-size: 20px;
     text-align: left;
     margin-right: 7rem;
+    padding-block: 3rem;
   }
   .logo-parent-container img {
     width: 75px;

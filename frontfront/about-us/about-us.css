@@ -104,10 +104,11 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .medcheck {
   font-size: 18px;
+  text-decoration: none;
   letter-spacing: -0.03em;
   line-height: 28px;
   font-weight: 500;

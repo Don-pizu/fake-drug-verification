@@ -49,7 +49,7 @@ header {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .header-2 {
   display: flex;
@@ -814,6 +814,37 @@ footer {
   margin-top: 6rem;
   color: #fff;
 }
+
+/*=======Backend ====== */
+/* Awareness table rows */
+#postList .frame-group {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#postList .frame-group:hover {
+  background-color: #f9f9f9; /* subtle hover */
+}
+
+.frame-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.frame-group .type,
+.frame-group .post {
+  text-align: center;
+}
+
 @media (max-width: 1209px) {
   .three-side-box_1 {
     display: block;
@@ -856,19 +887,20 @@ footer {
       "footer footer footer";
     grid-template-columns: 1fr 2fr 2fr;
   }
-.cmargs-pharmacy-wellmart-parent,
-.medplus-pharmacy-the-palms-parent,
-.medplus-pharmacy-chain-parent,
-.help-pharmacy-lagos-parent,
-.naza-pharmacy-life-link-ot-parent,
-.skylark-pharmacy-parent,
-.alpha-pharmacy-stores-limite-parent, .pharmacy-name-parent {
-  display: block;
-  align-items: center;
-  gap: 25px;
-  height: 28px;
-  margin: 10px;
-}
+  .cmargs-pharmacy-wellmart-parent,
+  .medplus-pharmacy-the-palms-parent,
+  .medplus-pharmacy-chain-parent,
+  .help-pharmacy-lagos-parent,
+  .naza-pharmacy-life-link-ot-parent,
+  .skylark-pharmacy-parent,
+  .alpha-pharmacy-stores-limite-parent,
+  .pharmacy-name-parent {
+    display: block;
+    align-items: center;
+    gap: 25px;
+    height: 28px;
+    margin: 10px;
+  }
   nav {
     display: none;
   }
@@ -941,41 +973,3 @@ footer {
     display: block;
   }
 }
-
-
-
-
-
-/*=======Backend ====== */
-/* Awareness table rows */
-#postList .frame-group {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
-  background-color: #fff;   /* white background */
-  color: #000;              /* black text */
-  padding: 10px;
-   border: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-#postList .frame-group:hover {
-  background-color: #f9f9f9; /* subtle hover */
-}
-
-.frame-group {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
-  gap: 10px;
-  padding: 12px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.frame-group .type, 
-.frame-group .post {
-  text-align: center;
-}
-
-
-
-
