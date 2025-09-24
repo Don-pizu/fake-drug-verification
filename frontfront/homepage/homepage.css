@@ -1258,12 +1258,19 @@ input::placeholder {
     display: block; /* show placeholders */
     margin: 0 auto;
   }
+    .cards img{
+    width: 299.45px;
+  }
+  .we-keep-you, .to-empower-consumers{
+    width: 299px;
+    text-align: center;
+  }
   .easily-verify-the {
     width: 335px;
     font-size: 24px;
   }
   .btc-big-parent {
-    gap: 3rem;
+    gap: 2rem;
     margin: 10px;
   }
   .verify-product,
@@ -1282,6 +1289,9 @@ input::placeholder {
   }
   .logo-parent-container img {
     width: 75px;
+  }
+  .logo-parent-container{
+    gap: 5px;
   }
   .benefit-of-medcheck {
     background: none;
@@ -1360,5 +1370,31 @@ input::placeholder {
   .copyright {
     width: 334px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 360px) {
+  body{
+    width: 100vw;
+  }
+  .logo-icon{
+    width: 75px;
+    margin: 0;
+  }
+  .testimonies{
+    width: 335px;
+  }
+  .medcheck-helped-me{
+    font-size: 30px;
+    width: 323px;
+    font-weight: 500;
+  }
+  .see-what-our{
+    width: 323px;
+font-size: 24px;
+letter-spacing: -0.03em;
+line-height: 32px;
+color: #dbefdc;
+text-align: center;
+height: 31px;
   }
 }
