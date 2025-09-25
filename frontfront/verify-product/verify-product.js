@@ -18,10 +18,11 @@ if (!token) window.location.href = "index.html";
 
 // FORM VERIFY (manual input)
 document
-  .querySelector(".verification-form")
-  .addEventListener("submit", async (e) => {
+  .getElementById("verifyBtn")
+  .addEventListener("click", async (e) => {
     e.preventDefault();
 
+    console.log("Form submitted");
     const nafdacReg = document.getElementById("nafdac-number").value.trim();
 
     if (!nafdacReg) {
@@ -182,7 +183,7 @@ function buildVerificationModal(data) {
 
 
 
-//=========LOGOUT=======/
+//=========LOGOUT=======//
 // ---------- LOGOUT: attach to all .logloglog anchors ----------
 const logoutBtns = document.querySelectorAll(".logloglog");
 if (logoutBtns && logoutBtns.length > 0) {
@@ -315,4 +316,4 @@ loadUserProfile();
 fetchAwareness();
 
 
-
+});

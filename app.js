@@ -106,10 +106,10 @@ app.use('/api', limiter);
 
 // CORS configuration
 const allowedOrigins = [
-  'http://localhost:5000',   // If frontend serves on 5000
+  //'http://localhost:5000',   // If frontend serves on 5000
   //'http://localhost:3000',   // React dev
   //'http://localhost:5173',   // If frontend serves on 5000
-  'null', //To allow frontend guys to work freely for now
+  //'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend 
   //'https://medcheck-website.netlify.app'  // deployed frontend  
   
