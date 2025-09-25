@@ -320,7 +320,6 @@ nav a:hover {
   white-space: pre-wrap;
 }
 .easily-verify-the {
-  flex: 1;
   font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 40px;
@@ -1013,7 +1012,7 @@ input::placeholder {
   }
   .protects-your-family-container {
     font-size: 36px;
-    width: 400px;
+ 
     padding-top: 21px;
   }
   .easily-verify-the {
@@ -1161,7 +1160,9 @@ input::placeholder {
   .logo-parent-container img {
     width: 160px;
   }
-  .found-a-suspicious-container, .scan-a-barcode, .we-keep-you{
+  .found-a-suspicious-container,
+  .scan-a-barcode,
+  .we-keep-you {
     /* display: flex; */
     margin: 0 auto;
   }
@@ -1237,6 +1238,10 @@ input::placeholder {
   }
 }
 @media (max-width: 480px) {
+  .header{
+    width: 95px;
+    margin-right: 10px;
+  }
   .main-section {
   height: 400px;
   padding-top: 13rem;
@@ -1246,6 +1251,10 @@ input::placeholder {
   }
   .testimonial-container {
     height: 100%;
+  }
+  .see-what-our{
+    font-size: 24px;
+    white-space: nowrap;
   }
   .container {
     margin: 0 auto;
@@ -1258,24 +1267,16 @@ input::placeholder {
     display: block; /* show placeholders */
     margin: 0 auto;
   }
-    .cards img{
-    width: 299.45px;
-  }
-  .we-keep-you, .to-empower-consumers{
-    width: 299px;
-    text-align: center;
-  }
   .easily-verify-the {
-    width: 335px;
     font-size: 24px;
   }
   .btc-big-parent {
-    gap: 2rem;
+    gap: 3rem;
     margin: 10px;
   }
   .verify-product,
   .report-product {
-    width: 154px;
+    width: 144px;
     height: 44px;
     white-space: nowrap;
     display: flex;
@@ -1292,6 +1293,12 @@ input::placeholder {
   }
   .logo-parent-container{
     gap: 5px;
+  }
+  .cards img{
+    width: 299.45px;
+  }
+  .we-keep-you{
+    width: 299px;
   }
   .benefit-of-medcheck {
     background: none;
@@ -1344,6 +1351,9 @@ input::placeholder {
   .our-mission {
     display: none;
   }
+  .call-to-action-parent{
+    flex-direction: column;
+  }
   .logo {
     padding: 2rem 0rem;
     margin: 10px;
@@ -1372,29 +1382,18 @@ input::placeholder {
     margin: 0 auto;
   }
 }
-@media (max-width: 360px) {
-  body{
-    width: 100vw;
-  }
-  .logo-icon{
-    width: 75px;
-    margin: 0;
-  }
-  .testimonies{
-    width: 335px;
-  }
-  .medcheck-helped-me{
-    font-size: 30px;
-    width: 323px;
-    font-weight: 500;
-  }
-  .see-what-our{
-    width: 323px;
-font-size: 24px;
-letter-spacing: -0.03em;
-line-height: 32px;
-color: #dbefdc;
-text-align: center;
-height: 31px;
-  }
+@media (max-width: 357px){
+.logo a{
+    padding: 10px 25px;
+}
+.testimonies{
+  width: 337px;
+}
+.medcheck-helped-me{
+  width: 337px;
+  font-size: 28px;
+}
+.name{
+font-size: 28px;  
+}
 }
