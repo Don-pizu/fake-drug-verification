@@ -20,7 +20,6 @@ html {
 }
 body {
   width: 100%;
-  background: red;
   font-family: "DM Sans", sans-serif;
   display: grid;
   grid-template-areas:
@@ -429,8 +428,6 @@ nav a:hover {
 .frame-parent7,
 .frame-parent9,
 .frame-parent10 {
-  display: flex;
-  gap: 15px;
   overflow-x: scroll;
 }
 .frame-parent7::-webkit-scrollbar,
@@ -635,7 +632,7 @@ article .latest .faq-dropdown p {
 }
 /* comminity gist */
 .post-1-parent {
-  max-width: 100%;
+  width: 100%;
 }
 .community-gist {
   font-size: 30px;
@@ -1542,8 +1539,6 @@ input::placeholder {
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
 }
-
-////////
 /* dropdown wrapper */
 .mobile-dashboard-notification {
   position: absolute;
@@ -1578,6 +1573,3 @@ input::placeholder {
 .notification-default:hover {
   background: #f9f9f9;
 }
-
-/* image */
-.notification-default-ch;
