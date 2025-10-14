@@ -29,7 +29,7 @@ body {
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  overflow-x: hidden;
+
 }
 header {
   grid-area: header;
@@ -586,7 +586,6 @@ article .latest .faq-dropdown p {
   font-size: 18px;
 }
 .alpha-pharmacy-stores-limite-parent {
-  width: 412px;
   height: 28px;
 }
 .alpha-pharmacy {
@@ -605,7 +604,6 @@ article .latest .faq-dropdown p {
   white-space: nowrap;
 }
 .cmargs-pharmacy-wellmart-parent {
-  width: 452px;
   height: 28px;
 }
 .cmargs-pharmacy-wellmart-parent,
@@ -621,21 +619,10 @@ article .latest .faq-dropdown p {
   gap: 25px;
   height: 28px;
 }
-.medplus-pharmacy-chain-parent {
-  width: 579px;
-}
-.help-pharmacy-lagos-parent {
-  width: 539px;
-}
 .medplus-pharmacy-the-palms-parent {
-  width: 416px;
   height: 28px;
 }
-.naza-pharmacy-life-link-ot-parent {
-  width: 469px;
-}
 .skylark-pharmacy-parent {
-  width: 421px;
   height: 28px;
   display: flex;
 }
@@ -1005,43 +992,51 @@ article .latest .faq-dropdown p {
   font-weight: 600;
 }
 /*  slider*/
-.scrolling {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 12px;
-  padding: 0.6rem 0;
-  overflow: hidden;
+/* Brands Partner */
+.partners {
+  height: 100%;
+  padding-block: 5em;
 }
-.scrolling__track {
+.partners h2 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  color: #424242;
+}
+.carousel {
   display: flex;
-  gap: var(--gap);
   width: 100%;
-  animation: scroll-left linear infinite;
-  animation-duration: var(--speed);
+  overflow-x: auto;
 }
-/* duplicate content technique: ensures continuous loop */
-.scrolling-content {
-  display: inline-flex;
-  gap: var(--gap);
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-block: 3rem;
+  padding-right: 1em;
+  animation: spin 6s infinite linear;
 }
-
-.scrolling-item {
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
+.brand-card {
+  display: flex;
+  gap: 3rem;
 }
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
+.nb {
+  width: 100px;
+  object-fit: cover;
+}
+@keyframes spin {
+  from {
+    translate: 0;
   }
-  100% {
-    transform: translateX(-50%);
-  } /* because content is duplicated */
+  to {
+    translate: -100%;
+  }
 }
-
 /*=======Backend ====*/
 /* Scrollable row containers stay the same */
 #recentPro,
@@ -1281,12 +1276,6 @@ input::placeholder {
   body {
     height: 100%;
   }
-  .slide {
-    display: none;
-  }
-  .scrolling {
-    display: none;
-  }
   .awareness-page-child {
     width: 100vw;
   }
@@ -1399,6 +1388,9 @@ input::placeholder {
     padding: 0;
     box-sizing: border-box;
   }
+  .partners, .slide{
+    display: none;
+  }
   .dropdown-btn {
     width: 324px;
     max-width: 100%;
@@ -1414,14 +1406,9 @@ input::placeholder {
   }
   .in-todays-market-container {
     text-align: center;
-    width: 335px;
     height: 224px;
   }
 }
-
-
-
-
 /*=======Backend ====*/
 /* Scrollable row containers stay the same */
 #recentPro,

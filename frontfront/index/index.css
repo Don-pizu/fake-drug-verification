@@ -5,17 +5,20 @@
   --main-color: #005f00;
   --lighter-green: #00c503;
   --hover-color: #e5feeb;
+  --body-color: rgba(255, 255, 255, 0.1);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  width: 100%;
+}
 body {
-  background: var(--white-color);
+  background: var(--body-color);
   width: 100%;
   font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
 }
 button {
   background: transparent;
@@ -62,8 +65,8 @@ nav a:hover {
   border-radius: 0px;
 }
 .header {
+  margin-inline: 30px;
   width: 95%;
-  background: var(--white-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,13 +76,20 @@ nav a:hover {
   width: 40px;
   height: 32px;
 }
-.medcheck {
-  font-size: 18px;
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   letter-spacing: -0.03em;
   line-height: 24px;
-  font-weight: 500;
-  color: #1a1a1a;
   text-align: left;
+}
+.header-logo a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 18px;
 }
 .login a {
   text-decoration: none;
@@ -101,11 +111,10 @@ nav a:hover {
 
 /* MAIN SECTION */
 .main-section {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
+
   height: 584px;
 }
 .family-image {
@@ -115,16 +124,13 @@ nav a:hover {
   object-fit: cover;
 }
 .protects-your-family-container {
-  font-size: 60px;
+  font-size: 55px;
   width: 100%;
   letter-spacing: -0.03em;
   line-height: 60px;
   text-align: left;
   color: #4d4d4d;
-  font-weight: 600;
-}
-.protect-family__text {
-  height: 548px;
+  font-weight: 700;
 }
 .counterfeit-harmful {
   color: #00ab00;
@@ -152,6 +158,7 @@ nav a:hover {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 .verify-product {
   background: var(--lighter-green);
@@ -168,14 +175,17 @@ nav a:hover {
 .report-product:hover {
   background: var(--hover-color);
 }
+.user-trust-container {
+  padding-block: 2rem;
+}
 .more-than-25000-user-trust-me-parent {
   box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
-  background-color: #fff;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 25px;
+  padding: 20px 25px;
   gap: 30px;
   text-align: left;
   font-size: 32px;
@@ -184,6 +194,7 @@ nav a:hover {
 .more-than-25000-container {
   line-height: 40px;
   font-weight: 600;
+  font-size: 24px;
 }
 .medcheck {
   color: #00ab00;
@@ -198,7 +209,7 @@ nav a:hover {
   gap: 24px;
 }
 .logo-icon {
-  width: 154px;
+  width: 124px;
   max-height: 100%;
 }
 .more-than-25000-user-trust-me-logo-icon {
@@ -256,7 +267,6 @@ nav a:hover {
   background: var(--white-color);
 }
 .benefit-text h2 {
-  width: 270px;
   font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 36px;
@@ -325,7 +335,7 @@ nav a:hover {
   display: inline-block;
   margin-bottom: 10px;
 }
-.extra{
+.extra {
   display: none !important;
 }
 .found-a-suspicious-container,
@@ -351,7 +361,6 @@ nav a:hover {
   display: inline-block;
   margin-bottom: 15px;
 }
-
 .card a {
   background: #00c503;
   width: 197px;
@@ -378,7 +387,6 @@ nav a:hover {
   margin-bottom: 7rem;
 }
 .our-mission h2 {
-  width: 1200px;
   font-size: 36px;
   letter-spacing: -0.03em;
   line-height: 40px;
@@ -398,10 +406,7 @@ nav a:hover {
   font-size: 24px;
   letter-spacing: -0.03em;
   line-height: 32px;
-  font-family: "DM Sans";
   color: #1a1a1a;
-  text-align: left;
-  display: inline-block;
 }
 .vision-statement,
 .value-title,
@@ -414,6 +419,9 @@ nav a:hover {
   text-align: left;
 }
 /* Testimonial-section */
+.testimonial-container {
+  height: 100%;
+}
 .testimonial-parent {
   text-align: center;
   margin: 15px;
@@ -439,7 +447,7 @@ nav a:hover {
   justify-content: center;
 }
 .testimonial-container {
-  height: 1600px;
+  height: 100%;
   max-height: 100%;
 }
 .testimonies-parent {
@@ -555,25 +563,48 @@ nav a:hover {
 }
 /* Brands Partner */
 .partners {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 5rem;
-  padding-block: 3rem;
-  margin-top: 2rem;
+  height: 100%;
+  padding-block: 5em;
 }
 .partners h2 {
+  text-align: center;
   font-size: 36px;
   letter-spacing: -0.03em;
   line-height: 40px;
-  display: inline-block;
-  font-family: "DM Sans";
   color: #424242;
 }
-.brand-image {
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-block: 3rem;
+  padding-right: 1em;
+  animation: spin 6s infinite linear;
+}
+.brand-card {
   display: flex;
   gap: 3rem;
+}
+.nb {
+  width: 100px;
+  object-fit: cover;
+}
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
 /* Faq Dropdown */
 .faq-container {
@@ -581,12 +612,29 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   display: flex;
   align-items: center;
-  padding-block: 10rem;
+  justify-content: space-between;
+  padding-block: 8rem;
+}
+.frequently-asked-questions {
+  font-size: 32px;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+details summary {
+  background: var(--white-color);
+  height: 70px;
+}
+details summary span {
+  font-size: 22px;
 }
 .faq-parent,
 summary,
 details ul li {
   max-width: 100%;
+}
+details ul li {
+  font-size: 20px;
+  padding-left: 1rem;
 }
 .faq-parent b {
   width: 638px;
@@ -595,11 +643,19 @@ details ul li {
   line-height: 40px;
   color: #424242 !important;
 }
-.side-faq-image img {
-  width: 700px;
-  max-width: 100%;
+/* Brands animation */
+.pics {
+  border: 6px dashed rgb(198, 194, 194);
   border-radius: 50%;
-  border: 2px dashed #4d4d4d;
+  padding: 5px 5px 10px 3px;
+  width: 50rem;
+  margin-left: -13rem;
+  box-shadow: 2px 2px 2px #8f8b8b;
+  margin-bottom: 2rem;
+}
+.pics img {
+  width: 98%;
+  border-radius: 50%;
 }
 summary .chevron {
   display: inline-block;
@@ -610,7 +666,7 @@ details[open] .chevron {
   transform: rotate(180deg);
 }
 summary {
-  list-style: none; /* removes marker in Firefox */
+  list-style: none;
   cursor: pointer;
 }
 /* Chrome, Safari, Edge */
@@ -798,8 +854,51 @@ input::placeholder {
   .logo-parent {
     flex-wrap: nowrap;
   }
+  .benefit-text {
+    padding: 3rem;
+  }
+  .protects-your-family-container {
+    font-size: 53px;
+    font-weight: 600;
+  }
+  .easily-verify-the {
+    font-size: 30px;
+    padding-block: 3rem;
+  }
+  .btc-big-parent {
+    gap: em;
+    margin-inline: 10px;
+    padding-block: 1rem;
+  }
+  .verify-product,
+  .report-product {
+    font-size: 18px;
+    width: 200px;
+  }
+  .benefit-medcheck-parent {
+    gap: 3em;
+  }
+  .benefit-header {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #005f00;
+    margin: 0 auto;
+    margin-block: 1rem;
+  }
+  .benefit-text {
+    width: 282px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    background: var(--white-color);
+  }
 }
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .family-image img {
     width: 700px;
     height: auto;
@@ -829,49 +928,43 @@ input::placeholder {
     display: block;
     margin-left: 9rem;
   }
-}
+} */
 @media (max-width: 850px) {
   .family-image img {
-    width: 470px;
-    height: auto;
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
   }
   .protects-your-family-container {
     font-size: 36px;
-    /* width: 400px; */
-    padding-top: 21px;
+    line-height: 40px;
   }
   .easily-verify-the {
     font-size: 25px;
-    /* width: 365px; */
     margin: 10px;
-    padding-top: 1rem;
+    padding-block: 1rem;
   }
   .btc-big-parent {
-    display: flex;
-    gap: 3rem;
-    padding-top: 0px;
+    gap: 1rem;
+    padding-block: 0px;
+    margin: 5px;
   }
   .verify-product,
   .report-product {
-    padding: 15px;
-    border-radius: 10px;
+    width: 180px;
   }
   .more-than-25000-user-trust-me-parent {
+    box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
     background-color: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 25px;
+    flex-direction: column;
   }
-  .logo-parent-container {
-    display: flex;
-    margin-left: 9rem;
+  .more-than-25000-container {
+    width: 100%;
   }
   .faq-container {
     background: var(--white-color);
   }
-  .side-faq-image {
+  .pics {
     display: none;
   }
   .faq-parent {
@@ -889,12 +982,7 @@ input::placeholder {
     height: auto;
   }
   .benefit-text h2 {
-    width: 270px;
     font-size: 27px;
-  }
-  .partners {
-    margin-top: 55rem;
-    height: 40vh;
   }
   .our-mission {
     margin-block: 60px;
@@ -934,6 +1022,13 @@ input::placeholder {
   }
 }
 @media (max-width: 768px) {
+  .family-image img {
+    width: 380px;
+    object-fit: cover;
+  }
+  .btc-big-parent {
+    gap: 1rem;
+  }
   .nav-btn,
   .dropdown-2,
   .group-item {
@@ -944,7 +1039,6 @@ input::placeholder {
   }
   .main-section {
     width: 95%;
-    margin: 0 auto;
   }
   .first-image {
     display: none;
@@ -985,9 +1079,13 @@ input::placeholder {
   .logo-parent-container img {
     width: 160px;
   }
-  .found-a-suspicious-container, .scan-a-barcode, .we-keep-you{
-    /* display: flex; */
+  .found-a-suspicious-container,
+  .scan-a-barcode,
+  .we-keep-you {
     margin: 0 auto;
+  }
+  .partners {
+    display: none;
   }
   .faq-container {
     padding-block: 3rem;
@@ -1010,6 +1108,196 @@ input::placeholder {
     height: 64px;
     white-space: nowrap;
     text-align: center;
+  }
+  /* .footer-links {
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .divider {
+    justify-content: center;
+    display: none;
+  }
+  .footer-links {
+    display: block;
+  }
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-block: 0rem;
+  }
+  .socials {
+    padding-bottom: 1rem;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .logo {
+    padding: 2rem 0rem;
+    margin: 10px;
+  }
+  .newsletter {
+    margin: 0;
+    padding-block: 1rem;
+  }
+  .links ul li {
+    margin-top: 0.5rem;
+  }
+  .footer-links {
+    margin: 10px;
+    padding-block: 1rem;
+  }
+  .legal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-bottom .legal {
+    margin: 0 auto;
+    gap: 6rem;
+  } */
+}
+@media (max-width: 765px) {
+  .main-section {
+    height: 400px;
+    padding-block: 2rem;
+  }
+  .family-image img {
+    width: 100%;
+    height: 330px;
+  }
+  .easily-verify-the {
+    font-size: 20px;
+    padding-block: 1rem;
+    line-height: 30px;
+  }
+  .btc-big-parent {
+    gap: 1rem;
+    margin: 10px;
+  }
+  .verify-product,
+  .report-product {
+    width: 165px;
+    height: 44px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .user-trust-container {
+    height: 100%;
+    padding-block: 0rem;
+  }
+  .more-than-25000-container {
+    font-size: 20px;
+    text-align: left;
+    margin-right: rem;
+    padding-block: 2rem;
+  }
+  .logo-parent-container {
+    gap: 5px;
+  }
+  .benefit-text h2 {
+    font-size: 28px;
+  }
+  .benefit-text p {
+    font-size: 24px;
+  }
+  .testimonial-container {
+    height: 100%;
+  }
+  .see-what-our {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  .container {
+    margin: 0 auto;
+    padding-block: 0rem;
+  }
+  .erase {
+    display: none;
+  }
+  .extra {
+    display: block;
+    margin: 0 auto;
+  }
+  .we-keep-you {
+    width: 299px;
+  }
+  .benefit-of-medcheck {
+    background: none;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    padding-block: 2rem;
+  }
+  .benefit-header {
+    font-size: 20px;
+  }
+  .benefit-text {
+    margin: 0 auto;
+  }
+  .benefit-text h2,
+  .benefit-text p {
+    text-align: center;
+  }
+  .partners {
+    display: none;
+  }
+  .frequently-asked-questions {
+    background: var(--main-color);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    color: var(--white-color);
+  }
+  .question-mark {
+    display: none;
+  }
+  .what-we-do {
+    letter-spacing: -0.03em;
+    line-height: 32px;
+    color: #4d4d4d;
+    margin: 0 auto;
+  }
+  .protects-your-family-container {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .easily-verify-the {
+    width: 335px;
+  }
+  .our-mission {
+    display: none;
+  }
+  .call-to-action-parent {
+    flex-direction: column;
+  }
+}
+@media (max-width: 632px) {
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .protects-your-family-container {
+    font-size: 40px;
+  }
+  .family-image {
+    display: none;
+  }
+  .frequently-asked-questions {
+    margin-left: 0rem;
+  }
+  .more-than-25000-container {
+    font-size: 20px;
+    text-align: left;
+    padding-block: 3rem;
+  }
+  .logo-parent-container img {
+    width: 140px;
+  }
+  .logo-parent-container {
+    gap: 5px;
   }
   .footer-links {
     width: 90%;
@@ -1054,73 +1342,66 @@ input::placeholder {
     justify-content: space-between;
   }
   .footer-bottom .legal {
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     gap: 6rem;
   }
 }
 @media (max-width: 480px) {
-  .header{
-    width: 95px;
-    margin-right: 10px;
+  .header {
+    margin-inline: 0px;
+    margin: 0 auto;
   }
   .main-section {
-  height: 400px;
-  padding-top: 13rem;
-}
-  .family-image {
-    display: none;
+    height: 400px;
   }
   .testimonial-container {
     height: 100%;
   }
-  .see-what-our{
+  .see-what-our {
     font-size: 24px;
     white-space: nowrap;
   }
   .container {
     margin: 0 auto;
     padding-block: 0rem;
+    padding-bottom: 7rem;
   }
   .erase {
     display: none;
   }
   .extra {
-    display: block; /* show placeholders */
+    display: block !important;
     margin: 0 auto;
   }
   .easily-verify-the {
     font-size: 24px;
   }
   .btc-big-parent {
-    gap: 3rem;
+    gap: 1rem;
     margin: 10px;
   }
   .verify-product,
   .report-product {
-    width: 144px;
     height: 44px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
+  }
+  .user-trust-container{
+    padding-block: 2rem;
+  }
+  .more-than-25000-user-trust-me-parent {
+    border-radius: 20px;
   }
   .more-than-25000-container {
     font-size: 20px;
     text-align: left;
-    margin-right: 7rem;
-    padding-block: 3rem;
+    padding-block: 0rem;
   }
   .logo-parent-container img {
     width: 75px;
   }
-  .logo-parent-container{
-    gap: 5px;
+  .logo-parent-container {
+    gap: 7px;
   }
-  .cards img{
-    width: 299.45px;
-  }
-  .we-keep-you{
+  .we-keep-you {
     width: 299px;
   }
   .benefit-of-medcheck {
@@ -1144,8 +1425,7 @@ input::placeholder {
     display: none;
   }
   .frequently-asked-questions {
-    background: var(--main-color);
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -1165,6 +1445,7 @@ input::placeholder {
     width: 335px;
   }
   .protects-your-family-container {
+    padding: 10px;
     font-size: 30px;
     line-height: normal;
   }
@@ -1174,7 +1455,7 @@ input::placeholder {
   .our-mission {
     display: none;
   }
-  .call-to-action-parent{
+  .call-to-action-parent {
     flex-direction: column;
   }
   .logo {
@@ -1198,25 +1479,35 @@ input::placeholder {
   .footer-bottom .legal {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 auto;
+  }
+  .legal {
+    white-space: nowrap;
+  }
+  .legal a {
+    margin: 0px;
+    padding-block: 1rem;
   }
   .copyright {
     width: 334px;
     margin: 0 auto;
   }
 }
-@media (max-width: 357px){
-.logo a{
+@media (max-width: 357px) {
+  .logo a {
     padding: 10px 25px;
-}
-.testimonies{
-  width: 337px;
-}
-.medcheck-helped-me{
-  width: 337px;
-  font-size: 28px;
-}
-.name{
-font-size: 28px;  
-}
+  }
+  .testimonies {
+    width: 337px;
+  }
+  .medcheck-helped-me {
+    width: 337px;
+    font-size: 28px;
+  }
+  .name {
+    font-size: 28px;
+  }
+  .footer-bottom .legal {
+    gap: 2rem;
+  }
 }
