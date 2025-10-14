@@ -1384,7 +1384,7 @@ input::placeholder {
   .report-product {
     height: 44px;
   }
-  .user-trust-container{
+  .user-trust-container {
     padding-block: 2rem;
   }
   .more-than-25000-user-trust-me-parent {
@@ -1493,19 +1493,63 @@ input::placeholder {
     margin: 0 auto;
   }
 }
-@media (max-width: 357px) {
+@media (max-width: 367px) {
   .logo a {
     padding: 10px 25px;
+  }
+  .logo-parent-container {
+    gap: 0px;
+  }
+  .wwd {
+    background: var(--white-color);
+  }
+  .benefit-header h2 {
+    font-size: 28px !important;
+    width: 100%;
+  }
+  .easily-verify-the p {
+    font-size: 18px;
+  }
+  .what-we-do h2 {
+    font-size: 22px !important;
+  }
+  .what-we-do p {
+    font-size: 24px;
+  }
+  .found-a-suspicious-container,
+  .scan-a-barcode,
+  .extra {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .we-keep-you {
+    font-weight: normal;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-block: 4rem;
+    padding-bottom: 5rem;
+  }
+  .card h2 {
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    line-height: 36px;
+    display: inline-block;
+    margin-bottom: 10px;
   }
   .testimonies {
     width: 337px;
   }
   .medcheck-helped-me {
-    width: 337px;
-    font-size: 28px;
+    font-size: 20px;
+    padding-block: 10px;
   }
   .name {
-    font-size: 28px;
+    font-size: 24px;
   }
   .footer-bottom .legal {
     gap: 2rem;
