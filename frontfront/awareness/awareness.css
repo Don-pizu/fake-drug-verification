@@ -19,7 +19,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  width: 100vw;
+  width: 100%;
+  background: red;
   font-family: "DM Sans", sans-serif;
   display: grid;
   grid-template-areas:
@@ -29,7 +30,6 @@ body {
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-
 }
 header {
   grid-area: header;
@@ -286,6 +286,9 @@ nav a:hover {
   overflow-x: scroll;
   max-width: 100%;
 }
+.slide::-webkit-scrollbar {
+  display: none;
+}
 .welcome {
   color: var(--black-color) !important;
   width: 100%;
@@ -429,6 +432,10 @@ nav a:hover {
   display: flex;
   gap: 15px;
   overflow-x: scroll;
+}
+.frame-parent7::-webkit-scrollbar,
+.frame-parent10::-webkit-scrollbar {
+  display: none;
 }
 .rectangle-container {
   display: flex;
@@ -1052,6 +1059,7 @@ article .latest .faq-dropdown p {
 #approvedPro::-webkit-scrollbar,
 #fakePro::-webkit-scrollbar {
   height: 8px;
+  display: none;
 }
 #recentPro::-webkit-scrollbar-thumb,
 #approvedPro::-webkit-scrollbar-thumb,
@@ -1328,10 +1336,10 @@ input::placeholder {
   .pharmacy-name-parent {
     padding-block: 2rem;
   }
-.view-all-product{
-  text-align: left;
-  margin-left: 10rem;
-}
+  .view-all-product {
+    text-align: left;
+    margin-left: 10rem;
+  }
   footer {
     padding: 2rem;
   }
@@ -1388,7 +1396,8 @@ input::placeholder {
     padding: 0;
     box-sizing: border-box;
   }
-  .partners, .slide{
+  .partners,
+  .slide {
     display: none;
   }
   .dropdown-btn {
@@ -1434,16 +1443,16 @@ input::placeholder {
 
 /* ---------- HORIZONTAL CARD ---------- */
 .product-card {
-  flex: 0 0 450px;                  /* card width */
-  display: flex;                    /* horizontal layout */
+  flex: 0 0 450px; /* card width */
+  display: flex; /* horizontal layout */
   width: 200px;
   align-items: center;
   background: #fff;
   border-radius: 14px;
   padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 .product-card:hover {
   transform: translateY(-3px);
@@ -1451,8 +1460,8 @@ input::placeholder {
 
 /* image fixed on the left */
 .product-card .product-image {
-  width: 150px;                     /* fixed image width */
-  height: 150px;                    /* fixed height for uniformity */
+  width: 150px; /* fixed image width */
+  height: 150px; /* fixed height for uniformity */
   object-fit: cover;
   border-radius: 14px;
   flex-shrink: 0;
@@ -1466,7 +1475,7 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
-  min-width: 0;                     /* let text wrap */
+  min-width: 0; /* let text wrap */
 }
 
 .product-info h4 {
@@ -1498,14 +1507,6 @@ input::placeholder {
   color: #555;
 }
 
-
-
-
-
-
-
-
-
 /*=======Backend profilePic, Bell, logout========*/
 .awareness-dropdown-wrapper {
   position: relative;
@@ -1525,7 +1526,7 @@ input::placeholder {
   overflow-y: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 10px;
 }
@@ -1535,14 +1536,12 @@ input::placeholder {
 }
 
 #profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
 }
-
-
 
 ////////
 /* dropdown wrapper */
@@ -1556,7 +1555,7 @@ input::placeholder {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 10px;
   z-index: 1000;
 }
@@ -1581,4 +1580,4 @@ input::placeholder {
 }
 
 /* image */
-.notification-default-ch
+.notification-default-ch;
