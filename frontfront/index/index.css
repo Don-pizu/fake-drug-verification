@@ -372,8 +372,6 @@ nav a:hover {
   cursor: pointer;
   font-size: 0.95rem;
   margin: 0 auto;
-}
-.card a {
   text-decoration: none;
 }
 .card a:hover {
@@ -416,7 +414,6 @@ nav a:hover {
   letter-spacing: -0.03em;
   line-height: 36px;
   color: #1a1a1a;
-  text-align: left;
 }
 /* Testimonial-section */
 .testimonial-container {
@@ -1541,15 +1538,23 @@ input::placeholder {
     display: inline-block;
     margin-bottom: 10px;
   }
-  .testimonies {
+  /* .testimonies {
     width: 337px;
+  } */
+  .btc-big-parent {
+    margin: 5px;
+  }
+  .card a {
+    margin-block: 10px;
+    text-decoration: none;
   }
   .medcheck-helped-me {
-    font-size: 20px;
-    padding-block: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
   }
   .name {
-    font-size: 24px;
+    font-size: 26px;
   }
   .footer-bottom .legal {
     gap: 2rem;
