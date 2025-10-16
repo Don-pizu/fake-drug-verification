@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  width: 100vw;
+  width: 100%;
   font-family: "DM Sans", sans-serif;
   display: grid;
   grid-template-areas:
@@ -29,7 +29,6 @@ body {
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  overflow-x: hidden;
 }
 header {
   grid-area: header;
@@ -286,6 +285,9 @@ nav a:hover {
   overflow-x: scroll;
   max-width: 100%;
 }
+.slide::-webkit-scrollbar {
+  display: none;
+}
 .welcome {
   color: var(--black-color) !important;
   width: 100%;
@@ -426,9 +428,11 @@ nav a:hover {
 .frame-parent7,
 .frame-parent9,
 .frame-parent10 {
-  display: flex;
-  gap: 15px;
   overflow-x: scroll;
+}
+.frame-parent7::-webkit-scrollbar,
+.frame-parent10::-webkit-scrollbar {
+  display: none;
 }
 .rectangle-container {
   display: flex;
@@ -586,7 +590,6 @@ article .latest .faq-dropdown p {
   font-size: 18px;
 }
 .alpha-pharmacy-stores-limite-parent {
-  width: 412px;
   height: 28px;
 }
 .alpha-pharmacy {
@@ -605,7 +608,6 @@ article .latest .faq-dropdown p {
   white-space: nowrap;
 }
 .cmargs-pharmacy-wellmart-parent {
-  width: 452px;
   height: 28px;
 }
 .cmargs-pharmacy-wellmart-parent,
@@ -621,27 +623,16 @@ article .latest .faq-dropdown p {
   gap: 25px;
   height: 28px;
 }
-.medplus-pharmacy-chain-parent {
-  width: 579px;
-}
-.help-pharmacy-lagos-parent {
-  width: 539px;
-}
 .medplus-pharmacy-the-palms-parent {
-  width: 416px;
   height: 28px;
 }
-.naza-pharmacy-life-link-ot-parent {
-  width: 469px;
-}
 .skylark-pharmacy-parent {
-  width: 421px;
   height: 28px;
   display: flex;
 }
 /* comminity gist */
 .post-1-parent {
-  max-width: 100%;
+  width: 100%;
 }
 .community-gist {
   font-size: 30px;
@@ -1005,43 +996,51 @@ article .latest .faq-dropdown p {
   font-weight: 600;
 }
 /*  slider*/
-.scrolling {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 12px;
-  padding: 0.6rem 0;
-  overflow: hidden;
+/* Brands Partner */
+.partners {
+  height: 100%;
+  padding-block: 5em;
 }
-.scrolling__track {
+.partners h2 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  color: #424242;
+}
+.carousel {
   display: flex;
-  gap: var(--gap);
   width: 100%;
-  animation: scroll-left linear infinite;
-  animation-duration: var(--speed);
+  overflow-x: auto;
 }
-/* duplicate content technique: ensures continuous loop */
-.scrolling-content {
-  display: inline-flex;
-  gap: var(--gap);
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-block: 3rem;
+  padding-right: 1em;
+  animation: spin 6s infinite linear;
 }
-
-.scrolling-item {
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
+.brand-card {
+  display: flex;
+  gap: 3rem;
 }
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
+.nb {
+  width: 100px;
+  object-fit: cover;
+}
+@keyframes spin {
+  from {
+    translate: 0;
   }
-  100% {
-    transform: translateX(-50%);
-  } /* because content is duplicated */
+  to {
+    translate: -100%;
+  }
 }
-
 /*=======Backend ====*/
 /* Scrollable row containers stay the same */
 #recentPro,
@@ -1057,6 +1056,7 @@ article .latest .faq-dropdown p {
 #approvedPro::-webkit-scrollbar,
 #fakePro::-webkit-scrollbar {
   height: 8px;
+  display: none;
 }
 #recentPro::-webkit-scrollbar-thumb,
 #approvedPro::-webkit-scrollbar-thumb,
@@ -1281,12 +1281,6 @@ input::placeholder {
   body {
     height: 100%;
   }
-  .slide {
-    display: none;
-  }
-  .scrolling {
-    display: none;
-  }
   .awareness-page-child {
     width: 100vw;
   }
@@ -1339,10 +1333,10 @@ input::placeholder {
   .pharmacy-name-parent {
     padding-block: 2rem;
   }
-.view-all-product{
-  text-align: left;
-  margin-left: 10rem;
-}
+  .view-all-product {
+    text-align: left;
+    margin-left: 10rem;
+  }
   footer {
     padding: 2rem;
   }
@@ -1399,6 +1393,10 @@ input::placeholder {
     padding: 0;
     box-sizing: border-box;
   }
+  .partners,
+  .slide {
+    display: none;
+  }
   .dropdown-btn {
     width: 324px;
     max-width: 100%;
@@ -1414,14 +1412,9 @@ input::placeholder {
   }
   .in-todays-market-container {
     text-align: center;
-    width: 335px;
     height: 224px;
   }
 }
-
-
-
-
 /*=======Backend ====*/
 /* Scrollable row containers stay the same */
 #recentPro,
@@ -1447,16 +1440,16 @@ input::placeholder {
 
 /* ---------- HORIZONTAL CARD ---------- */
 .product-card {
-  flex: 0 0 450px;                  /* card width */
-  display: flex;                    /* horizontal layout */
+  flex: 0 0 450px; /* card width */
+  display: flex; /* horizontal layout */
   width: 200px;
   align-items: center;
   background: #fff;
   border-radius: 14px;
   padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 .product-card:hover {
   transform: translateY(-3px);
@@ -1464,8 +1457,8 @@ input::placeholder {
 
 /* image fixed on the left */
 .product-card .product-image {
-  width: 150px;                     /* fixed image width */
-  height: 150px;                    /* fixed height for uniformity */
+  width: 150px; /* fixed image width */
+  height: 150px; /* fixed height for uniformity */
   object-fit: cover;
   border-radius: 14px;
   flex-shrink: 0;
@@ -1479,7 +1472,7 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
-  min-width: 0;                     /* let text wrap */
+  min-width: 0; /* let text wrap */
 }
 
 .product-info h4 {
@@ -1511,14 +1504,6 @@ input::placeholder {
   color: #555;
 }
 
-
-
-
-
-
-
-
-
 /*=======Backend profilePic, Bell, logout========*/
 .awareness-dropdown-wrapper {
   position: relative;
@@ -1538,7 +1523,7 @@ input::placeholder {
   overflow-y: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 10px;
 }
@@ -1548,16 +1533,12 @@ input::placeholder {
 }
 
 #profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
 }
-
-
-
-////////
 /* dropdown wrapper */
 .mobile-dashboard-notification {
   position: absolute;
@@ -1569,7 +1550,7 @@ input::placeholder {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 10px;
   z-index: 1000;
 }
@@ -1592,6 +1573,3 @@ input::placeholder {
 .notification-default:hover {
   background: #f9f9f9;
 }
-
-/* image */
-.notification-default-ch

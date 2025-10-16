@@ -1,8 +1,8 @@
 // admin-dashboard.js
 
  //const API = 'http://localhost:5000/api'; // Local backend
-  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
   // ================= USER ROLE CHECK =================
   const userId = localStorage.getItem("userId");
@@ -129,6 +129,8 @@ async function fetchStats() {
     PercenttotalAwareness.textContent = `${data.percentAwareness || 0}% new alerts`;
     PercenttotalUser.textContent = `${data.percentUsers || 0}% new users`;
 
+    console.log("Fetching stats...");
+
   } catch (err) {
     console.error("Stats Error:", err.message);
   }
@@ -212,7 +214,7 @@ async function loadUserProfile() {
 
 
 
-
+/*
 // ---------- AWARENESS DROPDOWN (use existing bell/dropdown) ----------
 const dropbell = document.getElementById("dropbell");
 const awarenessDropdown = document.createElement("div");
@@ -273,11 +275,7 @@ async function fetchAwareness() {
     console.error("Awareness error:", err.message);
   }
 }
-
-// ---------- initialize ----------
-loadUserProfile();
-fetchAwareness();
-
+*/
 
 // Initial load
 fetchProducts();
