@@ -75,6 +75,8 @@ project-root/
 -Bcrypt.js (password hashing)
 -Crypto
 -dotenv (environment variables)
+-multer
+-socket.io
 -Helmet, Express-rate-limit, Mongo-sanitize, XSS-clean (security)
 
 

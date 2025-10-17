@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   margin-bottom: 3rem;
 }
-.signin-parent a {
+.signin-parent button {
   text-decoration: none;
   height: 64px;
   width: 340px;

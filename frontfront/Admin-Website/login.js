@@ -1,3 +1,5 @@
+//login.js
+
 //sigin.js
 
 // Set the backend API URL
@@ -34,7 +36,7 @@ document.querySelector(".btn").addEventListener("click", async (e) => {
       localStorage.setItem("username", data.username);
 
       alert("Login successful!");
-      window.location.href = "../homepage/homepage.html";
+      window.location.href = "./admin-dashboard/admin-dashboard.html";
     } else {
       alert(data.message || "Login failed");
     }

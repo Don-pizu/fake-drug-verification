@@ -97,7 +97,7 @@ app.use((req, res, next) => {
   //ratelimit
 const limiter = rateLimit({ 
 windowMs: 15 * 60 * 1000, // 15 minutes 
-max: 100, // max 100 requests per IP 
+max: 10, // max 10 requests per IP 
 message: 'Too many requests from this IP, please try again later.' 
 }); 
 app.use('/api', limiter);
@@ -107,8 +107,6 @@ app.use('/api', limiter);
 // CORS configuration
 const allowedOrigins = [
   //'http://localhost:5000',   // If frontend serves on 5000
-  //'http://localhost:3000',   // React dev
-  //'http://localhost:5173',   // If frontend serves on 5000
   //'null', //To allow frontend guys to work freely for now
   'https://fake-drug-verification.onrender.com', //deployed backend 
   //'https://medcheck-website.netlify.app'  // deployed frontend  

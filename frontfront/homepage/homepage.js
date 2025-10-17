@@ -1,147 +1,21 @@
-// profile.js
+//homepage.js
 
-window.addEventListener("error", (e) => {
-  console.error("Global error caught:", e.message, "at", e.filename, ":", e.lineno);
-});
+//const API = 'http://localhost:5000/api'; // Local backend
+//const APP = 'http://localhost:5000';
 
-// const API = 'http://localhost:5000/api'; // Local backend
-  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
-  // ================= USER ROLE CHECK =================
-  const userId = localStorage.getItem("userId");
-  const userRole = localStorage.getItem("role");
-  const token = localStorage.getItem("token");
+// ================= USER ROLE CHECK =================
+const userId = localStorage.getItem("userId");
+const userRole = localStorage.getItem("role");
+const token = localStorage.getItem("token");
 
-  if (!token) 
-    window.location.href = "../index.html";
-
-  if (userRole !== "admin") {
-    alert("You are not an admin");
+if (!token) {
+    // redirect to login if no token
     window.location.href = "https://fake-drug-verification.onrender.com";
-  }
-
-// Elements
-const profileForm = document.getElementById("profileForm");
-const avatarInput = document.getElementById("avatarInput");
-const avatarBtn = document.querySelector(".form-image");
-const avatarPreview = document.getElementById("profile-avatar");
-
-// Open file picker when button clicked
-avatarPreview.addEventListener("click", () => avatarInput.click());
-
-
-// Show preview when file selected
-avatarInput.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (file) {
-    avatarPreview.src = URL.createObjectURL(file);
-  }
-});
-
-// Load user profile on page load
-async function loadUserProfile() {
-  try {
-    console.log("Fetching profile...");
-    const res = await fetch(`${API}/auth/me`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-
-    console.log("Profile response status:", res.status);
-
-    if (!res.ok) throw new Error("Failed to fetch profile");
-
-    const user = await res.json();
-    console.log("User from API:", user);
-
-    // Fill form fields
-    document.getElementById("fullname").value = user.username || "";
-    document.getElementById("email").value = user.email || "";
-    document.getElementById("phone").value = user.phoneNumber || "";
-    document.getElementById("location").value = user.location || "";
-
-    // Set avatar
-    if (user.profileImage) {
-      // Ensure full URL
-      avatarPreview.src = user.profileImage.startsWith("http")
-        ? user.profileImage
-        : `${APP}${user.profileImage}`;
-    }
-
-  } catch (err) {
-    console.error("Error loading profile:", err);
-    alert("Could not load profile data");
-  }
 }
-
-// Update profile
-document
-  .querySelector(".profile-form-inner")
-  .addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append(
-      "username",
-      document.getElementById("fullname").value.trim()
-    );
-    formData.append("email", document.getElementById("email").value.trim());
-    formData.append(
-      "phoneNumber",
-      document.getElementById("phone").value.trim()
-    );
-    formData.append(
-      "location",
-      document.getElementById("location").value.trim()
-    );
-
-    if (avatarInput.files[0]) {
-       console.log("Avatar selected:", avatarInput.files[0].name);
-      formData.append("image", avatarInput.files[0]); 
-    } else {
-  console.log("No avatar selected");
-}
-
-
-    console.log("Submitting profile update...");
-
-    try {
-      const res = await fetch(`${API}/auth/update`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${token}`, // JWT
-        },
-        body: formData, // multipart/form-data
-      });
-
-       console.log("Update response status:", res.status);
-
-      const data = await res.json();
-
-      console.log("Update response data:", data);
-
-
-      if (res.ok) {
-        alert("User updated successfully");
-
-        // Refresh fields with updated data
-        document.getElementById("fullname").value = data.user.username;
-        document.getElementById("email").value = data.user.email;
-        document.getElementById("phone").value = data.user.phoneNumber;
-        document.getElementById("location").value = data.user.location;
-
-        if (data.user.profileImage) {
-          avatarPreview.src = data.user.profileImage;
-        }
-      } else {
-        alert(data.message || "User update failed");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong. Please try again.");
-    }
-  });
-
+ 
 
 
 //=========LOGOUT=======/
@@ -284,10 +158,3 @@ async function fetchAwareness() {
 // ---------- initialize ----------
 loadUserProfile();
 fetchAwareness();
-
-
-
-// Run on page load
-window.addEventListener("DOMContentLoaded", loadUserProfile);
-
-
