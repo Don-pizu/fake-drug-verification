@@ -1,214 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign Up - MedCheck</title>
-   <link rel="icon" href="../images/logo.svg" />
-  <link rel="stylesheet" href="./signup.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap" />
-</head>
-<body>
-  <!-- Main container -->
-  <div class="signup-page">
-    
-    <!-- Desktop background image (hidden on mobile) -->
-    <div class="desktop-background">
-      <picture>
-        <source media="(min-width: 1024px)" srcset="../images/Gemini_Generated_Image_afm97tafm97tafm9 (1) 1 (2).png">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="">
-      </picture>
-      <div class="background-overlay"></div>
-    </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up - MedCheck</title>
+    <link rel="icon" href="../images/logo.svg" />
+    <link rel="stylesheet" href="./signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="signup-page">
+      <!-- Desktop background image (hidden on mobile) -->
+      <div class="desktop-background">
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcset="../images/Gemini_Generated_Image_afm97tafm97tafm9 (1) 1 (2).png"
+          />
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+            alt=""
+          />
+        </picture>
+        <div class="background-overlay"></div>
+      </div>
 
-    <!-- Header/Navigation -->
-    <header class="header">
-      <nav class="navbar">
-        <a href="#" class="logo-link" id="logoLink">
-          <img class="logo-icon" src="../images/logo.svg" alt="MedCheck Logo" loading="lazy">
-          <span class="brand-name">Medcheck</span>
-        </a> 
-        <!-- Mobile menu button -->
-        <div class="mobile-menu-container">
-          <input type="checkbox" id="mobile-menu-toggle" class="popup-toggle" hidden>
-          <label for="mobile-menu-toggle" class="mobile-menu-trigger" aria-label="Mobile menu">
-            <img src="../images/menu-line.svg" alt="Menu" loading="lazy">
-          </label>
-          
-          <nav class="mobile-menu-popup">
-            <div class="menu">
-              <div class="menu-item">
-                <span class="menu-link"><a href="../admin-dashboard/admin-dashboard.html">Dashboard</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../product-verification/product-verification.html">Verification</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../product-report/product-report.html">Report</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../Admin-awareness/awareness-page.html">Awareness</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../user-page/user-page.html">User</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../analytics/analytics.html">Analytics</a></span>
-              </div>
-              <div class="menu-item">
-                <span class="menu-link"><a href="../profile-setting/profile-setting.html">Setting</a></span>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </nav>
-    </header>
-    <!-- Main content -->
-    <main class="main-content">
-      <section class="signup-section">
-        
-        <!-- Page title -->
-        <h1 class="page-title">Sign up</h1>
-        
-        <!-- Signup form container -->
-        <div class="form-container">
-          <form class="signup-form" action="#" method="post" novalidate>
-            
-            <!-- Avatar upload -->
-            <div class="avatar-section">
-              <div class="avatar-placeholder">
-                <div class="avatar-circle"></div>
-                <div class="avatar-text">
-                  <p>Add</p>
-                  <p>Avatar</p>
+      <!-- Header/Navigation -->
+      <header class="header">
+        <nav class="navbar">
+          <a
+            href="../admin-dashboard/admin-dashboard.html"
+            class="logo-link"
+            id="logoLink"
+          >
+            <img
+              class="logo-icon"
+              src="../images/logo.svg"
+              alt="MedCheck Logo"
+              loading="lazy"
+            />
+            <span class="brand-name">Medcheck</span>
+          </a>
+          <!-- Mobile menu button -->
+          <div class="mobile-menu-container">
+            <input
+              type="checkbox"
+              id="mobile-menu-toggle"
+              class="popup-toggle"
+              hidden
+            />
+            <label
+              for="mobile-menu-toggle"
+              class="mobile-menu-trigger"
+              aria-label="Mobile menu"
+            >
+              <img src="../images/menu-line.svg" alt="Menu" loading="lazy" />
+            </label>
+
+            <nav class="mobile-menu-popup">
+              <div class="menu">
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../admin-dashboard/admin-dashboard.html"
+                      >Dashboard</a
+                    ></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../product-verification/product-verification.html"
+                      >Verification</a
+                    ></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../product-report/product-report.html"
+                      >Report</a
+                    ></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../Admin-awareness/awareness-page.html"
+                      >Awareness</a
+                    ></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../user-page/user-page.html">User</a></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../analytics/analytics.html">Analytics</a></span
+                  >
+                </div>
+                <div class="menu-item">
+                  <span class="menu-link"
+                    ><a href="../profile-setting/profile-setting.html"
+                      >Setting</a
+                    ></span
+                  >
                 </div>
               </div>
-            </div>
-            
-            <!-- Username field -->
-            <div class="form-group">
-              <label for="username" class="sr-only">Username</label>
-              <div class="input-wrapper">
-                <img src="../images/user.svg" alt="" class="input-icon" loading="lazy">
-                <input type="text" id="username" name="username" placeholder="Username" required>
+            </nav>
+          </div>
+        </nav>
+      </header>
+      <!-- Main content -->
+      <main class="main-content">
+        <section class="signup-section">
+          <!-- Page title -->
+          <h1 class="page-title">Sign up</h1>
+
+          <!-- Signup form container -->
+          <div class="form-container">
+            <form class="signup-form" action="#" method="post" novalidate>
+              <!-- Avatar upload -->
+              <div class="avatar-section">
+                <div class="avatar-placeholder">
+                  <div class="avatar-circle"></div>
+                  <div class="avatar-text">
+                    <p>Add</p>
+                    <p>Avatar</p>
+                  </div>
+                </div>
               </div>
-            </div> 
-            <!-- Email field -->
-            <div class="form-group">
-              <label for="email" class="sr-only">Email</label>
-              <div class="input-wrapper">
-                <img src="../images/mail-line.svg" alt="" class="input-icon" loading="lazy">
-                <input type="email" id="email" name="email" placeholder="Email" required>
+              <!-- Username field -->
+              <div class="form-group">
+                <label for="username" class="sr-only">Username</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../images/user.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Username"
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            <!-- Phone field -->
-            <div class="form-group">
-              <label for="phone" class="sr-only">Phone Number</label>
-              <div class="input-wrapper">
-                <img src="../images/phone (1).svg" alt="" class="input-icon" loading="lazy">
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+              <!-- Email field -->
+              <div class="form-group">
+                <label for="email" class="sr-only">Email</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../images/mail-line.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            
-            <!-- Location field -->
-            <div class="form-group">
-              <label for="location" class="sr-only">Location</label>
-              <div class="input-wrapper">
-                <img src="../images/location.svg" alt="" class="input-icon" loading="lazy">
-                <input type="text" id="location" name="location" placeholder="Location" required>
+              <!-- Phone field -->
+              <div class="form-group">
+                <label for="phone" class="sr-only">Phone Number</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../images/phone (1).svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            
-            <!-- Password field -->
-            <div class="form-group">
-              <label for="password" class="sr-only">Password</label>
-              <div class="input-wrapper password-wrapper">
-                <img src="../images/lock.svg" alt="" class="input-icon" loading="lazy">
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+
+              <!-- Location field -->
+              <div class="form-group">
+                <label for="location" class="sr-only">Location</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../images/location.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Location"
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            
-            <!-- Confirm password field -->
-            <div class="form-group">
-              <label for="confirmPassword" class="sr-only">Confirm Password</label>
-              <div class="input-wrapper password-wrapper">
-                <img src="../images/lock.svg" alt="" class="input-icon" loading="lazy">
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+              <!-- Password field -->
+              <div class="form-group">
+                <label for="password" class="sr-only">Password</label>
+                <div class="input-wrapper password-wrapper">
+                  <img
+                    src="../images/lock.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Toggle password visibility"
+                  ></button>
+                </div>
               </div>
+
+              <!-- Confirm password field -->
+              <div class="form-group">
+                <label for="confirmPassword" class="sr-only"
+                  >Confirm Password</label
+                >
+                <div class="input-wrapper password-wrapper">
+                  <img
+                    src="../images/lock.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm your password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Role selection -->
+              <div class="form-group">
+                <label for="userRole" class="sr-only">Role</label>
+                <div class="input-wrapper">
+                  <img
+                    src="../images/user.svg"
+                    alt=""
+                    class="input-icon"
+                    loading="lazy"
+                  />
+                  <select id="userRole" name="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Terms and conditions -->
+              <div class="form-group checkbox-group">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="terms" name="terms" required />
+                  <label for="terms" class="checkbox-label">
+                    <span class="checkbox-custom"></span>
+                    <span class="terms-text">
+                      I agree to the Medcheck
+                      <a
+                        href="../terms_conditions/terms_conditions.html"
+                        class="terms-link"
+                        >Terms of Service</a
+                      >
+                      and
+                      <a
+                        href="../privacy_policy/privacy_policy.html"
+                        class="terms-link"
+                        >Privacy Policy</a
+                      >
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="submit-btn">Signup</button>
+            </form>
+
+            <!-- Divider -->
+            <div class="divider">
+              <div class="divider-line"></div>
+              <span class="divider-text">OR</span>
+              <div class="divider-line"></div>
             </div>
 
-           <!-- Role selection -->
-            <div class="form-group">
-              <label for="userRole" class="sr-only">Role</label>
-              <div class="input-wrapper">
-                <img src="../images/user.svg" alt="" class="input-icon" loading="lazy">
-                <select id="userRole" name="role" required>
-                  <option value="" disabled selected>Select Role</option>
-                  <option value="user">User</option>
-                  <option value="admin">Admin</option>
-                </select>
-              </div>
-            </div>        
-            <!-- Terms and conditions -->
-            <div class="form-group checkbox-group">
-              <div class="checkbox-wrapper">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms" class="checkbox-label">
-                  <span class="checkbox-custom"></span>
-                  <span class="terms-text">
-                    I agree to the Medcheck 
-                    <a href="../terms_conditions/terms_conditions.html" class="terms-link">Terms of Service</a>
-                    and 
-                    <a href="../privacy_policy/privacy_policy.html" class="terms-link">Privacy Policy</a>
-                  </span>
-                </label>
-              </div>
+            <!-- Social login options -->
+            <div class="social-login">
+              <button type="button" class="social-btn google-btn">
+                <img src="../images/google-fill.svg" alt="" loading="lazy" />
+                <span>Sign in with Google</span>
+              </button>
+
+              <button type="button" class="social-btn linkedin-btn">
+                <img
+                  src="../images/linkedin-box-fill.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span>LinkedIn</span>
+              </button>
+
+              <button type="button" class="social-btn facebook-btn">
+                <img
+                  src="../images/facebook-circle-fill.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span>Sign in with Facebook</span>
+              </button>
             </div>
-            
-            <!-- Submit button -->
-            <button type="submit" class="submit-btn">Signup</button>
-            
-          </form>
-          
-          <!-- Divider -->
-          <div class="divider">
-            <div class="divider-line"></div>
-            <span class="divider-text">OR</span>
-            <div class="divider-line"></div>
+
+            <!-- Login link -->
+            <div class="login-link">
+              <p>
+                Already have an account?
+                <a href="../../signin/signin.html" class="login-text"
+                  >Sign in</a
+                >
+              </p>
+            </div>
           </div>
-          
-          <!-- Social login options -->
-          <div class="social-login">
-            <button type="button" class="social-btn google-btn">
-              <img src="../images/google-fill.svg" alt="" loading="lazy">
-              <span>Sign in with Google</span>
-            </button>
-            
-            <button type="button" class="social-btn linkedin-btn">
-              <img src="../images/linkedin-box-fill.svg" alt="" loading="lazy">
-              <span>LinkedIn</span>
-            </button>
-            
-            <button type="button" class="social-btn facebook-btn">
-              <img src="../images/facebook-circle-fill.svg" alt="" loading="lazy">
-              <span>Sign in with Facebook</span>
-            </button>
-          </div>
-          
-          <!-- Login link -->
-          <div class="login-link">
-            <p>
-              Already have an account? 
-              <a href="../../signin/signin.html" class="login-text">Sign in</a>
-            </p>
-          </div>
-          
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="signupAd.js"></script>
-</body>
+        </section>
+      </main>
+    </div>
+    <script src="signupAd.js"></script>
+  </body>
 </html>

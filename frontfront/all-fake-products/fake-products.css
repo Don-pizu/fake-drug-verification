@@ -326,6 +326,7 @@ nav a:hover {
   justify-content: center;
   width: 100%;
   align-items: center;
+  flex-shrink: 1;
   gap: 1rem;
 }
 .number {
@@ -484,32 +485,30 @@ option {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 
-  width: 100%;          /* take all horizontal space */
-  max-width: none;      /* override any parent max-width */
-  margin: 0;            /* no auto-centering */
-  padding: 100;           /* no internal padding */
+  width: 100%; /* take all horizontal space */
+  max-width: none; /* override any parent max-width */
+  margin: 0; /* no auto-centering */
+  padding: 100; /* no internal padding */
   justify-items: start; /* align grid items to the left side of their cells */
   justify-content: start; /* align the whole grid to the left */
 }
-
 
 /* =========================
    Product Card – horizontal layout inside each grid cell
    ========================= */
 .product-card {
-  display: flex;                  /* image left, info right */
+  display: flex; /* image left, info right */
   align-items: center;
   background: #fff;
   border-radius: 16px;
   padding: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
-
 /* image on the left */
 .product-card .product-image {
   width: 120px;
@@ -519,7 +518,6 @@ option {
   flex-shrink: 0;
   background: #f3f3f3;
 }
-
 /* info block */
 .product-info {
   flex: 1;
@@ -530,7 +528,6 @@ option {
   gap: 0.45rem;
   min-width: 0;
 }
-
 .product-info h4 {
   margin: 0;
   font-size: 1.05rem;
@@ -539,7 +536,6 @@ option {
   line-height: 1.3;
   word-wrap: break-word;
 }
-
 .product-badge {
   font-size: 0.8rem;
   font-weight: 600;
@@ -561,6 +557,71 @@ option {
   font-size: 0.88rem;
   color: #555;
   line-height: 1.4;
+}
+
+/*=======Backend profilePic, Bell, logout========*/
+.awareness-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.awareness-bell {
+  cursor: pointer;
+}
+
+.mobile-dashboard-notification.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+}
+.mobile-dashboard-notification.dropdown.hidden {
+  display: none;
+}
+#profilePic {
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: 2px solid #ddd; /* optional: add border */
+}
+/* dropdown wrapper */
+.mobile-dashboard-notification {
+  position: absolute;
+  top: 50px; /* adjust depending on your bell size */
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 1000;
+}
+/* hide by default */
+.hidden {
+  display: none;
+}
+/* each notification */
+.notification-default {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.notification-default:hover {
+  background: #f9f9f9;
 }
 /* ===== Footer Styling ===== */
 .footer {
@@ -785,186 +846,25 @@ input::placeholder {
     width: 90%;
   }
 }
-/* @media (max-width: 320px) {
-  .product-card img {
+@media (max-width: 392px) {
+  .legal a {
+    margin: 10px;
+  }
+  .legal {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 335px) {
+  /* .product-card img {
     width: 100px;
     height: 100px;
   }
   .product-card {
     width: 333px;
     height: 142px;
+  } */
+  .legal {
+    gap: 0px;
+    padding-top: 5px;
   }
-} */
-
-
-
-/*===== Backend ======*/
-/* =========================
-   All Products – 3-column grid
-   ========================= */
-#allProduct {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-
-  width: 100%;          /* take all horizontal space */
-  max-width: none;      /* override any parent max-width */
-  margin: 0;            /* no auto-centering */
-  padding: 100;           /* no internal padding */
-  justify-items: start; /* align grid items to the left side of their cells */
-  justify-content: start; /* align the whole grid to the left */
 }
-
-
-/* =========================
-   Product Card – horizontal layout inside each grid cell
-   ========================= */
-.product-card {
-  display: flex;                  /* image left, info right */
-  align-items: center;
-  background: #fff;
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.product-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-/* image on the left */
-.product-card .product-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
-  flex-shrink: 0;
-  background: #f3f3f3;
-}
-
-/* info block */
-.product-info {
-  flex: 1;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.45rem;
-  min-width: 0;
-}
-
-.product-info h4 {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #1f1f1f;
-  line-height: 1.3;
-  word-wrap: break-word;
-}
-
-.product-badge {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 8px;
-  align-self: flex-start;
-  text-transform: capitalize;
-}
-.badge-approved {
-  background: #e3f9ec;
-  color: #16843a;
-}
-.badge-fake {
-  background: #fde6e6;
-  color: #c62828;
-}
-
-.product-info p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: #555;
-  line-height: 1.4;
-}
-
-
-
-
-
-/*=======Backend profilePic, Bell, logout========*/
-.awareness-dropdown-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.awareness-bell {
-  cursor: pointer;
-}
-
-.mobile-dashboard-notification.dropdown {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  z-index: 1000;
-  padding: 10px;
-}
-
-.mobile-dashboard-notification.dropdown.hidden {
-  display: none;
-}
-
-#profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: 2px solid #ddd; /* optional: add border */
-}
-
-
-
-////////
-/* dropdown wrapper */
-.mobile-dashboard-notification {
-  position: absolute;
-  top: 50px; /* adjust depending on your bell size */
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  padding: 10px;
-  z-index: 1000;
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-/* each notification */
-.notification-default {
-  display: flex;
-  align-items: flex-start;
-  padding: 8px;
-  border-bottom: 1px solid #f0f0f0;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.notification-default:hover {
-  background: #f9f9f9;
-}
-
-/* image */
-.notification-default-ch
-

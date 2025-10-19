@@ -52,7 +52,7 @@ header {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .header-2 {
   display: flex;
@@ -92,95 +92,51 @@ header {
   display: none;
 }
 /* notification dropdown */
-.mobile-dashboard-notification {
-  width: 100%;
-  border-radius: 0px 0px 20px 20px;
-  background-color: #fff;
+.notification .item {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 10px 20px;
-  gap: 9px;
-  text-align: left;
-  font-size: 12px;
-  color: #1a1a1a;
-}
-.notification-default {
-  align-self: stretch;
-  border-radius: 0px 10px 10px 10px;
-  background-color: #fff;
-  border-bottom: 2px solid #00ab00;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  gap: 12px;
-}
-.notification-default-child {
-  width: 40px;
+  margin-bottom: 10px;
+  border-radius: 6px;
   position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #00ab00;
+  border-radius: 0px 10px 10px 10px;
+}
+.item:hover {
+  background: #e0fce0;
+}
+.notification .item img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  max-height: 100%;
   object-fit: cover;
 }
-.mobile-dashboard-notification-frame-parent {
+.notification .item .info {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 6px;
+  margin-left: 10px;
 }
-.miss-jennifer-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  font-size: 16px;
+.notification .item .info h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
 }
-.miss-jennifer {
-  flex: 1;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.notification .item .info p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #4d4d4d;
 }
-.view-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  text-align: center;
+.notification .item .info span {
+  font-size: 11px;
+  color: #999;
+}
+.notification .item a {
+  text-decoration: none;
   font-size: 12px;
   color: #999;
-}
-.view {
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-}
-.fake-product-everywhere {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #4d4d4d;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.m-ago {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #999;
+  font-weight: 500;
+  float: right;
 }
 /* upside button */
 .logout-dropdown {
@@ -475,6 +431,7 @@ b {
   max-width: 100%;
   grid-gap: 5px;
   padding-block: 2rem;
+  margin: 10px;
 }
 .total__parent {
   box-shadow: var(--box-shadow);
@@ -664,7 +621,8 @@ footer {
 }
 /* Footer */
 @media (max-width: 1178px) {
-  .total-numbers-container, .chartContainer{
+  .total-numbers-container,
+  .chartContainer {
     overflow-x: scroll;
   }
 }

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MedCheck - Admin User Page</title>
+    <title>Admin User Page - MedCheck</title>
+    <link rel="icon" href="images/logo.svg" />
     <link rel="stylesheet" href="user-page.css" />
     <link
       rel="stylesheet"
@@ -21,89 +22,57 @@
           <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
-          <div class="dropdown">
-            <img id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
-            <img src="../images/notification-dot.svg" alt="notification" />
-            <!-- <div id="myDropdown" class="dropdown-content">
-              <div class="mobile-dashboard-notification">
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
+          <!-- bell icon -->
+          <div class="dropdown" id="dropdown">
+            <img
+              class="group-child"
+              alt=""
+              src="../images/notification-2-fill (1).svg"
+              id="dropdrop"
+            />
+            <img src="../images/notification-dot.svg" alt="" />
+            <!-- <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
               </div>
-            </div> -->
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div> -->
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -153,7 +122,9 @@
         <ul>
           <li class="homepage">
             <img src="../images/home-4-line.svg" alt="dashboard-icon" />
-            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html"
+              >Dashboard</a
+            >
           </li>
           <div class="multiselect">
             <div class="selectBox" onclick="showBoxes()">
@@ -170,7 +141,9 @@
               <ul>
                 <li>
                   <img src="../images/search-normal.svg" alt="Verification" />
-                  <a href="../product-verification/product-verification.html" target="_blank"
+                  <a
+                    href="../product-verification/product-verification.html"
+                    target="_blank"
                     >Verification</a
                   >
                 </li>
@@ -233,7 +206,9 @@
             </div>
             <div class="number">
               <h2 id="activeUsers">0</h2>
-              <strong class="percentage" id="percent-activeUsers">+0% increase from last month</strong>
+              <strong class="percentage" id="percent-activeUsers"
+                >+0% increase from last month</strong
+              >
             </div>
           </div>
         </div>
@@ -266,35 +241,25 @@
               </tr>
             </thead>
 
-
-
-            <tbody>
-              <tbody id="userList"></tbody>
-              
-            </tbody>
-
-
+            <tbody id="userList"></tbody>
           </table>
         </div>
       </section>
       <section>
         <h2 class="title-1">Admin/Staff</h2>
-        <div class="admin-table-con">  <table class="user-table admin">
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Role</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-
+        <div class="admin-table-con">
+          <table class="user-table admin">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
             <tbody id="adminList"></tbody>
-
-
-          </tbody>
-        </table></div>
+          </table>
+        </div>
       </section>
     </main>
     <footer>

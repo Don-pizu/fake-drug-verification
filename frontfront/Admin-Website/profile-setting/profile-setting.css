@@ -58,13 +58,13 @@ header {
 }
 /*=====Backend pic ==== */
 #profile-avatar {
-  width: 120px;      /* fixed size */
-  height: 120px;     /* same height for a square */
+  width: 120px; /* fixed size */
+  height: 120px; /* same height for a square */
   border-radius: 50%; /* make it round */
-  object-fit: cover;  /* crop image to fit nicely */
+  object-fit: cover; /* crop image to fit nicely */
   border: 3px solid #f0f0f0; /* optional border */
   display: block;
-  margin: 0 auto;    /* center horizontally */
+  margin: 0 auto; /* center horizontally */
 }
 
 .header-2 {
@@ -118,7 +118,8 @@ header {
   justify-content: center;
   z-index: 9999;
 }
-.menu-line:hover, .menu-content{
+.menu-line:hover,
+.menu-content {
   display: block;
 }
 .menu-content a:hover {
@@ -134,99 +135,64 @@ header {
   padding: 10px;
 }
 /* notification dropdown */
-.mobile-dashboard-notification {
-  width: 100%;
-  border-radius: 0px 0px 20px 20px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 10px 20px;
-  gap: 9px;
-  text-align: left;
-  font-size: 12px;
-  color: #1a1a1a;
-  font-family: "DM Sans";
+.notification {
+  background: var(--white-color);
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  /* top: 100%; */
+  left: -140px;
+  /* margin-top: 10px; */
+  display: none;
+  z-index: 100;
 }
-.notification-default {
-  align-self: stretch;
-  border-radius: 0px 10px 10px 10px;
-  background-color: #fff;
-  border-bottom: 2px solid #00ab00;
+/* Notification items */
+.notification .item {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  gap: 12px;
-}
-.notification-default-child {
-  width: 40px;
+  margin-bottom: 10px;
+  border-radius: 6px;
   position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #00ab00;
+  border-radius: 0px 10px 10px 10px;
+}
+.item:hover {
+  background: #e0fce0;
+}
+.notification .item img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  max-height: 100%;
   object-fit: cover;
 }
-.mobile-dashboard-notification-frame-parent {
+.notification .item .info {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 6px;
+  margin-left: 10px;
 }
-.miss-jennifer-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  font-size: 16px;
+.notification .item .info h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
 }
-.miss-jennifer {
-  flex: 1;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.notification .item .info p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #4d4d4d;
 }
-.view-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  text-align: center;
+.notification .item .info span {
+  font-size: 11px;
+  color: #999;
+}
+.notification .item a {
+  text-decoration: none;
   font-size: 12px;
   color: #999;
-}
-.view {
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-}
-.fake-product-everywhere {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #4d4d4d;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.m-ago {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #999;
-}
-.notification-default:hover {
-  background: #e5feeb;
+  font-weight: 500;
+  float: right;
 }
 /* upside button */
 .logout-dropdown {
@@ -348,7 +314,7 @@ main {
   grid-area: content;
   margin-bottom: 15rem;
 }
-.profile-setting{
+.profile-setting {
   padding-bottom: 4rem;
 }
 .profile-setting h1 {
@@ -358,13 +324,13 @@ main {
   color: #4d4d4d;
   text-align: center;
 }
-.profile-setting p{
+.profile-setting p {
   font-size: 24px;
-letter-spacing: -0.03em;
-line-height: 32px;
-font-weight: 500;
-color: #b3b3b3;
-text-align: center;
+  letter-spacing: -0.03em;
+  line-height: 32px;
+  font-weight: 500;
+  color: #b3b3b3;
+  text-align: center;
 }
 form {
   display: flex;
@@ -416,13 +382,85 @@ form input::placeholder {
   font-size: 16px;
   cursor: pointer;
 }
-.btn button{
+.btn button {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
 }
 .btn:hover {
   background: #00c503;
+}
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px; /* fixed size */
+  height: 120px; /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover; /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+/*=======Backend profilePic, Bell, logout========*/
+.awareness-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.awareness-bell {
+  cursor: pointer;
+}
+.mobile-dashboard-notification.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+}
+.mobile-dashboard-notification.dropdown.hidden {
+  display: none;
+}
+#profilePic {
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: 2px solid #ddd; /* optional: add border */
+}
+/* dropdown wrapper */
+.mobile-dashboard-notification {
+  position: absolute;
+  top: 50px; /* adjust depending on your bell size */
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 1000;
+}
+/* hide by default */
+.hidden {
+  display: none;
+}
+/* each notification */
+.notification-default {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.notification-default:hover {
+  background: #f9f9f9;
 }
 /* FOOTER */
 footer {
@@ -546,110 +584,8 @@ footer {
   }
 }
 @media (max-width: 480px) {
-  .profile-setting{
+  .profile-setting {
     padding-block: 2rem;
     text-align: left;
   }
 }
-
-}
-
-
-
-
-/*=====Backend pic ==== */
-#profile-avatar {
-  width: 120px;      /* fixed size */
-  height: 120px;     /* same height for a square */
-  border-radius: 50%; /* make it round */
-  object-fit: cover;  /* crop image to fit nicely */
-  border: 3px solid #f0f0f0; /* optional border */
-  display: block;
-  margin: 0 auto;    /* center horizontally */
-}
-
-
-
-
-
-
-
-
-
-/*=======Backend profilePic, Bell, logout========*/
-.awareness-dropdown-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.awareness-bell {
-  cursor: pointer;
-}
-
-.mobile-dashboard-notification.dropdown {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  z-index: 1000;
-  padding: 10px;
-}
-
-.mobile-dashboard-notification.dropdown.hidden {
-  display: none;
-}
-
-#profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: 2px solid #ddd; /* optional: add border */
-}
-
-
-
-////////
-/* dropdown wrapper */
-.mobile-dashboard-notification {
-  position: absolute;
-  top: 50px; /* adjust depending on your bell size */
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  padding: 10px;
-  z-index: 1000;
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-/* each notification */
-.notification-default {
-  display: flex;
-  align-items: flex-start;
-  padding: 8px;
-  border-bottom: 1px solid #f0f0f0;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.notification-default:hover {
-  background: #f9f9f9;
-}
-
-/* image */
-.notification-default-ch
-

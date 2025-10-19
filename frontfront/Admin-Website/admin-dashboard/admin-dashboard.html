@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MedCheck - Admin Dashboard</title>
+    <title>Admin Dashboard - MedCheck</title>
     <link rel="stylesheet" href="admin-dashboard.css" />
     <link rel="icon" href="../images/logo.svg" />
     <link
@@ -23,93 +23,57 @@
           <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
-          <div class="dropdown">
-            <img  id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
+          <!-- bell icon -->
+          <div class="dropdown" id="dropdown">
             <img
-              src="../images/notification-dot.svg"
-              alt="notification"
-            
+              id="dropbell"
+              class="group-child-1"
+              alt=""
+              src="../images/notification-2-fill (1).svg"
             />
-            <!-- <div id="myDropdown" class="dropdown-content">
-              <div class="mobile-dashboard-notification">
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
+            <img src="../images/notification-dot.svg" alt="" />
+            <!-- <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
               </div>
-            </div> -->
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div> -->
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -139,7 +103,9 @@
             </div>
           </div>
           <div class="profile">
-            <a href="#" id="profilePic"><img src="../images/Ellipse 1.svg" alt="" /></a>
+            <a href="#" id="profilePic"
+              ><img src="../images/Ellipse 1.svg" alt=""
+            /></a>
           </div>
           <div class="logout-dropdown">
             <div class="logout-dropdown">
@@ -195,7 +161,8 @@
             <a href="../awareness/awareness.html">Awareness</a>
           </li>
           <li>
-            <img src="../images/profile-circle.svg" alt="User" /><a href="../user-page/user-page.html"
+            <img src="../images/profile-circle.svg" alt="User" /><a
+              href="../user-page/user-page.html"
               >Users</a
             >
           </li>
@@ -232,7 +199,9 @@
               </p>
               <div class="parent">
                 <p class="number" id="totalProduct">0</p>
-                <p class="from-last-month" id="percent-totalProduct">+0% from last month</p>
+                <p class="from-last-month" id="percent-totalProduct">
+                  +0% from last month
+                </p>
               </div>
             </div>
             <img
@@ -248,7 +217,11 @@
               </p>
               <div class="parent">
                 <p class="b" id="totalReport">0</p>
-                <p style="color: #f44336" class="from-last-month" id="percent-totalReport">
+                <p
+                  style="color: #f44336"
+                  class="from-last-month"
+                  id="percent-totalReport"
+                >
                   +0% this month
                 </p>
               </div>
@@ -261,12 +234,14 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified-parent">
-              <p style="width: 199px" class="total-products-verified" >
+              <p style="width: 199px" class="total-products-verified">
                 Total Awareness/ Alerts
               </p>
               <div class="parent">
                 <p class="b" id="totalAwareness">0</p>
-                <p class="from-last-month" id="percent-totalAwareness"> +0 New alerts available</p>
+                <p class="from-last-month" id="percent-totalAwareness">
+                  +0 New alerts available
+                </p>
               </div>
             </div>
             <img
@@ -280,7 +255,9 @@
               <p class="total-products-verified">Active <br />Users</p>
               <div class="parent">
                 <p class="b" id="totalUsers">0</p>
-                <p class="from-last-month" id="percent-totalUsers">+0 New alerts available</p>
+                <p class="from-last-month" id="percent-totalUsers">
+                  +0 New alerts available
+                </p>
               </div>
             </div>
             <img
@@ -421,9 +398,7 @@
               </tr>
             </thead>
 
-              <tbody id="productTableBody"></tbody>
-
-
+            <tbody id="productTableBody"></tbody>
           </table>
         </div>
       </section>
@@ -447,7 +422,9 @@
           <li><a href="../awareness/awareness.html"></a></li>
           <li><a href="../user-page/user-page.html">Users</a></li>
           <li><a href="../analytics/analytics.html">Analytics</a></li>
-          <li><a href="../profile-setting/profile-setting.html">Settings</a></li>
+          <li>
+            <a href="../profile-setting/profile-setting.html">Settings</a>
+          </li>
         </ul>
       </div>
       <div class="condition">
@@ -456,7 +433,7 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
-    
+
     <script src="../pie.js"></script>
     <script>
       var expanded = false;
@@ -487,7 +464,7 @@
         }
       });
     </script>
-    
+
     <script src="admin-dashboard.js"></script>
   </body>
 </html>

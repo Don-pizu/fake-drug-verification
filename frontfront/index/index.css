@@ -889,7 +889,6 @@ input::placeholder {
   }
   .benefit-text {
     width: 282px;
-    height: 250px;
     padding: 10px;
     border-radius: 15px;
     background: var(--white-color);
@@ -1058,16 +1057,12 @@ input::placeholder {
   }
   .benefit-text {
     width: 310px;
-    height: 330px;
     margin: 20px;
   }
   .benefit-text h2 {
     width: 270px;
     font-size: 32px;
     line-height: 40px;
-  }
-  .benefit-text p {
-    font-size: 30px;
   }
   .benefit-text h2,
   .benefit-text p {
@@ -1197,7 +1192,7 @@ input::placeholder {
     font-size: 28px;
   }
   .benefit-text p {
-    font-size: 24px;
+    font-size: 16px;
   }
   .testimonial-container {
     height: 100%;
@@ -1351,6 +1346,20 @@ input::placeholder {
   .main-section {
     height: 400px;
   }
+  .protects-your-family-container {
+    padding: 10px;
+    font-size: 30px;
+    line-height: normal;
+  }
+  .easily-verify-the {
+    width: 335px;
+  }
+  .our-mission {
+    display: none;
+  }
+  .call-to-action-parent {
+    flex-direction: column;
+  }
   .testimonial-container {
     height: 100%;
   }
@@ -1371,7 +1380,7 @@ input::placeholder {
     margin: 0 auto;
   }
   .easily-verify-the {
-    font-size: 24px;
+    font-size: 20px;
   }
   .btc-big-parent {
     gap: 1rem;
@@ -1414,7 +1423,13 @@ input::placeholder {
   .benefit-text {
     margin: 0 auto;
   }
-  .benefit-text h2,
+  .benefit-text p {
+    font-size: 16px;
+  }
+  .peace-of-mind {
+    font-size: 20px !important;
+  }
+  .benefit-header .benefit-text h2,
   .benefit-text p {
     text-align: center;
   }
@@ -1433,28 +1448,31 @@ input::placeholder {
     display: none;
   }
   .what-we-do {
-    letter-spacing: -0.03em;
-    line-height: 32px;
-    color: #4d4d4d;
     margin: 0 auto;
+  }
+  .what-we-do h2 {
+    font-size: 30px;
   }
   .what-we-do p {
     width: 335px;
+    font-size: 16px;
   }
-  .protects-your-family-container {
-    padding: 10px;
-    font-size: 30px;
-    line-height: normal;
+  .card h2 {
+    font-size: 20px;
   }
-  .easily-verify-the {
-    width: 335px;
+  .card p {
+    font-size: 16px;
   }
-  .our-mission {
-    display: none;
+  .name {
+    font-size: 20px;
   }
-  .call-to-action-parent {
-    flex-direction: column;
+  .card a {
+    margin-block: 10px;
   }
+  .medcheck-helped-me {
+    font-size: 16px;
+  }
+
   .logo {
     padding: 2rem 0rem;
     margin: 10px;

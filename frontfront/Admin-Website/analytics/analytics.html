@@ -23,89 +23,57 @@
           <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
-          <div class="dropdown">
-            <img   id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
-            <img src="../images/notification-dot.svg" alt="notification" />
-            <!-- <div id="myDropdown" class="dropdown-content">
-              <div class="mobile-dashboard-notification">
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
-                <div class="notification-default">
-                  <img
-                    class="notification-default-child"
-                    alt=""
-                    src="../images/profile-female.svg"
-                  />
-                  <div class="mobile-dashboard-notification-frame-parent">
-                    <div class="miss-jennifer-parent">
-                      <div class="miss-jennifer">Miss Jennifer</div>
-                      <div class="view-wrapper">
-                        <div class="view">View</div>
-                      </div>
-                    </div>
-                    <div class="fake-product-everywhere">
-                      Fake product everywhere
-                    </div>
-                    <div class="m-ago">20m ago</div>
-                  </div>
-                </div>
+          <!-- bell icon -->
+          <div class="dropdown" id="dropdown">
+            <img
+              id="dropbell"
+              class="group-child-1"
+              alt=""
+              src="../images/notification-2-fill (1).svg"
+            />
+            <img src="../images/notification-dot.svg" alt="" />
+            <!-- <div class="notification">
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
               </div>
-            </div> -->
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+            <div class="item">
+              <img src="../images/dropdown-image.svg" alt="profile" />
+              <div class="info">
+                <h5>Miss Jennifer <a href="#">View</a></h5>
+                <p>Fake product everywhere</p>
+                <span>20m ago</span>
+              </div>
+            </div>
+          </div> -->
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -141,7 +109,9 @@
             </div>
           </div>
           <div class="profile">
-            <a href="#" id="profilePic"><img src="../images/Ellipse 1.svg" alt="" /></a>
+            <a href="#" id="profilePic"
+              ><img src="../images/Ellipse 1.svg" alt=""
+            /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
@@ -159,7 +129,12 @@
         <ul>
           <li>
             <img src="../images/home-4-line.svg" alt="dashboard-icon" />
-            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
+            <a
+              id="dashboard"
+              href="../admin-dashboard/admin-dashboard.html"
+              target="_self"
+              >Dashboard</a
+            >
           </li>
           <li>
             <span class="products-btn"
@@ -222,7 +197,9 @@
               <p class="total__text">Total Verification</p>
               <div class="parent">
                 <p class="number" id="verified-products">0</p>
-                <p class="percentage" id="percent-verified">+0% vs previous Period</p>
+                <p class="percentage" id="percent-verified">
+                  +0% vs previous Period
+                </p>
               </div>
             </div>
             <img
@@ -236,7 +213,9 @@
               <p class="total__text">Counterfeit Products</p>
               <div class="parent">
                 <p class="b" id="reported-products">0</p>
-                <p class="percentage" id="percent-reported">+0% vs previous period</p>
+                <p class="percentage" id="percent-reported">
+                  +0% vs previous period
+                </p>
               </div>
             </div>
             <img
@@ -247,10 +226,12 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified">
-              <p class="total__text" >Reports Submitted</p>
+              <p class="total__text">Reports Submitted</p>
               <div class="parent">
                 <p class="b" id="total-products">0</p>
-                <p class="percentage" id="percent-products">+0% vs previous period</p>
+                <p class="percentage" id="percent-products">
+                  +0% vs previous period
+                </p>
               </div>
             </div>
             <img
@@ -267,7 +248,9 @@
               </p>
               <div class="parent">
                 <p class="b" id="total-users">0</p>
-                <p class="percentage" id="percent-users">+0% Vs previous period</p>
+                <p class="percentage" id="percent-users">
+                  +0% Vs previous period
+                </p>
               </div>
             </div>
             <img
@@ -561,15 +544,15 @@
       }
 
       // Optional: Close the menu when clicking outside
-      document.addEventListener('click', function(event) {
-        const menu = document.getElementById('menuLinks');
-        const icon = document.querySelector('.hamburger-icon');
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("menuLinks");
+        const icon = document.querySelector(".hamburger-icon");
         if (!menu.contains(event.target) && !icon.contains(event.target)) {
-          menu.style.display = 'none';
+          menu.style.display = "none";
         }
       });
     </script>
     <script src="pie.js"></script>
-    <!-- <script src="analytics.js"></script> -->
+    <script src="analytics.js"></script>
   </body>
 </html>

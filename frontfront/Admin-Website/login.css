@@ -15,7 +15,7 @@ body {
 .signin-parent {
   background: #f1f1f1;
   height: 427px;
-  max-width: 486px;
+  width: 100%;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -91,13 +91,13 @@ body {
   border-color: green;
 }
 @media (max-width: 480px) {
-  body{
+  body {
     height: 100vh;
   }
-  .logo-parent{
+  .logo-parent {
     display: none;
   }
-  .signin-parent{
+  .signin-parent {
     width: 95%;
     margin: 0 auto;
   }

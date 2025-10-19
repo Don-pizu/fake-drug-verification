@@ -52,7 +52,7 @@ header {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .header-2 {
   display: flex;
@@ -97,12 +97,12 @@ header {
   display: none;
   position: absolute;
   top: 50px;
-    right: -10px;
+  right: -10px;
   background-color: var(--white-color);
   border: 1px solid #ccc;
   flex-direction: column;
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   width: 150px;
 }
@@ -118,95 +118,51 @@ header {
   color: var(--white-color);
 }
 /* notification dropdown */
-.mobile-dashboard-notification {
-  width: 100%;
-  border-radius: 0px 0px 20px 20px;
-  background-color: #fff;
+.notification .item {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 10px 20px;
-  gap: 9px;
-  text-align: left;
-  font-size: 12px;
-  color: #1a1a1a;
-}
-.notification-default {
-  align-self: stretch;
-  border-radius: 0px 10px 10px 10px;
-  background-color: #fff;
-  border-bottom: 2px solid #00ab00;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  gap: 12px;
-}
-.notification-default-child {
-  width: 40px;
+  margin-bottom: 10px;
+  border-radius: 6px;
   position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #00ab00;
+  border-radius: 0px 10px 10px 10px;
+}
+.item:hover {
+  background: #e0fce0;
+}
+.notification .item img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  max-height: 100%;
   object-fit: cover;
 }
-.mobile-dashboard-notification-frame-parent {
+.notification .item .info {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 6px;
+  margin-left: 10px;
 }
-.miss-jennifer-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  font-size: 16px;
+.notification .item .info h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
 }
-.miss-jennifer {
-  flex: 1;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.notification .item .info p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #4d4d4d;
 }
-.view-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  text-align: center;
+.notification .item .info span {
+  font-size: 11px;
+  color: #999;
+}
+.notification .item a {
+  text-decoration: none;
   font-size: 12px;
   color: #999;
-}
-.view {
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-}
-.fake-product-everywhere {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #4d4d4d;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.m-ago {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: -0.03em;
-  line-height: 16px;
-  color: #999;
+  font-weight: 500;
+  float: right;
 }
 /* upside button */
 .logout-dropdown {
@@ -501,6 +457,7 @@ b {
   max-width: 100%;
   grid-gap: 5px;
   padding-block: 2rem;
+  margin: 10px;
 }
 .total__parent {
   box-shadow: var(--box-shadow);
@@ -1169,7 +1126,7 @@ footer {
     font-size: 16px;
     font-weight: 500;
   }
-  .dashboard{
+  .dashboard {
     padding-block: 0rem;
   }
   .dashboard-parent h2 {
@@ -1178,7 +1135,7 @@ footer {
   .dashboard-parent p {
     font-size: 18px;
   }
-  .chartContainer{
+  .chartContainer {
     padding-block: 1rem;
   }
   .total-numbers-container {
@@ -1190,7 +1147,7 @@ footer {
   .total__parent {
     width: 253px;
   }
-  .activity-table{
+  .activity-table {
     overflow-x: scroll;
   }
   /* footer */
@@ -1199,27 +1156,6 @@ footer {
     font-size: 20px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*=======Backend profilePic, Bell, logout========*/
 .awareness-dropdown-wrapper {
@@ -1240,7 +1176,7 @@ footer {
   overflow-y: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 10px;
 }
@@ -1250,16 +1186,12 @@ footer {
 }
 
 #profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
 }
-
-
-
-////////
 /* dropdown wrapper */
 .mobile-dashboard-notification {
   position: absolute;
@@ -1271,7 +1203,7 @@ footer {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 10px;
   z-index: 1000;
 }
@@ -1294,6 +1226,3 @@ footer {
 .notification-default:hover {
   background: #f9f9f9;
 }
-
-/* image */
-.notification-default-ch
