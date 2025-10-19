@@ -22,20 +22,33 @@
           <div class="login-details-parent">
             <div class="login-details-input">
               <label for="username"><img src="images/user.svg" alt="" /></label>
-              <input type="text" placeholder="username" required />
+              <input 
+                type="text" 
+                id="username" 
+                name="username"
+                placeholder="Username" 
+                required 
+              />
             </div>
             <div class="login-details-input">
               <label for="password"><img src="images/lock.svg" alt="" /></label>
-              <input type="password" placeholder="password" required />
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="••••••••••••••••••••" 
+                required />
             </div>
             <div class="login-details-input-1">
               <input type="checkbox" class="my-check" />
               <span>Keep me logged in</span>
             </div>
           </div>
-          <a href=".dashboard/dashboard.html">Login</a>
+          <button class="btn">Login</button>
         </form>
       </div>
     </main>
+
+    <script src="login.js"></script>
   </body>
 </html>

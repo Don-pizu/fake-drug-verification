@@ -157,13 +157,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 
 
-
-
-
-
-
-
-
 //=========LOGOUT=======/
 // ---------- LOGOUT: attach to all .logloglog anchors ----------
 const logoutBtns = document.querySelectorAll(".logloglog");
@@ -196,7 +189,6 @@ async function loadUserProfile() {
     });
 
     const data = await res.json();
-    console.log("User Profile:", data);
 
     if (!res.ok) throw new Error(data.message || "Failed to load profile");
 
@@ -212,7 +204,6 @@ async function loadUserProfile() {
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
       const imgUrl = new URL(data.profileImage, APP).href;
-      console.log("Final profile image URL:", imgUrl);
       profilePic.src = imgUrl;
 
       profilePic.onerror = () => {
@@ -234,7 +225,7 @@ async function loadUserProfile() {
 // ---------- AWARENESS DROPDOWN (use existing bell/dropdown) ----------
 const dropbell = document.getElementById("dropbell");
 const awarenessDropdown = document.createElement("div");
-awarenessDropdown.classList.add("mobile-dashboard-notification", "hidden");
+awarenessDropdown.classList.add("notification", "hidden");
 document.getElementById("dropdown").appendChild(awarenessDropdown);
 
 // toggle on bell click
@@ -243,12 +234,25 @@ dropbell.addEventListener("click", (e) => {
   awarenessDropdown.classList.toggle("hidden");
 });
 
-// hide when clicking outside
+// hide only when clicking completely outside (not inside dropdown)
 document.addEventListener("click", (e) => {
-  if (!document.getElementById("dropdown").contains(e.target)) {
+  if (
+    !document.getElementById("dropdown").contains(e.target) &&
+    !awarenessDropdown.contains(e.target)
+  ) {
     awarenessDropdown.classList.add("hidden");
   }
 });
+
+
+// prevent dropdown from closing when scrolling or clicking inside
+awarenessDropdown.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+awarenessDropdown.addEventListener("scroll", (e) => {
+  e.stopPropagation();
+});
+
 
 async function fetchAwareness() {
   try {
@@ -256,7 +260,6 @@ async function fetchAwareness() {
       headers: { Authorization: `Bearer ${token}` }
     });
     const data = await res.json();
-    console.log("Awareness Response:", data);
     if (!res.ok) throw new Error(data.message || "Failed to load awareness");
 
     const awarenessList = data.awareNess || [];
@@ -269,21 +272,20 @@ async function fetchAwareness() {
 
     awarenessList.forEach((a) => {
       const item = document.createElement("div");
-      item.classList.add("notification-default");
+      item.classList.add("item");
 
       // safe image url builder
-      const imgSrc = a.image ? new URL(a.image, APP).href : "../images/profile-female.svg";
+      const imgSrc = "../images/user.svg";
 
       item.innerHTML = `
-        <img class="notification-default-child" src="${imgSrc}" alt="awareness" />
-        <div class="mobile-dashboard-notification-frame-parent">
-          <div class="miss-jennifer-parent">
-            <div class="miss-jennifer">${a.title}</div>
-            <div class="view-wrapper"><div class="view">View</div></div>
-          </div>
-          <div class="fake-product-everywhere">${a.description || "No description"}</div>
-          <div class="m-ago">${new Date(a.createdAt).toLocaleDateString()}</div>
+        <img src="${imgSrc}" alt="awareness" />
+        <div class="info">
+          
+          <h5>${a.title}</h5>
+          <p>${a.description || "No description"}</p>
+          <span>${new Date(a.createdAt).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' } )}</span>
         </div>
+         <a href="https://fake-drug-verification.onrender.com/">View</a>
       `;
       awarenessDropdown.appendChild(item);
     });
@@ -291,6 +293,8 @@ async function fetchAwareness() {
     console.error("Awareness error:", err.message);
   }
 }
+
+
 
 // ---------- initialize ----------
 loadUserProfile();
