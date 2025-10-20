@@ -630,8 +630,8 @@ details ul li {
   max-width: 100%;
 }
 details ul li {
-  font-size: 20px;
-  padding-left: 1rem;
+  font-size: 16px;
+  padding-left: 2rem;
 }
 .faq-parent b {
   width: 638px;
@@ -666,11 +666,9 @@ summary {
   list-style: none;
   cursor: pointer;
 }
-/* Chrome, Safari, Edge */
 summary::-webkit-details-marker {
   display: none;
 }
-/* Firefox */
 summary::marker {
   display: none;
 }
@@ -1463,6 +1461,12 @@ input::placeholder {
   .card p {
     font-size: 16px;
   }
+  summary span {
+    font-size: 20px !important;
+  }
+  details ul li {
+    padding-block: 0.7rem;
+  }
   .name {
     font-size: 20px;
   }
@@ -1472,7 +1476,6 @@ input::placeholder {
   .medcheck-helped-me {
     font-size: 16px;
   }
-
   .logo {
     padding: 2rem 0rem;
     margin: 10px;
