@@ -28,51 +28,10 @@
               class="group-child"
               alt=""
               src="../images/notification-2-fill (1).svg"
-              id="dropdrop"
+              id="dropbell"
             />
             <img src="../images/notification-dot.svg" alt="" />
-            <!-- <div class="notification">
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/dropdown-image.svg" alt="profile" />
-              <div class="info">
-                <h5>Miss Jennifer <a href="#">View</a></h5>
-                <p>Fake product everywhere</p>
-                <span>20m ago</span>
-              </div>
-            </div>
-          </div> -->
+            
           </div>
           <div class="menu-line">
             <img src="../images/menu-line.svg" alt="menu-line" />
@@ -92,20 +51,25 @@
               <a href="../user-page/user-page.html">User</a>
               <a href="../analytics/analytics.html">Analytics</a>
               <a href="../profile-setting/profile-setting.html">Settings</a>
-              <a href="../login.html" class="logloglog">Logout</a>
+              <a href="#" class="logloglog">Logout</a>
             </div>
           </div>
+
           <div class="profile">
-            <a href="#" id="profilePic"
-              ><img src="../images/Ellipse 1.svg" alt=""
-            /></a>
+            <img 
+              src="../images/Ellipse 1.svg" 
+              alt=""
+              class="profilePic"
+              id="profilePic"
+            />
           </div>
+
           <div class="logout-dropdown">
             <button class="drop-button">
               <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="../login.html">logout</a>
+              <a href="#">logout</a>
             </div>
           </div>
         </div>
@@ -171,9 +135,9 @@
                   Reported products
                 </p>
                 <div class="parent">
-                  <p class="b">800</p>
-                  <p style="color: #f44336" class="from-last-month">
-                    +8.7% vs previous
+                  <p class="b" id="totalReport">0</p>
+                  <p style="color: #f44336" class="from-last-month" id="percent-totalReport">
+                    +0% vs previous
                   </p>
                 </div>
               </div>
@@ -189,8 +153,8 @@
                   Total Products
                 </p>
                 <div class="parent">
-                  <p class="number">1,248</p>
-                  <p class="from-last-month">+12.5% vs previous</p>
+                  <p class="number" id="totalProduct">0</p>
+                  <p class="from-last-month" id="percent-totalProduct">+0% vs previous</p>
                 </div>
               </div>
               <img
@@ -204,37 +168,37 @@
             <div class="card">
               <div class="progress-circle">
                 <div class="empty-circle"></div>
-                <div class="percentage">25%</div>
+                <div class="percentage" id="beverages">0%</div>
               </div>
-              <div class="label"><h4>Cosmetic</h4></div>
+              <div class="label"><h4>Beverages</h4></div>
             </div>
             <div class="card">
               <div class="progress-circle">
                 <div class="empty-circle"></div>
-                <div class="percentage">50%</div>
-              </div>
-              <div class="label"><h4>Foods</h4></div>
-            </div>
-            <div class="card">
-              <div class="progress-circle">
-                <div class="empty-circle"></div>
-                <div class="percentage">25%</div>
-              </div>
-              <div class="label"><h4>Drinks</h4></div>
-            </div>
-            <div class="card">
-              <div class="progress-circle">
-                <div class="empty-circle"></div>
-                <div class="percentage">25%</div>
+                <div class="percentage" id="drugs">0%</div>
               </div>
               <div class="label"><h4>Drugs</h4></div>
             </div>
             <div class="card">
               <div class="progress-circle">
                 <div class="empty-circle"></div>
-                <div class="percentage">25%</div>
+                <div class="percentage" id="cosmetics">0%</div>
               </div>
-              <div class="label"><h4>Others</h4></div>
+              <div class="label"><h4>Cosmetics</h4></div>
+            </div>
+            <div class="card">
+              <div class="progress-circle">
+                <div class="empty-circle"></div>
+                <div class="percentage" id="chemical">0%</div>
+              </div>
+              <div class="label"><h4>Chemical</h4></div>
+            </div>
+            <div class="card">
+              <div class="progress-circle">
+                <div class="empty-circle"></div>
+                <div class="percentage" id="devices">0%</div>
+              </div>
+              <div class="label"><h4>Devices</h4></div>
             </div>
           </div>
         </div>
@@ -253,141 +217,12 @@
                 <th>Date</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Cosmetics</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge reported">Reported</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-            </tbody>
+            
+
+            <tbody id="productTableBody"></tbody>
+
+
+
           </table>
         </div>
       </section>
@@ -441,5 +276,7 @@
         }
       }
     </script>
+
+    <script src="product-report.js"></script>
   </body>
 </html>

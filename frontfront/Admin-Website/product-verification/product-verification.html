@@ -23,14 +23,13 @@
           <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
-<<<<<<< HEAD
           <!-- bell icon -->
           <div class="dropdown" id="dropdown">
             <img
               class="group-child"
               alt=""
               src="../images/notification-2-fill (1).svg"
-              id="dropdrop"
+              id="dropbell"
             />
             <img src="../images/notification-dot.svg" alt="" />
             <!-- <div class="notification">
@@ -73,9 +72,11 @@
                 <p>Fake product everywhere</p>
                 <span>20m ago</span>
               </div>
-            </div>
-          </div> -->
-=======
+            </div>  -->
+          </div> 
+
+
+          <!---
           <div class="dropdown">
             <img id="dropbell" src="../images/notification-2-fill (1).svg" alt="" />
             <img src="../images/notification-dot.svg" alt="notification" />
@@ -159,8 +160,9 @@
                 </div>
               </div>
             </div>
->>>>>>> 083fe4f82b77dc8dc943fb7815c0695e27b3d8ff
           </div>
+
+
           <div class="menu-line">
             <img
               class="menu-img"
@@ -168,17 +170,29 @@
               alt="menu-line"
             />
           </div>
+          -->
+
+
+
+
+
+          
           <div class="profile">
-            <a href="#" id="profilePic"
-              ><img src="../images/Ellipse 1.svg" alt=""
-            /></a>
+            <img
+             class="group-item"
+             src="../images/Ellipse 1.svg" 
+             alt=""
+             class="profilePic"
+              id="profilePic"
+            />
           </div>
+
           <div class="logout-dropdown">
             <button class="drop-button">
               <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="../login.html" class="logloglog">logout</a>
+              <a href="#" class="logloglog">logout</a>
             </div>
           </div>
         </div>
@@ -256,8 +270,8 @@
             <div class="total-record-container">
               <p class="total__text colored">Reported Products</p>
               <div class="parent">
-                <p class="number">156</p>
-                <p class="percentage colored">+8.7%</p>
+                <p class="number" id="totalReport">0</p>
+                <p class="percentage colored" id="percent-totalReport">+0%</p>
               </div>
             </div>
             <img
@@ -270,8 +284,8 @@
             <div class="total-record-container">
               <p class="total__text">Total products</p>
               <div class="parent">
-                <p class="b">1,248</p>
-                <p class="percentage">+12.5% vs previous</p>
+                <p class="b" id="totalProduct2">0</p>
+                <p class="percentage" id="percent-totalProduct2">+0% vs previous</p>
               </div>
             </div>
             <img
@@ -284,7 +298,7 @@
             <div class="total-products-verified">
               <p class="total__text">Total Products</p>
               <div class="parent">
-                <p class="b">584</p>
+                <p class="b" id="totalProduct22">0</p>
                 <p class="percentage">New alerts available</p>
               </div>
             </div>
@@ -298,8 +312,8 @@
             <div class="total-products-verified-parent">
               <p class="total__text">Total Verified</p>
               <div class="parent">
-                <p class="b">1,248</p>
-                <p class="percentage">+12.5% Vs previous</p>
+                <p class="b" id="totalProduct">0</p>
+                <p class="percentage" id="percent-totalProduct">+0% Vs previous</p>
               </div>
             </div>
             <img
@@ -409,127 +423,9 @@
                 <th>Date</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge fake">❌ Fake</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge flagged">⚠️ FLAGGED</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge verify">✅ Verified</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge fake">❌ Fake</span></td>
-                <td>Cosmetics</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge verify">✅ Verified</span></td>
-                <td>Food</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge verify">✅ Verified</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge unauthorized">⛔ Unauthorized</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge flagged">⚠️ FLAGGED</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge fake">❌ Fake</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drink</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge verify">✅ Verified</span></td>
-                <td>Cosmestics</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drug</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge counterfeit">⚠️ Counterfeit</span></td>
-                <td>Drug</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-              <tr>
-                <td>Product Name</td>
-                <td><span class="badge flagged">⚠️ FLAGGED</span></td>
-                <td>Drug</td>
-                <td>Reg. No: A8-110681</td>
-                <td>23/07/2025</td>
-              </tr>
-            </tbody>
+            
+
+             <tbody id="productTableBody"></tbody>
           </table>
         </div>
       </section>
@@ -567,5 +463,6 @@
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
     <script src=".js/pie.js"></script>
+    <script src="product-verification.js"></script>
   </body>
 </html>

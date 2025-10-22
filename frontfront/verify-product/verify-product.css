@@ -529,6 +529,9 @@ nav a:hover {
 ======================================== */
 
 /* ===== Verification Modal (scoped) ===== */
+
+
+
 .vfy-modal {
   top: 50%;
   left: 50%;
@@ -992,3 +995,10 @@ input::placeholder {
     width: 0px;
   }
 }
+
+
+
+
+
+
+/////
