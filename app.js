@@ -97,7 +97,7 @@ app.use((req, res, next) => {
   //ratelimit
 const limiter = rateLimit({ 
 windowMs: 15 * 60 * 1000, // 15 minutes 
-max: 10, // max 10 requests per IP 
+max: 100, // max 100 requests per IP 
 message: 'Too many requests from this IP, please try again later.' 
 }); 
 app.use('/api', limiter);
