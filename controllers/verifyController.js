@@ -2,6 +2,8 @@
 
 const Verify = require('../models/verify');
 const User = require('../models/User');
+const cloudinary = require('../config/cloudinary');
+const fs = require('fs');
 
 
 //POST Nafdac reg no
@@ -39,12 +41,23 @@ exports.createVerify = async (req, res, next) => {
 			return res.status(400).json({ message: 'Nafdac Reg already exist'});
 
 
-		//Handle image(if upload)
-		let imagePath = '';
-		if (req.file) {
-			// save relative path (e.g /uploads/file.jpg)
-			imagePath = `/uploads/${req.file.filename}`;
-		}
+		//Handle Cloudinary upload (if image provided)
+    let imagePath = '';
+    if (req.file) {
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'fake-drug-verification',
+        resource_type: 'image',
+        transformation: [{ quality: 'auto', fetch_format: 'auto' }],
+      });
+      if (req.file && req.file.path && !req.file.path.startsWith('http')) {
+			  try {
+			    fs.unlinkSync(req.file.path);
+			  } catch (err) {
+			    console.warn("⚠️ Could not delete local temp file:", err.message);
+			  }
+			}
+      imagePath = result.secure_url;
+    }
 
 		//create contents for verification
 		const createVerify = await Verify.create({
@@ -167,9 +180,21 @@ exports.updateReg = async (req, res, next) => {
 			getVeri.authentic = authentic;
 
 		// update image if new one is uploaded
-	    if (req.file) {
-	      getVeri.image = `/uploads/${req.file.filename}`;
-	    }
+	  if (req.file) {
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'fake-drug-verification',
+        resource_type: 'image',
+        transformation: [{ quality: 'auto', fetch_format: 'auto' }],
+      });
+      if (req.file && req.file.path && !req.file.path.startsWith('http')) {
+			  try {
+			    fs.unlinkSync(req.file.path);
+			  } catch (err) {
+			    console.warn("⚠️ Could not delete local temp file:", err.message);
+			  }
+			}
+      getVeri.image = result.secure_url;
+    }
 
 		await getVeri.save();
 

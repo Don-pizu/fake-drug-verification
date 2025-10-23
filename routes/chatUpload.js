@@ -3,11 +3,14 @@
 const express = require("express");
 const Chat = require("../models/chat");
 const multer = require("multer");
+const cloudinary = require("../config/cloudinary");
+const fs = require("fs");
 const path = require("path");
+
 
 const router = express.Router();
 
-// Storage config
+// Multer setup — save temporarily before upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads");
@@ -33,11 +36,39 @@ const upload = multer({
 });
 
 // Upload endpoint
-router.post("/upload", upload.single("file"), (req, res) => {
-  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+router.post("/upload", upload.single("file"), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
 
-  const fileUrl = `/uploads/${req.file.filename}`;
-  res.json({ url: fileUrl });
+    // Upload to Cloudinary
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      folder: "fake-drug-verification",
+      resource_type: "auto", // auto-detect (images, videos, etc.)
+    });
+
+    // Safely delete local file after upload
+    if (req.file && req.file.path && fs.existsSync(req.file.path)) {
+      try {
+        fs.unlinkSync(req.file.path);
+      } catch (err) {
+        console.warn("⚠️ Could not delete temp file:", err.message);
+      }
+    }
+
+    // Return file URL
+    res.json({
+      message: "File uploaded successfully",
+      file: {
+        url: result.secure_url,
+        public_id: result.public_id,
+        format: result.format,
+        bytes: result.bytes,
+      },
+    });
+  } catch (err) {
+    console.error("Upload failed:", err);
+    res.status(500).json({ error: "File upload failed", details: err.message });
+  }
 });
 
 

@@ -2,6 +2,7 @@
 
 //const API = "http://localhost:5000/api"; // Local backend
 //const APP = 'http://localhost:5000';
+
 const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
 const APP = "https://fake-drug-verification.onrender.com";
 
@@ -118,8 +119,13 @@ profileForm.addEventListener("submit", async (e) => {
         document.getElementById("location").value = data.user.location;
 
         if (data.user.profileImage) {
-          avatarPreview.src = data.user.profileImage;
+          avatarPreview.src = data.user.profileImage.startsWith("http")
+            ? data.user.profileImage
+            : `${APP}${data.user.profileImage}`;
+        } else {
+          avatarPreview.src = "../images/Ellipse 1.svg";
         }
+
       } else {
         alert(data.message || "User update failed");
       }
@@ -154,7 +160,7 @@ if (logoutBtns && logoutBtns.length > 0) {
 
 //======profile Picture=====//
 
-async function loadUserProfile() {
+async function loadUserProfile2() {
   try {
     const res = await fetch(`${API}/auth/me`, {
       headers: {
@@ -177,8 +183,7 @@ async function loadUserProfile() {
 
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
-      const imgUrl = new URL(data.profileImage, APP).href;
-      profilePic.src = imgUrl;
+      profilePic.src = data.profileImage;
 
       profilePic.onerror = () => {
         console.warn("Failed to load profile image from server, using fallback.");
@@ -269,7 +274,7 @@ async function fetchAwareness() {
 }
 
 // ---------- initialize ----------
-loadUserProfile();
+loadUserProfile2();
 fetchAwareness();
 
 

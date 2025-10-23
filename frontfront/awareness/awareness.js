@@ -35,7 +35,7 @@ function createProductCard(verify, isApproved) {
 
   const image = document.createElement("img");
   image.src = verify.image
-    ? `${APP}${verify.image}`
+    ? verify.image
     : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");
@@ -192,8 +192,7 @@ async function loadUserProfile() {
 
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
-      const imgUrl = new URL(data.profileImage, APP).href;
-      profilePic.src = imgUrl;
+     profilePic.src = data.profileImage;
 
       profilePic.onerror = () => {
         console.warn("Failed to load profile image from server, using fallback.");

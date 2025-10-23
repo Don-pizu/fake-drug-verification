@@ -76,6 +76,7 @@ project-root/
 -Crypto
 -dotenv (environment variables)
 -multer
+-cloudinary
 -socket.io
 -Helmet, Express-rate-limit, Mongo-sanitize, XSS-clean (security)
 

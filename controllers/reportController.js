@@ -2,6 +2,9 @@
 
 const Report = require('../models/report');
 const User = require('../models/User');
+const cloudinary = require('../config/cloudinary'); 
+const fs = require('fs');
+
 
 //POST make a report
 
@@ -30,12 +33,25 @@ exports.createReport = async (req, res, next) => {
 			return res.status(400).json({ message: 'User not found'});
 		}
 
-		//Handle image(if upload)
+		//Handle image(if upload) to cloudinary
 		let imagePath = '';
 		if (req.file) {
-			// save relative path (e.g /uploads/file.jpg)
-			imagePath = `/uploads/${req.file.filename}`;
-		}
+		    const result = await cloudinary.uploader.upload(req.file.path, {
+		        folder: 'fake-drug-verification',
+		        resource_type: 'image',
+		        transformation: [{ quality: 'auto', fetch_format: 'auto' }],
+		    });
+
+		    // delete local file
+		    if (req.file && req.file.path && !req.file.path.startsWith('http')) {
+		      try {
+		        fs.unlinkSync(req.file.path);
+		      } catch (err) {
+		        console.warn("⚠️ Could not delete local temp file:", err.message);
+		      }
+		    }
+			imagePath = result.secure_url;
+	    }
 
 		 // create report
 
@@ -145,7 +161,20 @@ exports.updateReport = async (req, res, next) => {
 
 		// update image if new one is uploaded
 	    if (req.file) {
-	      getRepo.image = `/uploads/${req.file.filename}`;
+	      const result = await cloudinary.uploader.upload(req.file.path, {
+	        folder: 'fake-drug-verification',
+	        resource_type: 'image',
+	        transformation: [{ quality: 'auto', fetch_format: 'auto' }],
+	      });
+
+	        if (req.file && req.file.path && !req.file.path.startsWith('http')) {
+		      try {
+		        fs.unlinkSync(req.file.path);
+		      } catch (err) {
+		        console.warn("⚠️ Could not delete local temp file:", err.message);
+		      }
+		    }
+	      getRepo.image = result.secure_url;
 	    }
 
 		await getRepo.save();

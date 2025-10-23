@@ -138,11 +138,9 @@ function buildVerificationModal(data) {
       <button id="vfy-close">&times;</button>
     </div>
     <div class="vfy-body">
-      <img src="${
-        data.image
-          ? `${APP}${data.image}`
-          : "assets/images/default.png"
-      }" alt="${data.name}">
+      <img src="${data.image}" alt="${data.name}">
+
+
       <h2 class="vfy-name">${data.name}</h2>
       <span class="vfy-badge ${data.authentic ? "vfy-authentic" : "vfy-counterfeit"}">
         ${data.authentic ? "✔ Authentic" : "⚠ Counterfeit"}
@@ -225,8 +223,7 @@ async function loadUserProfile() {
 
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
-      const imgUrl = new URL(data.profileImage, APP).href;
-      profilePic.src = imgUrl;
+      profilePic.src = data.profileImage;
 
       profilePic.onerror = () => {
         console.warn("Failed to load profile image from server, using fallback.");

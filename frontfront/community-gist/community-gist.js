@@ -51,7 +51,7 @@ chatForm.addEventListener("submit", async (e) => {
         body: formData
       });
       const data = await res.json();
-      fileUrl = data.url ? `${APP}${data.url}` : null;
+      fileUrl = data.url || null;
     } catch (err) {
       console.error("File upload failed:", err);
     }
@@ -203,8 +203,7 @@ async function loadUserProfile() {
 
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
-      const imgUrl = new URL(data.profileImage, APP).href;
-      profilePic.src = imgUrl;
+      profilePic.src = data.profileImage;
 
       profilePic.onerror = () => {
         console.warn("Failed to load profile image from server, using fallback.");

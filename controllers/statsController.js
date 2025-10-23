@@ -3,6 +3,8 @@ const Verify = require("../models/verify");
 const Awareness = require("../models/awareness");
 const User = require("../models/User");
 const Report = require("../models/report");
+const cloudinary = require('../config/cloudinary');
+const fs = require('fs');
 
 exports.getStats = async (req, res) => {
   try {

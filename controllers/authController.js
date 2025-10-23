@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 const { sendOtpEmail } = require('../util/emailService');
+const cloudinary = require('../config/cloudinary');
+const fs = require('fs');
 
 
 
@@ -315,7 +317,8 @@ exports.updateUser = async (req, res) => {
 
     // If an image is uploaded
     if (req.file) {
-      updateFields.profileImage =  `/uploads/${req.file.filename}`; 
+      updateFields.profileImage = req.file.path;
+      //updateFields.profileImage =  `/uploads/${req.file.filename}`; 
     }
 
     const updatedUser = await User.findByIdAndUpdate(
@@ -336,7 +339,7 @@ exports.updateUser = async (req, res) => {
         email: updatedUser.email,
         phoneNumber: updatedUser.phoneNumber,
         location: updatedUser.location,
-        profileImage: updatedUser.profileImage,
+        profileImage: updatedUser.profileImage,    // Now a Cloudinary URL
         role: updatedUser.role,
       },
     });

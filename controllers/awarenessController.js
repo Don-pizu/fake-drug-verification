@@ -2,6 +2,8 @@
 
 const Awareness = require('../models/awareness');
 const User = require('../models/User');
+const cloudinary = require('../config/cloudinary');
+const fs = require('fs');
 
 
 //POST    create an awareness
@@ -36,12 +38,33 @@ exports.createAwareness = async (req, res, next) => {
 			return res.status(400).json({ message: 'User not found'});
 		}
 
-		//Handle image(if upload)
-		let imagePath = '';
+		//Handle image(if upload) on cloudinary
+		let imageUrl = '';
+    if (req.file && req.file.path) {
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'fake-drug-verification',
+        resource_type: 'image',
+        transformation: [{ quality: 'auto', fetch_format: 'auto' }]
+    });
+
+    imageUrl = result.secure_url;
+
+
+    // Safely delete local file
+      if (req.file && req.file.path && !req.file.path.startsWith('http')) {
+        try {
+          fs.unlinkSync(req.file.path);
+        } catch (err) {
+          console.warn("⚠️ Could not delete local temp file:", err.message);
+        }
+      }
+    }
+
+		/* let imagePath = '';
 		if (req.file) {
 			// save relative path (e.g /uploads/file.jpg)
 			imagePath = `/uploads/${req.file.filename}`;
-		}
+		}*/
 
 		//crate awareness
 		const createAwareness = await Awareness.create({
@@ -49,7 +72,7 @@ exports.createAwareness = async (req, res, next) => {
 			description,
 			category,
 			type,
-			image: imagePath,
+			image: imageUrl,
 			user: dbUser._id
 		});
 
@@ -136,9 +159,22 @@ exports.updateAwareness = async (req, res, next) => {
 			getAware.type = type;
 
 		// update image if new one is uploaded
-	    if (req.file) {
-	      getVeri.image = `/uploads/${req.file.filename}`;
-	    }
+	  if (req.file && req.file.path) {
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'fake-drug-verification/awareness',
+        resource_type: 'image',
+        transformation: [{ quality: 'auto', fetch_format: 'auto' }],
+      });
+
+      getAware.image = result.secure_url;
+
+      // Safely delete local temp file
+      try {
+        fs.unlinkSync(req.file.path);
+      } catch (err) {
+        console.warn("⚠️ Could not delete local temp file:", err.message);
+      }
+    }
 
 		await getAware.save();
 
