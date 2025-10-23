@@ -54,7 +54,8 @@ app.use(
         "https://cdn.jsdelivr.net",   // ✅ allow worker importScripts
         "https://cdn.socket.io",
         "http://localhost:5000",
-         "https://fake-drug-verification.onrender.com",
+        "https://fake-drug-verification.onrender.com",
+        "https://res.cloudinary.com"
       ],
       imgSrc: ["'self'", "data:", "blob:", "http://localhost:5000", "https://fake-drug-verification.onrender.com"], // 👈 FIX: allow blob: images
     },
