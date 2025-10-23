@@ -57,7 +57,17 @@ app.use(
         "https://fake-drug-verification.onrender.com",
         "https://res.cloudinary.com"
       ],
-      imgSrc: ["'self'", "data:", "blob:", "http://localhost:5000", "https://fake-drug-verification.onrender.com"], // 👈 FIX: allow blob: images
+      imgSrc: [
+        "'self'", 
+        "data:", 
+        "blob:", 
+        "http://localhost:5000", 
+        "https://fake-drug-verification.onrender.com", 
+        "https://res.cloudinary.com"
+        "https://cdn.jsdelivr.net",
+        "https://images.unsplash.com",
+        "https://*.cloudinary.com"
+      ], // 👈 FIX: allow blob: images
     },
   })
 );
