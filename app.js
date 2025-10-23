@@ -64,7 +64,6 @@ app.use(
         "http://localhost:5000", 
         "https://fake-drug-verification.onrender.com", 
         "https://res.cloudinary.com"
-        "https://*.cloudinary.com"
       ], // 👈 FIX: allow blob: images
     },
   })
