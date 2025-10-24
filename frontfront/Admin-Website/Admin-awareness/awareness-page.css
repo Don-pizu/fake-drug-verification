@@ -44,12 +44,13 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo a {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .header-2 {
   display: flex;
@@ -85,6 +86,116 @@ header {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/*=======Backend ====== */
+/* Awareness table rows */
+#postList .frame-group {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#postList .frame-group:hover {
+  background-color: #f9f9f9; /* subtle hover */
+}
+
+.frame-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.frame-group .type,
+.frame-group .post {
+  text-align: center;
+}
+
+/*=======Backend profilePic, Bell, logout========*/
+
+/* NEW ADDITION BELOW — keeps dropdown open even with gap */
+
+/* Invisible hover bridge below the icon */
+.dropdown::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+  top: 100%; /* place directly under the dropdown trigger */
+  left: 0;
+  width: 100%;
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
+  background: transparent;
+}
+/* Ensure the dropdown box appears above the hover bridge */
+.dropdown:hover::before {
+  z-index: 99;
+}
+#profilePic {
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: 2px solid #ddd; /* optional: add border */
+}
+/* dropdown wrapper */
+.mobile-dashboard-notification {
+  position: absolute;
+  top: 50px; /* adjust depending on your bell size */
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 1000;
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: none; /* optional: add border */
+}
+/* hide by default */
+.hidden {
+  display: none;
+}
+/* last dropdown*/
+/*Show dropdown on hover */
+.dropdown-2:hover .dropdown-content-1 {
+  display: block;
+}
+/* Hover bridge trick — invisible area keeps dropdown open */
+.dropdown-2::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* directly below the dropdown button */
+  left: 0;
+  width: 100%;
+  height: 100px; /* height of the invisible hover area */
+  background: transparent;
+}
+/* Ensure hovering over the bridge area also keeps menu open */
+.dropdown-2:hover::after {
+  pointer-events: auto;
 }
 .hamburger-menu {
   position: relative;
@@ -651,6 +762,7 @@ details {
   line-height: 24px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 305px;
 }
 .cmargs-pharmacy-wellmart-parent {
   width: 452px;
@@ -781,7 +893,6 @@ footer {
   margin-top: 6rem;
   color: #fff;
 }
-
 /*=======Backend ====== */
 /* Awareness table rows */
 #postList .frame-group {
@@ -794,11 +905,9 @@ footer {
   border: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-
 #postList .frame-group:hover {
   background-color: #f9f9f9; /* subtle hover */
 }
-
 .frame-group {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
@@ -806,29 +915,31 @@ footer {
   padding: 12px;
   border-bottom: 1px solid #e0e0e0;
 }
-
 .frame-group .type,
 .frame-group .post {
   text-align: center;
 }
-
+@media (max-width: 1275px) {
+  .awareness-card-parent {
+    overflow-x: scroll;
+  }
+  .awareness-card-parent::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (max-width: 1209px) {
   .three-side-box_1 {
     display: block;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
-  .faqs-dropdown-parent {
-    width: 100vw;
+  .faqs-dropdown-parent,
+  summary {
+    max-width: 100%;
   }
 }
 @media (max-width: 1004px) {
   .frame-parent {
-    overflow-x: scroll;
-  }
-}
-@media (max-width: 1709px) {
-  .awareness-card-parent {
     overflow-x: scroll;
   }
 }
@@ -867,6 +978,7 @@ footer {
     gap: 25px;
     height: 28px;
     margin: 10px;
+    width: 100%;
   }
   nav {
     display: none;
@@ -925,8 +1037,17 @@ footer {
     width: 335px;
     margin: 0 auto;
   }
+  .awareness-card-parent {
+    margin-top: 5rem;
+  }
   .recent-post {
     overflow: scroll;
+  }
+  .from-last-month {
+    font-size: 16px;
+  }
+  .recent-post::-webkit-scrollbar {
+    display: none;
   }
   .logo img {
     width: 30px;
@@ -939,145 +1060,18 @@ footer {
   .hamburger-menu {
     display: block;
   }
+  .title {
+    font-size: 20px;
+  }
+  .engagement-grouping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .group-parent,
+  .in-todays-market,
+  .create {
+    font-size: 16px;
+  }
 }
-
-/*=======Backend ====== */
-/* Awareness table rows */
-#postList .frame-group {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
-  background-color: #fff; /* white background */
-  color: #000; /* black text */
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-#postList .frame-group:hover {
-  background-color: #f9f9f9; /* subtle hover */
-}
-
-.frame-group {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr; /* wider Post + CreatedOn */
-  gap: 10px;
-  padding: 12px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.frame-group .type,
-.frame-group .post {
-  text-align: center;
-}
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
->>>>>>> 083fe4f82b77dc8dc943fb7815c0695e27b3d8ff
-/*=======Backend profilePic, Bell, logout========*/
-
-/* NEW ADDITION BELOW — keeps dropdown open even with gap */
-
-/* Invisible hover bridge below the icon */
-.dropdown::before {
-  content: "";
-  position: absolute;
-<<<<<<< HEAD
-  top: 40px;
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  padding: 10px;
-=======
-  top: 100%;      /* place directly under the dropdown trigger */
-  left: 0;
-  width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
-  background: transparent;
->>>>>>> 083fe4f82b77dc8dc943fb7815c0695e27b3d8ff
-}
-
-/* Ensure the dropdown box appears above the hover bridge */
-.dropdown:hover::before {
-  z-index: 99;
-}
-
-
-
-#profilePic {
-<<<<<<< HEAD
-  width: 75px; /* fixed width */
-  height: 75px; /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: 2px solid #ddd; /* optional: add border */
-}
-
-/* dropdown wrapper */
-.mobile-dashboard-notification {
-  position: absolute;
-  top: 50px; /* adjust depending on your bell size */
-  right: 0;
-  width: 320px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 10px;
-  z-index: 1000;
-=======
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: none; /* optional: add border */
->>>>>>> 083fe4f82b77dc8dc943fb7815c0695e27b3d8ff
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-
-/* last dropdown*/
-/*Show dropdown on hover */
-.dropdown-2:hover .dropdown-content-1 {
-  display: block;
-}
-
-/* Hover bridge trick — invisible area keeps dropdown open */
-.dropdown-2::after {
-  content: "";
-  position: absolute;
-  top: 100%; /* directly below the dropdown button */
-  left: 0;
-  width: 100%;
-  height: 100px; /* height of the invisible hover area */
-  background: transparent;
-}
-
-/* Ensure hovering over the bridge area also keeps menu open */
-.dropdown-2:hover::after {
-  pointer-events: auto;
-}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 083fe4f82b77dc8dc943fb7815c0695e27b3d8ff

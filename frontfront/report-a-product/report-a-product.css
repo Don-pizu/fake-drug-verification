@@ -94,6 +94,7 @@ nav a:hover {
   font-weight: 500;
   color: #1a1a1a;
   text-align: left;
+  font-weight: 500;
 }
 .nav2 {
   display: flex;
@@ -328,7 +329,8 @@ nav a:hover {
   margin: 10px;
 }
 .emails-input {
-  max-width: 441px;
+  width: 441px;
+  max-width: 100%;
   height: 54px;
   font-size: 16px;
   align-self: stretch;
@@ -360,6 +362,12 @@ nav a:hover {
   padding: 5px 20px;
   gap: 15px;
   color: #000;
+}
+.select {
+  cursor: pointer;
+  height: 44px;
+  border: none;
+  outline: none;
 }
 .input {
   border: none;
@@ -557,6 +565,110 @@ input[type="checkbox"]:checked {
 input[type="file"] {
   display: none;
 }
+/*==Backend==*/
+/* === Popup Overlay & Modal === */
+.custom-overlay {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left:0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  text-align: center;
+}
+
+.custom-toast p.custom-success {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 8px;
+}
+
+.custom-toast p.custom-msg {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.custom-done {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.custom-done:hover {
+  background: #0056b3;
+}
+
+/*=======Backend profilePic, Bell, logout========*/
+
+/* NEW ADDITION BELOW — keeps dropdown open even with gap */
+
+/* Invisible hover bridge below the icon */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%; /* place directly under the dropdown trigger */
+  left: 0;
+  width: 100%;
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
+  background: transparent;
+}
+
+/* Ensure the dropdown box appears above the hover bridge */
+.dropdown:hover::before {
+  z-index: 99;
+}
+
+#profilePic {
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: none; /* optional: add border */
+}
+
+/* hide by default */
+.hidden {
+  display: none;
+}
+
+/* last dropdown*/
+/*Show dropdown on hover */
+.dropdown-2:hover .dropdown-content-1 {
+  display: block;
+}
+
+/* Hover bridge trick — invisible area keeps dropdown open */
+.dropdown-2::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* directly below the dropdown button */
+  left: 0;
+  width: 100%;
+  height: 100px; /* height of the invisible hover area */
+  background: transparent;
+}
+
+/* Ensure hovering over the bridge area also keeps menu open */
+.dropdown-2:hover::after {
+  pointer-events: auto;
+}
+
 /* ===== Footer Styling ===== */
 .footer {
   width: 100%;
@@ -694,130 +806,24 @@ b {
     gap: 30px;
   }
 }
-@media (max-width: 500px) {
-  .emails-input {
-    width: 307px;
-    height: 54px;
-    align-self:normal ;
-    padding: 5px 20px;
-    margin-left: rem;
-    gap: 10px;
+@media (max-width: 480px) {
+  .frame-parent {
+    padding: 0;
+  }
+  input::placeholder {
+    font-size: 16px;
+  }
+  input {
+    font-size: 16px;
+  }
+  .emails-input-parent,
+  .emails-input-group {
+    padding: 10px;
   }
 }
-
-
-
-
-/*==Backend==*/
-/* === Popup Overlay & Modal === */
-.custom-overlay {
-  position: fixed;
-  inset: 0;                  /* top/right/bottom/left:0 */
-  background: rgba(0,0,0,0.6);
-  z-index: 9998;
+@media (max-width: 367px) {
+  div.emails-input {
+    width: 350px;
+    padding: 20px;
+  }
 }
-
-.custom-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  max-width: 360px;
-  width: 90%;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  z-index: 9999;
-  text-align: center;
-}
-
-.custom-toast p.custom-success {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #28a745;
-  margin-bottom: 8px;
-}
-
-.custom-toast p.custom-msg {
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-  color: #333;
-}
-
-.custom-done {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.custom-done:hover {
-  background: #0056b3;
-}
-
-
-
-
-
-/*=======Backend profilePic, Bell, logout========*/
-
-/* NEW ADDITION BELOW — keeps dropdown open even with gap */
-
-/* Invisible hover bridge below the icon */
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 100%;      /* place directly under the dropdown trigger */
-  left: 0;
-  width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
-  background: transparent;
-}
-
-/* Ensure the dropdown box appears above the hover bridge */
-.dropdown:hover::before {
-  z-index: 99;
-}
-
-
-
-#profilePic {
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: none; /* optional: add border */
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-
-/* last dropdown*/
-/*Show dropdown on hover */
-.dropdown-2:hover .dropdown-content-1 {
-  display: block;
-}
-
-/* Hover bridge trick — invisible area keeps dropdown open */
-.dropdown-2::after {
-  content: "";
-  position: absolute;
-  top: 100%; /* directly below the dropdown button */
-  left: 0;
-  width: 100%;
-  height: 100px; /* height of the invisible hover area */
-  background: transparent;
-}
-
-/* Ensure hovering over the bridge area also keeps menu open */
-.dropdown-2:hover::after {
-  pointer-events: auto;
-}
-
-
-

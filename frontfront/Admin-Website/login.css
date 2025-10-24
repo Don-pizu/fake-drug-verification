@@ -24,6 +24,8 @@ body {
   margin-bottom: 3rem;
 }
 .signin-parent button {
+  border: none;
+  outline: none;
   text-decoration: none;
   height: 64px;
   width: 340px;
