@@ -4,9 +4,9 @@ window.addEventListener("error", (e) => {
   console.error("Global error caught:", e.message, "at", e.filename, ":", e.lineno);
 });
 
- const API = 'http://localhost:5000/api'; // Local backend
-  //const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
-  //const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
+ //const API = 'http://localhost:5000/api'; // Local backend
+  const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
+  const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
   // ================= USER ROLE CHECK =================
   const userId = localStorage.getItem("userId");
