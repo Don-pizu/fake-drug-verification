@@ -282,6 +282,7 @@ nav a:hover {
   display: block;
 }
 /*=======Backend profilePic, Bell, logout========*/
+
 /* NEW ADDITION BELOW — keeps dropdown open even with gap */
 /* Invisible hover bridge below the icon */
 .dropdown::before {
@@ -529,8 +530,6 @@ nav a:hover {
 ======================================== */
 
 /* ===== Verification Modal (scoped) ===== */
-
-
 
 .vfy-modal {
   top: 50%;
@@ -995,10 +994,3 @@ input::placeholder {
     width: 0px;
   }
 }
-
-
-
-
-
-
-/////

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awareness Page | MedCheck</title>
-	 <link rel="icon" href="../images/logo.svg" />
+    <link rel="icon" href="../images/logo.svg" />
     <link rel="stylesheet" href="../Admin-awareness/awareness-page.css" />
     <link
       rel="stylesheet"
@@ -22,16 +22,16 @@
           <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
         </div>
         <div class="header-2">
-           <!-- bell icon -->
-        <div class="dropdown" id="dropdown">
-          <img
-            id="dropbell"
-            class="group-child-1"
-            alt=""
-            src="../images/notification-2-fill (1).svg"
-          />
-          <img src="../images/notification-dot.svg" alt="" />
-          <!-- <div class="notification">
+          <!-- bell icon -->
+          <div class="dropdown" id="dropdown">
+            <img
+              id="dropbell"
+              class="group-child-1"
+              alt=""
+              src="../images/notification-2-fill (1).svg"
+            />
+            <img src="../images/notification-dot.svg" alt="" />
+            <!-- <div class="notification">
             <div class="item">
               <img src="../images/dropdown-image.svg" alt="profile" />
               <div class="info">
@@ -73,18 +73,6 @@
               </div>
             </div>
           </div> -->
-        </div>
-          <div class="dropdown" id="dropdown">
-            <img 
-              class="group-child"
-              src="../images/notification-2-fill (1).svg" 
-              id="dropbell" alt="" 
-            />
-            <img
-              src="../images/notification-dot.svg"
-              alt="notification"
-            />
-            
           </div>
           <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -95,67 +83,68 @@
               />
             </div>
             <div class="menu-links" id="menuLinks">
-              <a href="admin-dashboard.html" target="_self">Dashboard</a>
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
+                >Dashboard</a
+              >
               <a href="product-verification.html" target="_blank"
                 >Verification</a
               >
-              <a href="../admin-dashboard/admin-dashboard.html" target="_self">Dashboard</a>
-              <a
-                href=".product-verification/product-verification.html"
-                target="_blank"
-                >Verification</a
-              >
               <a href="../product-report/product-report.html">Reports</a>
-              <a href="../awareness/.awareness.html">Awareness</a>
+              <a href="../Admin-awareness/awareness-page.html">Awareness</a>
               <a href="../user-page/user-page.html">User</a>
               <a href="../analytics/analytics.html">Analytics</a>
               <a href="../profile-setting/profile-setting.html">Settings</a>
-              <a href="#" class="logloglog">Logout</a>
+              <a href="../login.html" class="logloglog">Logout</a>
             </div>
           </div>
-
-          <div >
-            <img 
-              src="../images/Ellipse 1.svg" 
+          <div>
+            <img
+              src="../images/Ellipse 1.svg"
               alt="profile"
-              class="profile" 
-              id="profilePic" 
+              class="profile"
+              id="profilePic"
             />
-            
           </div>
-
           <div class="logout-dropdown">
             <div class="logout-dropdown">
-              <button class="drop-button">
-                <img src="../images/expand-up-down-line.svg" alt="" />
+              <button class="drop-button"></button>
+              <img src="../images/expand-up-down-line.svg" alt="" />
               <div class="logout">
                 <a href="../login.html" class="logloglog">logout</a>
               </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </header>
-         <nav>
+    <nav>
       <div class="nav">
         <ul>
           <li class="homepage">
             <img src="../images/home-4-line.svg" alt="dashboard-icon" />
-            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html"
+              >Dashboard</a
+            >
           </li>
           <div class="multiselect">
             <div class="selectBox" onclick="showBoxes()">
               <div class="product-1">
                 <img src="../images/box-3-line.svg" alt="" />
                 <a href="#">Product</a>
-                <img src="../images/chevron-down.svg" alt="chevron-down" class="chevron">
+                <img
+                  src="../images/chevron-down.svg"
+                  alt="chevron-down"
+                  class="chevron"
+                />
               </div>
             </div>
             <div id="checkboxes">
               <ul>
                 <li>
                   <img src="../images/search-normal.svg" alt="Verification" />
-                  <a href="../product-verification/product-verification.html" target="_blank"
+                  <a
+                    href="../product-verification/product-verification.html"
+                    target="_blank"
                     >Verification</a
                   >
                 </li>
@@ -171,7 +160,8 @@
             <a href="../awareness/awareness.html">Awareness</a>
           </li>
           <li>
-            <img src="../images/profile-circle.svg" alt="User" /><a href="../user-page/user-page.html"
+            <img src="../images/profile-circle.svg" alt="User" /><a
+              href="../user-page/user-page.html"
               >Users</a
             >
           </li>
@@ -197,7 +187,9 @@
             <h3 class="awareness">Awareness</h3>
             <p class="manage-posts">Manage Posts</p>
           </div>
-          <a class="create" href="../admin-dashboard/post.html">Create a post</a>
+          <a class="create" href="../admin-dashboard/post.html"
+            >Create a post</a
+          >
         </div>
       </section>
       <div class="welcome">
@@ -222,7 +214,9 @@
               <p class="total-posts">Total Posts</p>
               <div class="parent">
                 <p class="number" id="totalAwareness">0</p>
-                <p class="from-last-month" id="percentAwareness">+0% from last month</p>
+                <p class="from-last-month" id="percentAwareness">
+                  +0% from last month
+                </p>
               </div>
             </div>
             <img src="../images/Vector-dot.svg" alt="" />
@@ -237,7 +231,9 @@
               <p class="total-posts">Recent Posts</p>
               <div class="parent">
                 <p class="number" id="recentPost">0</p>
-                <p class="from-last-month" id="percentRecent">+0% Recently posted</p>
+                <p class="from-last-month" id="percentRecent">
+                  +0% Recently posted
+                </p>
               </div>
             </div>
             <img
@@ -251,7 +247,9 @@
               <p class="total-posts">Engagement Stats</p>
               <div class="parent">
                 <p class="number" id="engagement">0</p>
-                <p class="from-last-month" id="percentEngagement">+0% from last month</p>
+                <p class="from-last-month" id="percentEngagement">
+                  +0% from last month
+                </p>
               </div>
             </div>
             <img class="pages-line-icon" src="../images/message.svg" alt="" />
@@ -280,8 +278,7 @@
               <div class="type">Action</div>
             </div>
           </div>
-          
-          
+
           <div id="postList"></div>
         </div>
       </section>
@@ -448,32 +445,34 @@
           </div>
         </section>
         <section class="engagement-container">
-          <div class="audience-parent">
-            <img src="../images/like.svg" alt="like" />
-            <div class="engagement-rate-parent">
-              <p class="engagement-rate">Engagement Rate</p>
-              <p class="engagement-rate">80%</p>
-              <div class="of-viewers-who">
-                % of viewers who reacted or commented
+          <div class="engagement-grouping">
+            <div class="audience-parent">
+              <img src="../images/like.svg" alt="like" />
+              <div class="engagement-rate-parent">
+                <p class="engagement-rate">Engagement Rate</p>
+                <p class="engagement-rate">80%</p>
+                <div class="of-viewers-who">
+                  % of viewers who reacted or commented
+                </div>
               </div>
             </div>
-          </div>
-          <div class="audience-parent">
-            <img src="../images/profile.svg" alt="profile" />
-            <div class="engagement-rate-parent">
-              <p class="engagement-rate">Target Audience</p>
-              <p class="of-viewers-who">
-                The general public, pharmacies, manufacturers, & brands
-              </p>
+            <div class="audience-parent">
+              <img src="../images/profile.svg" alt="profile" />
+              <div class="engagement-rate-parent">
+                <p class="engagement-rate">Target Audience</p>
+                <p class="of-viewers-who">
+                  The general public, pharmacies, manufacturers, & brands
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="audience-parent">
-            <img src="../images/filter-line.svg" alt="filter-like" />
-            <div class="engagement-rate-parent">
-              <p class="engagement-rate">Content Type</p>
-              <p class="of-viewers-who">
-                Image, Video, Announcement, Infographic etc
-              </p>
+            <div class="audience-parent">
+              <img src="../images/filter-line.svg" alt="filter-like" />
+              <div class="engagement-rate-parent">
+                <p class="engagement-rate">Content Type</p>
+                <p class="of-viewers-who">
+                  Image, Video, Announcement, Infographic etc
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -488,7 +487,9 @@
       <div class="quick">
         <ul>
           <li class="solid-text">Quick</li>
-          <li><a href="../admin-dashboard/admin-dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+          </li>
           <li>
             <a href=".product-verification/product-verification.html"
               >Verification</a
@@ -498,7 +499,9 @@
           <li><a href="../awareness/awareness.html"></a></li>
           <li><a href="../user-page/user-page.html">Users</a></li>
           <li><a href="../analytics/analytics.html">Analytics</a></li>
-          <li><a href="../profile-setting/profile-setting.html">Settings</a></li>
+          <li>
+            <a href="../profile-setting/profile-setting.html">Settings</a>
+          </li>
         </ul>
       </div>
       <div class="condition">
@@ -507,7 +510,7 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
-	    <script>
+    <script>
       var expanded = false;
 
       function showBoxes() {
@@ -536,6 +539,6 @@
         }
       });
     </script>
-     <script src="awareness-page.js"></script>
+    <script src="awareness-page.js"></script>
   </body>
 </html>
