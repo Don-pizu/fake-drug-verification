@@ -4,6 +4,10 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+
+//Tell Express to trust Render's reverse proxy
+app.set("trust proxy", 1);
+
 const connectDB = require('./config/db');
 const path = require("path");
 const http = require('http');

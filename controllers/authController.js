@@ -87,6 +87,7 @@ exports.register = async (req, res, next) => {
 
 
 	} catch (err) {
+    console.error("Register Error:", err);
 		res.status(500).json({ message: 'Internal server error' });
 	}
 };
