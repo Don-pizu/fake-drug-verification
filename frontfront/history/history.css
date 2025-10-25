@@ -78,20 +78,18 @@ header {
   width: 40px;
   height: 32px;
 }
-.header-logo {
+.logo-parent {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
 }
-.header-logo a {
+.logo-parent a {
   text-decoration: none;
   color: #1a1a1a;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: left;
+  font-weight: 600;
 }
 .login a {
   text-decoration: none;
@@ -250,9 +248,9 @@ header {
   display: none;
   width: 100%;
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 2rem;
-  background-color: #f1f1f1;
+  background-color: var(--white-color);
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -291,13 +289,11 @@ header {
   display: block;
 }
 /*=======Backend======*/
-
 .product-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-
 .product-table th,
 .product-table td {
   border-bottom: 1px solid #ddd;
@@ -305,12 +301,10 @@ header {
   text-align: left;
   vertical-align: middle;
 }
-
 .product-table th {
   background: #f5f5f5;
   font-weight: bold;
 }
-
 .status-badge {
   padding: 6px 12px;
   border-radius: 6px;
@@ -318,12 +312,10 @@ header {
   font-size: 14px;
   display: inline-block;
 }
-
 .status-auth {
   background: #0f9d58;
   color: #fff;
 }
-
 .status-fake {
   background: #e74c3c;
   color: #fff;
@@ -372,6 +364,7 @@ header {
   max-height: 400px;
   overflow-y: auto;
   background: #fff;
+  opacity: 0;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -531,6 +524,9 @@ section .statii table {
   flex: 4;
   border-collapse: collapse;
 }
+thead {
+  white-space: nowrap;
+}
 section .statii th {
   background-color: #e0e0e0;
   padding: 20px 5px;
@@ -604,7 +600,6 @@ section .statii td {
 }
 section .statii .card-two {
   flex: 1;
-  height: 12rem;
   border: 2px solid rgb(243, 238, 238);
   border-radius: 20px;
   box-shadow: 2px 2px 2px #ebe4e4;
@@ -629,22 +624,23 @@ section .card-two .cardi {
   background: var(--main-color);
   height: 100%;
 }
-.logo a {
+.footer-logo {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  padding: 3rem 2rem;
+  width: 119px;
+  padding-block: 2rem;
+  margin-inline: 10px;
+}
+.footer-logo a {
   text-decoration: none;
-  color: var(--black-color);
-  font-size: 20px;
+  color: var(--white-color);
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .chevron-right {
   background: #99fcaf;
-}
-b {
-  font-size: 1.4rem;
-  color: var(--white-color);
 }
 .divider {
   width: 90%;
@@ -766,10 +762,14 @@ input::placeholder {
   color: var(--white-color);
   font-size: 20px;
 }
-@media (max-width: 1249px) {
-  /* section .stat {
-    flex-wrap: wrap;
-  } */
+/* MEDIA QUERY */
+@media (max-width: 1265px) {
+  .stat {
+    overflow-x: scroll;
+  }
+  .stat::-webkit-scrollbar {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
   .testimonial-container {
@@ -825,7 +825,8 @@ input::placeholder {
     padding-top: 1rem;
   }
   .footer-bottom {
-    display: block;
+    flex-direction: column-reverse;
+    align-items: normal;
     padding-block: 1rem;
   }
   .socials {
@@ -853,7 +854,6 @@ input::placeholder {
   section .stat {
     flex-wrap: nowrap;
     overflow-x: scroll;
-    /* width: 19rem; */
     margin-top: 3rem;
   }
   section .stat .card {
@@ -864,75 +864,47 @@ input::placeholder {
     display: flex;
     flex: 1;
   }
-  section .statii {
-    overflow-x: scroll;
-    width: 26rem;
+  .card-two {
+    display: none;
   }
-  section table {
+  .statii {
+    overflow-x: scroll;
+    gap: 2rem;
+  }
+  .statii::-webkit-scrollbar {
+    display: none;
+  }
+  thead {
     width: 100%;
+    white-space: nowrap;
+    gap: 10px;
   }
   section .card-two {
     visibility: hidden;
   }
-  footer {
-    height: 72rem;
-    width: 26rem;
+}
+@media (max-width: 480px) {
+  a.medcheck {
+    font-size: 20px !important;
   }
-  footer .medlogo {
-    left: 1rem;
-    border: none;
-    margin-bottom: 2rem;
+  .footer-bottom {
+    flex-direction: column-reverse;
   }
-  footer .medlogo h3 {
-    font-size: 30px;
+  .logo a {
+    padding: 0px;
   }
-  footer .explore {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  .socials {
+    margin: 0px;
   }
-  footer .service {
-    order: 1;
-  }
-  footer .more {
-    order: 2;
-  }
-  footer .form {
-    order: 4;
-  }
-  footer .help {
-    order: 3;
-  }
-  footer .mail {
-    display: flex;
-    gap: 6px;
-    width: 340px;
-  }
-  footer label {
-    position: relative;
-    width: 100px;
-    top: 18px;
-  }
-  footer button {
-    height: 4.5rem;
-    width: 4rem;
-  }
-  footer .terms {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 20px;
-    width: 100%;
-  }
-  footer .social {
-    order: 1;
-  }
-  footer .condition {
-    order: 2;
+  .legal a {
+    margin: 0px;
   }
 }
 @media (max-width: 360px) {
   nav {
+    gap: 2rem;
+  }
+  .legal {
     gap: 2rem;
   }
 }

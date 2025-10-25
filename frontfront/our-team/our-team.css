@@ -80,12 +80,11 @@ nav a:hover {
   gap: 1.5rem;
 }
 .medcheck {
-  font-size: 18px;
+  text-decoration: none;
+  font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
+  font-weight: 600;
   color: #1a1a1a;
-  text-align: left;
 }
 .nav2 {
   display: flex;
@@ -233,9 +232,9 @@ nav a:hover {
   display: none;
   width: 100%;
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 2rem;
-  background-color: #f1f1f1;
+  background-color: var(--white-color);
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -274,6 +273,53 @@ nav a:hover {
   display: block;
   background-color: var(--white-color);
 }
+/*=======Backend profilePic, Bell, logout========*/
+/* ✅ NEW ADDITION BELOW — keeps dropdown open even with gap */
+/* Invisible hover bridge below the icon */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%; /* place directly under the dropdown trigger */
+  left: 0;
+  width: 100%;
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
+  background: transparent;
+}
+/* Ensure the dropdown box appears above the hover bridge */
+.dropdown:hover::before {
+  z-index: 99;
+}
+#profilePic {
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: none; /* optional: add border */
+}
+/* hide by default */
+.hidden {
+  display: none;
+}
+/* last dropdown*/
+/*Show dropdown on hover */
+.dropdown-2:hover .dropdown-content-1 {
+  display: block;
+}
+/* Hover bridge trick — invisible area keeps dropdown open */
+.dropdown-2::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* directly below the dropdown button */
+  left: 0;
+  width: 100%;
+  height: 100px; /* height of the invisible hover area */
+  background: transparent;
+}
+/* Ensure hovering over the bridge area also keeps menu open */
+.dropdown-2:hover::after {
+  pointer-events: auto;
+}
+/* MAIN SECTION */
 .meet-our-team {
   background-color: #005f00;
   height: 25rem;
@@ -303,7 +349,6 @@ nav a:hover {
   gap: 4rem;
   margin-block: 5rem;
   padding-block: 30px;
-  padding-left: 3rem;
 }
 .frame {
   border-radius: 25px;
@@ -332,7 +377,7 @@ nav a:hover {
   font-size: 25px;
 }
 .frame .content .project-manager {
-  font-size: 25px;
+  font-size: 16px;
   width: 372px;
   margin-bottom: 2rem;
 }
@@ -506,7 +551,6 @@ input::placeholder {
 .awareness-bell {
   cursor: pointer;
 }
-
 .mobile-dashboard-notifiation.dropdown {
   position: absolute;
   top: 40px;
@@ -516,7 +560,7 @@ input::placeholder {
   overflow-y: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 10px;
 }
@@ -526,8 +570,8 @@ input::placeholder {
 }
 
 #proflePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
@@ -544,7 +588,7 @@ input::placeholder {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 10px;
   z-index: 1000;
 }
@@ -632,9 +676,8 @@ input::placeholder {
 }
 
 @media (max-width: 500px) {
-  body{
-    width: 26rem;
-    overflow: hidden;
+  .medcheck {
+    font-size: 20px;
   }
   nav .logo p {
     position: absolute;
@@ -649,7 +692,7 @@ input::placeholder {
   nav .logo {
     left: 20px;
   }
-  .nav2{
+  .nav2 {
     position: relative;
     right: 20px;
   }
@@ -696,24 +739,25 @@ input::placeholder {
   section h3 {
     margin-block: 2rem;
   }
-  .team-header p{
-    font-size: 25px;
-    padding: 1rem;
+  .team-header p {
+    font-size: 18px;
+    width: 100%;
   }
   section p {
-    width: 450px;
     text-align: center;
-    margin-right: 2rem;
+    padding: 20px;
+  }
+  .frameparent .name,
+  .role {
+    display: none;
   }
   .frameparent {
     display: flex;
     flex-direction: column;
     margin-block: 10px;
-    padding-block: 10px;
   }
-  .frameparent .name,
-  .role {
-    display: none;
+  .frame .content {
+    width: 100%;
   }
   .frameparent .frame {
     display: flex;
@@ -721,12 +765,15 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     box-shadow: none;
-    margin-right: 5rem;
+    width: 100%;
   }
   .frameparent .content {
     display: block;
-    max-width: 29rem;
     text-align: center;
+  }
+  .content h3 {
+    font-size: 24px !important;
+    padding-top: 10px;
   }
   .frameparent .framei img {
     width: 200px;
@@ -735,107 +782,27 @@ input::placeholder {
   }
   .frameparent .content .pro {
     font-size: 18px;
-    margin-bottom: -15px;
   }
   .frame .content .project-manager {
     font-size: 18px;
-    width: 97%;
+    width: 80%;
     margin: auto;
-    padding: 20px;
   }
   .frame .handle {
-    gap: 2rem;
-    width: 85%;
-    margin-left: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 18px;
+    padding-block: 10px;
   }
-  .frame .handle .info {
-    margin-left: 7rem;
-  }
-  .frame .handle .infoi {
-    margin-left: 4rem;
-  }
-  .frame .handle .infoii {
-    margin-left: 5rem;
-  }
-  .frame:hover .framei img {
-    top: 0;
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
   .divider {
     display: none;
   }
   .links ul li {
     margin-top: 0.5rem;
   }
+  .legal a {
+    margin: 0px;
+  }
 }
-
-
-
-
-
-
-
-
-/*=======Backend profilePic, Bell, logout========*/
-
-/* ✅ NEW ADDITION BELOW — keeps dropdown open even with gap */
-
-/* Invisible hover bridge below the icon */
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 100%;      /* place directly under the dropdown trigger */
-  left: 0;
-  width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
-  background: transparent;
-}
-
-/* Ensure the dropdown box appears above the hover bridge */
-.dropdown:hover::before {
-  z-index: 99;
-}
-
-
-
-#profilePic {
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: none; /* optional: add border */
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-
-/* last dropdown*/
-/*Show dropdown on hover */
-.dropdown-2:hover .dropdown-content-1 {
-  display: block;
-}
-
-/* Hover bridge trick — invisible area keeps dropdown open */
-.dropdown-2::after {
-  content: "";
-  position: absolute;
-  top: 100%; /* directly below the dropdown button */
-  left: 0;
-  width: 100%;
-  height: 100px; /* height of the invisible hover area */
-  background: transparent;
-}
-
-/* Ensure hovering over the bridge area also keeps menu open */
-.dropdown-2:hover::after {
-  pointer-events: auto;
-}
-
-
