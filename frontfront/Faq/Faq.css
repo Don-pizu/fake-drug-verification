@@ -17,7 +17,7 @@ body {
 .faqs {
   background-color: #fafafa;
   overflow-x: hidden;
-  width: 79rem;
+  width: 100%;
 }
 button {
   background: transparent;
@@ -67,7 +67,7 @@ nav a:hover {
   max-width: 100%;
   width: 95%;
   margin: 0 auto;
-  background: var(--white-color);
+  background: #fafafa;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,13 +83,12 @@ nav a:hover {
   justify-content: center;
   gap: 1.5rem;
 }
-.medcheck {
-  font-size: 18px;
+.logo-parent a {
+  text-decoration: none;
+  font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
+  font-weight: 700;
   color: #1a1a1a;
-  text-align: left;
 }
 .nav2 {
   display: flex;
@@ -237,9 +236,9 @@ nav a:hover {
   display: none;
   width: 100%;
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 2rem;
-  background-color: #f1f1f1;
+  background-color: var(--white-color);
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -277,88 +276,134 @@ nav a:hover {
 .dropdown-content {
   display: block;
 }
-section{
-	display: flex;
-	align-items: center;
-  flex-wrap: wrap;
-	gap: 2rem;
-	margin-top: 12rem;
+/*=======Backend profilePic, Bell, logout========*/
+/* ✅ NEW ADDITION BELOW — keeps dropdown open even with gap */
+/* Invisible hover bridge below the icon */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%; /* place directly under the dropdown trigger */
+  left: 0;
+  width: 100%;
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
+  background: transparent;
 }
-section .pics{
-	border: 6px dashed rgb(198, 194, 194);
-    border-radius: 50%;
-	padding: 5px 5px 10px 3px;
-	width: 50rem;
-	margin-left: -13rem;
-	box-shadow: 2px 2px 2px #8f8b8b;
-	margin-bottom: 2rem;
+/* Ensure the dropdown box appears above the hover bridge */
+.dropdown:hover::before {
+  z-index: 99;
 }
-section .pics img{
-	width: 98%;
-	border-radius: 50%;
+#profilePic {
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: none; /* optional: add border */
 }
-section .content{
-	width: 50%;
-	height: 53rem;
-	margin-bottom: 2rem;
+/* hide by default */
+.hidden {
+  display: none;
 }
-section h3{
-	font-size: 31px;
-	margin-bottom: 3rem ;
-    margin-left: 1rem;
-    color: #424242;
-}
-section .big-question {
-  color: red;  
-}
-
-section .medcheck{
-	margin-bottom: 1rem;
-	padding: 15px;
-	position: relative;
-	font-size: 22px;
-	background-color: #fff;
-    width: 90%;
-}
-section input{
-    display: none;
-}
-section p{
-    width: 550px;
-}
-section .medcheck span{
-   position: absolute;
-   right: 20px;
-}
-section .medcheck .a-rrow{
-	bottom: 5px;
-    right: 1px;
-	position: absolute;
-}
-.arrowdown{
-	display: none;
-}
-section .medcheck ul{
- list-style: none;
-}
-section input:checked ~ .arrowdown{
+/* last dropdown*/
+/*Show dropdown on hover */
+.dropdown-2:hover .dropdown-content-1 {
   display: block;
 }
-section .medcheck:hover{
-	background-color: #E5FEEB;
-	cursor: pointer;
+/* Hover bridge trick — invisible area keeps dropdown open */
+.dropdown-2::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* directly below the dropdown button */
+  left: 0;
+  width: 100%;
+  height: 100px; /* height of the invisible hover area */
+  background: transparent;
 }
-section input:checked + label span{
+/* Ensure hovering over the bridge area also keeps menu open */
+.dropdown-2:hover::after {
+  pointer-events: auto;
+}
+/* MAIN SECTION */
+section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 12rem;
+}
+section .pics {
+  border: 6px dashed rgb(198, 194, 194);
+  border-radius: 50%;
+  padding: 5px 5px 10px 3px;
+  width: 50rem;
+  margin-left: -13rem;
+  box-shadow: 2px 2px 2px #8f8b8b;
+  margin-bottom: 2rem;
+}
+section .pics img {
+  width: 98%;
+  border-radius: 50%;
+}
+section .content {
+  width: 50%;
+  height: 53rem;
+  margin-bottom: 2rem;
+}
+section h3 {
+  font-size: 31px;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  color: #424242;
+}
+section .big-question {
+  color: red;
+}
+section .medcheck {
+  margin-bottom: 1rem;
+  padding: 15px;
+  position: relative;
+  font-size: 22px;
+  background-color: #fff;
+  width: 100%;
+}
+section input {
+  display: none;
+}
+section p {
+  width: 550px;
+}
+section .medcheck span {
+  position: absolute;
+  right: 20px;
+}
+section .medcheck .a-rrow {
+  bottom: 5px;
+  right: 1px;
+  position: absolute;
+}
+.arrowdown {
+  display: none;
+}
+section .medcheck ul {
+  list-style: none;
+}
+section input:checked ~ .arrowdown {
+  display: block;
+}
+section .medcheck:hover {
+  background-color: #e5feeb;
+  cursor: pointer;
+}
+section input:checked + label span {
   transform: rotate(180deg);
 }
-article{
-    width: 50%;
-    margin:20px 22rem ;
-    text-align: center;
-    background-color: #005f00;
-    color: #fafafa;
-    padding: 20px;
-    display: none;
+article {
+  width: 50%;
+  max-width: 100%;
+  text-align: center;
+  background-color: #005f00;
+  color: #fafafa;
+  padding: 20px;
+  display: none;
 }
 /* ===== Footer Styling ===== */
 .footer {
@@ -521,24 +566,20 @@ input::placeholder {
   overflow-y: auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 10px;
 }
-
 .mobile-dashboard-notification.dropdown.hidden {
   display: none;
 }
-
 #profilePic {
-  width: 75px;      /* fixed width */
-  height: 75px;     /* fixed height */
+  width: 75px; /* fixed width */
+  height: 75px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: 2px solid #ddd; /* optional: add border */
 }
-
-
 /* dropdown wrapper */
 .mobile-dashboard-notification {
   position: absolute;
@@ -550,16 +591,14 @@ input::placeholder {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 10px;
   z-index: 1000;
 }
-
 /* hide by default */
 .hidden {
   display: none;
 }
-
 /* each notification */
 .notification-default {
   display: flex;
@@ -569,15 +608,12 @@ input::placeholder {
   cursor: pointer;
   transition: background 0.2s;
 }
-
 .notification-default:hover {
   background: #f9f9f9;
 }
-
 @media (max-width: 900px) {
   .faqs {
-    overflow-x: hidden;
-    width: 90rem;
+    width: 100%;
   }
   nav {
     padding-top: 30px;
@@ -601,7 +637,7 @@ input::placeholder {
   }
 }
 @media (max-width: 768px) {
-   .nav-btn {
+  .nav-btn {
     display: none;
   }
   .group-item,
@@ -655,9 +691,11 @@ input::placeholder {
   }
 }
 @media (max-width: 450px) {
+  .logo-parent a {
+    font-size: 20px;
+  }
   .faqs {
-    overflow: hidden;
-    width: 26rem !important;
+    width: 100% !important;
   }
   nav {
     gap: 2rem !important;
@@ -738,23 +776,27 @@ input::placeholder {
   }
   section .medcheck {
     font-size: 15px;
-    margin-left: 25px;
+    max-width: 100%;
   }
   section .medcheck p {
     width: 250px;
   }
   article {
     display: block;
-    margin-left: 1rem;
     border-radius: 20px;
-    width: 93%;
+    width: 100%;
     height: 15rem;
     margin-bottom: 5rem;
   }
   article p {
-    font-size: 27px;
-    width: 20rem;
+    font-size: 20px;
     margin-block: 10px;
+  }
+  .question {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
   }
   article button {
     width: 69%;
@@ -775,8 +817,10 @@ input::placeholder {
     background-color: #c9f3c9;
     color: #495749;
   }
+  .legal a {
+    margin: 0px;
+  }
 }
-
 @media (max-width: 390px) {
   nav .icon {
     left: 17rem;
@@ -786,7 +830,7 @@ input::placeholder {
   }
   article p {
     font-size: 25px;
-    width: 19rem;
+
     margin-block: 10px;
     margin-left: -10px;
   }
@@ -806,7 +850,6 @@ input::placeholder {
   footer .mail {
     width: 320px;
   }
-
   footer .terms {
     font-size: 15px;
   }
@@ -820,7 +863,6 @@ input::placeholder {
     margin-left: 2rem;
   }
 }
-
 @media (max-width: 360px) {
   nav .icon {
     left: 17rem !important;
@@ -853,67 +895,3 @@ input::placeholder {
     left: 1rem;
   }
 }
-
-
-
-
-
-/*=======Backend profilePic, Bell, logout========*/
-
-/* ✅ NEW ADDITION BELOW — keeps dropdown open even with gap */
-
-/* Invisible hover bridge below the icon */
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 100%;      /* place directly under the dropdown trigger */
-  left: 0;
-  width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
-  background: transparent;
-}
-
-/* Ensure the dropdown box appears above the hover bridge */
-.dropdown:hover::before {
-  z-index: 99;
-}
-
-
-
-#profilePic {
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: none; /* optional: add border */
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-
-/* last dropdown*/
-/*Show dropdown on hover */
-.dropdown-2:hover .dropdown-content-1 {
-  display: block;
-}
-
-/* Hover bridge trick — invisible area keeps dropdown open */
-.dropdown-2::after {
-  content: "";
-  position: absolute;
-  top: 100%; /* directly below the dropdown button */
-  left: 0;
-  width: 100%;
-  height: 100px; /* height of the invisible hover area */
-  background: transparent;
-}
-
-/* Ensure hovering over the bridge area also keeps menu open */
-.dropdown-2:hover::after {
-  pointer-events: auto;
-}
-
-

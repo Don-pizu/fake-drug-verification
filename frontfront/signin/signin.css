@@ -54,7 +54,7 @@ header {
   display: none;
   width: 100%;
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 2rem;
   background-color: var(--white-color);
   min-width: 180px;
@@ -84,7 +84,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding: 5px 10px;
-    color: #00c503;
+  color: #00c503;
 }
 .service {
   letter-spacing: -0.03em;
@@ -107,9 +107,8 @@ header {
   text-decoration: none;
   font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 32px;
   color: #1a1a1a;
-  font-weight: 500;
+  font-weight: 600;
 }
 /* signin */
 .bg {
@@ -333,12 +332,15 @@ header {
   .hamburger {
     display: block;
   }
-  .signup{
+  .signup {
     font-size: 24px;
     color: #333;
   }
 }
 @media (max-width: 500px) {
+  .medcheck {
+    font-size: 20px;
+  }
   .bg {
     display: none;
   }
@@ -355,6 +357,13 @@ header {
     line-height: 32px;
     color: #197c1d;
     text-align: center;
+  }
+  .social-btn {
+    gap: 0px;
+  }
+  .social-btn a {
+    margin: 0 auto;
+    font-size: 16px;
   }
   .input-box {
     width: 340px;

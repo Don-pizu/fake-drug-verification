@@ -43,7 +43,6 @@
             <img src="../images/notification-2-fill (1).svg" alt="" id="dropbell" />
             <img src="../images/notification-dot.svg" alt="notification" />
             <div id="myDropdown" class="dropdown-content">
-              
 
             </div>
             <div class="item">
@@ -98,7 +97,9 @@
             </div>
           </div>
           <div class="profile">
-            <a href="#"><img src="../images/Ellipse 1.svg" alt="" id="profilePic"/></a>
+            <a href="#"
+              ><img src="../images/Ellipse 1.svg" alt="" id="profilePic"
+            /></a>
           </div>
           <div class="logout-dropdown">
             <button class="drop-button">
@@ -119,7 +120,7 @@
         <div class="multiselect">
           <div class="selectBox" onclick="showBoxes()">
             <div class="product">
-              <a href=".product-verification/product-verification.html">
+              <a href="#">
                 <img src="../images/box-3-line.svg" alt="" />Product
                 <i
                   class="fa-solid fa-chevron-down fa-2xs"
@@ -129,28 +130,28 @@
             </div>
           </div>
           <div id="checkboxes">
-            <a href=".product-verification/product-verification.html"
+            <a href="../product-verification/product-verification.html"
               ><img
                 src="../images/search-normal.svg"
                 alt="Verification"
               />Verification</a
             >
             <img src="" alt="" />
-            <a href="#">
+            <a href="../product-report/product-report.html">
               <img src="../images/danger.svg" alt="Report" />Report</a
             >
           </div>
         </div>
-        <a href="#">
+        <a href="../Admin-awareness/awareness-page.html">
           <img src="../images/news-line.svg" alt="Awareness" />Awareness</a
         >
-        <a href="">
+        <a href="../user-page/user-page.html">
           <img src="../images/profile-circle.svg" alt="User" />Users
         </a>
-        <a href=".analytics/analytics.html">
+        <a href="../analytics/analytics.html">
           <img src="../images/bar-chart-2-line.svg" alt="analytics" />Analytics
         </a>
-        <a href="">
+        <a href="../profile-setting/profile-setting.html">
           <img
             src="../images/settings-3-line.svg"
             alt="settings-icon"
@@ -217,15 +218,17 @@
       </div>
     </main>
     <footer>
-      <div class="logo">
+      <div class="footer-logo">
         <img src="../images/logo.svg" alt="Medcheck-logo" />
-        <span>MedCheck</span>
+        <a href="../admin-dashboard/admin-dashboard.html">MedCheck</a>
       </div>
       <hr class="divider" />
       <div class="quick">
         <ul>
           <li class="solid-text">Quick</li>
-          <li>Dashboard</li>
+          <li>
+            <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+          </li>
           <li>
             <a href="../product-verification/product-verification.html"
               >Verification</a
@@ -246,7 +249,20 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
+    <script>
+      var expanded = false;
 
+      function showBoxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+          checkboxes.style.display = "block";
+          expanded = true;
+        } else {
+          checkboxes.style.display = "none";
+          expanded = false;
+        }
+      }
+    </script>
     <script src="profile-setting.js"></script>
   </body>
 </html>

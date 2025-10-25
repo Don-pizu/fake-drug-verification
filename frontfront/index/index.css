@@ -88,8 +88,8 @@ nav a:hover {
 .header-logo a {
   text-decoration: none;
   color: #1a1a1a;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 24px;
 }
 .login a {
   text-decoration: none;
@@ -108,7 +108,6 @@ nav a:hover {
   background: var(--lighter-green);
   color: var(--white-color);
 }
-
 /* MAIN SECTION */
 .main-section {
   display: grid;
@@ -836,6 +835,7 @@ input::placeholder {
   color: var(--white-color);
   font-size: 20px;
 }
+/* MEDIA QUERY */
 @media (max-width: 1249px) {
   .container {
     justify-content: center;
@@ -861,7 +861,6 @@ input::placeholder {
     padding-block: 3rem;
   }
   .btc-big-parent {
-    gap: em;
     margin-inline: 10px;
     padding-block: 1rem;
   }
@@ -1341,6 +1340,9 @@ input::placeholder {
     margin-inline: 0px;
     margin: 0 auto;
   }
+  .header-logo a {
+    font-size: 20px;
+  }
   .main-section {
     height: 400px;
   }
@@ -1453,10 +1455,10 @@ input::placeholder {
   }
   .what-we-do p {
     width: 335px;
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .card h2 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .card p {
     font-size: 16px;
@@ -1468,13 +1470,17 @@ input::placeholder {
     padding-block: 0.7rem;
   }
   .name {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .card a {
     margin-block: 10px;
   }
   .medcheck-helped-me {
-    font-size: 16px;
+    font-size: 16px !important;
+  }
+  .call-to-action-parent p {
+    font-size: 18px !important;
+    margin-inline: 20px;
   }
   .logo {
     padding: 2rem 0rem;
@@ -1559,9 +1565,12 @@ input::placeholder {
     display: inline-block;
     margin-bottom: 10px;
   }
-  /* .testimonies {
-    width: 337px;
-  } */
+  .benefit-text {
+    width: 200px;
+  }
+  .benefit-text h2 {
+    width: 100%;
+  }
   .btc-big-parent {
     margin: 5px;
   }
@@ -1575,9 +1584,34 @@ input::placeholder {
     padding: 10px;
   }
   .name {
-    font-size: 26px;
+    font-size: 24px;
   }
   .footer-bottom .legal {
     gap: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .testimonies-parent {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .medcheck-helped-me {
+    width: 320px;
+  }
+  .btc-big-parent {
+    gap: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    width: 120px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .easily-verify-the {
+    width: 100%;
+  }
+  .logo-parent-container img {
+    width: 60px;
+    gap: 5px;
   }
 }

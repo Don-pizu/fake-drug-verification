@@ -474,12 +474,10 @@ td:nth-of-type(5) {
   height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
   background: transparent;
 }
-
 /* Ensure the dropdown box appears above the hover bridge */
 .dropdown:hover::before {
   z-index: 99;
 }
-
 #profilePic {
   width: 60px; /* fixed width */
   height: 60px; /* fixed height */
@@ -519,7 +517,7 @@ footer {
   background: var(--main-color);
   height: 80vh;
 }
-.logo {
+.footer-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -527,6 +525,11 @@ footer {
   width: 119px;
   padding-block: 2rem;
   margin-inline: 10px;
+}
+.footer-logo a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 20px;
 }
 .quick ul li {
   display: inline-block;
@@ -563,6 +566,11 @@ footer {
   margin-top: 6rem;
 }
 /* Footer */
+@media (max-width: 1225px) {
+  .ratings {
+    overflow: auto;
+  }
+}
 @media (max-width: 900px) {
   .divider {
     display: none;
@@ -583,11 +591,6 @@ footer {
   }
   .condition {
     justify-content: space-around;
-  }
-}
-@media (max-width: 1225px) {
-  .ratings {
-    overflow: auto;
   }
 }
 @media (max-width: 768px) {

@@ -87,7 +87,9 @@
               <a href="../admin-dashboard/admin-dashboard.html" target="_self"
                 >Dashboard</a
               >
-              <a href="product-verification.html" target="_blank"
+              <a
+                href="../product-verification/product-verification.html"
+                target="_blank"
                 >Verification</a
               >
               <a href="../product-report/product-report.html">Reports</a>
@@ -107,13 +109,8 @@
             />
           </div>
           <div class="logout-dropdown">
-            <div class="logout-dropdown">
-              <button class="drop-button"></button>
-              <img src="../images/expand-up-down-line.svg" alt="" />
-              <div class="logout">
-                <a href="../login.html" class="logloglog">logout</a>
-              </div>
-            </div>
+            <img src="../images/expand-up-down-line.svg" alt="" />
+            <a href="../login.html" class="logloglog logout">logout</a>
           </div>
         </div>
       </div>
@@ -123,13 +120,15 @@
         <ul>
           <li class="homepage">
             <img src="../images/home-4-line.svg" alt="dashboard-icon" />
-            <a id="dashboard" href="index.html">Dashboard</a>
+            <a id="dashboard" href="../admin-dashboard/admin-dashboard.html"
+              >Dashboard</a
+            >
           </li>
           <div class="multiselect">
             <div class="selectBox" onclick="showBoxes()">
               <div class="product">
                 <li class="product-parent">
-                  <a href="../product-report/product-report.html"
+                  <a href="#"
                     ><img src="../images/box-3-line.svg" alt="" />Product</a
                   >
                   <i
@@ -143,7 +142,9 @@
               <ul>
                 <li>
                   <img src="../images/search-normal.svg" alt="Verification" />
-                  <a href="product-verification.html" target="_blank"
+                  <a
+                    href="../product-verification/product-verification.html"
+                    target="_blank"
                     >Verification</a
                   >
                 </li>
@@ -452,7 +453,6 @@
         const menu = document.getElementById("menuLinks");
         menu.style.display = menu.style.display === "flex" ? "none" : "flex";
       }
-
       // Optional: Close the menu when clicking outside
       document.addEventListener("click", function (event) {
         const menu = document.getElementById("menuLinks");

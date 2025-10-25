@@ -89,11 +89,9 @@ header {
 .header-logo a {
   text-decoration: none;
   color: #1a1a1a;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: left;
+  font-weight: 600;
 }
 .login a {
   text-decoration: none;
@@ -252,9 +250,9 @@ header {
   display: none;
   width: 100%;
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 2rem;
-  background-color: #f1f1f1;
+  background-color: var(--white-color);
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -1071,6 +1069,7 @@ input::placeholder {
   color: var(--white-color);
   font-size: 20px;
 }
+/* MEDIA QUERY */
 @media (max-width: 1249px) {
   .container {
     justify-content: center;
@@ -1096,7 +1095,6 @@ input::placeholder {
     padding-block: 3rem;
   }
   .btc-big-parent {
-    gap: em;
     margin-inline: 10px;
     padding-block: 1rem;
   }
@@ -1122,43 +1120,11 @@ input::placeholder {
   }
   .benefit-text {
     width: 282px;
-    height: 250px;
     padding: 10px;
     border-radius: 15px;
     background: var(--white-color);
   }
 }
-/* @media (max-width: 900px) {
-  .family-image img {
-    width: 700px;
-    height: auto;
-  }
-  .protects-your-family-container {
-    font-size: 50px;
-    line-height: normal;
-    padding-top: 60px;
-  }
-  .easily-verify-the {
-    font-size: 30px;
-    letter-spacing: -0.03em;
-    line-height: normal;
-    padding-block: 2rem;
-  }
-  .btc-big-parent {
-    display: flex;
-    gap: 6rem;
-    padding-top: 2rem;
-  }
-  .verify-product,
-  .report-product {
-    padding: 15px;
-    border-radius: 10px;
-  }
-  .logo-parent-container {
-    display: block;
-    margin-left: 9rem;
-  }
-} */
 @media (max-width: 850px) {
   .family-image img {
     width: 440px;
@@ -1335,52 +1301,6 @@ input::placeholder {
     white-space: nowrap;
     text-align: center;
   }
-  /* .footer-links {
-    width: 90%;
-    margin: 0 auto;
-    gap: 2rem;
-  }
-  .divider {
-    justify-content: center;
-    display: none;
-  }
-  .footer-links {
-    display: block;
-  }
-  .footer-bottom {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    padding-block: 0rem;
-  }
-  .socials {
-    padding-bottom: 1rem;
-  }
-  .copyright {
-    text-align: center;
-  }
-  .logo {
-    padding: 2rem 0rem;
-    margin: 10px;
-  }
-  .newsletter {
-    margin: 0;
-    padding-block: 1rem;
-  }
-  .links ul li {
-    margin-top: 0.5rem;
-  }
-  .footer-links {
-    margin: 10px;
-    padding-block: 1rem;
-  }
-  .legal {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer-bottom .legal {
-    margin: 0 auto;
-    gap: 6rem;
-  } */
 }
 @media (max-width: 765px) {
   .main-section {
@@ -1577,6 +1497,9 @@ input::placeholder {
     margin-inline: 0px;
     margin: 0 auto;
   }
+  .header-logo a {
+    font-size: 20px;
+  }
   .main-section {
     height: 400px;
   }
@@ -1689,20 +1612,13 @@ input::placeholder {
   }
   .what-we-do p {
     width: 335px;
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .card h2 {
-    font-size: 20px;
-    text-align: center;
+    font-size: 20px !important;
   }
   .card p {
     font-size: 16px;
-  }
-  .name {
-    font-size: 20px;
-  }
-  .card a {
-    margin-block: 10px;
   }
   summary span {
     font-size: 20px !important;
@@ -1710,8 +1626,18 @@ input::placeholder {
   details ul li {
     padding-block: 0.7rem;
   }
+  .name {
+    font-size: 20px !important;
+  }
+  .card a {
+    margin-block: 10px;
+  }
   .medcheck-helped-me {
-    font-size: 16px;
+    font-size: 16px !important;
+  }
+  .call-to-action-parent p {
+    font-size: 18px !important;
+    margin-inline: 20px;
   }
   .logo {
     padding: 2rem 0rem;
@@ -1796,9 +1722,12 @@ input::placeholder {
     display: inline-block;
     margin-bottom: 10px;
   }
-  /* .testimonies {
-    width: 337px;
-  } */
+  .benefit-text {
+    width: 200px;
+  }
+  .benefit-text h2 {
+    width: 100%;
+  }
   .btc-big-parent {
     margin: 5px;
   }
@@ -1812,9 +1741,34 @@ input::placeholder {
     padding: 10px;
   }
   .name {
-    font-size: 26px;
+    font-size: 24px;
   }
   .footer-bottom .legal {
     gap: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .testimonies-parent {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .medcheck-helped-me {
+    width: 320px;
+  }
+  .btc-big-parent {
+    gap: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    width: 120px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .easily-verify-the {
+    width: 100%;
+  }
+  .logo-parent-container img {
+    width: 60px;
+    gap: 5px;
   }
 }
