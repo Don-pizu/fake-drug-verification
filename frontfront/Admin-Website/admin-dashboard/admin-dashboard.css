@@ -48,13 +48,25 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo a {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px; /* fixed size */
+  height: 120px; /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover; /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
 .header-2 {
   display: flex;
   align-items: center;
@@ -85,7 +97,6 @@ header {
   background: var(--white-color);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin: 10px;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -98,15 +109,15 @@ header {
 .menu-links {
   display: none;
   position: absolute;
-  top: 50px;
-  right: -10px;
+  top: 40px;
+  right: -25px;
   background-color: var(--white-color);
   border: 1px solid #ccc;
   flex-direction: column;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  width: 150px;
+  min-width: 160px;
 }
 .menu-links a {
   text-decoration: none;
@@ -119,6 +130,9 @@ header {
   background: var(--sub-color);
   color: var(--white-color);
 }
+.hamburger-menu:hover .menu-links {
+  display: block;
+}
 /* notification dropdown */
 .notification {
   background: var(--white-color);
@@ -129,6 +143,7 @@ header {
   /* top: 100%; */
   left: -140px;
   /* margin-top: 10px; */
+  display: none;
   z-index: 100;
 }
 /* Notification items */
@@ -181,47 +196,16 @@ header {
 /* upside button */
 .logout-dropdown {
   position: relative;
-  cursor: pointer;
   display: inline-block;
+  cursor: pointer;
+}
+.drop-button {
+  cursor: pointer;
 }
 .logout {
   display: none;
   position: absolute;
-  right: -5px;
-  padding: 12px;
-  text-decoration: none;
-  color: #00e331;
-  background-color: var(--white-color);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  text-align: right;
-  font-size: 18px;
-}
-.logout::before {
-  content: "";
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 100px;
-  background: transparent;
-}
-.logout:hover:: {
-  z-index: 99;
-}
-.logout:hover {
-  background: #00e331;
-  color: var(--white-color);
-}
-/* .logout {
-  display: none;
-  position: absolute;
-  color: #00e331;
-
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  right: -5px;
+  right: 5px;
   top: 50px;
   background-color: var(--white-color);
   min-width: 160px;
@@ -229,10 +213,22 @@ header {
   z-index: 1;
   text-align: right;
   border-radius: 5px;
-} */
+}
+.logout a {
+  color: #00e331;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.logout a:hover {
+  background-color: #00e331;
+  color: var(--white-color);
+  border-radius: 10px;
+}
 .logout-dropdown:hover .logout {
   display: block;
 }
+/* Main section */
 header,
 main,
 nav,
@@ -974,7 +970,7 @@ footer {
 @media (max-width: 480px) {
   body {
     grid-template-areas:
-      "header header header"
+      "header"
       "nav"
       "content"
       "footer";
@@ -1035,7 +1031,7 @@ footer {
     font-size: 20px;
   }
   .total-products-verified,
-  .total-products-verified {
+  .total-reported-products {
     font-size: 20px;
   }
 }

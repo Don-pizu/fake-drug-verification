@@ -75,7 +75,7 @@
           </div> -->
           </div>
           <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="hamburger-icon">
               <img
                 src="../images/menu-line.svg"
                 alt="menu-line"
@@ -289,18 +289,18 @@
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("menuLinks");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-      }
-      // Optional: Close the menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const menu = document.getElementById("menuLinks");
-        const icon = document.querySelector(".hamburger-icon");
-        if (!menu.contains(event.target) && !icon.contains(event.target)) {
-          menu.style.display = "none";
+      var expanded = false;
+
+      function showBoxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+          checkboxes.style.display = "block";
+          expanded = true;
+        } else {
+          checkboxes.style.display = "none";
+          expanded = false;
         }
-      });
+      }
     </script>
     <script src="user-page.js"></script>
   </body>

@@ -47,6 +47,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo a {
   text-decoration: none;
@@ -54,6 +55,17 @@ header {
   font-size: 24px;
   font-weight: 700;
 }
+/*=====Backend pic ==== */
+#profile-avatar {
+  width: 120px; /* fixed size */
+  height: 120px; /* same height for a square */
+  border-radius: 50%; /* make it round */
+  object-fit: cover; /* crop image to fit nicely */
+  border: 3px solid #f0f0f0; /* optional border */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
 .header-2 {
   display: flex;
   align-items: center;
@@ -88,10 +100,52 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.menu-line {
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
   display: none;
 }
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  background-color: var(--white-color);
+  border: 1px solid #ccc;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 160px;
+}
+.menu-links a {
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  color: #333;
+  color: var(--sub-color);
+}
+.menu-links a:hover {
+  background: var(--sub-color);
+  color: var(--white-color);
+}
+.hamburger-menu:hover .menu-links {
+  display: block;
+}
 /* notification dropdown */
+.notification {
+  background: var(--white-color);
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  /* top: 100%; */
+  left: -140px;
+  /* margin-top: 10px; */
+  display: none;
+  z-index: 100;
+}
+/* Notification items */
 .notification .item {
   display: flex;
   align-items: center;
@@ -150,7 +204,7 @@ header {
 .logout {
   display: none;
   position: absolute;
-  right: 15px;
+  right: 5px;
   top: 50px;
   background-color: var(--white-color);
   min-width: 160px;
@@ -168,7 +222,7 @@ header {
 .logout a:hover {
   background-color: #00e331;
   color: var(--white-color);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .logout-dropdown:hover .logout {
   display: block;
@@ -655,6 +709,9 @@ footer {
   .header-2 {
     gap: 1.4rem;
   }
+  .hamburger-menu {
+    display: block;
+  }
   .logout-dropdown,
   .profile {
     display: none;
@@ -738,7 +795,7 @@ footer {
     height: 24px;
   }
   .logo a {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
   }
   .dashboard-parent h2 {
@@ -750,11 +807,18 @@ footer {
   .total-numbers-container {
     margin-top: 3rem;
   }
+  .total__text {
+    font-size: 22px;
+    width: 120px;
+  }
   .ratings {
     overflow: scroll;
   }
   .total__parent {
     width: 253px;
+  }
+  .nuumber {
+    font-size: 28px !important;
   }
   /* footer */
   .right {
@@ -762,11 +826,6 @@ footer {
     font-size: 20px;
   }
 }
-
-
-
-
-
 
 /*=======Backend profilePic, Bell, logout========*/
 
@@ -776,10 +835,10 @@ footer {
 .dropdown::before {
   content: "";
   position: absolute;
-  top: 100%;      /* place directly under the dropdown trigger */
+  top: 100%; /* place directly under the dropdown trigger */
   left: 0;
   width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
   background: transparent;
 }
 
@@ -788,11 +847,9 @@ footer {
   z-index: 99;
 }
 
-
-
 #profilePic {
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: none; /* optional: add border */
@@ -802,7 +859,6 @@ footer {
 .hidden {
   display: none;
 }
-
 
 /* last dropdown*/
 /*Show dropdown on hover */
@@ -825,8 +881,3 @@ footer {
 .dropdown-2:hover::after {
   pointer-events: auto;
 }
-
-
-
-
-

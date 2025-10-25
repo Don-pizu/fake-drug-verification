@@ -79,21 +79,29 @@
             </div>
           </div> -->
           </div>
-          <div class="menu-line">
-            <img src="../images/menu-line.svg" alt="menu-line" />
-            <div class="menu-content">
-              <a href=".dashboard/dashboard.html" target="_self">Dashboard</a>
+          <div class="hamburger-menu">
+            <div class="hamburger-icon">
+              <img
+                src="../images/menu-line.svg"
+                alt="menu-line"
+                class="menu-line"
+              />
+            </div>
+            <div class="menu-links" id="menuLinks">
+              <a href="../admin-dashboard/admin-dashboard.html" target="_self"
+                >Dashboard</a
+              >
               <a
-                href="../images/product-verification/product-verification.html"
+                href="../product-verification/product-verification.html"
                 target="_blank"
                 >Verification</a
               >
-              <a href="#">Reports</a>
-              <a href=".">Awareness</a>
-              <a href="#">User</a>
-              <a href=".analytics/analytics.html">Analytics</a>
-              <a href=".profile-setting/profile-setting.html">Settings</a>
-              <a href=".login.html" target="_blank" class="logloglog">Logout</a>
+              <a href="../product-report/product-report.html">Reports</a>
+              <a href="../Admin-awareness/awareness-page.html">Awareness</a>
+              <a href="../user-page/user-page.html">User</a>
+              <a href="../analytics/analytics.html">Analytics</a>
+              <a href="../profile-setting/profile-setting.html">Settings</a>
+              <a href="../login.html" class="logloglog">Logout</a>
             </div>
           </div>
           <div class="profile">
@@ -106,7 +114,7 @@
               <img src="../images/expand-up-down-line.svg" alt="" />
             </button>
             <div class="logout">
-              <a href="#" class="logloglog">logout</a>
+              <a href="../login.html" class="logloglog">logout</a>
             </div>
           </div>
         </div>
@@ -201,7 +209,6 @@
             /></label>
             <input type="text" placeholder="Location" id="location" required />
           </div>
-
           <!-- we cannot have function to change password here
           <div class="Form-fill">
             <label for="password"
@@ -210,7 +217,6 @@
             <input type="password" placeholder="Change Password" />
           </div>
           -->
-
           <div class="btn">
             <button type="submit">Save Change</button>
           </div>
@@ -249,6 +255,7 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
+
     <script>
       var expanded = false;
 

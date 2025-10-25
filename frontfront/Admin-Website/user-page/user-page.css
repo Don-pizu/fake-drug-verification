@@ -99,7 +99,7 @@ header {
 .menu-links {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: -10px;
   background-color: var(--white-color);
   border: 1px solid #ccc;
@@ -107,7 +107,7 @@ header {
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  width: 150px;
+  min-width: 160px;
 }
 .menu-links a {
   text-decoration: none;
@@ -119,6 +119,9 @@ header {
 .menu-links a:hover {
   background: var(--sub-color);
   color: var(--white-color);
+}
+.hamburger-menu:hover .menu-links {
+  display: block;
 }
 /* notification dropdown */
 .notification {
@@ -726,11 +729,15 @@ footer {
     width: 95%;
     margin: 0 auto;
   }
+  .user-text h1 {
+    font-size: 24px;
+  }
   .user-text p {
     font-size: 16px;
   }
   .add-new-user {
     margin-block: 1rem;
+    font-size: 16px;
   }
   .user-card span {
     font-size: 20px;

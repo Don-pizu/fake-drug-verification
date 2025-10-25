@@ -49,12 +49,13 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo a {
   text-decoration: none;
   color: var(--black-color);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 /*=====Backend pic ==== */
 #profile-avatar {
@@ -101,38 +102,37 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.menu-line {
+.hamburger-menu {
   position: relative;
   display: inline-block;
   display: none;
 }
-.menu-content {
-  display: none !important;
+.menu-links {
+  display: none;
   position: absolute;
+  top: 40px;
   right: -10px;
-  background: var(--white-color);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  min-width: 160px;
-  display: flex;
+  background-color: var(--white-color);
+  border: 1px solid #ccc;
   flex-direction: column;
-  justify-content: center;
-  z-index: 9999;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 160px;
 }
-.menu-line:hover,
-.menu-content {
+.menu-links a {
+  text-decoration: none;
+  padding: 8px 12px;
   display: block;
+  color: #333;
+  color: var(--sub-color);
 }
-.menu-content a:hover {
+.menu-links a:hover {
   background: var(--sub-color);
   color: var(--white-color);
-  border-radius: 10px;
 }
-.menu-content a {
-  text-decoration: none;
-  color: var(--sub-color);
-  width: 160px;
-  height: 52px;
-  padding: 10px;
+.hamburger-menu:hover .menu-links {
+  display: block;
 }
 /* notification dropdown */
 .notification {
@@ -633,7 +633,7 @@ footer {
     text-align: left;
     margin-left: 2rem;
   }
-  .menu-line {
+  .hamburger-menu {
     display: block;
   }
   .divider {

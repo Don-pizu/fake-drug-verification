@@ -163,6 +163,133 @@ nav a:hover {
   display: none;
   z-index: 100;
 }
+/*=======Backend ====*/
+/* Scrollable row containers stay the same */
+#recentPro,
+#approvedPro,
+#fakePro {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+}
+#recentPro::-webkit-scrollbar,
+#approvedPro::-webkit-scrollbar,
+#fakePro::-webkit-scrollbar {
+  height: 8px;
+}
+#recentPro::-webkit-scrollbar-thumb,
+#approvedPro::-webkit-scrollbar-thumb,
+#fakePro::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+/* ---------- HORIZONTAL CARD ---------- */
+.product-card {
+  flex: 0 0 450px; /* card width */
+  display: flex; /* horizontal layout */
+  width: 200px;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+}
+/* image fixed on the left */
+.product-card .product-image {
+  width: 150px; /* fixed image width */
+  height: 150px; /* fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+/* info block on the right */
+.product-info {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 0; /* let text wrap */
+}
+.product-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+.product-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+.badge-approved {
+  background: #e0f7e9;
+  color: #188c3a;
+}
+.badge-fake {
+  background: #fdecea;
+  color: #c62828;
+}
+.product-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+/*=======Backend profilePic, Bell, logout========*/
+/* Invisible hover bridge below the icon */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%; /* place directly under the dropdown trigger */
+  left: 0;
+  width: 100%;
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
+  background: transparent;
+}
+/* Ensure the dropdown box appears above the hover bridge */
+.dropdown:hover::before {
+  z-index: 99;
+}
+#profilePic {
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
+  object-fit: cover; /* crop instead of stretching */
+  border-radius: 50%; /* makes it a circle */
+  border: none; /* optional: add border */
+}
+/* hide by default */
+.hidden {
+  display: none;
+}
+/* last dropdown*/
+/*Show dropdown on hover */
+.dropdown-2:hover .dropdown-content-1 {
+  display: block;
+}
+/* Hover bridge trick — invisible area keeps dropdown open */
+.dropdown-2::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* directly below the dropdown button */
+  left: 0;
+  width: 100%;
+  height: 100px; /* height of the invisible hover area */
+  background: transparent;
+}
+/* Ensure hovering over the bridge area also keeps menu open */
+.dropdown-2:hover::after {
+  pointer-events: auto;
+}
 /* Notification items */
 .notification .item {
   display: flex;
@@ -287,6 +414,8 @@ nav a:hover {
   display: none;
 }
 .welcome {
+  font-size: 30px;
+  padding-block: 20px;
   color: var(--black-color) !important;
   width: 100%;
 }
@@ -1394,6 +1523,13 @@ input::placeholder {
     padding: 0;
     box-sizing: border-box;
   }
+  .welcome {
+    font-weight: 700;
+    color: #005f00 !important;
+  }
+  .police {
+    font-size: 18px;
+  }
   .partners,
   .slide {
     display: none;
@@ -1408,152 +1544,17 @@ input::placeholder {
   .table {
     margin-top: 1rem;
   }
-  .welcome {
-    color: #005f00;
-  }
   .in-todays-market-container {
     text-align: center;
     height: 224px;
   }
-}
-/*=======Backend ====*/
-/* Scrollable row containers stay the same */
-#recentPro,
-#approvedPro,
-#fakePro {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 0.5rem 0;
-  scrollbar-width: thin;
-}
-#recentPro::-webkit-scrollbar,
-#approvedPro::-webkit-scrollbar,
-#fakePro::-webkit-scrollbar {
-  height: 8px;
-}
-#recentPro::-webkit-scrollbar-thumb,
-#approvedPro::-webkit-scrollbar-thumb,
-#fakePro::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 3px;
-}
-
-/* ---------- HORIZONTAL CARD ---------- */
-.product-card {
-  flex: 0 0 450px; /* card width */
-  display: flex; /* horizontal layout */
-  width: 200px;
-  align-items: center;
-  background: #fff;
-  border-radius: 14px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-.product-card:hover {
-  transform: translateY(-3px);
-}
-
-/* image fixed on the left */
-.product-card .product-image {
-  width: 150px; /* fixed image width */
-  height: 150px; /* fixed height for uniformity */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;
-  background: #f5f5f5;
-}
-
-/* info block on the right */
-.product-info {
-  padding: 0.8rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.4rem;
-  min-width: 0; /* let text wrap */
-}
-
-.product-info h4 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #222;
-}
-
-.product-badge {
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.2rem 0.5rem;
-  border-radius: 8px;
-  align-self: flex-start;
-}
-.badge-approved {
-  background: #e0f7e9;
-  color: #188c3a;
-}
-.badge-fake {
-  background: #fdecea;
-  color: #c62828;
-}
-
-.product-info p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: #555;
-}
-
-/*=======Backend profilePic, Bell, logout========*/
-
-/* Invisible hover bridge below the icon */
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 100%; /* place directly under the dropdown trigger */
-  left: 0;
-  width: 100%;
-  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
-  background: transparent;
-}
-
-/* Ensure the dropdown box appears above the hover bridge */
-.dropdown:hover::before {
-  z-index: 99;
-}
-
-#profilePic {
-  width: 60px; /* fixed width */
-  height: 60px; /* fixed height */
-  object-fit: cover; /* crop instead of stretching */
-  border-radius: 50%; /* makes it a circle */
-  border: none; /* optional: add border */
-}
-
-/* hide by default */
-.hidden {
-  display: none;
-}
-
-/* last dropdown*/
-/*Show dropdown on hover */
-.dropdown-2:hover .dropdown-content-1 {
-  display: block;
-}
-
-/* Hover bridge trick — invisible area keeps dropdown open */
-.dropdown-2::after {
-  content: "";
-  position: absolute;
-  top: 100%; /* directly below the dropdown button */
-  left: 0;
-  width: 100%;
-  height: 100px; /* height of the invisible hover area */
-  background: transparent;
-}
-
-/* Ensure hovering over the bridge area also keeps menu open */
-.dropdown-2:hover::after {
-  pointer-events: auto;
+  .view-all-product {
+    margin-left: 0px;
+  }
+  .legal {
+    padding-top: 10px;
+  }
+  .legal a {
+    margin: 0px;
+  }
 }

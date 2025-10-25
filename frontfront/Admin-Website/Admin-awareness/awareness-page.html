@@ -524,21 +524,6 @@
         }
       }
     </script>
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("menuLinks");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-      }
-
-      // Optional: Close the menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const menu = document.getElementById("menuLinks");
-        const icon = document.querySelector(".hamburger-icon");
-        if (!menu.contains(event.target) && !icon.contains(event.target)) {
-          menu.style.display = "none";
-        }
-      });
-    </script>
     <script src="awareness-page.js"></script>
   </body>
 </html>

@@ -76,7 +76,7 @@
           </div> -->
           </div>
           <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="hamburger-icon">
               <img
                 src="../images/menu-line.svg"
                 alt="menu-line"
@@ -413,7 +413,7 @@
           <li class="solid-text">Quick</li>
           <li>Dashboard</li>
           <li>
-            <a href=".product-verification/product-verification.html"
+            <a href="../product-verification/product-verification.html"
               >Verification</a
             >
           </li>
@@ -432,7 +432,6 @@
       </div>
       <p class="right">&copy; 2025 Copyright. All Rights Reserved.</p>
     </footer>
-
     <script src="../pie.js"></script>
     <script>
       var expanded = false;
@@ -447,20 +446,6 @@
           expanded = false;
         }
       }
-    </script>
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("menuLinks");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-      }
-      // Optional: Close the menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const menu = document.getElementById("menuLinks");
-        const icon = document.querySelector(".hamburger-icon");
-        if (!menu.contains(event.target) && !icon.contains(event.target)) {
-          menu.style.display = "none";
-        }
-      });
     </script>
     <script src="admin-dashboard.js"></script>
   </body>

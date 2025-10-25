@@ -59,12 +59,10 @@ button {
 }
 .logo-parent a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: -0.03em;
-  line-height: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: #1a1a1a;
-  text-align: left;
 }
 .nav2 {
   display: flex;
@@ -300,7 +298,7 @@ nav a:hover {
   background: #fff;
 }
 /* Hero Section */
-.hero-section{
+.hero-section {
   padding-block: 5rem;
 }
 /* ========================================
@@ -308,7 +306,7 @@ nav a:hover {
 ======================================== */
 .contact-us {
   width: 100%;
-  min-height: 200px;
+  height: 200px;
   background-color: var(--main-color);
 }
 .contact-text {
@@ -425,7 +423,7 @@ nav a:hover {
   position: relative;
   width: 100%;
 }
-.form-group input::placeholder{
+.form-group input::placeholder {
   color: #333;
   font-size: 16px;
 }
@@ -740,25 +738,21 @@ input::placeholder {
     font-size: 30px;
     line-height: 36px;
   }
-
   .hero-description {
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 47px;
   }
-
   /* Contact info mobile */
   .contact-info {
     grid-template-columns: 1fr;
     gap: 38px;
   }
-
   .contact-labels {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
   }
-
   .contact-details {
     gap: 38px;
   }
@@ -776,12 +770,10 @@ input::placeholder {
     border-radius: 10px;
     padding: 10px;
   }
-
   .form-input input,
   .form-input textarea {
     font-size: 16px;
   }
-
   .submit-button {
     align-self: center;
   }
@@ -833,14 +825,6 @@ input::placeholder {
   }
 }
 
-
-
-
-
-
-
-
-
 /*=======Backend profilePic, Bell, logout========*/
 
 /* ✅ NEW ADDITION BELOW — keeps dropdown open even with gap */
@@ -849,10 +833,10 @@ input::placeholder {
 .dropdown::before {
   content: "";
   position: absolute;
-  top: 100%;      /* place directly under the dropdown trigger */
+  top: 100%; /* place directly under the dropdown trigger */
   left: 0;
   width: 100%;
-  height: 100px;   /* adjust this to match your gap size (e.g., 15–25px) */
+  height: 100px; /* adjust this to match your gap size (e.g., 15–25px) */
   background: transparent;
 }
 
@@ -861,11 +845,9 @@ input::placeholder {
   z-index: 99;
 }
 
-
-
 #profilePic {
-  width: 60px;      /* fixed width */
-  height: 60px;     /* fixed height */
+  width: 60px; /* fixed width */
+  height: 60px; /* fixed height */
   object-fit: cover; /* crop instead of stretching */
   border-radius: 50%; /* makes it a circle */
   border: none; /* optional: add border */
@@ -875,7 +857,6 @@ input::placeholder {
 .hidden {
   display: none;
 }
-
 
 /* last dropdown*/
 /*Show dropdown on hover */
@@ -893,10 +874,47 @@ input::placeholder {
   height: 100px; /* height of the invisible hover area */
   background: transparent;
 }
-
 /* Ensure hovering over the bridge area also keeps menu open */
 .dropdown-2:hover::after {
   pointer-events: auto;
 }
-
-
+@media (max-width: 480px) {
+  .logo-parent a {
+    font-size: 20px;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+  .need,
+  .for-your-product,
+  .solution {
+    font-size: 24px;
+  }
+  .hero-description {
+    font-size: 20px;
+    width: 255px;
+  }
+  .contact-details {
+    display: block;
+  }
+  .contact-us {
+    height: 150px;
+  }
+  .contact-text {
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 390px) {
+  .legal {
+    padding-top: 10px;
+  }
+  .legal a {
+    margin: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .legal {
+    gap: 1rem;
+  }
+}
