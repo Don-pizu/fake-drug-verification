@@ -13,7 +13,7 @@ const token = localStorage.getItem("token");
 
 const vfyContainer = document.getElementById("vfy-container");
 
-if (!token) window.location.href = "index.html";
+/* if (!token) window.location.href = "index.html"; */
 
 
 // FORM VERIFY (manual input)
