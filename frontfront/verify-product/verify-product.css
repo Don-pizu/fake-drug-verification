@@ -331,6 +331,7 @@ nav a:hover {
 ======================================== */
 .form-aside-background img {
   min-width: 563px;
+  max-width: 100vw;
   height: 563px;
   object-fit: cover;
 }
@@ -372,6 +373,7 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 .verification-product-container {
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -529,8 +531,6 @@ nav a:hover {
 
 /* ===== Verification Modal (scoped) ===== */
 
-
-
 .vfy-modal {
   position: fixed;
   top: 50%;
@@ -635,10 +635,6 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
-
-
-
-
 
 /* ========================================
    FOOTER STYLES
@@ -787,7 +783,6 @@ input::placeholder {
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */
-/* Tablet styles */
 @media (max-width: 1024px) {
   .hero-image {
     width: 45%;

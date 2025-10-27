@@ -322,7 +322,7 @@ nav a:hover {
 /* MAIN SECTION */
 .meet-our-team {
   background-color: #005f00;
-  height: 25rem;
+  height: 23.5rem;
   color: #fff;
   font-size: 35px;
 }
@@ -356,6 +356,14 @@ nav a:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 10px 10px 40px;
   display: flex;
+}
+.framei img {
+  border-radius: 40px;
+  width: 241px;
+  height: 260px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 .frame .name {
   text-align: center;
@@ -539,9 +547,8 @@ input::placeholder {
 .copyright {
   text-align: center;
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
 }
-
 /*=======Backend profilePic, Bell, logout========*/
 .awareness-dropdown-wrapper {
   position: relative;
@@ -737,11 +744,18 @@ input::placeholder {
     height: 22rem;
   }
   section h3 {
-    margin-block: 2rem;
+    margin-block: 1rem;
+  }
+  .meet-our-team {
+    height: 311px;
   }
   .team-header p {
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
+    padding-block: 0rem;
+  }
+  .team-header h3 {
+    font-size: 28px;
   }
   section p {
     text-align: center;
@@ -804,5 +818,10 @@ input::placeholder {
   }
   .legal a {
     margin: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .legal {
+    gap: 2rem;
   }
 }

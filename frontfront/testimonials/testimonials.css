@@ -304,15 +304,20 @@ nav a:hover {
 .testimonial-container {
   height: 1600px;
   max-height: 100%;
+  max-width: 100%;
 }
 .testimonies-parent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: dense;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   gap: 1.8rem;
   width: 90%;
-  margin: 0 auto;
+  max-width: 1200px;
+
   padding-block: 2rem;
 }
 .testimonies {
@@ -343,6 +348,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 .medcheck-helped-me {
   letter-spacing: -0.03em;
@@ -350,6 +356,7 @@ nav a:hover {
   display: inline-block;
   font-size: 30px;
   width: 343px;
+  max-width: 100%;
 }
 .name {
   letter-spacing: -0.03em;
@@ -790,9 +797,6 @@ input::placeholder {
   .links ul li {
     margin-top: 0.5rem;
   }
-  /* .newsletter{
-    order: 4;
-  } */
 }
 @media (max-width: 380px) {
   .legal {
@@ -804,10 +808,10 @@ input::placeholder {
 }
 @media (max-width: 350px) {
   .testimonies-parent {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     max-width: 100%;
   }
-  .medcheck-helped-me {
-    width: 100%;
+  .legal {
+    gap: 2rem;
   }
 }
