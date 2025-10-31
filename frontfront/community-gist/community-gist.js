@@ -7,8 +7,47 @@ const API = "https://fake-drug-verification.onrender.com/api"; // Production bac
 const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
+const role = localStorage.getItem("role");
+const userId = localStorage.getItem("userId");
 
-if (!token) window.location.href = "../index.html";
+// TOKEN CHECK & AUTO LOGOUT
+
+function clearUserSession() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userId");
+  localStorage.removeItem("role");
+}
+
+if (token) {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expiryTime = payload.exp * 1000 - Date.now();
+
+    // If expired already
+    if (expiryTime <= 0) {
+      alert("Your session has expired. Please log in again.");
+      clearUserSession();
+      window.location.href = "../signin/signin.html";
+    } else {
+      // Auto logout when it expires
+      setTimeout(() => {
+        alert("Your session has expired. Please log in again.");
+        clearUserSession();
+        window.location.href = "../signin/signin.html";
+      }, expiryTime);
+    }
+  } catch (err) {
+    console.error("Invalid token:", err);
+    alert("Invalid session. Please log in again.");
+    clearUserSession();
+    window.location.href = "../signin/signin.html";
+  }
+} else {
+  // redirect to login if no token
+  window.location.href = "../index.html";
+}
+
+
 
 // SOCKET.IO connection
 const socket = io(APP, {

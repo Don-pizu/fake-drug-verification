@@ -1,7 +1,8 @@
 //verify-product.js
 
-
+ let hasAlertedLogin = false;
 document.addEventListener("DOMContentLoaded", () => {
+ 
 // Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 //const APP = 'http://localhost:5000';
@@ -10,17 +11,77 @@ const API = "https://fake-drug-verification.onrender.com/api"; // Production bac
 const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
+const userId = localStorage.getItem("userId");
+const userRole = localStorage.getItem("role");
+
+
+
+//login helper function for verify
+function requireLogin() {
+  if (!token) {
+    if (!hasAlertedLogin) { // only show alert once
+      hasAlertedLogin = true;
+      alert("You need to be registered and logged in to verify a product.");
+      window.location.href = "../signin/signin.html";
+    }
+    return false;
+  }
+  return true;
+}
+
+// TOKEN CHECK & AUTO LOGOUT
+function clearUserSession() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userId");
+  localStorage.removeItem("role");
+}
+
+
+if (token) {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expiryTime = payload.exp * 1000 - Date.now();
+
+    // If expired already
+    if (expiryTime <= 0) {
+      alert("Your session has expired. Please log in again.");
+      clearUserSession();
+      window.location.href = "../signin/signin.html";
+    } else {
+      // Auto logout when it expires
+      setTimeout(() => {
+        alert("Your session has expired. Please log in again.");
+        clearUserSession();
+        window.location.href = "../signin/signin.html";
+      }, expiryTime);
+    }
+  } catch (err) {
+    console.error("Invalid token:", err);
+    alert("Invalid session. Please log in again.");
+    clearUserSession();
+    window.location.href = "../signin/signin.html";
+  }
+} else {
+  // redirect to login if no token
+  const offline = document.querySelectorAll('.offline');
+  offline.forEach(element => element.style.display = 'none'); // remove space from layout
+
+  const offline2 = document.querySelectorAll('.offline2');
+  offline2.forEach(element => element.style.visibility = 'hidden'); // keep layout
+}
+
+
+
 
 const vfyContainer = document.getElementById("vfy-container");
-
-/* if (!token) window.location.href = "index.html"; */
-
 
 // FORM VERIFY (manual input)
 document
   .getElementById("verifyBtn")
   .addEventListener("click", async (e) => {
     e.preventDefault();
+
+    if (!requireLogin()) return; //stop if not logged in
 
     console.log("Form submitted");
     const nafdacReg = document.getElementById("nafdac-number").value.trim();
@@ -60,7 +121,11 @@ const ocrInput = document.getElementById("ocr-input");
 const ocrResult = document.getElementById("ocr-result");
 
 if (cameraBtn && ocrInput) {
-  cameraBtn.addEventListener("click", () => ocrInput.click());
+  cameraBtn.addEventListener("click", () => {
+    if (!requireLogin()) return; //stop if not logged in
+    ocrInput.click();
+  });
+
 
   ocrInput.addEventListener("change", (e) => {
     const file = e.target.files[0];

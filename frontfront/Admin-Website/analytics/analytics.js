@@ -1,6 +1,6 @@
 //analytics.js
 
-// const API = 'http://localhost:5000/api'; // Local backend
+//const API = 'http://localhost:5000/api'; // Local backend
   const API = "https://fake-drug-verification.onrender.com/api"; // Production backend
   const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
@@ -8,6 +8,7 @@
   const userId = localStorage.getItem("userId");
   const userRole = localStorage.getItem("role");
   const token = localStorage.getItem("token");
+  let categoryChart;
 
   if (!token) 
     window.location.href = "../index.html";
@@ -59,6 +60,170 @@ async function fetchDashboardStats() {
 
 
 
+
+// Product Category & counterfeit Products
+
+//=====funstion for loading %
+function showLoadingBars() {
+  document.querySelectorAll(".loading-bar").forEach((bar) => {
+    bar.style.opacity = "1"; // make shimmer visible
+  });
+  document.querySelectorAll(".progress-bar").forEach((bar) => {
+    bar.style.width = "0"; // reset actual bars
+  });
+}
+
+// ===== Function to hide shimmer =====
+function hideLoadingBars() {
+  document.querySelectorAll(".loading-bar").forEach((bar) => {
+    bar.style.opacity = "0"; // fade shimmer out
+  });
+}
+
+
+//Bar loading for the categories
+function updateCategoryBar(id, percent) {
+  const bar = document.getElementById(`${id}Bar`);
+  const label = document.querySelectorAll(`.${id}P`);
+  if (!bar || !label) return;
+
+  // Convert to number safely
+  const safePercent = parseFloat(percent) || 0;
+
+  // Clamp values between 0–100 (no overflow)
+  const finalPercent = Math.min(Math.max(safePercent, 0), 100);
+
+  // Update bar + text
+  bar.style.width = `${finalPercent}%`;
+  label.textContent = `${finalPercent.toFixed(1)}%`;
+}
+
+//categories loading and %
+const drugsP = document.querySelectorAll('.drugsP');
+const beveragesP = document.querySelectorAll('.beveragesP');
+const cosmeticsP = document.querySelectorAll('.cosmeticsP');
+const chemicalsP = document.querySelectorAll('.chemicalsP'); 
+const devicesP = document.querySelectorAll('.devicesP');
+const totalUsers2 = document.querySelectorAll(".totalUsers2");
+
+// counterfeit %
+const drugsP2 = document.querySelectorAll('.drugsP2');
+const beveragesP2 = document.querySelectorAll('.beveragesP2');
+const cosmeticsP2 = document.querySelectorAll('.cosmeticsP2');
+const chemicalsP2 = document.querySelectorAll('.chemicalsP2'); 
+const devicesP2 = document.querySelectorAll('.devicesP2');
+
+async function loadCategory() {
+  showLoadingBars(); // show the helper bars
+
+  try {
+    const res = await fetch(`${API}/stats`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data.message || "Failed to fetch stats");
+
+    // total users
+    totalUsers2.forEach(el => el.textContent = data.totalReportedProducts);
+
+
+    const cat = data.categoryData || {};
+
+    // Percentages
+    const drugs = cat.drugs?.percent || 0;
+    const beverages = cat.beverages?.percent || 0;
+    const cosmetics = cat.cosmetics?.percent || 0;
+    const chemicals = cat.chemical?.percent || 0; 
+    const devices = cat.devices?.percent || 0; 
+
+    // percentage cunterfeits
+    const cat2 = data.counterfeitData || {};
+
+    const drugs2 = cat2.drugs?.percent || 0;
+    const beverages2 = cat2.beverages?.percent || 0;
+    const cosmetics2 = cat2.cosmetics?.percent || 0;
+    const chemicals2 = cat2.chemical?.percent || 0; 
+    const devices2 = cat2.devices?.percent || 0; 
+
+    // Update the text and animate bars
+    updateCategoryBar("drugs", drugs);
+    updateCategoryBar("beverages", beverages);
+    updateCategoryBar("cosmetics", cosmetics);
+    updateCategoryBar("chemicals", chemicals);
+    updateCategoryBar("devices", devices);
+
+    // Get percentage for each category
+    beveragesP.forEach(el => el.textContent = `${beverages}%`);
+    drugsP.forEach(el => el.textContent = `${drugs}%`);
+    cosmeticsP.forEach(el => el.textContent = `${cosmetics}%`);
+    chemicalsP.forEach(el => el.textContent = `${chemicals}%`);
+    devicesP.forEach(el => el.textContent = `${devices}%`);
+
+    //counterfeit %
+    beveragesP2.forEach(el => el.textContent = `${beverages2}%`);
+    drugsP2.forEach(el => el.textContent = `${drugs2}%`);
+    cosmeticsP2.forEach(el => el.textContent = `${cosmetics2}%`);
+    chemicalsP2.forEach(el => el.textContent = `${chemicals2}%`);
+    devicesP2.forEach(el => el.textContent = `${devices2}%`);
+
+
+    // Prepare labels and data for the chart
+    const labels = ["Drugs", "Devices", "Beverages", "Cosmetics", "Chemicals"];
+    const dataValues = [drugs2, devices2, beverages2, cosmetics2, chemicals2];
+
+    // Call the update function
+    updateCategoryChart(labels, dataValues);
+
+
+
+     // Delay fade out for smooth transition
+    setTimeout(hideLoadingBars, 800);
+    
+  } catch (err) {
+    console.error("Error loading stats:", err);
+  }
+}
+
+
+function updateCategoryChart(labels, data) {
+  const ctx = document.getElementById('myDoughnut').getContext('2d');
+
+  // Destroy previous chart (if it exists)
+  if (categoryChart) {
+    categoryChart.destroy();
+  }
+
+  categoryChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: [
+          '#00C503', '#4DFA72', '#006304',
+          '#F44336', '#B24C00'
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+          position: 'bottom',
+          labels: { color: '#333', boxWidth: 15 }
+        }
+      },
+      cutout: '70%'
+    }
+  });
+}
 
 
 
@@ -208,3 +373,4 @@ fetchAwareness();
 
 
 fetchDashboardStats();
+loadCategory();

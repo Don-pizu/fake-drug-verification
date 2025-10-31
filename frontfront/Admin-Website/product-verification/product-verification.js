@@ -27,7 +27,7 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const productList = document.getElementById("productTableBody");
 const totalProVeri = document.getElementById("totalProduct");
-const totalProVeri2 = document.getElementById("totalProduct2");
+const totalProVeri2 = document.querySelectorAll(".totalProduct2");
 const totalProVeri22 = document.getElementById("totalProduct22");
 const totalReport = document.getElementById("totalReport");
 
@@ -119,7 +119,7 @@ async function fetchStats() {
 
      // Assign values
     totalProVeri.textContent = data.totalVerifiedProducts || 0;
-    totalProVeri2.textContent = data.totalProducts || 0;
+    totalProVeri2.forEach(el => el.textContent = data.totalProducts || 0);
     totalProVeri22.textContent = data.totalProducts || 0;
     totalReport.textContent = data.reportCount || 0;
    

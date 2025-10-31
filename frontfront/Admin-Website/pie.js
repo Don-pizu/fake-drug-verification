@@ -5,7 +5,7 @@ new Chart(ctx, {
     data: {
         labels: ['Lagos', 'Abuja', '245', 'Kano', 'Oshogbo', 'Others'],
         datasets: [{
-            data: [32, 24, 21, 18, 15, 11],
+            data: [70, 24, 21, 18, 15, 11],
             backgroundColor: [
                 '#00C503', '#4DFA72', '#006304',
                 '#F44336', '#B24C00', '#666666'
