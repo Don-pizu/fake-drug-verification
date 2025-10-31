@@ -6,7 +6,7 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
 const role = localStorage.getItem("role");
-const token = localStorage.getItem("token");
+const role = localStorage.getItem("role");
 
 // TOKEN CHECK & AUTO LOGOUT
 
