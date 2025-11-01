@@ -1,4 +1,4 @@
- // Set the backend API URL
+// Set the backend API URL
 //const API = 'http://localhost:5000/api'; // Uncomment this for local testing
 //const APP = 'http://localhost:5000';
 
@@ -13,7 +13,6 @@ const recentPro = document.getElementById("recentPro");
 const approvedPro = document.getElementById("approvedPro");
 const fakePro = document.getElementById("fakePro");
 
-
 // Helper to format expiry date
 function formatDate(dateStr) {
   if (!dateStr) return "N/A";
@@ -24,19 +23,13 @@ function formatDate(dateStr) {
     year: "numeric",
   });
 }
-
-
-
-
 // Helper to render product card
 function createProductCard(verify, isApproved) {
   const div = document.createElement("div");
   div.classList.add("product-card");
 
   const image = document.createElement("img");
-  image.src = verify.image
-    ? verify.image
-    : "images/placeholder.png";
+  image.src = verify.image ? verify.image : "images/placeholder.png";
   image.alt = verify.name;
   image.classList.add("product-image");
 
@@ -75,7 +68,6 @@ function createProductCard(verify, isApproved) {
   return div;
 }
 
-
 // Fetch recent products
 async function fetchRecent() {
   const res = await fetch(`${API}/verify?limit=4`, {
@@ -95,9 +87,6 @@ async function fetchRecent() {
     alert(data.message || "Could not load recent products");
   }
 }
-
-
-
 
 // Fetch verified drugs
 async function fetchVerified() {
@@ -119,9 +108,6 @@ async function fetchVerified() {
   }
 }
 
-
-
-
 // Fetch counterfeit drugs
 async function fetchCounterfeit() {
   const res = await fetch(`${API}/verify?authentic=false&limit=4`, {
@@ -142,10 +128,6 @@ async function fetchCounterfeit() {
   }
 }
 
-
- 
-
-
 //=========LOGOUT=======/
 // ---------- LOGOUT: attach to all .logloglog anchors ----------
 const logoutBtns = document.querySelectorAll(".logloglog");
@@ -164,8 +146,6 @@ if (logoutBtns && logoutBtns.length > 0) {
   // no logout anchors still shouldn't break other JS
   console.warn("No logout anchors (.logloglog) found");
 }
-
-
 
 //======profile Picture=====//
 
@@ -192,10 +172,12 @@ async function loadUserProfile() {
 
     if (data.profileImage) {
       // Build a correct absolute URL (handles leading/trailing slashes safely)
-     profilePic.src = data.profileImage;
+      profilePic.src = data.profileImage;
 
       profilePic.onerror = () => {
-        console.warn("Failed to load profile image from server, using fallback.");
+        console.warn(
+          "Failed to load profile image from server, using fallback."
+        );
         profilePic.src = "../images/Ellipse 1.svg";
       };
     } else {
@@ -206,9 +188,6 @@ async function loadUserProfile() {
     console.error("Profile error:", err.message);
   }
 }
-
-
-
 
 // ---------- AWARENESS DROPDOWN (use existing bell/dropdown) ----------
 const dropbell = document.getElementById("dropbell");
@@ -232,7 +211,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 // prevent dropdown from closing when scrolling or clicking inside
 awarenessDropdown.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -241,11 +219,10 @@ awarenessDropdown.addEventListener("scroll", (e) => {
   e.stopPropagation();
 });
 
-
 async function fetchAwareness() {
   try {
     const res = await fetch(`${API}/awareness?page=1&limit=4`, {
-      headers: { Authorization: `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.message || "Failed to load awareness");
@@ -271,7 +248,10 @@ async function fetchAwareness() {
           
           <h5>${a.title}</h5>
           <p>${a.description || "No description"}</p>
-          <span>${new Date(a.createdAt).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' } )}</span>
+          <span>${new Date(a.createdAt).toLocaleDateString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          })}</span>
         </div>
          <a href="https://fake-drug-verification.onrender.com/">View</a>
       `;
@@ -285,7 +265,6 @@ async function fetchAwareness() {
 // ---------- initialize ----------
 loadUserProfile();
 fetchAwareness();
-
 
 fetchRecent();
 fetchVerified();
