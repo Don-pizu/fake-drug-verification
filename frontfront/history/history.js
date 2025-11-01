@@ -6,7 +6,7 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 const token = localStorage.getItem("token");
 const role = localStorage.getItem("role");
-const role = localStorage.getItem("role");
+const userId = localStorage.getItem("userId");
 
 // TOKEN CHECK & AUTO LOGOUT
 
@@ -15,6 +15,7 @@ function clearUserSession() {
   localStorage.removeItem("userId");
   localStorage.removeItem("role");
 }
+
 
 if (token) {
   try {
@@ -48,12 +49,6 @@ if (token) {
 
 
 const productList = document.getElementById("productTableBody");
-const beverages = document.getElementById("beverages");
-const drugs = document.getElementById("drugs");
-const cosmetics = document.getElementById("cosmetics");
-const chemical = document.getElementById("chemical");
-const devices = document.getElementById("devices")
-const totalProduct = document.getElementById("totalProduct");
 
 // Fetch all verify records
 async function fetchProducts() {
@@ -124,26 +119,20 @@ function renderProducts(products) {
 
 
 
-
-
-
-function updateDonut(id, percentage) {
-  const donut = document.getElementById(id);
-  if (donut) {
-    donut.style.background = `conic-gradient(
-      green 0% ${percentage}%,
-      red ${percentage}% 100%
-    )`;
-    donut.innerHTML = `<p>${percentage}%</p>`;
-  }
-}
-
-
-
 // Get verify product categories in %
-async function getCounts() {
+//categories loading and %
+const drugsP = document.getElementById('drugsP');
+const beveragesP = document.getElementById('beveragesP');
+const cosmeticsP = document.getElementById('cosmeticsP');
+const chemicalsP = document.getElementById('chemicalsP'); 
+const devicesP = document.getElementById('devicesP');
+const totalProduct = document.getElementById("totalProduct");
+const totalVerified = document.getElementById("totalProductVerified");
+const totalReported = document.getElementById("totalProductReported");
+
+async function loadCategory() {
   try {
-    const res = await fetch(`${API}/verifyStats`, {
+    const res = await fetch(`${API}/stats`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -151,40 +140,42 @@ async function getCounts() {
     });
 
     const data = await res.json();
-    console.log("Stats Response:", data);
 
-    // Cosmetic
-    updateDonut("cosmetic", data.cosmetics.percentage);
+    if (!res.ok) throw new Error(data.message || "Failed to fetch stats");
 
-    // Beverages
-    updateDonut("beverages", data.beverages.percentage);
+    // total PRODUVTS
+    totalProduct.textContent = data.totalProducts;
+    totalVerified.textContent = data.totalVerifiedProducts;
+    totalReported.textContent = data.totalNewLocations;
+  
+    const cat = data.categoryData || {};
 
-    // Chemical
-    updateDonut("chemical", data.chemical.percentage);
+    // Percentages
+    const drugs = cat.drugs?.percent || 0;
+    const beverages = cat.beverages?.percent || 0;
+    const cosmetics = cat.cosmetics?.percent || 0;
+    const chemicals = cat.chemical?.percent || 0; 
+    const devices = cat.devices?.percent || 0;    
 
-    // Drugs
-    updateDonut("drugs", data.drugs.percentage);
 
-    // Devices
-    updateDonut("devices", data.devices.percentage);
-
-     // Totals
-    const total = data.totalProducts || 0;
-    const verified = data.totalVerified || 0;
-    const reported = data.totalReported || 0;
-    const percentage = data.totalPercentage || 0;
-
-    // Update donut for totals
-    updateDonut("totalProduct", percentage);
-
-    document.getElementById("totalProduct").innerHTML = `<p>${total}</p>`;
-    document.getElementById("totalVerified").textContent = `${verified} Verified`;
-    document.getElementById("totalReported").textContent = `${reported} Reported`;
-
+    // Get percentage for each category
+    beveragesP.textContent = `${beverages}%`;
+    drugsP.textContent = `${drugs}%`;
+    cosmeticsP.textContent = `${cosmetics}%`;
+    chemicalsP.textContent = `${chemicals}%`;
+    devicesP.textContent = `${devices}%`;
+    
   } catch (err) {
-    console.error("Error fetching stats:", err.message);
+    console.error("Error loading stats:", err);
   }
 }
+
+
+
+
+
+
+
 
 
 
@@ -327,3 +318,4 @@ async function fetchAwareness() {
 loadUserProfile();
 fetchAwareness();
 fetchProducts();
+loadCategory();

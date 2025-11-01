@@ -12,7 +12,6 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
   const token = localStorage.getItem("token");
 
 let categoryChart;
-  
   if (!token) {
     // redirect to login if no token
     window.location.href = "https://fake-drug-verification.onrender.com";
@@ -22,7 +21,6 @@ let categoryChart;
     window.location.href = "https://fake-drug-verification.onrender.com";
   }
   
-
 
 
 
