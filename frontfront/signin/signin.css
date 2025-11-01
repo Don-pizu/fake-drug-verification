@@ -22,78 +22,8 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  width: 98%;
-}
-.hamburger {
-  position: relative;
-  display: inline-block;
-  display: none;
-}
-.dropdown-content-1 {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: -5px;
-  background-color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  width: 193px;
-  height: 124px;
-  text-align: right;
-}
-.link {
-  padding: 5px 10px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 5px 10px;
-}
-.dropdown-content ul {
-  display: none;
-  width: 100%;
-  position: absolute;
-  right: -25px;
-  top: 2rem;
-  background-color: var(--white-color);
-  min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-.dropdown-content ul li {
-  list-style-type: none;
-}
-.dropdown-content li a {
-  text-decoration: none;
-  color: var(--lighter-green);
-  font-size: 18px;
-}
-.hamburger:hover .dropdown-content ul {
-  display: block;
-}
-.menu a:hover {
-  background: #007900;
-  color: var(--white-color);
-  width: 100%;
-}
-.menu {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 5px 10px;
-  color: #00c503;
-}
-.service {
-  letter-spacing: -0.03em;
-  line-height: 28px;
-  font-weight: 500;
-}
-.hamburger img:hover,
-.dropdown-content {
-  display: block;
+  padding: 10px;
 }
 .logo-parent {
   display: flex;
@@ -110,25 +40,34 @@ header {
   color: #1a1a1a;
   font-weight: 600;
 }
+.home {
+  display: none;
+}
 /* signin */
 .bg {
-  height: 100%;
-  object-fit: cover;
   max-width: 100%;
 }
-.sign-in-container {
-  height: 893px;
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bg-image {
+  position: relative;
+}
+.form {
+  height: 1000px;
   position: absolute;
-  right: 5px;
-  top: 150px;
-  width: 486px;
+  right: -5px;
+  top: 130px;
+  width: 416px;
   backdrop-filter: blur(18px);
   background-color: rgba(0, 0, 0, 0);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
   border: 1.5px groove var(--white-color);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 40px 30px;
+  padding: 30px 52px;
+  margin: 1rem;
   border-radius: 25px;
   text-align: center;
 }
@@ -145,6 +84,7 @@ header {
   padding-block: 0.5rem;
 }
 .input-wrapper {
+  max-width: 100%;
   display: flex;
   align-items: center;
   background-color: #fafafa;
@@ -154,21 +94,18 @@ header {
   gap: 15px;
   transition: border-color 0.2s ease;
 }
-
 .input-wrapper:focus-within {
   border-color: #00e331;
   outline: 2px solid rgba(0, 227, 49, 0.1);
   outline-offset: 2px;
 }
-
 .input-icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
-
 .input-wrapper input {
-  flex: 1;
+  width: 100%;
   border: none;
   background: none;
   outline: none;
@@ -177,10 +114,10 @@ header {
   letter-spacing: -0.03em;
   color: #000;
 }
-
 .input-wrapper input::placeholder {
   color: #b3b3b3;
   font-weight: 400;
+  max-width: 100%;
 }
 /* Options */
 .options {
@@ -194,6 +131,7 @@ header {
 .options a {
   color: green;
   text-decoration: none;
+  white-space: nowrap;
 }
 .options label {
   color: #666;
@@ -303,6 +241,7 @@ header {
   font-size: 18px;
 }
 .social-btn a {
+  max-width: 100%;
   text-decoration: none;
   color: var(--black-color);
   font-weight: 700;
@@ -313,10 +252,11 @@ header {
 }
 /* Signup link */
 .signup {
-  margin-top: 15px;
+  width: 100%;
+  padding: 15px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .signup a {
   color: green;
@@ -329,30 +269,43 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .bg {
+    display: none;
+  }
+  .form {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: static;
+    top: auto;
+    right: auto;
   }
   .signup {
     font-size: 24px;
     color: #333;
+  }
+  .sign-in-container {
+    margin: 0px;
   }
 }
 @media (max-width: 500px) {
   .medcheck {
     font-size: 20px;
   }
+  .home {
+    display: block;
+  }
   .bg {
     display: none;
   }
-  .sign-in-container {
-    width: 100%;
+  .form {
     height: 100%;
-    text-align: center;
+    margin: 0px auto;
     border: none;
     box-shadow: none;
   }
   .sign-in-container b {
-    font-size: 34px;
+    font-size: 28px;
     letter-spacing: -0.03em;
     line-height: 32px;
     color: #197c1d;
@@ -369,11 +322,10 @@ header {
     width: 340px;
   }
   .form {
-    padding-block: 10rem;
+    padding-block: 1rem;
   }
   .signup {
     font-size: 16px;
-    padding: 2rem;
     display: flex;
     gap: 10px;
     white-space: nowrap;
@@ -385,5 +337,26 @@ header {
     background: #009200;
   }
 }
+<<<<<<< HEAD
+@media (max-width: 320px) {
+  .social-btn a {
+    font-size: 14px;
+  }
+  .options {
+    gap: 10px;
+  }
+  .checkbox-container {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  #forgotPassword {
+    font-size: 12px;
+  }
+  .signup {
+    font-size: 14px;
+  }
+}
+=======
 
 
+>>>>>>> ad39b97c8c1e5da6035e863c93aa4687256cfc38

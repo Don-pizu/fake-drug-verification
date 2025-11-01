@@ -11,54 +11,58 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;;
+  height: 100vh;
 }
 .pw-reset_container {
-    background: #fff;
-  max-width: 410px;
-  height: 300px;
+  margin: 10px;
+  background: #fff;
+  max-width: 100%;
+  width: 370px;
+  max-height: 100%;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   border-radius: 20px;
 }
-.pw-reset_container h2{
-    padding-bottom: 1rem;
-    font-size: 24px;
+.pw-reset_container h2 {
+  padding-bottom: 1rem;
+  font-size: 24px;
 }
-.pw-reset_container p{
-    font-weight: 500;
+.pw-reset_container p {
+  font-weight: 500;
 }
-form input{
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #00C503;
-    border-radius: 10px;
-    font-size: 16px;
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #00c503;
+  border-radius: 10px;
+  font-size: 16px;
 }
-input:focus{
-    border-color: #B2FDC3;
-    outline: none;
+input:focus {
+  border-color: #b2fdc3;
+  outline: none;
 }
-form h3{
-    text-align: left;
-    /* font-size: 16px; */
-    padding-top: 1rem;
+form label {
+  display: flex;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 1rem;
 }
-button {
+.reset-btn {
   width: 100%;
   border: none;
   outline: none;
   color: white;
   background: #007900;
   height: 44px;
+  margin-block: 0.5rem;
   border-radius: 10px;
   cursor: pointer;
 }
-button:hover{
-    background: #00C503;
+button:hover {
+  background: #00c503;
 }
-.verify-p{
-    font-weight: 500;
-    padding-block: 0.5rem;
+.verify-p {
+  font-weight: 500;
+  padding-block: 0.5rem;
 }

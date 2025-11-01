@@ -18,6 +18,10 @@
 html {
   scroll-behavior: smooth;
 }
+button {
+  background: transparent;
+  border: none;
+}
 body {
   width: 100%;
   font-family: "DM Sans", sans-serif;
@@ -357,8 +361,23 @@ nav a:hover {
   line-height: 28px;
   font-weight: 500;
 }
-.hamburger {
+
+.dropdown-2:hover .dropdown-content-1 {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.dropdown-content ul {
   display: none;
+  width: 100%;
+  position: absolute;
+  right: -25px;
+  top: 2rem;
+  background-color: var(--white-color);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 .dropdown-content {
   display: none;
@@ -390,6 +409,32 @@ nav a:hover {
 }
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+.menu-container {
+  margin: 1rem auto;
+  z-index: 1000;
+}
+.list-item-container {
+  display: none;
+}
+.list-item-container.active {
+  display: block;
+}
+.menu-container .list-item-container a {
+  text-decoration: none;
+  display: block;
+  margin: 0.2rem 0;
+  padding: 5px;
+  min-width: 160px;
+  text-align: left;
+  color: #00c503;
+  font-size: 1rem;
+  max-width: 100%;
+  transition: 0.3s;
+}
+.menu-container .list-item-container a:hover {
+  background: #00c503;
+  color: var(--white-color);
 }
 /* Main */
 .container {
