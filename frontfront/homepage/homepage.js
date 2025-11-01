@@ -8,7 +8,7 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
 
 // ================= USER ROLE CHECK =================
 const userId = localStorage.getItem("userId");
-const userRole = localStorage.getItem("role");
+const role = localStorage.getItem("role");
 const token = localStorage.getItem("token");
 
 if (!token) {

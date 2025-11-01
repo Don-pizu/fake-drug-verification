@@ -8,9 +8,45 @@ const API = "https://fake-drug-verification.onrender.com/api"; // Production bac
 const APP = "https://fake-drug-verification.onrender.com";
 
 const token = localStorage.getItem("token");
+const userId = localStorage.getItem("userId");
+const role = localStorage.getItem("role");
 
-// Redirect if no token
-if (!token) window.location.href = "../index.html";
+// TOKEN CHECK & AUTO LOGOUT
+function clearUserSession() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userId");
+  localStorage.removeItem("role");
+}
+
+if (token) {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expiryTime = payload.exp * 1000 - Date.now();
+
+    // If expired already
+    if (expiryTime <= 0) {
+      alert("Your session has expired. Please log in again.");
+      clearUserSession();
+      window.location.href = "../signin/signin.html";
+    } else {
+      // Auto logout when it expires
+      setTimeout(() => {
+        alert("Your session has expired. Please log in again.");
+        clearUserSession();
+        window.location.href = "../signin/signin.html";
+      }, expiryTime);
+    }
+  } catch (err) {
+    console.error("Invalid token:", err);
+    alert("Invalid session. Please log in again.");
+    clearUserSession();
+    window.location.href = "../signin/signin.html";
+  }
+} else {
+  // redirect to login if no token
+  window.location.href = "../index.html";
+}
+
 
 // Elements
 const profileForm = document.getElementById("profileForm");
@@ -145,9 +181,7 @@ if (logoutBtns && logoutBtns.length > 0) {
   logoutBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      localStorage.removeItem("token");
-      localStorage.removeItem("userId");
-      localStorage.removeItem("role");
+      clearUserSession();
       // redirect to your app's frontend home (use relative path)
       window.location.href = "../index.html";
     });

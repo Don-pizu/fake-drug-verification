@@ -136,6 +136,49 @@ exports.getStats = async (req, res) => {
     const percentRecent = getPercent(recentAwareness, awarenessCount); 
 
 
+
+    //category stats (number and %)
+    const categories = [ 'beverages', 'drugs', 'cosmetics', 'chemical', 'devices'];
+
+    // Aggregate counts for all categories
+    const categoryCounts = await Verify.aggregate([
+      { $match: { category: { $in: categories } } },
+      { $group: { _id: "$category", count: { $sum: 1 } } }
+    ]);
+
+    // Convert aggregation result into number 
+    const categoryData = {};
+    categories.forEach(cat => {
+      const found = categoryCounts.find(c => c._id === cat);
+      categoryData[cat] = {
+        count: found ? found.count : 0,
+        percent: totalProducts > 0 ? ((found ? found.count : 0) / totalProducts * 100).toFixed(1) : 0
+      };
+    });
+
+
+    //for counterfeits % 
+    // Aggregate counts for all categories
+    const counterfeitCounts = await Verify.aggregate([
+      { $match: { category: { $in: categories }, authentic: false } },
+      { $group: { _id: "$category", count: { $sum: 1 } } }
+    ]);
+
+    // Convert aggregation result into number 
+    const counterfeitData = {};
+    categories.forEach(cat => {
+      const found = counterfeitCounts.find(c => c._id === cat);
+      counterfeitData[cat] = {
+        count: found ? found.count : 0,
+       percent: categoryData[cat].count > 0
+          ? ((found ? found.count : 0) / categoryData[cat].count * 100).toFixed(1)
+          : 0
+      };
+    });
+
+
+
+
     // -------------------------
     // 4. Send response
     // -------------------------
@@ -161,7 +204,9 @@ exports.getStats = async (req, res) => {
       percentEngagement,
       percentRecent,
       percentActive,
-       percentNew,
+      percentNew,
+      categoryData,
+      counterfeitData,
     });
   } catch (err) {
     res.status(500).json({ message: err.message || "Server Error" });

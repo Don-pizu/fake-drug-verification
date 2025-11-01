@@ -11,6 +11,8 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
   const userRole = localStorage.getItem("role");
   const token = localStorage.getItem("token");
 
+let categoryChart;
+  
   if (!token) {
     // redirect to login if no token
     window.location.href = "https://fake-drug-verification.onrender.com";
@@ -19,6 +21,7 @@ const APP = "https://fake-drug-verification.onrender.com"; // FOR IMAGES
     alert("You are not an admin");
     window.location.href = "https://fake-drug-verification.onrender.com";
   }
+  
 
 
 
@@ -134,6 +137,151 @@ async function fetchStats() {
     console.error("Stats Error:", err.message);
   }
 }
+
+
+
+//=====funstion for loading %
+function showLoadingBars() {
+  document.querySelectorAll(".loading-bar").forEach((bar) => {
+    bar.style.opacity = "1"; // make shimmer visible
+  });
+  document.querySelectorAll(".progress-bar").forEach((bar) => {
+    bar.style.width = "0"; // reset actual bars
+  });
+}
+
+// ===== Function to hide shimmer =====
+function hideLoadingBars() {
+  document.querySelectorAll(".loading-bar").forEach((bar) => {
+    bar.style.opacity = "0"; // fade shimmer out
+  });
+}
+
+
+//Bar loading for the categories
+function updateCategoryBar(id, percent) {
+  const bar = document.getElementById(`${id}Bar`);
+  const label = document.getElementById(`${id}P`);
+  if (!bar || !label) return;
+
+  // Convert to number safely
+  const safePercent = parseFloat(percent) || 0;
+
+  // Clamp values between 0–100 (no overflow)
+  const finalPercent = Math.min(Math.max(safePercent, 0), 100);
+
+  // Update bar + text
+  bar.style.width = `${finalPercent}%`;
+  label.textContent = `${finalPercent.toFixed(1)}%`;
+}
+
+//categories loading and %
+const drugsP = document.getElementById('drugsP');
+const beveragesP = document.getElementById('beveragesP');
+const cosmeticsP = document.getElementById('cosmeticsP');
+const chemicalsP = document.getElementById('chemicalsP'); 
+const devicesP = document.getElementById('devicesP');
+const totalUsers2 = document.getElementById("totalUsers2");
+
+async function loadCategory() {
+  showLoadingBars(); // show the helper bars
+
+  try {
+    const res = await fetch(`${API}/stats`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data.message || "Failed to fetch stats");
+
+    // total users
+    totalUsers2.textContent = data.userCount;
+  
+    const cat = data.categoryData || {};
+
+    // Percentages
+    const drugs = cat.drugs?.percent || 0;
+    const beverages = cat.beverages?.percent || 0;
+    const cosmetics = cat.cosmetics?.percent || 0;
+    const chemicals = cat.chemical?.percent || 0; 
+    const devices = cat.devices?.percent || 0;    
+
+    // Update the text and animate bars
+    updateCategoryBar("drugs", drugs);
+    updateCategoryBar("beverages", beverages);
+    updateCategoryBar("cosmetics", cosmetics);
+    updateCategoryBar("chemicals", chemicals);
+    updateCategoryBar("devices", devices);
+
+    // Get percentage for each category
+    beveragesP.textContent = `${beverages}%`;
+    drugsP.textContent = `${drugs}%`;
+    cosmeticsP.textContent = `${cosmetics}%`;
+    chemicalsP.textContent = `${chemicals}%`;
+    devicesP.textContent = `${devices}%`;
+
+
+    // Prepare labels and data for the chart
+    const labels = ["Drugs", "Devices", "Beverages", "Cosmetics", "Chemicals"];
+    const dataValues = [drugs, devices, beverages, cosmetics, chemicals];
+
+    // Call the update function
+    updateCategoryChart(labels, dataValues);
+
+
+
+     // Delay fade out for smooth transition
+    setTimeout(hideLoadingBars, 800);
+    
+  } catch (err) {
+    console.error("Error loading stats:", err);
+  }
+}
+
+
+function updateCategoryChart(labels, data) {
+  const ctx = document.getElementById('myDoughnut').getContext('2d');
+
+  // Destroy previous chart (if it exists)
+  if (categoryChart) {
+    categoryChart.destroy();
+  }
+
+  categoryChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: [
+          '#00C503', '#4DFA72', '#006304',
+          '#F44336', '#B24C00'
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+          position: 'bottom',
+          labels: { color: '#333', boxWidth: 15 }
+        }
+      },
+      cutout: '70%'
+    }
+  });
+}
+
+
+
+
+
 
 
 //=========LOGOUT=======/
@@ -281,3 +429,4 @@ fetchProducts();
 fetchStats();
 loadUserProfile();
 fetchAwareness();
+loadCategory();

@@ -337,6 +337,7 @@ header {
     background: #009200;
   }
 }
+<<<<<<< HEAD
 @media (max-width: 320px) {
   .social-btn a {
     font-size: 14px;
@@ -355,3 +356,7 @@ header {
     font-size: 14px;
   }
 }
+=======
+
+
+>>>>>>> ad39b97c8c1e5da6035e863c93aa4687256cfc38

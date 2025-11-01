@@ -191,7 +191,7 @@
         <div class="total-numbers-container">
           <div class="total__parent">
             <div class="total-record-container">
-              <p class="total__text">Total Verification</p>
+              <p class="total__text">Verified </br> Products</p>
               <div class="parent">
                 <p class="number" id="verified-products">0</p>
                 <p class="percentage" id="percent-verified">
@@ -207,7 +207,7 @@
           </div>
           <div class="total__parent">
             <div class="total-record-container">
-              <p class="total__text">Counterfeit Products</p>
+              <p class="total__text">Reports Submitted</p>
               <div class="parent">
                 <p class="number" id="reported-products">0</p>
                 <p class="percentage" id="percent-reported">
@@ -223,7 +223,7 @@
           </div>
           <div class="total__parent">
             <div class="total-products-verified">
-              <p class="total__text">Reports Submitted</p>
+              <p class="total__text">Total </br> Products</p>
               <div class="parent">
                 <p class="number" id="total-products">0</p>
                 <p class="percentage" id="percent-products">
@@ -309,7 +309,7 @@
                 <canvas id="myDoughnut"></canvas>
                 <div class="chart-center">
                   <p>Total Value</p>
-                  <h2>72</h2>
+                  <h2 class="totalUsers2">0</h2>
                 </div>
               </div>
               <div class="chart-legend">
@@ -319,104 +319,97 @@
                   </li>
                   <hr class="divider-line" />
                   <li>
-                    <span class="dot lagos"></span> Drugs <strong>28.6%</strong>
+                    <span class="dot lagos"></span> Drugs <strong class="drugsP2">0%</strong>
                   </li>
                   <li>
-                    <span class="dot abuja"></span> Food<strong>42.9%</strong>
+                    <span class="dot abuja"></span> Beverages<strong  class="beveragesP2">0%</strong>
                   </li>
                   <li>
-                    <span class="dot dark"></span> Drinks <strong>28.6%</strong>
+                    <span class="dot dark"></span> Cosmetics <strong class="cosmeticsP2">0%</strong>
                   </li>
                   <li>
-                    <span class="dot kano"></span> Cosmetics
-                    <strong>28.6%</strong>
+                    <span class="dot kano"></span> Chemicals
+                    <strong class="chemicalsP2">0%</strong>
                   </li>
                   <li>
-                    <span class="dot oshogbo"></span> Products
-                    <strong>14.3%</strong>
+                    <span class="dot oshogbo"></span> Devices
+                    <strong class="devicesP2">0%</strong>
                   </li>
-                  <li>
-                    <span class="dot others"></span> Others
-                    <strong>14.3%</strong>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="charts">
         <div class="chartContainer">
           <div class="chart-parent">
             <h3>Product Categories</h3>
             <p>Distribution of verified products by category</p>
-            <div class="slide-bar">
+
+            <div class="slide-bar" id="categoryContainer">
+
               <div class="div">
                 <div class="text">
                   <div class="drugs">Drugs</div>
                 </div>
-                <div class="graphic">
-                  <div class="auto"></div>
-                  <div class="header-auto"></div>
-                  <div class="scale"></div>
+                 <div class="progress-container">
+                  <div class="loading-bar"></div>
+                  <div id="drugsBar" class="progress-bar"></div>
                 </div>
-                <div class="header-div">35%</div>
+                <div class="header-div drugsP">0%</div>
               </div>
+
               <div class="div2">
                 <div class="text">
-                  <div class="drugs">Food</div>
+                  <div class="drugs">Beverages</div>
                 </div>
-                <div class="graphic">
-                  <div class="rectangle"></div>
-                  <div class="header-auto"></div>
-                  <div class="width-control"></div>
+                <div class="progress-container">
+                  <div class="loading-bar"></div>
+                  <div id="beveragesBar" class="progress-bar"></div>
                 </div>
-                <div class="header-div">25%</div>
+                <div class="header-div beveragesP">0%</div>
               </div>
+
               <div class="div4">
-                <div class="text">
-                  <div class="drugs">Drinks</div>
-                </div>
-                <div class="graphic">
-                  <div class="rectangle"></div>
-                  <div class="header-auto"></div>
-                  <div class="header-width-control"></div>
-                </div>
-                <div class="header-div">15%</div>
-              </div>
-              <div class="div6">
                 <div class="text">
                   <div class="drugs">Cosmetics</div>
                 </div>
-                <div class="graphic">
-                  <div class="rectangle"></div>
-                  <div class="header-auto"></div>
-                  <div class="width-control2"></div>
+                <div class="progress-container">
+                  <div class="loading-bar"></div>
+                  <div id="cosmeticsBar" class="progress-bar"></div>
                 </div>
-                <div class="header-div">14%</div>
+                <div class="header-div cosmeticsP">0%</div>
               </div>
+
+              <div class="div6">
+                <div class="text">
+                  <div class="drugs">Chemicals</div>
+                </div>
+                <div class="progress-container">
+                  <div class="loading-bar"></div>
+                  <div id="chemicalsBar" class="progress-bar"></div>
+                </div>
+                <div class="header-div chemicalsP">0%</div>
+              </div>
+
               <div class="div8">
                 <div class="text">
-                  <div class="drugs">Products</div>
+                  <div class="drugs">Devices</div>
                 </div>
-                <div class="graphic">
-                  <div class="rectangle"></div>
-                  <div class="header-auto"></div>
-                  <div class="width-control3"></div>
+                <div class="progress-container">
+                  <!-- shimmer loading bar -->
+                  <div class="loading-bar"></div>
+                  <!-- actual filled bar -->
+                  <div id="devicesBar" class="progress-bar"></div>
                 </div>
-                <div class="header-div">13%</div>
+                <div class="header-div devicesP">0%</div>
               </div>
-              <div class="div10">
-                <div class="text">
-                  <div class="drugs">Others</div>
-                </div>
-                <div class="graphic">
-                  <div class="rectangle"></div>
-                  <div class="header-auto"></div>
-                  <div class="width-control4"></div>
-                </div>
-                <div class="header-div">10%</div>
-              </div>
+
+          
+
             </div>
           </div>
           <!-- geo Chart -->
@@ -425,36 +418,37 @@
             <p>Distribution by product category</p>
             <div class="chart-wrapper">
               <div class="chart-box">
+                
                 <img src="../images/Container.svg" alt="" />
                 <div class="chart-center">
                   <p>Total Value</p>
-                  <h2>72</h2>
+                  <h2 class="totalUsers2">0</h2>
                 </div>
               </div>
               <div class="chart-legend">
                 <ul>
                   <li style="color: #737373">
-                    <span style="font-weight: 500">Label</span> <b>%</b>
+                    <span style="font-weight: 500">Label</span> <b></b>
                   </li>
                   <hr class="divider-line" />
                   <li>
-                    <span class="dot lagos"></span> Lagos <strong>32%</strong>
+                    <span class="dot lagos"></span> Lagos <strong></strong>
                   </li>
                   <li>
-                    <span class="dot abuja"></span> Abuja <strong>24%</strong>
+                    <span class="dot abuja"></span> Abuja <strong></strong>
                   </li>
                   <li>
-                    <span class="dot dark"></span> 245 <strong>21%</strong>
+                    <span class="dot dark"></span> Ibadan <strong></strong>
                   </li>
                   <li>
-                    <span class="dot kano"></span> Kano <strong>18%</strong>
+                    <span class="dot kano"></span> Kano <strong></strong>
                   </li>
                   <li>
                     <span class="dot oshogbo"></span> Oshogbo
-                    <strong>15%</strong>
+                    <strong></strong>
                   </li>
                   <li>
-                    <span class="dot others"></span> Others <strong>11%</strong>
+                    <span class="dot others"></span> Others <strong></strong>
                   </li>
                 </ul>
               </div>
@@ -549,7 +543,7 @@
         }
       });
     </script>
-    <script src="pie.js"></script>
+    
     <script src="analytics.js"></script>
   </body>
 </html>
