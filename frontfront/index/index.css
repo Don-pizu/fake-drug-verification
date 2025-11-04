@@ -225,6 +225,7 @@ nav a:hover {
 .more-than-25000-user-trust-me-parent {
   box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
   width: 95%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -250,12 +251,16 @@ nav a:hover {
   display: flex;
   align-items: center;
   padding: 10px 5px;
+  max-width: 100%;
   gap: 24px;
+}
+.logo-parent-container img {
   max-width: 100%;
 }
 .logo-icon {
   width: 124px;
   max-height: 100%;
+  max-width: 100%;
 }
 .more-than-25000-user-trust-me-logo-icon {
   width: 170px;
@@ -265,13 +270,10 @@ nav a:hover {
   width: 186px;
   max-height: 100%;
 }
-.vector-icon {
-  width: 220px;
-  height: 37px;
-}
 .benefit-of-medcheck {
   background: url("../images/-bg-2.png") no-repeat;
   height: 800px;
+  max-width: 100%;
   background-size: cover;
   padding-block: 2rem;
 }
