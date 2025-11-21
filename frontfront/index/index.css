@@ -782,6 +782,9 @@ input::placeholder {
   }
 }
 @media (max-width: 850px) {
+  .btc-big-parent {
+    margin-top: 2rem;
+  }
   .faq-container {
     background: var(--white-color);
   }
@@ -1267,7 +1270,7 @@ input::placeholder {
     max-height: 100%;
   }
   .family-image img {
-    width: 100%;
+    max-width: 100%;
     max-height: 100%;
     object-fit: cover;
   }
@@ -1313,7 +1316,7 @@ input::placeholder {
   .report-product {
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     max-width: 100%;
     white-space: nowrap;
@@ -1370,7 +1373,7 @@ input::placeholder {
   }
   .easily-verify-the {
     font-size: 1rem;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
   }
   .btc-big-parent {
     padding-top: 1rem;
@@ -1378,7 +1381,7 @@ input::placeholder {
 }
 @media (min-width: 835px) {
   .easily-verify-the {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
   .btc-big-parent {
     padding-top: 1rem;
@@ -1386,18 +1389,12 @@ input::placeholder {
 }
 @media (min-width: 855px) {
   .easily-verify-the {
-    padding-top: 2rem;
-  }
-  .btc-big-parent {
-    padding-top: 2rem;
+    padding-block: 2rem;
   }
 }
 @media (min-width: 906px) {
   .easily-verify-the {
     padding-top: 2rem;
-  }
-  .btc-big-parent {
-    padding-top: 2.5rem;
   }
 }
 @media (min-width: 925px) {
@@ -1421,6 +1418,11 @@ input::placeholder {
     font-size: 2.5rem;
   }
 }
+@media (min-width: 1004px) {
+  .protects-your-family-container {
+    padding-top: 1rem;
+  }
+}
 @media (min-width: 1100px) {
   .protects,
   .counterfeit-harmful,
@@ -1428,12 +1430,10 @@ input::placeholder {
     font-size: 2.5rem;
     width: 100%;
   }
+
   .easily-verify-the {
     font-size: 1.2rem;
-    padding-top: 1.4rem;
-  }
-  .btc-big-parent {
-    padding-top: 2.5rem;
+    padding-block: 2.1rem;
   }
   .verify-product,
   .report-product {
@@ -1447,35 +1447,42 @@ input::placeholder {
     font-size: 3.3rem;
     width: 100%;
   }
+  .protects-your-family-container {
+    padding-top: 2rem;
+  }
   .easily-verify-the {
     font-size: 1.3rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     min-width: 390px;
   }
   .btc-big-parent {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .verify-product,
   .report-product {
     padding: 15px;
   }
 }
-
-@media (min-width: 1500px) {
-  .family-image img {
-    width: 100%;
+@media (min-width: 1300px) {
+  .protects-your-family-container {
+    padding-top: 5rem;
   }
+}
+@media (min-width: 1500px) {
   .protects,
   .counterfeit-harmful,
   .products {
     font-size: 3rem;
     width: 100%;
   }
+  .protects-your-family-container {
+    padding-top: 6rem;
+  }
   .easily-verify-the {
     padding-top: 2rem;
   }
   .btc-big-parent {
-    padding-top: 3rem;
+    padding-top: 2rem;
     gap: 6rem;
   }
   .verify-product,
