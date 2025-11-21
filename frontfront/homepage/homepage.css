@@ -291,132 +291,18 @@ header {
   display: block;
 }
 /* MAIN SECTION */
-.main-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-
-  height: 584px;
-}
-.family-image {
-  max-width: 100%;
-}
-.family-image img {
-  object-fit: cover;
-}
-.protects-your-family-container {
-  font-size: 55px;
-  width: 100%;
-  letter-spacing: -0.03em;
-  line-height: 60px;
-  text-align: left;
-  color: #4d4d4d;
-  font-weight: 700;
-}
-.counterfeit-harmful {
-  color: #00ab00;
-}
-.products {
-  white-space: pre-wrap;
-}
-.easily-verify-the {
-  font-size: 30px;
-  letter-spacing: -0.03em;
-  line-height: 40px;
-  color: #4d4d4d;
-  text-align: left;
-  padding-block: 3.8rem;
-}
-.btc-big-parent {
-  display: flex;
-  gap: 6em;
-  margin-inline: 10px;
-}
-.verify-product,
-.report-product {
-  text-decoration: none;
-  font-size: 16px;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  white-space: nowrap;
-}
-.verify-product {
-  background: var(--lighter-green);
-  color: var(--white-color);
-}
-.report-product {
-  border: 1px groove var(--lighter-green);
-  color: var(--lighter-green);
-}
-.verify-product:hover {
-  background: var(--hover-color);
-  color: var(--main-color);
-}
-.report-product:hover {
-  background: var(--hover-color);
-}
-.user-trust-container {
-  padding-block: 2rem;
-}
-.more-than-25000-user-trust-me-parent {
-  box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px;
-  gap: 30px;
-  text-align: left;
-  font-size: 32px;
-  color: #2c2f38;
-}
-.more-than-25000-container {
-  line-height: 40px;
-  font-weight: 600;
-  font-size: 24px;
-}
-.medcheck {
-  color: #00ab00;
-}
-.span {
-  color: #003cff;
-}
-.logo-parent-container {
-  display: flex;
-  align-items: center;
-  padding: 10px 5px;
-  gap: 24px;
-}
-.logo-icon {
-  width: 124px;
-  max-height: 100%;
-}
-.more-than-25000-user-trust-me-logo-icon {
-  width: 170px;
-  max-height: 100%;
-}
-.logo-icon2 {
-  width: 186px;
-  max-height: 100%;
-}
-.vector-icon {
-  width: 220px;
-  height: 37px;
-}
 .benefit-of-medcheck {
   background: url("../images/-bg-2.png") no-repeat;
-  height: 800px;
+  height: 100%;
   background-size: cover;
   padding-block: 2rem;
 }
 .frame-parent {
   width: 98%;
+  max-width: 1200px;
   border-radius: 50px;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0);
-  -webkit-backdrop-filter: blur(10px);
   border: 1.5px groove var(--white-color);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -424,39 +310,43 @@ header {
 }
 .benefit-medcheck-parent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin: 10px;
-  row-gap: 5rem;
+  gap: 2rem;
+  max-width: 100%;
 }
 .benefit-header {
   width: 95%;
+  padding: 10px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
-  padding: 10px;
   text-align: center;
   font-size: 24px;
   color: #005f00;
-  margin: 0 auto;
   margin-block: 1rem;
 }
+.medcheck-text-group {
+  max-width: 100%;
+}
 .benefit-text {
-  width: 282px;
-  height: 272px;
+  width: 100%;
+  max-height: 272px;
   padding: 10px;
   border-radius: 15px;
   background: var(--white-color);
 }
 .benefit-text h2 {
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: -0.03em;
   line-height: 36px;
   color: #424242;
   text-align: left;
 }
 .benefit-text p {
-  width: 100%;
-  font-size: 24px;
+  max-width: 200px;
+  font-size: 18px;
   letter-spacing: -0.03em;
   line-height: 32px;
   color: #1a1a1a;
@@ -1076,109 +966,9 @@ input::placeholder {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 1114px) {
-  .more-than-25000 {
-    white-space: nowrap;
-  }
-  .logo-parent {
-    flex-wrap: nowrap;
-  }
-  .benefit-text {
-    padding: 3rem;
-  }
-  .protects-your-family-container {
-    font-size: 53px;
-    font-weight: 600;
-  }
-  .easily-verify-the {
-    font-size: 30px;
-    padding-block: 3rem;
-  }
-  .btc-big-parent {
-    margin-inline: 10px;
-    padding-block: 1rem;
-  }
-  .verify-product,
-  .report-product {
-    font-size: 18px;
-    width: 200px;
-  }
-  .benefit-medcheck-parent {
-    gap: 3em;
-  }
-  .benefit-header {
-    width: 95%;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    font-size: 24px;
-    color: #005f00;
-    margin: 0 auto;
-    margin-block: 1rem;
-  }
-  .benefit-text {
-    width: 282px;
-    padding: 10px;
-    border-radius: 15px;
-    background: var(--white-color);
-  }
-}
 @media (max-width: 850px) {
-  .family-image img {
-    width: 440px;
-    height: 440px;
-    object-fit: cover;
-  }
-  .protects-your-family-container {
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .easily-verify-the {
-    font-size: 25px;
-    margin: 10px;
-    padding-block: 1rem;
-  }
-  .btc-big-parent {
-    gap: 1rem;
-    padding-block: 0px;
-    margin: 5px;
-  }
-  .verify-product,
-  .report-product {
-    width: 180px;
-  }
-  .more-than-25000-user-trust-me-parent {
-    box-shadow: 0px 4px 3.5px rgba(174, 174, 174, 0.25);
-    background-color: #fff;
-    flex-direction: column;
-  }
-  .more-than-25000-container {
-    width: 100%;
-  }
-  .faq-container {
-    background: var(--white-color);
-  }
-  .pics {
-    display: none;
-  }
   .faq-parent {
     margin: 0 auto;
-  }
-  .benefit-of-medcheck {
-    height: 1100px;
-  }
-  .benefit-medcheck-parent {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-  }
-  .benefit-text {
-    width: 255px;
-    height: auto;
-  }
-  .benefit-text h2 {
-    font-size: 27px;
   }
   .our-mission {
     margin-block: 60px;
@@ -1207,24 +997,8 @@ input::placeholder {
     padding: 15px;
     border-radius: 10px;
   }
-  .more-than-25000-user-trust-me-parent {
-    display: block;
-  }
-  .logo-parent-container {
-    margin-left: 0rem;
-  }
-  .logo-parent-container img {
-    width: 170px;
-  }
 }
 @media (max-width: 768px) {
-  .family-image img {
-    width: 380px;
-    object-fit: cover;
-  }
-  .btc-big-parent {
-    gap: 1rem;
-  }
   .nav-btn,
   .dropdown-2,
   .group-item {
@@ -1233,11 +1007,89 @@ input::placeholder {
   .hamburger {
     display: block;
   }
-  .main-section {
-    width: 95%;
-  }
-  .first-image {
+  .family-image {
     display: none;
+  }
+  .protect-family__text {
+    padding: 2rem;
+  }
+  .protects-your-family-container {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .counterfeit-harmful {
+    color: rgba(0, 197, 3, 1);
+  }
+  .easily-verify-the {
+    font-size: 24px;
+    max-width: 490px;
+  }
+  .btc-big-parent {
+    display: flex;
+    gap: 4rem;
+    max-width: 100%;
+    padding-top: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+  .verify-product {
+    background: var(--lighter-green);
+    color: var(--white-color);
+  }
+  .report-product {
+    border: 1px groove var(--lighter-green);
+    color: var(--lighter-green);
+  }
+  .verify-product:hover {
+    background: var(--hover-color);
+    color: var(--main-color);
+    border-radius: 10px;
+  }
+  .report-product:hover {
+    background: var(--hover-color);
+    border-radius: 10px;
+  }
+  .user-trust-container {
+    padding-block: 2rem;
+    width: 95%;
+    max-width: 100%;
+  }
+  .more-than-25000-user-trust-me-parent {
+    margin: 0 auto;
+    display: block;
+    padding: 20px 25px;
+    gap: 30px;
+    text-align: left;
+    font-size: 32px;
+    color: #2c2f38;
+  }
+  .more-than-25000-container {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .medcheck {
+    color: #00ab00;
+  }
+  .span {
+    color: #003cff;
+  }
+  .logo-parent-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 5px;
+    max-width: 100%;
+  }
+  .logo-parent-container img {
+    max-width: 100%;
+    width: 125px;
   }
   .productVerify__container {
     height: 100%;
@@ -1248,25 +1100,12 @@ input::placeholder {
   }
   .benefit-of-medcheck {
     background: #f1f1f1;
-    height: 1800px;
     padding-block: 2rem;
-  }
-  .benefit-medcheck-parent {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  .benefit-text {
-    width: 310px;
-    margin: 20px;
-  }
-  .benefit-text h2 {
-    width: 270px;
-    font-size: 32px;
-    line-height: 40px;
   }
   .benefit-text h2,
   .benefit-text p {
     text-align: center;
+    max-width: 100%;
   }
   .logo-parent-container img {
     width: 160px;
@@ -1302,125 +1141,6 @@ input::placeholder {
     text-align: center;
   }
 }
-@media (max-width: 765px) {
-  .main-section {
-    height: 400px;
-    padding-block: 2rem;
-  }
-  .family-image img {
-    width: 100%;
-    height: 330px;
-  }
-  .easily-verify-the {
-    font-size: 20px;
-    padding-block: 1rem;
-    line-height: 30px;
-  }
-  .btc-big-parent {
-    gap: 1rem;
-    margin: 10px;
-  }
-  .verify-product,
-  .report-product {
-    width: 165px;
-    height: 44px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  .user-trust-container {
-    height: 100%;
-    padding-block: 0rem;
-  }
-  .more-than-25000-container {
-    font-size: 20px;
-    text-align: left;
-    margin-right: rem;
-    padding-block: 2rem;
-  }
-  .logo-parent-container {
-    gap: 5px;
-  }
-  .benefit-text h2 {
-    font-size: 28px;
-  }
-  .benefit-text p {
-    font-size: 16px;
-  }
-  .testimonial-container {
-    height: 100%;
-  }
-  .see-what-our {
-    font-size: 24px;
-    white-space: nowrap;
-  }
-  .container {
-    margin: 0 auto;
-    padding-block: 0rem;
-  }
-  .erase {
-    display: none;
-  }
-  .extra {
-    display: block;
-    margin: 0 auto;
-  }
-  .we-keep-you {
-    width: 299px;
-  }
-  .benefit-of-medcheck {
-    background: none;
-    height: 100%;
-    width: 95%;
-    margin: 0 auto;
-    padding-block: 2rem;
-  }
-  .benefit-header {
-    font-size: 20px;
-  }
-  .benefit-text {
-    margin: 0 auto;
-  }
-  .benefit-text h2,
-  .benefit-text p {
-    text-align: center;
-  }
-  .partners {
-    display: none;
-  }
-  .frequently-asked-questions {
-    background: var(--main-color);
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 44px;
-    color: var(--white-color);
-  }
-  .question-mark {
-    display: none;
-  }
-  .what-we-do {
-    letter-spacing: -0.03em;
-    line-height: 32px;
-    color: #4d4d4d;
-    margin: 0 auto;
-  }
-  .protects-your-family-container {
-    font-size: 30px;
-    line-height: normal;
-  }
-  .easily-verify-the {
-    width: 335px;
-  }
-  .our-mission {
-    display: none;
-  }
-  .call-to-action-parent {
-    flex-direction: column;
-  }
-}
 @media (max-width: 632px) {
   .main-section {
     grid-template-columns: 1fr;
@@ -1433,17 +1153,6 @@ input::placeholder {
   }
   .frequently-asked-questions {
     margin-left: 0rem;
-  }
-  .more-than-25000-container {
-    font-size: 20px;
-    text-align: left;
-    padding-block: 3rem;
-  }
-  .logo-parent-container img {
-    width: 140px;
-  }
-  .logo-parent-container {
-    gap: 5px;
   }
   .footer-links {
     width: 90%;
@@ -1490,6 +1199,23 @@ input::placeholder {
   .footer-bottom .legal {
     margin: 0 auto;
     gap: 6rem;
+  }
+}
+@media (max-with: 590px) {
+  .benefit-text p {
+    padding: 0rem;
+  }
+}
+@media (max-width: 515px) {
+  .frame-parent {
+    backdrop-filter: none;
+  }
+  .benefit-medcheck-parent {
+    /* padding: 10px; */
+    margin: 0 auto;
+  }
+  .benefit-text {
+    max-width: 250px;
   }
 }
 @media (max-width: 480px) {
@@ -1722,9 +1448,6 @@ input::placeholder {
     display: inline-block;
     margin-bottom: 10px;
   }
-  .benefit-text {
-    width: 200px;
-  }
   .benefit-text h2 {
     width: 100%;
   }
@@ -1770,5 +1493,231 @@ input::placeholder {
   .logo-parent-container img {
     width: 60px;
     gap: 5px;
+  }
+}
+@media (min-width: 769px) {
+  .main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .family-image img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .protects-your-family-container {
+    width: 100%;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #4d4d4d;
+    font-weight: 650;
+  }
+  .protects-your-family-container p {
+    width: 100%;
+  }
+  .protect-family__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .counterfeit-harmful {
+    color: #00ab00;
+  }
+  .easily-verify-the {
+    letter-spacing: -0.03em;
+    font-size: 18px;
+    color: #4d4d4d;
+    text-align: left;
+    width: 300px;
+    padding-top: 1.3rem;
+  }
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .btc-big-parent {
+    display: flex;
+    gap: 4rem;
+    max-width: 100%;
+    padding-top: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+  .verify-product {
+    background: var(--lighter-green);
+    color: var(--white-color);
+  }
+  .report-product {
+    border: 1px groove var(--lighter-green);
+    color: var(--lighter-green);
+  }
+  .verify-product:hover {
+    background: var(--hover-color);
+    color: var(--main-color);
+    border-radius: 10px;
+  }
+  .report-product:hover {
+    background: var(--hover-color);
+    border-radius: 10px;
+  }
+  .more-than-25000-user-trust-me-parent {
+    height: 160px;
+    display: flex;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  .logo-parent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo-parent-container img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .more-than-25000-container {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .medcheck span {
+    color: rgba(0, 197, 3, 1);
+  }
+}
+@media (min-width: 803px) {
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .easily-verify-the {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+  .btc-big-parent {
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 835px) {
+  .easily-verify-the {
+    padding-top: 1rem;
+  }
+  .btc-big-parent {
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 855px) {
+  .easily-verify-the {
+    padding-top: 2rem;
+  }
+  .btc-big-parent {
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 906px) {
+  .easily-verify-the {
+    padding-top: 2rem;
+  }
+  .btc-big-parent {
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 925px) {
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 2.3rem;
+  }
+  .easily-verify-the {
+    font-size: 18px;
+    padding-top: 1rem;
+  }
+  .btc-big-parent {
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 944px) {
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .easily-verify-the {
+    font-size: 1.2rem;
+    padding-top: 1.4rem;
+  }
+  .btc-big-parent {
+    padding-top: 2.5rem;
+  }
+  .verify-product,
+  .report-product {
+    padding: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 3.3rem;
+    width: 100%;
+  }
+  .easily-verify-the {
+    font-size: 1.3rem;
+    padding-top: 2rem;
+    min-width: 390px;
+  }
+  .btc-big-parent {
+    padding-top: 2rem;
+  }
+  .verify-product,
+  .report-product {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .family-image img {
+    width: 100%;
+  }
+  .protects,
+  .counterfeit-harmful,
+  .products {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .easily-verify-the {
+    padding-top: 2rem;
+  }
+  .btc-big-parent {
+    padding-top: 3rem;
+    gap: 6rem;
+  }
+  .verify-product,
+  .report-product {
+    padding: 20px;
   }
 }
